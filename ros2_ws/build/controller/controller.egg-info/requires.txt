@@ -1,2 +1,4 @@
 can
+geometry_msgs
+sensor_msgs
 setuptools

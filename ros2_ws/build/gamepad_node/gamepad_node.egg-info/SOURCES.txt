@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../../build/gamepad_node/gamepad_node.egg-info/PKG-INFO
+../../build/gamepad_node/gamepad_node.egg-info/SOURCES.txt
+../../build/gamepad_node/gamepad_node.egg-info/dependency_links.txt
+../../build/gamepad_node/gamepad_node.egg-info/entry_points.txt
+../../build/gamepad_node/gamepad_node.egg-info/requires.txt
+../../build/gamepad_node/gamepad_node.egg-info/top_level.txt
+../../build/gamepad_node/gamepad_node.egg-info/zip-safe
+gamepad_node/__init__.py
+gamepad_node/gamepad.py
+gamepad_node/joy.py
+resource/gamepad_node
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

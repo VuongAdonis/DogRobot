@@ -1,0 +1,40 @@
+[3.653s] Invoking command in '/home/DATA/DogRobot/ros2_ws/src/gamepad_node': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/gamepad_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/gamepad_node build --build-base /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build install --record /home/DATA/DogRobot/ros2_ws/build/gamepad_node/install.log --single-version-externally-managed install_data
+[4.378s] running egg_info
+[4.378s] creating ../../build/gamepad_node/gamepad_node.egg-info
+[4.442s] writing ../../build/gamepad_node/gamepad_node.egg-info/PKG-INFO
+[4.443s] writing dependency_links to ../../build/gamepad_node/gamepad_node.egg-info/dependency_links.txt
+[4.445s] writing entry points to ../../build/gamepad_node/gamepad_node.egg-info/entry_points.txt
+[4.445s] writing requirements to ../../build/gamepad_node/gamepad_node.egg-info/requires.txt
+[4.446s] writing top-level names to ../../build/gamepad_node/gamepad_node.egg-info/top_level.txt
+[4.446s] writing manifest file '../../build/gamepad_node/gamepad_node.egg-info/SOURCES.txt'
+[4.549s] reading manifest file '../../build/gamepad_node/gamepad_node.egg-info/SOURCES.txt'
+[4.551s] writing manifest file '../../build/gamepad_node/gamepad_node.egg-info/SOURCES.txt'
+[4.551s] running build
+[4.551s] running build_py
+[4.551s] creating /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build
+[4.551s] creating /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build/lib
+[4.552s] creating /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build/lib/gamepad_node
+[4.552s] copying gamepad_node/__init__.py -> /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build/lib/gamepad_node
+[4.552s] copying gamepad_node/gamepad.py -> /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build/lib/gamepad_node
+[4.552s] copying gamepad_node/joy.py -> /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build/lib/gamepad_node
+[4.552s] running install
+[4.558s] running install_lib
+[4.584s] creating /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages/gamepad_node
+[4.584s] copying /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build/lib/gamepad_node/__init__.py -> /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages/gamepad_node
+[4.584s] copying /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build/lib/gamepad_node/gamepad.py -> /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages/gamepad_node
+[4.584s] copying /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build/lib/gamepad_node/joy.py -> /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages/gamepad_node
+[4.584s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages/gamepad_node/__init__.py to __init__.cpython-312.pyc
+[4.585s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages/gamepad_node/gamepad.py to gamepad.cpython-312.pyc
+[4.585s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages/gamepad_node/joy.py to joy.cpython-312.pyc
+[4.586s] running install_data
+[4.586s] creating /home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/ament_index
+[4.586s] creating /home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/ament_index/resource_index
+[4.586s] creating /home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/ament_index/resource_index/packages
+[4.586s] copying resource/gamepad_node -> /home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/ament_index/resource_index/packages
+[4.586s] copying package.xml -> /home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/gamepad_node
+[4.586s] running install_egg_info
+[4.617s] Copying ../../build/gamepad_node/gamepad_node.egg-info to /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages/gamepad_node-0.0.0-py3.12.egg-info
+[4.618s] running install_scripts
+[4.773s] Installing joy script to /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/gamepad_node
+[4.774s] writing list of installed files to '/home/DATA/DogRobot/ros2_ws/build/gamepad_node/install.log'
+[5.147s] Invoked command in '/home/DATA/DogRobot/ros2_ws/src/gamepad_node' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/gamepad_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/gamepad_node build --build-base /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build install --record /home/DATA/DogRobot/ros2_ws/build/gamepad_node/install.log --single-version-externally-managed install_data

@@ -1,0 +1,357 @@
+[0.135s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.135s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7754d97a40b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7754d9773da0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7754d9773da0>>, mixin_verb=('build',))
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.179s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/DATA/DogRobot/ros2_ws'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/add_integers) by extensions ['ignore', 'ignore_ament_install']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/add_integers) by extension 'ignore'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/add_integers) by extension 'ignore_ament_install'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/add_integers) by extensions ['colcon_pkg']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/add_integers) by extension 'colcon_pkg'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/add_integers) by extensions ['colcon_meta']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/add_integers) by extension 'colcon_meta'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/add_integers) by extensions ['ros']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/add_integers) by extension 'ros'
+[0.218s] DEBUG:colcon.colcon_core.package_identification:Package 'src/add_integers' with type 'ros.ament_python' and name 'add_integers'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_node) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_node) by extension 'ignore'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_node) by extension 'ignore_ament_install'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_node) by extensions ['colcon_pkg']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_node) by extension 'colcon_pkg'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_node) by extensions ['colcon_meta']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_node) by extension 'colcon_meta'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_node) by extensions ['ros']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_node) by extension 'ros'
+[0.219s] DEBUG:colcon.colcon_core.package_identification:Package 'src/can_node' with type 'ros.ament_python' and name 'can_node'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['ignore', 'ignore_ament_install']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ignore'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ignore_ament_install'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['colcon_pkg']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'colcon_pkg'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['colcon_meta']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'colcon_meta'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['ros']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ros'
+[0.220s] DEBUG:colcon.colcon_core.package_identification:Package 'src/controller' with type 'ros.ament_python' and name 'controller'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'ignore'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'ignore_ament_install'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['colcon_pkg']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'colcon_pkg'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['colcon_meta']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'colcon_meta'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['ros']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'ros'
+[0.222s] DEBUG:colcon.colcon_core.package_identification:Package 'src/custom_interfaces' with type 'ros.ament_cmake' and name 'custom_interfaces'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/gamepad_node) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/gamepad_node) by extension 'ignore'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/gamepad_node) by extension 'ignore_ament_install'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/gamepad_node) by extensions ['colcon_pkg']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/gamepad_node) by extension 'colcon_pkg'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/gamepad_node) by extensions ['colcon_meta']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/gamepad_node) by extension 'colcon_meta'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/gamepad_node) by extensions ['ros']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/gamepad_node) by extension 'ros'
+[0.223s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gamepad_node' with type 'ros.ament_python' and name 'gamepad_node'
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.224s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.224s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.224s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.224s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.244s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.244s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.247s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/DATA/DogRobot/ros2_ws/install
+[0.248s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 315 installed packages in /opt/ros/jazzy
+[0.250s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.302s] Level 5:colcon.colcon_core.verb:set package 'can_node' build argument 'cmake_args' from command line to 'None'
+[0.302s] Level 5:colcon.colcon_core.verb:set package 'can_node' build argument 'cmake_target' from command line to 'None'
+[0.302s] Level 5:colcon.colcon_core.verb:set package 'can_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.302s] Level 5:colcon.colcon_core.verb:set package 'can_node' build argument 'cmake_clean_cache' from command line to 'False'
+[0.302s] Level 5:colcon.colcon_core.verb:set package 'can_node' build argument 'cmake_clean_first' from command line to 'False'
+[0.302s] Level 5:colcon.colcon_core.verb:set package 'can_node' build argument 'cmake_force_configure' from command line to 'False'
+[0.302s] Level 5:colcon.colcon_core.verb:set package 'can_node' build argument 'ament_cmake_args' from command line to 'None'
+[0.302s] Level 5:colcon.colcon_core.verb:set package 'can_node' build argument 'catkin_cmake_args' from command line to 'None'
+[0.302s] Level 5:colcon.colcon_core.verb:set package 'can_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.302s] DEBUG:colcon.colcon_core.verb:Building package 'can_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/DATA/DogRobot/ros2_ws/build/can_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/DATA/DogRobot/ros2_ws/install/can_node', 'merge_install': False, 'path': '/home/DATA/DogRobot/ros2_ws/src/can_node', 'symlink_install': False, 'test_result_base': None}
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_args' from command line to 'None'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target' from command line to 'None'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.303s] DEBUG:colcon.colcon_core.verb:Building package 'controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/DATA/DogRobot/ros2_ws/build/controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/DATA/DogRobot/ros2_ws/install/controller', 'merge_install': False, 'path': '/home/DATA/DogRobot/ros2_ws/src/controller', 'symlink_install': False, 'test_result_base': None}
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.303s] DEBUG:colcon.colcon_core.verb:Building package 'custom_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/DATA/DogRobot/ros2_ws/build/custom_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces', 'merge_install': False, 'path': '/home/DATA/DogRobot/ros2_ws/src/custom_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'gamepad_node' build argument 'cmake_args' from command line to 'None'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'gamepad_node' build argument 'cmake_target' from command line to 'None'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'gamepad_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'gamepad_node' build argument 'cmake_clean_cache' from command line to 'False'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'gamepad_node' build argument 'cmake_clean_first' from command line to 'False'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'gamepad_node' build argument 'cmake_force_configure' from command line to 'False'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'gamepad_node' build argument 'ament_cmake_args' from command line to 'None'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'gamepad_node' build argument 'catkin_cmake_args' from command line to 'None'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'gamepad_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.304s] DEBUG:colcon.colcon_core.verb:Building package 'gamepad_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/DATA/DogRobot/ros2_ws/build/gamepad_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/DATA/DogRobot/ros2_ws/install/gamepad_node', 'merge_install': False, 'path': '/home/DATA/DogRobot/ros2_ws/src/gamepad_node', 'symlink_install': False, 'test_result_base': None}
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'add_integers' build argument 'cmake_args' from command line to 'None'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'add_integers' build argument 'cmake_target' from command line to 'None'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'add_integers' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'add_integers' build argument 'cmake_clean_cache' from command line to 'False'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'add_integers' build argument 'cmake_clean_first' from command line to 'False'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'add_integers' build argument 'cmake_force_configure' from command line to 'False'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'add_integers' build argument 'ament_cmake_args' from command line to 'None'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'add_integers' build argument 'catkin_cmake_args' from command line to 'None'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'add_integers' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.305s] DEBUG:colcon.colcon_core.verb:Building package 'add_integers' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/DATA/DogRobot/ros2_ws/build/add_integers', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/DATA/DogRobot/ros2_ws/install/add_integers', 'merge_install': False, 'path': '/home/DATA/DogRobot/ros2_ws/src/add_integers', 'symlink_install': False, 'test_result_base': None}
+[0.305s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.306s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.306s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/DATA/DogRobot/ros2_ws/src/custom_interfaces' with build type 'ament_cmake'
+[0.306s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/DATA/DogRobot/ros2_ws/src/custom_interfaces'
+[0.309s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.309s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.309s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.313s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/DATA/DogRobot/ros2_ws/src/can_node' with build type 'ament_python'
+[0.313s] Level 1:colcon.colcon_core.shell:create_environment_hook('can_node', 'ament_prefix_path')
+[0.314s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/can_node/share/can_node/hook/ament_prefix_path.ps1'
+[0.315s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/can_node/share/can_node/hook/ament_prefix_path.dsv'
+[0.316s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/can_node/share/can_node/hook/ament_prefix_path.sh'
+[0.317s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.317s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.320s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/DATA/DogRobot/ros2_ws/src/controller' with build type 'ament_python'
+[0.320s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'ament_prefix_path')
+[0.320s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/controller/share/controller/hook/ament_prefix_path.ps1'
+[0.321s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/controller/share/controller/hook/ament_prefix_path.dsv'
+[0.321s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/controller/share/controller/hook/ament_prefix_path.sh'
+[0.322s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.322s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.325s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/DATA/DogRobot/ros2_ws/src/gamepad_node' with build type 'ament_python'
+[0.326s] Level 1:colcon.colcon_core.shell:create_environment_hook('gamepad_node', 'ament_prefix_path')
+[0.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/gamepad_node/hook/ament_prefix_path.ps1'
+[0.326s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/gamepad_node/hook/ament_prefix_path.dsv'
+[0.327s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/gamepad_node/hook/ament_prefix_path.sh'
+[0.327s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.328s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.339s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/DATA/DogRobot/ros2_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/custom_interfaces -- -j8 -l8
+[0.712s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/DATA/DogRobot/ros2_ws/src/can_node'
+[0.713s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.713s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.226s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/DATA/DogRobot/ros2_ws/src/controller'
+[1.227s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.227s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.374s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/DATA/DogRobot/ros2_ws/src/gamepad_node'
+[2.375s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.375s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.421s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/DATA/DogRobot/ros2_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/custom_interfaces -- -j8 -l8
+[2.826s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/DATA/DogRobot/ros2_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/custom_interfaces
+[3.211s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_interfaces)
+[3.213s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/DATA/DogRobot/ros2_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/custom_interfaces
+[3.229s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces' for CMake module files
+[3.234s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces' for CMake config files
+[3.237s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'cmake_prefix_path')
+[3.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.ps1'
+[3.242s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.dsv'
+[3.245s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.sh'
+[3.252s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib'
+[3.254s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'ld_library_path_lib')
+[3.255s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.ps1'
+[3.258s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.dsv'
+[3.260s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.sh'
+[3.265s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/bin'
+[3.267s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/pkgconfig/custom_interfaces.pc'
+[3.269s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages'
+[3.271s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'pythonpath')
+[3.273s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.ps1'
+[3.275s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.dsv'
+[3.275s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.sh'
+[3.277s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/bin'
+[3.279s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.ps1'
+[3.283s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.dsv'
+[3.287s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.sh'
+[3.289s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.bash'
+[3.291s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.zsh'
+[3.297s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/colcon-core/packages/custom_interfaces)
+[3.700s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_interfaces)
+[3.701s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces' for CMake module files
+[3.705s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces' for CMake config files
+[3.707s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'cmake_prefix_path')
+[3.708s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.ps1'
+[3.712s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.dsv'
+[3.715s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.sh'
+[3.717s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib'
+[3.718s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'ld_library_path_lib')
+[3.718s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.ps1'
+[3.721s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.dsv'
+[3.723s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.sh'
+[3.724s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/bin'
+[3.725s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/pkgconfig/custom_interfaces.pc'
+[3.726s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages'
+[3.727s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'pythonpath')
+[3.728s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.ps1'
+[3.730s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.dsv'
+[3.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.sh'
+[3.735s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/bin'
+[3.736s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.ps1'
+[3.739s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.dsv'
+[3.742s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.sh'
+[3.747s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.bash'
+[3.750s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.zsh'
+[3.753s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/colcon-core/packages/custom_interfaces)
+[3.755s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/DATA/DogRobot/ros2_ws/src/add_integers' with build type 'ament_python'
+[3.759s] Level 1:colcon.colcon_core.shell:create_environment_hook('add_integers', 'ament_prefix_path')
+[3.761s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/add_integers/share/add_integers/hook/ament_prefix_path.ps1'
+[3.764s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/add_integers/share/add_integers/hook/ament_prefix_path.dsv'
+[3.766s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/add_integers/share/add_integers/hook/ament_prefix_path.sh'
+[3.768s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.768s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.981s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/DATA/DogRobot/ros2_ws/src/add_integers'
+[4.984s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.984s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.519s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/DATA/DogRobot/ros2_ws/src/controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/DATA/DogRobot/ros2_ws/build/controller/build install --record /home/DATA/DogRobot/ros2_ws/build/controller/install.log --single-version-externally-managed install_data
+[5.611s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/DATA/DogRobot/ros2_ws/src/can_node': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/can_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/can_node build --build-base /home/DATA/DogRobot/ros2_ws/build/can_node/build install --record /home/DATA/DogRobot/ros2_ws/build/can_node/install.log --single-version-externally-managed install_data
+[5.624s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/DATA/DogRobot/ros2_ws/src/gamepad_node': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/gamepad_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/gamepad_node build --build-base /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build install --record /home/DATA/DogRobot/ros2_ws/build/gamepad_node/install.log --single-version-externally-managed install_data
+[7.956s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/DATA/DogRobot/ros2_ws/src/add_integers': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/add_integers/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/add_integers build --build-base /home/DATA/DogRobot/ros2_ws/build/add_integers/build install --record /home/DATA/DogRobot/ros2_ws/build/add_integers/install.log --single-version-externally-managed install_data
+[8.165s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/gamepad_node' for CMake module files
+[8.173s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/DATA/DogRobot/ros2_ws/src/gamepad_node' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/gamepad_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/gamepad_node build --build-base /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build install --record /home/DATA/DogRobot/ros2_ws/build/gamepad_node/install.log --single-version-externally-managed install_data
+[8.175s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/gamepad_node' for CMake config files
+[8.185s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib'
+[8.185s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/bin'
+[8.186s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/pkgconfig/gamepad_node.pc'
+[8.187s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages'
+[8.187s] Level 1:colcon.colcon_core.shell:create_environment_hook('gamepad_node', 'pythonpath')
+[8.192s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/gamepad_node/hook/pythonpath.ps1'
+[8.200s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/gamepad_node/hook/pythonpath.dsv'
+[8.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/gamepad_node/hook/pythonpath.sh'
+[8.210s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/bin'
+[8.211s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gamepad_node)
+[8.217s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/gamepad_node/package.ps1'
+[8.220s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/gamepad_node/package.dsv'
+[8.223s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/gamepad_node/package.sh'
+[8.224s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/gamepad_node/package.bash'
+[8.225s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/gamepad_node/package.zsh'
+[8.226s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/DATA/DogRobot/ros2_ws/install/gamepad_node/share/colcon-core/packages/gamepad_node)
+[8.235s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/can_node' for CMake module files
+[8.243s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/can_node' for CMake config files
+[8.245s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/can_node/lib'
+[8.246s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/can_node/bin'
+[8.246s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/can_node/lib/pkgconfig/can_node.pc'
+[8.247s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/DATA/DogRobot/ros2_ws/src/can_node' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/can_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/can_node build --build-base /home/DATA/DogRobot/ros2_ws/build/can_node/build install --record /home/DATA/DogRobot/ros2_ws/build/can_node/install.log --single-version-externally-managed install_data
+[8.252s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages'
+[8.254s] Level 1:colcon.colcon_core.shell:create_environment_hook('can_node', 'pythonpath')
+[8.258s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/can_node/share/can_node/hook/pythonpath.ps1'
+[8.266s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/can_node/share/can_node/hook/pythonpath.dsv'
+[8.268s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/can_node/share/can_node/hook/pythonpath.sh'
+[8.273s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/can_node/bin'
+[8.274s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(can_node)
+[8.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/can_node/share/can_node/package.ps1'
+[8.281s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/DATA/DogRobot/ros2_ws/install/can_node/share/can_node/package.dsv'
+[8.289s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/can_node/share/can_node/package.sh'
+[8.292s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/can_node/share/can_node/package.bash'
+[8.296s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/can_node/share/can_node/package.zsh'
+[8.300s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/DATA/DogRobot/ros2_ws/install/can_node/share/colcon-core/packages/can_node)
+[8.468s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/controller' for CMake module files
+[8.470s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/controller' for CMake config files
+[8.472s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/DATA/DogRobot/ros2_ws/src/controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/DATA/DogRobot/ros2_ws/build/controller/build install --record /home/DATA/DogRobot/ros2_ws/build/controller/install.log --single-version-externally-managed install_data
+[8.474s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/controller/lib'
+[8.474s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/controller/bin'
+[8.474s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/controller/lib/pkgconfig/controller.pc'
+[8.476s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages'
+[8.481s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'pythonpath')
+[8.484s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/controller/share/controller/hook/pythonpath.ps1'
+[8.487s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/controller/share/controller/hook/pythonpath.dsv'
+[8.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/controller/share/controller/hook/pythonpath.sh'
+[8.490s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/controller/bin'
+[8.491s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller)
+[8.493s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/controller/share/controller/package.ps1'
+[8.496s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/DATA/DogRobot/ros2_ws/install/controller/share/controller/package.dsv'
+[8.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/controller/share/controller/package.sh'
+[8.507s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/controller/share/controller/package.bash'
+[8.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/controller/share/controller/package.zsh'
+[8.511s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/DATA/DogRobot/ros2_ws/install/controller/share/colcon-core/packages/controller)
+[11.338s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/add_integers' for CMake module files
+[11.344s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/add_integers' for CMake config files
+[11.345s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/DATA/DogRobot/ros2_ws/src/add_integers' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/add_integers/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/add_integers build --build-base /home/DATA/DogRobot/ros2_ws/build/add_integers/build install --record /home/DATA/DogRobot/ros2_ws/build/add_integers/install.log --single-version-externally-managed install_data
+[11.349s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/add_integers/lib'
+[11.350s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/add_integers/bin'
+[11.351s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/pkgconfig/add_integers.pc'
+[11.353s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages'
+[11.354s] Level 1:colcon.colcon_core.shell:create_environment_hook('add_integers', 'pythonpath')
+[11.356s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/add_integers/share/add_integers/hook/pythonpath.ps1'
+[11.358s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/DATA/DogRobot/ros2_ws/install/add_integers/share/add_integers/hook/pythonpath.dsv'
+[11.360s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/DATA/DogRobot/ros2_ws/install/add_integers/share/add_integers/hook/pythonpath.sh'
+[11.369s] Level 1:colcon.colcon_core.environment:checking '/home/DATA/DogRobot/ros2_ws/install/add_integers/bin'
+[11.371s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(add_integers)
+[11.374s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/add_integers/share/add_integers/package.ps1'
+[11.377s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/DATA/DogRobot/ros2_ws/install/add_integers/share/add_integers/package.dsv'
+[11.384s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/add_integers/share/add_integers/package.sh'
+[11.387s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/add_integers/share/add_integers/package.bash'
+[11.390s] INFO:colcon.colcon_core.shell:Creating package script '/home/DATA/DogRobot/ros2_ws/install/add_integers/share/add_integers/package.zsh'
+[11.394s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/DATA/DogRobot/ros2_ws/install/add_integers/share/colcon-core/packages/add_integers)
+[11.398s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[11.408s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[11.409s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[11.409s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[11.447s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[11.449s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[11.449s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[11.551s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[11.552s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/DATA/DogRobot/ros2_ws/install/local_setup.ps1'
+[11.564s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/DATA/DogRobot/ros2_ws/install/_local_setup_util_ps1.py'
+[11.585s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/DATA/DogRobot/ros2_ws/install/setup.ps1'
+[11.595s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/DATA/DogRobot/ros2_ws/install/local_setup.sh'
+[11.599s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/DATA/DogRobot/ros2_ws/install/_local_setup_util_sh.py'
+[11.602s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/DATA/DogRobot/ros2_ws/install/setup.sh'
+[11.607s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/DATA/DogRobot/ros2_ws/install/local_setup.bash'
+[11.611s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/DATA/DogRobot/ros2_ws/install/setup.bash'
+[11.618s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/DATA/DogRobot/ros2_ws/install/local_setup.zsh'
+[11.620s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/DATA/DogRobot/ros2_ws/install/setup.zsh'

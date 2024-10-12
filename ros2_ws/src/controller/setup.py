@@ -20,9 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "talker = controller.publisher:main",
-            "listener = controller.subcriber:main"
-            "joy = controller.joy:main"
+            
         ],
     },
 )
