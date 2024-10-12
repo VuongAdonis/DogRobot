@@ -1,0 +1,105 @@
+[0.000000] (-) TimerEvent: {}
+[0.006661] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.008235] (controller) JobStarted: {'identifier': 'controller'}
+[0.100171] (-) TimerEvent: {}
+[0.200740] (-) TimerEvent: {}
+[0.301880] (-) TimerEvent: {}
+[0.402321] (-) TimerEvent: {}
+[0.503834] (-) TimerEvent: {}
+[0.604490] (-) TimerEvent: {}
+[0.707397] (-) TimerEvent: {}
+[0.808013] (-) TimerEvent: {}
+[0.916771] (-) TimerEvent: {}
+[1.017631] (-) TimerEvent: {}
+[1.119843] (-) TimerEvent: {}
+[1.222527] (-) TimerEvent: {}
+[1.325828] (-) TimerEvent: {}
+[1.428830] (-) TimerEvent: {}
+[1.533778] (-) TimerEvent: {}
+[1.634088] (-) TimerEvent: {}
+[1.735714] (-) TimerEvent: {}
+[1.838721] (-) TimerEvent: {}
+[1.943272] (-) TimerEvent: {}
+[2.054852] (-) TimerEvent: {}
+[2.162321] (-) TimerEvent: {}
+[2.268914] (-) TimerEvent: {}
+[2.371633] (-) TimerEvent: {}
+[2.481089] (-) TimerEvent: {}
+[2.601482] (-) TimerEvent: {}
+[2.701964] (-) TimerEvent: {}
+[2.809729] (-) TimerEvent: {}
+[2.956285] (-) TimerEvent: {}
+[3.059026] (-) TimerEvent: {}
+[3.160615] (-) TimerEvent: {}
+[3.261032] (-) TimerEvent: {}
+[3.363030] (-) TimerEvent: {}
+[3.471199] (-) TimerEvent: {}
+[3.581599] (-) TimerEvent: {}
+[3.682588] (-) TimerEvent: {}
+[3.786830] (-) TimerEvent: {}
+[3.887451] (-) TimerEvent: {}
+[3.989578] (-) TimerEvent: {}
+[4.007177] (controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/vuong/Project/ROS2/ros2_ws/build/controller/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/home/vuong/Project/ROS2/ros2_ws/build/controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'vuong', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/vuong', 'OLDPWD': '/home/vuong/Project/ROS2/ros2_ws/install', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3192', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/vuong/Project/ROS2/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'vuong', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'vuong', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/vuong-VMware-Virtual-Platform:@/tmp/.ICE-unix/3013,unix/vuong-VMware-Virtual-Platform:/tmp/.ICE-unix/3013', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c0f8eedd_1300_4a8c_8161_509ea958aed5', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.4SH4U2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.449', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/vuong/Project/ROS2/ros2_ws/install/controller:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/vuong/Project/ROS2/ros2_ws/build/controller', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vuong/Project/ROS2/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages:/home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[4.091632] (-) TimerEvent: {}
+[4.192354] (-) TimerEvent: {}
+[4.297556] (-) TimerEvent: {}
+[4.398093] (-) TimerEvent: {}
+[4.498782] (-) TimerEvent: {}
+[4.599292] (-) TimerEvent: {}
+[4.703631] (-) TimerEvent: {}
+[4.805609] (-) TimerEvent: {}
+[4.907738] (-) TimerEvent: {}
+[5.008779] (-) TimerEvent: {}
+[5.109757] (-) TimerEvent: {}
+[5.212697] (-) TimerEvent: {}
+[5.314190] (-) TimerEvent: {}
+[5.423032] (-) TimerEvent: {}
+[5.530219] (-) TimerEvent: {}
+[5.630788] (-) TimerEvent: {}
+[5.731082] (-) TimerEvent: {}
+[5.817394] (controller) StdoutLine: {'line': b'running develop\n'}
+[5.822522] (controller) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.\n'}
+[5.830696] (controller) StderrLine: {'line': b'!!\n'}
+[5.831043] (controller) StderrLine: {'line': b'\n'}
+[5.831135] (-) TimerEvent: {}
+[5.834535] (controller) StderrLine: {'line': b'        ********************************************************************************\n'}
+[5.834769] (controller) StderrLine: {'line': b'        Please avoid running ``setup.py`` and ``easy_install``.\n'}
+[5.834865] (controller) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[5.835190] (controller) StderrLine: {'line': b'        standards-based tools.\n'}
+[5.835327] (controller) StderrLine: {'line': b'\n'}
+[5.844375] (controller) StderrLine: {'line': b'        See https://github.com/pypa/setuptools/issues/917 for details.\n'}
+[5.844746] (controller) StderrLine: {'line': b'        ********************************************************************************\n'}
+[5.844849] (controller) StderrLine: {'line': b'\n'}
+[5.844938] (controller) StderrLine: {'line': b'!!\n'}
+[5.845027] (controller) StderrLine: {'line': b'  easy_install.initialize_options(self)\n'}
+[5.934571] (-) TimerEvent: {}
+[6.037534] (-) TimerEvent: {}
+[6.138071] (-) TimerEvent: {}
+[6.239952] (-) TimerEvent: {}
+[6.348047] (-) TimerEvent: {}
+[6.452894] (-) TimerEvent: {}
+[6.553509] (-) TimerEvent: {}
+[6.655429] (-) TimerEvent: {}
+[6.756206] (-) TimerEvent: {}
+[6.819845] (controller) StdoutLine: {'line': b'running egg_info\n'}
+[6.820011] (controller) StdoutLine: {'line': b'writing controller.egg-info/PKG-INFO\n'}
+[6.820086] (controller) StdoutLine: {'line': b'writing dependency_links to controller.egg-info/dependency_links.txt\n'}
+[6.821553] (controller) StdoutLine: {'line': b'writing entry points to controller.egg-info/entry_points.txt\n'}
+[6.821782] (controller) StdoutLine: {'line': b'writing requirements to controller.egg-info/requires.txt\n'}
+[6.825349] (controller) StdoutLine: {'line': b'writing top-level names to controller.egg-info/top_level.txt\n'}
+[6.856342] (-) TimerEvent: {}
+[6.899054] (controller) StdoutLine: {'line': b"reading manifest file 'controller.egg-info/SOURCES.txt'\n"}
+[6.900737] (controller) StdoutLine: {'line': b"writing manifest file 'controller.egg-info/SOURCES.txt'\n"}
+[6.929121] (controller) StdoutLine: {'line': b'running build_ext\n'}
+[6.930408] (controller) StdoutLine: {'line': b'Creating /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller.egg-link (link to .)\n'}
+[6.931756] (controller) StdoutLine: {'line': b'Installing test_node script to /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/controller\n'}
+[6.932826] (controller) StdoutLine: {'line': b'\n'}
+[6.933724] (controller) StdoutLine: {'line': b'Installed /home/vuong/Project/ROS2/ros2_ws/build/controller\n'}
+[6.933901] (controller) StdoutLine: {'line': b'running symlink_data\n'}
+[6.936335] (controller) StdoutLine: {'line': b'symbolically linking /home/vuong/Project/ROS2/ros2_ws/build/controller/resource/controller -> /home/vuong/Project/ROS2/ros2_ws/install/controller/share/ament_index/resource_index/packages\n'}
+[6.936977] (controller) StdoutLine: {'line': b'symbolically linking /home/vuong/Project/ROS2/ros2_ws/build/controller/package.xml -> /home/vuong/Project/ROS2/ros2_ws/install/controller/share/controller\n'}
+[6.958639] (-) TimerEvent: {}
+[7.026829] (controller) CommandEnded: {'returncode': 0}
+[7.056754] (-) TimerEvent: {}
+[7.067003] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[7.070199] (-) EventReactorShutdown: {}

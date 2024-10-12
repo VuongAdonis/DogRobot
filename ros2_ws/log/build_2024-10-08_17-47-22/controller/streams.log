@@ -1,0 +1,52 @@
+[1.653s] Invoking command in '/home/vuong/Project/ROS2/ros2_ws/build/controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vuong/Project/ROS2/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/vuong/Project/ROS2/ros2_ws/build/controller/build
+[2.012s] running develop
+[2.013s] /usr/lib/python3/dist-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[2.013s] !!
+[2.014s] 
+[2.014s]         ********************************************************************************
+[2.014s]         Please avoid running ``setup.py`` and ``easy_install``.
+[2.014s]         Instead, use pypa/build, pypa/installer or other
+[2.014s]         standards-based tools.
+[2.014s] 
+[2.014s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[2.015s]         ********************************************************************************
+[2.015s] 
+[2.015s] !!
+[2.015s]   easy_install.initialize_options(self)
+[2.265s] Removing /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller.egg-link (link to .)
+[2.322s] Invoked command in '/home/vuong/Project/ROS2/ros2_ws/build/controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vuong/Project/ROS2/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/vuong/Project/ROS2/ros2_ws/build/controller/build
+[2.325s] Invoking command in '/home/vuong/Project/ROS2/ros2_ws/src/controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vuong/Project/ROS2/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/vuong/Project/ROS2/ros2_ws/build/controller/build install --record /home/vuong/Project/ROS2/ros2_ws/build/controller/install.log --single-version-externally-managed install_data --force
+[2.702s] running egg_info
+[2.727s] writing ../../build/controller/controller.egg-info/PKG-INFO
+[2.728s] writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt
+[2.729s] writing entry points to ../../build/controller/controller.egg-info/entry_points.txt
+[2.729s] writing requirements to ../../build/controller/controller.egg-info/requires.txt
+[2.729s] writing top-level names to ../../build/controller/controller.egg-info/top_level.txt
+[2.779s] reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[2.780s] writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[2.781s] running build
+[2.781s] running build_py
+[2.781s] copying controller/can_controller.py -> /home/vuong/Project/ROS2/ros2_ws/build/controller/build/lib/controller
+[2.782s] copying controller/subcriber.py -> /home/vuong/Project/ROS2/ros2_ws/build/controller/build/lib/controller
+[2.783s] copying controller/publisher.py -> /home/vuong/Project/ROS2/ros2_ws/build/controller/build/lib/controller
+[2.783s] running install
+[2.790s] running install_lib
+[2.812s] creating /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[2.812s] copying /home/vuong/Project/ROS2/ros2_ws/build/controller/build/lib/controller/can_controller.py -> /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[2.812s] copying /home/vuong/Project/ROS2/ros2_ws/build/controller/build/lib/controller/__init__.py -> /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[2.813s] copying /home/vuong/Project/ROS2/ros2_ws/build/controller/build/lib/controller/subcriber.py -> /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[2.813s] copying /home/vuong/Project/ROS2/ros2_ws/build/controller/build/lib/controller/publisher.py -> /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[2.813s] byte-compiling /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller/can_controller.py to can_controller.cpython-312.pyc
+[2.814s] byte-compiling /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller/__init__.py to __init__.cpython-312.pyc
+[2.815s] byte-compiling /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller/subcriber.py to subcriber.cpython-312.pyc
+[2.816s] byte-compiling /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller/publisher.py to publisher.cpython-312.pyc
+[2.817s] running install_data
+[2.818s] copying resource/controller -> /home/vuong/Project/ROS2/ros2_ws/install/controller/share/ament_index/resource_index/packages
+[2.818s] copying package.xml -> /home/vuong/Project/ROS2/ros2_ws/install/controller/share/controller
+[2.820s] running install_egg_info
+[2.846s] Copying ../../build/controller/controller.egg-info to /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info
+[2.849s] running install_scripts
+[3.003s] Installing listener script to /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/controller
+[3.004s] Installing talker script to /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/controller
+[3.005s] writing list of installed files to '/home/vuong/Project/ROS2/ros2_ws/build/controller/install.log'
+[3.051s] Invoked command in '/home/vuong/Project/ROS2/ros2_ws/src/controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vuong/Project/ROS2/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/vuong/Project/ROS2/ros2_ws/build/controller/build install --record /home/vuong/Project/ROS2/ros2_ws/build/controller/install.log --single-version-externally-managed install_data --force

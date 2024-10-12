@@ -1,0 +1,30 @@
+[1.804s] Invoking command in '/home/vuong/Project/ROS2/ros2_ws/build/controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vuong/Project/ROS2/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/vuong/Project/ROS2/ros2_ws/build/controller/build --no-deps symlink_data
+[2.564s] running develop
+[2.565s] /usr/lib/python3/dist-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[2.565s] !!
+[2.565s] 
+[2.566s]         ********************************************************************************
+[2.566s]         Please avoid running ``setup.py`` and ``easy_install``.
+[2.566s]         Instead, use pypa/build, pypa/installer or other
+[2.566s]         standards-based tools.
+[2.566s] 
+[2.570s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[2.570s]         ********************************************************************************
+[2.570s] 
+[2.570s] !!
+[2.571s]   easy_install.initialize_options(self)
+[2.877s] running egg_info
+[2.902s] writing controller.egg-info/PKG-INFO
+[2.904s] writing dependency_links to controller.egg-info/dependency_links.txt
+[2.905s] writing entry points to controller.egg-info/entry_points.txt
+[2.906s] writing requirements to controller.egg-info/requires.txt
+[2.907s] writing top-level names to controller.egg-info/top_level.txt
+[2.958s] reading manifest file 'controller.egg-info/SOURCES.txt'
+[2.960s] writing manifest file 'controller.egg-info/SOURCES.txt'
+[2.984s] running build_ext
+[2.986s] Creating /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages/controller.egg-link (link to .)
+[2.988s] Installing test_node script to /home/vuong/Project/ROS2/ros2_ws/install/controller/lib/controller
+[2.988s] 
+[2.988s] Installed /home/vuong/Project/ROS2/ros2_ws/build/controller
+[2.988s] running symlink_data
+[3.026s] Invoked command in '/home/vuong/Project/ROS2/ros2_ws/build/controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vuong/Project/ROS2/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vuong/Project/ROS2/ros2_ws/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/vuong/Project/ROS2/ros2_ws/build/controller/build --no-deps symlink_data
