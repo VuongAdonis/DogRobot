@@ -1,0 +1,19 @@
+[3.564s] Invoking command in '/home/DATA/DogRobot/ros2_ws/src/controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/DATA/DogRobot/ros2_ws/build/controller/build install --record /home/DATA/DogRobot/ros2_ws/build/controller/install.log --single-version-externally-managed install_data
+[4.058s] running egg_info
+[4.095s] writing ../../build/controller/controller.egg-info/PKG-INFO
+[4.096s] writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt
+[4.096s] writing requirements to ../../build/controller/controller.egg-info/requires.txt
+[4.096s] writing top-level names to ../../build/controller/controller.egg-info/top_level.txt
+[4.152s] reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[4.152s] writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[4.153s] running build
+[4.153s] running build_py
+[4.153s] running install
+[4.161s] running install_lib
+[4.190s] running install_data
+[4.190s] running install_egg_info
+[4.227s] removing '/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info' (and everything under it)
+[4.228s] Copying ../../build/controller/controller.egg-info to /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info
+[4.229s] running install_scripts
+[4.459s] writing list of installed files to '/home/DATA/DogRobot/ros2_ws/build/controller/install.log'
+[4.572s] Invoked command in '/home/DATA/DogRobot/ros2_ws/src/controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/DATA/DogRobot/ros2_ws/build/controller/build install --record /home/DATA/DogRobot/ros2_ws/build/controller/install.log --single-version-externally-managed install_data
