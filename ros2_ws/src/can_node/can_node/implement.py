@@ -1,7 +1,7 @@
 # * File: implement.py
 # * Author: ROBOT_DOG_TEAM
 # * Creation Date: September 30, 2024
-# * Last Modified: October 14, 2024
+# * Last Modified: October 15, 2024
 # * Description: this file to calculate forward and backward kinematic of ROBOT
 # * Status: developing (Done, brainStorm, developing)
 
@@ -67,18 +67,12 @@ class leg(Enum):
   RL                  = 4
 #-------------------------------------------------------------------------------------
 
-#-------------------------------------------------------------------------------------
-# Class OdriveID:
-
-class OdriveID():
-  pass
-#-------------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------------
-# Class informDH: gathering the a, alpha, d, theta value
+# Class informDH: gathering the a, alpha, d, theta value between joint(i-1) and joint(i)
 # Parameters:
 #    the description of all parameters are listed in D-H table
-class informDHEachJoint:
+class DHInform:
   def __init__(self, a, alpha, d, theta = 0):
     # assign values into a(i), alpha(i), d(i), theta(i)
     self.a          = a
@@ -89,9 +83,9 @@ class informDHEachJoint:
 
 
 #-------------------------------------------------------------------------------------  
-# Class coordinatePoint: collect X, Y, Z coordinate of each point in space
+# Class coordinatePoint: collect X, Y, Z self.endEffector of each point in space
 # Parameters:
-#     - X, Y, Z value is the coordinate of corresponding z, y, z axis 
+#     - X, Y, Z value is the self.endEffector of corresponding z, y, z axis 
 class coordinatePoint:
   def __init__(self, X, Y, Z):
     self.X= X
@@ -99,70 +93,45 @@ class coordinatePoint:
     self.Z= Z
   
   def getCoordinate(self):
-    coordinate= np.array([self.X, self.Y, self.Z, 1]).reshape(4, -1)
-    return coordinate
+    self.endEffector= np.array([self.X, self.Y, self.Z, 1]).reshape(4, -1)
+    return self.endEffector
 #-------------------------------------------------------------------------------------
-
-
-#-------------------------------------------------------------------------------------  
-# Class trajectory: define several points to particular leg moves with desired trajectory
-# Parameters: all parameters have the same unit (mm)
-#    - XOriginal: the X value on x axis of global coordinate
-#    - YOriginal: the Y value on y axis of global coordinate
-#    - ZOriginal: the Z value on z axis of global coordinate
-#    - deviation: the value to represent the distance between 2 points in stance phase (<= 50mm)
-class trajectoryLeg:
-  def __init__(self, XOriginal, YOriginal, ZOriginal, deviation):
-    # deviation is about 35mm
-    self.coordinatePoint1 = coordinatePoint(XOriginal, YOriginal, ZOriginal + 3*deviation)
-    self.coordinatePoint2 = coordinatePoint(XOriginal, YOriginal, ZOriginal + 2*deviation)
-    self.coordinatePoint3 = coordinatePoint(XOriginal, YOriginal, ZOriginal + deviation)
-    self.coordinatePoint4 = coordinatePoint(XOriginal, YOriginal, ZOriginal)
-    self.coordinatePoint5 = coordinatePoint(XOriginal, YOriginal, ZOriginal - deviation)
-    self.coordinatePoint6 = coordinatePoint(XOriginal, YOriginal, ZOriginal - 2*deviation)
-    self.coordinatePoint7 = coordinatePoint(XOriginal, YOriginal, ZOriginal - 3*deviation)
-    self.coordinatePoint8 = coordinatePoint(XOriginal+ 45, YOriginal, ZOriginal)
-    
-    
-  # def updateGlobalCoordinate(self):
-#-------------------------------------------------------------------------------------
-
   
 
-# declare and define the object to convert global coordinate to local coordinate for 4 leg of robot
+# declare and define the object to convert global self.endEffector to local self.endEffector for 4 leg of robot
 homoMatrixObject = homoMatrix()
 
 # declare and define the object to convert angle of three-joint of each leg to corresponding position
 positionObject = position()
   
 #-------------------------------------------------------------------------------------
-# Class kinematicRobot: the function of this class to calculate value about 
-#                        the kinematicRobot
+# Class kinematicEachLeg: the function of this class to calculate value about 
+#                        the kinematicEachLeg
 # Parameters:
 #    - joint0, joint1, joint2 are the object of informDHEachJoint class of 
 #                         corresponding joint0, joint1, joint2 of each leg 
-class kinematicRobot:
-  
-  def __init__(self, joint0, joint1, joint2, legType):
-    self.joint0           = joint0
-    self.joint1           = joint1
-    self.joint2           = joint2
-    self.legType          = legType
+class kinematicEachLeg:
+  def __init__(self, row1DHTable, row2DHTable, row3DHTable, globalCoordinateEndEffector, legType):
+    self.row1DHTable           = row1DHTable
+    self.row2DHTable           = row2DHTable
+    self.row3DHTable           = row3DHTable
+    self.legType               = legType
+    self.endEffector           = globalCoordinateEndEffector
     
-  def createMatrixT(self, joint):
-    matrixT    = np.array([[cos(joint.theta), -sin(joint.theta)*cos(joint.alpha), sin(joint.theta)*sin(joint.alpha), joint.a*cos(joint.theta)],
-                            [sin(joint.theta), cos(joint.theta)*cos(joint.alpha), -cos(joint.theta)*sin(joint.alpha), joint.a*sin(joint.theta)],
-                            [0, sin(joint.alpha), cos(joint.alpha), joint.d],
+  def createMatrixT(self, row_I_DHTable):
+    matrixT    = np.array([[cos(row_I_DHTable.theta), -sin(row_I_DHTable.theta)*cos(row_I_DHTable.alpha), sin(row_I_DHTable.theta)*sin(row_I_DHTable.alpha), row_I_DHTable.a*cos(row_I_DHTable.theta)],
+                            [sin(row_I_DHTable.theta), cos(row_I_DHTable.theta)*cos(row_I_DHTable.alpha), -cos(row_I_DHTable.theta)*sin(row_I_DHTable.alpha), row_I_DHTable.a*sin(row_I_DHTable.theta)],
+                            [0, sin(row_I_DHTable.alpha), cos(row_I_DHTable.alpha), row_I_DHTable.d],
                             [0, 0, 0, 1]], dtype= np.float32)
     return matrixT
 
   def forwardKinematic(self, theta0, theta1, theta2):
-    self.joint0.theta         = theta0
-    self.joint1.theta         = theta1
-    self.joint2.theta         = theta2
-    matrixT01                 = self.createMatrixT(self.joint0)
-    matrixT12                 = self.createMatrixT(self.joint1)
-    matrixT23                 = self.createMatrixT(self.joint2)
+    self.row1DHTable.theta         = theta0
+    self.row2DHTable.theta         = theta1
+    self.row3DHTable.theta         = theta2
+    matrixT01                 = self.createMatrixT(self.row1DHTable)
+    matrixT12                 = self.createMatrixT(self.row2DHTable)
+    matrixT23                 = self.createMatrixT(self.row3DHTable)
     matrixT03                 = (matrixT01.dot(matrixT12)).dot(matrixT23)
     XEnd_effector             = matrixT03[0, 3]
     YEnd_effector             = matrixT03[1, 3]
@@ -250,15 +219,14 @@ class kinematicRobot:
   def backwardKinematic(self, globalCoordinate):
     pairPositionJoint012 = list()
     
-    # convert global coordinate to local coordinate
+    # convert global self.endEffector to local self.endEffector
     localCoordinate = homoMatrixObject.convertGlobal2LocalCoordinate(globalCoordinate, self.legType)
-    print("Local: ", localCoordinate.reshape(-1, 4))
     
     # check the localCoordinate is valid or not
     if localCoordinate is None:
       return pairPositionJoint012
     
-    # assign the local coordinate into X, Y, Z
+    # assign the local self.endEffector into X, Y, Z
     X, Y, Z= localCoordinate[0][0], localCoordinate[1][0], localCoordinate[2][0]
     
     #----------------------Determine the value of theta2 of JOINT2---------------------------
@@ -275,69 +243,96 @@ class kinematicRobot:
         for joint0ThetaTemp in joint0ThetaTempList:
           XPredict, YPredict, ZPredict= self.forwardKinematic(joint0ThetaTemp, joint1ThetaTemp, joint2ThetaTemp)
           if (XPredict- X)**2 + (YPredict- Y)**2 + (ZPredict -Z)**2 < 0.001:
-            # joint0Position= convertAngle2PositionJoint0(joint0ThetaTemp)
-            # joint1Position= convertAngle2PositionJoint1(joint1ThetaTemp)
-            # joint2Position= convertAngle2PositionJoint2(joint2ThetaTemp)
-            # pairPositionJoint012.append([joint0Position, joint1Position, joint2Position])
-            pairPositionJoint012.append([joint0ThetaTemp, joint1ThetaTemp, joint2ThetaTemp])
-            # joint0Pos, joint1Pos, joint2Pos= self.positionObject.convertAngle2Position(joint0ThetaTemp, joint1ThetaTemp, joint2ThetaTemp, self.legType)
-            
+            angleJointList = [joint0ThetaTemp, joint1ThetaTemp, joint2ThetaTemp]
+            posJointList   = positionObject.convertAngle2Position(angleJointList, self.legType)
+            pairPositionJoint012 = posJointList
     #-----------------------------------------------------------------------------------------
     return pairPositionJoint012
+      
+  def updateTrajectoryLeg(self, deviation, angleVector= 0):
+    coordinatePoint1 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z + 3*deviation)
+    coordinatePoint2 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z + 2*deviation)
+    coordinatePoint3 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z +   deviation)
+    coordinatePoint4 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z              )
+    coordinatePoint5 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z -   deviation)
+    coordinatePoint6 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z - 2*deviation)
+    coordinatePoint7 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z - 3*deviation)
+    coordinatePoint8 = coordinatePoint(self.endEffector.X+ 45,  self.endEffector.Y, self.endEffector.Z              )
     
-    #   print(actualPairJoint012)
-    #   joint0PositionCurrent = convertAngle2PositionJoint0(actualPairJoint012[0][0])
-    #   joint1PositionCurrent = convertAngle2PositionJoint1(actualPairJoint012[0][1])
-    #   joint2PositionCurrent = convertAngle2PositionJoint2(actualPairJoint012[0][2])
-    #   print("positionJoint0: ", joint0PositionCurrent)
-    #   print("positionJoint1: ", joint1PositionCurrent)
-    #   print("positionJoint2: ", joint2PositionCurrent)
-
+    self.posPnt1 = self.backwardKinematic(coordinatePoint1.getCoordinate())
+    self.posPnt2 = self.backwardKinematic(coordinatePoint2.getCoordinate())
+    self.posPnt3 = self.backwardKinematic(coordinatePoint3.getCoordinate())
+    self.posPnt4 = self.backwardKinematic(coordinatePoint4.getCoordinate())
+    self.posPnt5 = self.backwardKinematic(coordinatePoint5.getCoordinate())
+    self.posPnt6 = self.backwardKinematic(coordinatePoint6.getCoordinate())
+    self.posPnt7 = self.backwardKinematic(coordinatePoint7.getCoordinate())
+    self.posPnt8 = self.backwardKinematic(coordinatePoint8.getCoordinate())
+    
+    
+    
+class quadrupedRobot:
+  def __init__(self, legRR, legRL, legFR, legFL):
+    self.legRR  = legRR
+    self.legRL  = legRL
+    self.legFR  = legFR
+    self.legFL  = legFL
+    
+  def updateTrajectoryAllLegs(self):
+    self.legRR.updateTrajectoryLeg(deviation = 35, angleVector = 0)
+    # self.legRL.updateTrajectoryLeg(deviation = 35, angleVector = 0)
+    # self.legFR.updateTrajectoryLeg(deviation = 35, angleVector = 0)
+    # self.legFL.updateTrajectoryLeg(deviation = 35, angleVector = 0)
+    
+  def out(self):
+    print(self.legRR.posPnt8)
+    
+  def getAllPointsOfTrajectory(self):
+    allPoints = list()
+    allPoints.append(self.legRR.posPnt1)
+    allPoints.append(self.legRR.posPnt2)
+    allPoints.append(self.legRR.posPnt3)
+    allPoints.append(self.legRR.posPnt4)
+    allPoints.append(self.legRR.posPnt5)
+    allPoints.append(self.legRR.posPnt6)
+    allPoints.append(self.legRR.posPnt7)
+    allPoints.append(self.legRR.posPnt8)
+    return allPoints
+    
+    
+    
+  
+    
 def main():
-  # initialize three joints Object, each joint has three data fields a, alpha, d
-  joint0Object        = informDHEachJoint(0,                    pi/2, distance.L1.value)
-  joint1Object        = informDHEachJoint(distance.L2.value,    0,    distance.L4.value)
-  joint2Object        = informDHEachJoint(distance.L3.value,    0,    0)
+  # initialize DH table of each leg of quadruped robot
+  row1DHTable             = DHInform(0,                    pi/2, distance.L1.value)
+  row2DHTable             = DHInform(distance.L2.value,    0,    distance.L4.value)
+  row3DHTable             = DHInform(distance.L3.value,    0,    0)
   
-  
-  # the value to move up and down from -(L2+ L3) to -L2
-  # lower = -(L2 + L3)
-  # X = [lower, lower+ 20, lower+ 40, lower+ 80, lower+ 100, lower+ 120, lower+ 140, lower+ 160, lower+ 180, lower+ 200]
-  # Y= -L4
-  # Z= L1
-  
-  # declare the coordinate of each leg of robot on original coordinate
+  # declare the self.endEffector of end_effector of each leg of robot in global self.endEffector
   globalCoordinateFL = coordinatePoint(-350, 161.12, -187)    # check oke
   globalCoordinateFR = coordinatePoint(-350, -161.12, -187)   # check oke
   globalCoordinateRL = coordinatePoint(-350, 161.12, 187)     # check oke
   globalCoordinateRR = coordinatePoint(-350, -161.12, 187)    # check oke
   
   # declare the object of each leg of robot
-  FLObject = kinematicRobot(joint0Object, joint1Object, joint2Object, leg.FL.value)
-  RRObject = kinematicRobot(joint0Object, joint1Object, joint2Object, leg.RR.value)
-  RLObject = kinematicRobot(joint0Object, joint1Object, joint2Object, leg.RL.value)
-  FRObject = kinematicRobot(joint0Object, joint1Object, joint2Object, leg.FR.value)
-
-  # declare the object for CAN communication
-  canObject = CanNode()
-  canObject.sendClosedLoop(1)
+  legFL = kinematicEachLeg(row1DHTable, row2DHTable, row3DHTable, globalCoordinateFL, leg.FL.value)
+  legRR = kinematicEachLeg(row1DHTable, row2DHTable, row3DHTable, globalCoordinateRR, leg.RR.value)
+  legRL = kinematicEachLeg(row1DHTable, row2DHTable, row3DHTable, globalCoordinateRL, leg.RL.value)
+  legFR = kinematicEachLeg(row1DHTable, row2DHTable, row3DHTable, globalCoordinateFR, leg.FR.value)
   
-  # print angle of each leg, which includes angle of joint0, joint1 and joint2 of quadruped robot
-  # print("AngleFL: ", FLObject.backwardKinematic(globalCoordinateFL.getCoordinate()))
-  # print("AngleRR: ", RRObject.backwardKinematic(globalCoordinateRR.getCoordinate()))
-  # print("AngleRL: ", FRObject.backwardKinematic(globalCoordinateRL.getCoordinate()))
-  # print("AngleFR: ", FRObject.backwardKinematic(globalCoordinateFR.getCoordinate()))
-  trajectoryLegFL = trajectoryLeg(globalCoordinateFL.X, globalCoordinateFL.Y, globalCoordinateFL.Z, 35)
+  # define the quadruped robot
+  dogRobotHK241 = quadrupedRobot(legRR, legRL, legFR, legFL)
+  dogRobotHK241.updateTrajectoryAllLegs()
   
-  point1 = FLObject.backwardKinematic(trajectoryLegFL.coordinatePoint1.getCoordinate())
-  point2 = FLObject.backwardKinematic(trajectoryLegFL.coordinatePoint8.getCoordinate())
-  point3 = FLObject.backwardKinematic(trajectoryLegFL.coordinatePoint7.getCoordinate())
-  point4 = FLObject.backwardKinematic(trajectoryLegFL.coordinatePoint6.getCoordinate())
-  point5 = FLObject.backwardKinematic(trajectoryLegFL.coordinatePoint5.getCoordinate())
-  point6 = FLObject.backwardKinematic(trajectoryLegFL.coordinatePoint4.getCoordinate())
-  point6 = FLObject.backwardKinematic(trajectoryLegFL.coordinatePoint3.getCoordinate())
-  point7 = FLObject.backwardKinematic(trajectoryLegFL.coordinatePoint2.getCoordinate())
-  point8 = FLObject.backwardKinematic(trajectoryLegFL.coordinatePoint1.getCoordinate())
+  trajectoryLegRR = dogRobotHK241.getAllPointsOfTrajectory()
+  
+  # setup ID for each ODrive on CAN network
+  ODriveID = [0x01, 0x02, 0x03]
+  
+  # declare the CAN protocol
+  CAN = CanNode()
+  CAN.sendPositionContinuously(ODriveID, trajectoryLegRR)
+  
 
 
 if __name__ == "__main__":

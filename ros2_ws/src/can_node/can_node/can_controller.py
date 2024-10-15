@@ -101,7 +101,7 @@ class CanNode():
             else:
                 print("No respond from ODrive.")
     
-    def sendPositionContinously(self, id, point):
+    def sendPositionContinuously(self, id, point):
         try:
             i = 3
             while True:
