@@ -27,7 +27,7 @@ class CanNode():
         print("Message sent state IDLE on {}".format(self.bus.channel_info))
 
     # The function convert from Float to Hex 
-    def convertFloatToHex(num:float):
+    def convertFloatToHex(self, num:float):
         packed = struct.pack('<f', num)  # Pack as a little-endian float
         hexValue = packed.hex()
         byteArray = [hexValue[i:i+2] for i in range(0, len(hexValue), 2)]
@@ -101,7 +101,7 @@ class CanNode():
             else:
                 print("No respond from ODrive.")
     
-    def sendPositionContinously(self, id, point):
+    def sendPositionContinuously(self, id, point):
         try:
             i = 3
             while True:
@@ -121,43 +121,24 @@ class CanNode():
 
 # def main(args=None):
 #     # bus = initialCAN()
-#     bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
+#     # bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
+#     robotDogHk241 = CanNode()
 #     try:
-#         sendClosedLoop(bus, 1)
-#         time.sleep(2)
-#         sendPos(bus, 1, 2)
-#         time.sleep(10)
-#         count = 0
-#         checkCompleted = True
-#         timeStart = time.time()
-#         timeEnd = time.time()
-#         while True:
-#             timeEnd = time.time()
-#             if timeEnd - timeStart >= 60:
-#                 break
-#             MotorPos = sendGetEncoderEstimate(bus, 1)
-            
-#             if MotorPos > 1.99 and MotorPos < 2.1 and checkCompleted == True:
-#                 print("Move the motor to the position 2 completed")
-#                 sendPos(bus, 1, 0)
-#                 checkCompleted = False
-#                 count+=1
-#             if MotorPos < 0.1 and MotorPos > -0.1 and checkCompleted == False:
-#                 print("Move the motor to the position 0 completed")
-#                 sendPos(bus, 1, 2)
-#                 checkCompleted = True
-#                 count+=1
-#             if count >=5:
-#                 break
-#             time.sleep(1)
-#         sendIdle(bus, 1)
+#         robotDogHk241.sendClosedLoop(1)
+#         robotDogHk241.sendClosedLoop(2)
 #         time.sleep(5)
+#         robotDogHk241.sendPos(1, 0.35)
+#         # robotDogHk241.sendPos(2, )
+#         time.sleep(5)
+#         robotDogHk241.sendIdle(1)
+#         robotDogHk241.sendIdle(2)
+        
 #     except can.CanError:
 #         print("Message NOT sent")
 
 #     finally:
 #         # Đảm bảo việc tắt bus đúng cách
-#         bus.shutdown()  # Hoặc sử dụng 'bus.close()' nếu có phương thức này
+#         robotDogHk241.bus.shutdown()  # Hoặc sử dụng 'bus.close()' nếu có phương thức này
 
 #         print("SLCAN bus has been turned off properly.")
 
