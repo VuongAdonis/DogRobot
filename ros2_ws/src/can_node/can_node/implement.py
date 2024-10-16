@@ -37,6 +37,7 @@ from convertAngle2Position import position
 from convertCoordinate import homoMatrix
 from enum import Enum
 from can_controller import CanNode
+import time
 
 #-------------------------------------------------------------------------------------
 # Class distance: define the distance between several vectors
@@ -208,11 +209,11 @@ class kinematicEachLeg:
       return joint2ThetaTemp
     sinJoint2 = sqrt(1- cosJoint2**2)
     # the value of atan2 with (sin and cos is equal or greater than 0) is from 0 to pi/2
-    if atan2(sinJoint2, cosJoint2) <= pi/2:
-      if (self.legType == leg.RR.value) or (self.legType == leg.FR.value):
-        joint2ThetaTemp = [atan2(sinJoint2, cosJoint2)]
-      if (self.legType == leg.FL.value) or (self.legType == leg.RL.value):
-        joint2ThetaTemp = [-atan2(sinJoint2, cosJoint2)]
+    # if atan2(sinJoint2, cosJoint2) <= pi/2:
+    if (self.legType == leg.RR.value) or (self.legType == leg.FR.value):
+      joint2ThetaTemp = [atan2(sinJoint2, cosJoint2)]
+    if (self.legType == leg.FL.value) or (self.legType == leg.RL.value):
+      joint2ThetaTemp = [-atan2(sinJoint2, cosJoint2)]
       
     return joint2ThetaTemp
   
@@ -257,7 +258,7 @@ class kinematicEachLeg:
     coordinatePoint5 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z -   deviation)
     coordinatePoint6 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z - 2*deviation)
     coordinatePoint7 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z - 3*deviation)
-    coordinatePoint8 = coordinatePoint(self.endEffector.X+ 45,  self.endEffector.Y, self.endEffector.Z              )
+    coordinatePoint8 = coordinatePoint(self.endEffector.X+ 50,  self.endEffector.Y, self.endEffector.Z              )
     
     self.posPnt1 = self.backwardKinematic(coordinatePoint1.getCoordinate())
     self.posPnt2 = self.backwardKinematic(coordinatePoint2.getCoordinate())
@@ -272,31 +273,32 @@ class kinematicEachLeg:
     
 class quadrupedRobot:
   def __init__(self, legRR, legRL, legFR, legFL):
-    self.legRR  = legRR
-    self.legRL  = legRL
-    self.legFR  = legFR
-    self.legFL  = legFL
+
+    self.legList = [legFR, legFL, legRR, legRL]
+    self.trajectoryLeg = [0, 0, 0, 0]
     
   def updateTrajectoryAllLegs(self):
-    self.legRR.updateTrajectoryLeg(deviation = 35, angleVector = 0)
-    # self.legRL.updateTrajectoryLeg(deviation = 35, angleVector = 0)
-    # self.legFR.updateTrajectoryLeg(deviation = 35, angleVector = 0)
-    # self.legFL.updateTrajectoryLeg(deviation = 35, angleVector = 0)
     
+    for item in self.legList:
+      item.updateTrajectoryLeg(deviation = 35, angleVector =0)
+      self.assignTrajetory(item)
+
   def out(self):
     print(self.legRR.posPnt8)
     
-  def getAllPointsOfTrajectory(self):
+    
+  def assignTrajetory(self, itemLegList):
     allPoints = list()
-    allPoints.append(self.legRR.posPnt1)
-    allPoints.append(self.legRR.posPnt2)
-    allPoints.append(self.legRR.posPnt3)
-    allPoints.append(self.legRR.posPnt4)
-    allPoints.append(self.legRR.posPnt5)
-    allPoints.append(self.legRR.posPnt6)
-    allPoints.append(self.legRR.posPnt7)
-    allPoints.append(self.legRR.posPnt8)
-    return allPoints
+    allPoints.append(itemLegList.posPnt1)
+    allPoints.append(itemLegList.posPnt2)
+    allPoints.append(itemLegList.posPnt3)
+    allPoints.append(itemLegList.posPnt4)
+    allPoints.append(itemLegList.posPnt5)
+    allPoints.append(itemLegList.posPnt6)
+    allPoints.append(itemLegList.posPnt7)
+    allPoints.append(itemLegList.posPnt8)
+   
+    self.trajectoryLeg[itemLegList.legType - 1] = allPoints
     
     
     
@@ -309,12 +311,12 @@ def main():
   row3DHTable             = DHInform(distance.L3.value,    0,    0)
   
   # declare the self.endEffector of end_effector of each leg of robot in global self.endEffector
-  globalCoordinateFL = coordinatePoint(-350, 161.12, -187)    # check oke
-  globalCoordinateFR = coordinatePoint(-350, -161.12, -187)   # check oke
-  globalCoordinateRL = coordinatePoint(-350, 161.12, 187)     # check oke
-  globalCoordinateRR = coordinatePoint(-350, -161.12, 187)    # check oke
+  globalCoordinateFL = coordinatePoint(-330, 161.12, -187)    # check oke
+  globalCoordinateFR = coordinatePoint(-330, -161.12, -187)   # check oke
+  globalCoordinateRL = coordinatePoint(-330, 161.12, 187)     # check oke
+  globalCoordinateRR = coordinatePoint(-330, -161.12, 187)    # check oke
   
-  # declare the object of each leg of robot
+  # declare the object of each leg of robot``
   legFL = kinematicEachLeg(row1DHTable, row2DHTable, row3DHTable, globalCoordinateFL, leg.FL.value)
   legRR = kinematicEachLeg(row1DHTable, row2DHTable, row3DHTable, globalCoordinateRR, leg.RR.value)
   legRL = kinematicEachLeg(row1DHTable, row2DHTable, row3DHTable, globalCoordinateRL, leg.RL.value)
@@ -322,16 +324,72 @@ def main():
   
   # define the quadruped robot
   dogRobotHK241 = quadrupedRobot(legRR, legRL, legFR, legFL)
+
   dogRobotHK241.updateTrajectoryAllLegs()
-  
-  trajectoryLegRR = dogRobotHK241.getAllPointsOfTrajectory()
+
+  trajectoryFR = dogRobotHK241.trajectoryLeg[leg.FR.value -1]
+  trajectoryRR = dogRobotHK241.trajectoryLeg[leg.RR.value -1]
+
+  print("Position")
+  for item in trajectoryFR:
+    print(item)
   
   # setup ID for each ODrive on CAN network
   ODriveID = [0x01, 0x02, 0x03]
-  
+  # [-0.6, -2.5920281697767567, 0.7670972579325023]
+  # [-0.6, -2.5119967629737694, 0.8014408065937144]
+  # [-0.6, -2.399843324299733, 0.821382514970479]
+  # [-0.6, -2.2602877167442363, 0.8279376204134645]
+  # [-0.6, -2.097133729593992, 0.821382514970479]
+  # [-0.6, -1.9131901407636014, 0.8014408065937144]
+  # [-0.6, -1.7095219587802508, 0.7670972579325023]
+  # [-0.6, -2.514032801089388, 0.9689071117163267]
+  # for i in range(0, 8):
+  #   print("FR2: ", trajectoryFR[i][2])
+  #   print("FR1: ", trajectoryFR[i][1])
+  #   print("####")
+
   # declare the CAN protocol
   CAN = CanNode()
-  CAN.sendPositionContinuously(ODriveID, trajectoryLegRR)
+  CAN.sendClosedLoop(5)
+  time.sleep(1)
+  CAN.sendClosedLoop(4)
+  time.sleep(1)
+  CAN.sendClosedLoop(1)
+  time.sleep(1)
+  CAN.sendClosedLoop(2)
+  time.sleep(1)
+  try:
+    idxRR = 4
+    idxFR = 6
+    while True:
+      
+      CAN.sendPos(5, trajectoryFR[idxFR][2])
+      time.sleep(1)
+      CAN.sendPos(4, trajectoryFR[idxFR][1])
+      time.sleep(1)
+      CAN.sendPos(2, trajectoryRR[idxRR][1])
+      time.sleep(1)
+      CAN.sendPos(1, trajectoryRR[idxRR][2])
+      time.sleep(1)
+      idxRR -= 1
+      idxFR -= 1
+      if idxRR < 0:
+        idxRR = 7
+      if idxFR < 0:
+        idxFR = 7
+
+  except KeyboardInterrupt:
+    CAN.sendIdle(5)
+    time.sleep(1)
+    CAN.sendIdle(4)
+    time.sleep(1)
+    CAN.sendIdle(1)
+    time.sleep(1)
+    CAN.sendIdle(2)
+    time.sleep(1)
+    CAN.bus.shutdown()
+  # CAN.sendPositionContinuously(ODriveID, trajectoryLegRR)
   
 
 

@@ -29,13 +29,13 @@ class limitRR(Enum):
   joint0LowerLimit      =           -2.9
   joint0Middle          =           -0.6
 
-  joint1UpperLimit      =           1.9
-  joint1LowerLimit      =           -2.7
-  joint1Middle          =           -0.4
+  joint1UpperLimit      =           0
+  joint1LowerLimit      =           -2.5
+  joint1Middle          =           -1.4
 
-  joint2UpperLimit      =           1
-  joint2LowerLimit      =           -0.25
-  joint2Middle          =           0.375
+  joint2UpperLimit      =           1.2
+  joint2LowerLimit      =           -0.2
+  joint2Middle          =           0.5
   
 class limitRL(Enum):
   joint0Middle          =           -0.6
@@ -44,8 +44,12 @@ class limitRL(Enum):
   
 class limitFR(Enum):
   joint0Middle          =           -0.6
-  joint1Middle          =           -0.4
-  joint2Middle          =            0.375
+
+  joint1Middle          =           -1      
+
+  joint2Middle          =            0.25
+  joint2Lowerlimit      =           -0.4
+  joint2UpperLimit      =            0.8
 
 class limitFL(Enum):
   joint0Middle          =           -0.6
@@ -66,6 +70,17 @@ class position:
       if angle < 0:
         joint0PositionCurrent = limitRR.joint0Middle.value - abs(angle)*stepPerDegree.joint0.value
       return joint0PositionCurrent
+    
+    #  modify
+    if legType == leg.FR.value:
+      joint0PositionCurrent = limitRR.joint0Middle.value
+      if angle == 0:
+        joint0PositionCurrent = limitRR.joint0Middle.value
+      if angle > 0:
+        joint0PositionCurrent = limitRR.joint0Middle.value + abs(angle)*stepPerDegree.joint0.value
+      if angle < 0:
+        joint0PositionCurrent = limitRR.joint0Middle.value - abs(angle)*stepPerDegree.joint0.value
+      return joint0PositionCurrent
 
   def convertAngle2PositionJoint1(self, angle, legType):
     if legType == leg.RR.value:
@@ -74,7 +89,16 @@ class position:
         joint1PositionCurrent = limitRR.joint1Middle.value - abs(pi - angle)*stepPerDegree.joint1.value
       if angle < -pi/2:
         joint1PositionCurrent = limitRR.joint1Middle.value + abs(pi + angle)*stepPerDegree.joint1.value
+      return joint1PositionCurrent
     
+    if legType == leg.FR.value:
+      joint1PositionCurrent   = limitFR.joint1Middle.value
+      if angle == 0:
+        joint1PositionCurrent   = limitFR.joint1Middle.value
+      if angle > 0:
+        joint1PositionCurrent = limitFR.joint1Middle.value + abs(angle)*stepPerDegree.joint1.value
+      if angle < 0:
+        joint1PositionCurrent = limitFR.joint1Middle.value - abs(angle)*stepPerDegree.joint1.value
       return joint1PositionCurrent
     
   def convertAngle2PositionJoint2(self, angle, legType):
@@ -86,6 +110,16 @@ class position:
         joint2PositionCurrent = limitRR.joint2Middle.value - abs(angle)*stepPerDegree.joint2.value
       if angle > 0:
         joint2PositionCurrent = limitRR.joint2Middle.value + abs(angle)*stepPerDegree.joint2.value
+      return joint2PositionCurrent
+    
+    if legType == leg.FR.value:
+      joint2PositionCurrent = limitFR.joint2Middle.value
+      if angle == 0:
+        joint2PositionCurrent = limitFR.joint2Middle.value
+      if angle > 0:
+        joint2PositionCurrent = limitFR.joint2Middle.value + abs(angle)*stepPerDegree.joint2.value
+      if angle < 0:
+        joint2PositionCurrent = limitFR.joint2Middle.value - abs(angle)*stepPerDegree.joint2.value
       return joint2PositionCurrent
 
   def convertAngle2Position(self, angleLeg, legType):
