@@ -1,24 +1,34 @@
-# * File: convertCoordinate.py
+# * File: convertGlobal2LocalCoordinate.py
 # * Author: ROBOT_DOG_TEAM
 # * Creation Date: October 08, 2024
-# * Last Modified: October 08, 2024
+# * Last Modified: October 17, 2024
 # * Description: declare and define some matrixes to change the coordinate of original system to
-#    the coordinate corresponding of 4-leg of robot
-# * Status: developing (Done, brainStorm, developing)
+#    the coordinate corresponding of 4-leg of robot (local coordinate)
+# * Status: Done (Done, brainStorm, developing):
+#       - 
 
 # import necessary framework
 import numpy as np
 from math import cos, sin, pi
 from enum import Enum
 
-# define the type of leg
+#---------------------------------------------------------------------------------------------------------------------#
+# Class leg: declare the leg (enum) to distinguish 4-leg of quadruped robot
 class leg(Enum):
   FR                  = 1
   FL                  = 2
   RR                  = 3
   RL                  = 4
-  
+#---------------------------------------------------------------------------------------------------------------------#
+
+
+#---------------------------------------------------------------------------------------------------------------------#
+# Class's name:
+#   - homoMatrix 
+# Description:
+#   - Declare and define some functions to convert global coordinate to global coordinate for each leg in quadrupedRobot
 class homoMatrix:
+  
   def __init__(self):
     self.createHomoMatrixRR()
     self.createHomoMatrixRL()
@@ -76,4 +86,5 @@ class homoMatrix:
     if legType == leg.RL.value:
       localCoordinate = self.homoMatrixRL.dot(globalCoordinate)
     return localCoordinate
+#---------------------------------------------------------------------------------------------------------------------#
     
