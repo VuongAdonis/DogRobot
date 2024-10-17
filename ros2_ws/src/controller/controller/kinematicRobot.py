@@ -34,9 +34,14 @@
 import numpy as np
 from math import cos, sin, radians, pi, atan2, sqrt
 from enum import Enum
+<<<<<<< HEAD:ros2_ws/src/controller/controller/kinematicRobot.py
 from convertGlobal2LocalCoordinate import leg
 from convertAngle2Position import position
 from convertGlobal2LocalCoordinate import homoMatrix
+=======
+from can_controller import CanNode
+import time
+>>>>>>> 25c12bcfaf9e2b525bc5332f97404f0df5ee0f76:ros2_ws/src/can_node/can_node/implement.py
 
 
 #---------------------------------------------------------------------------------------------------------------------#
@@ -248,7 +253,11 @@ class kinematicEachLeg:
     coordinatePoint5 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z -   deviation)
     coordinatePoint6 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z - 2*deviation)
     coordinatePoint7 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z - 3*deviation)
+<<<<<<< HEAD:ros2_ws/src/controller/controller/kinematicRobot.py
     coordinatePoint8 = coordinatePoint(self.endEffector.X+ 50 ,  self.endEffector.Y, self.endEffector.Z              )
+=======
+    coordinatePoint8 = coordinatePoint(self.endEffector.X+ 50,  self.endEffector.Y, self.endEffector.Z              )
+>>>>>>> 25c12bcfaf9e2b525bc5332f97404f0df5ee0f76:ros2_ws/src/can_node/can_node/implement.py
     
     posPnt1 = self.backwardKinematic(coordinatePoint1.getCoordinate())
     posPnt2 = self.backwardKinematic(coordinatePoint2.getCoordinate())
@@ -259,6 +268,131 @@ class kinematicEachLeg:
     posPnt7 = self.backwardKinematic(coordinatePoint7.getCoordinate())
     posPnt8 = self.backwardKinematic(coordinatePoint8.getCoordinate())
     
+<<<<<<< HEAD:ros2_ws/src/controller/controller/kinematicRobot.py
     return [posPnt1, posPnt2, posPnt3, posPnt4, posPnt5, posPnt6, posPnt7, posPnt8]
 #---------------------------------------------------------------------------------------------------------------------#
+=======
+    
+    
+class quadrupedRobot:
+  def __init__(self, legRR, legRL, legFR, legFL):
+
+    self.legList = [legFR, legFL, legRR, legRL]
+    self.trajectoryLeg = [0, 0, 0, 0]
+    
+  def updateTrajectoryAllLegs(self):
+    
+    for item in self.legList:
+      item.updateTrajectoryLeg(deviation = 35, angleVector =0)
+      self.assignTrajetory(item)
+
+  def out(self):
+    print(self.legRR.posPnt8)
+    
+    
+  def assignTrajetory(self, itemLegList):
+    allPoints = list()
+    allPoints.append(itemLegList.posPnt1)
+    allPoints.append(itemLegList.posPnt2)
+    allPoints.append(itemLegList.posPnt3)
+    allPoints.append(itemLegList.posPnt4)
+    allPoints.append(itemLegList.posPnt5)
+    allPoints.append(itemLegList.posPnt6)
+    allPoints.append(itemLegList.posPnt7)
+    allPoints.append(itemLegList.posPnt8)
+   
+    self.trajectoryLeg[itemLegList.legType - 1] = allPoints
+    
+    
+    
+  
+    
+def main():
+  # initialize DH table of each leg of quadruped robot
+  row1DHTable             = DHInform(0,                    pi/2, distance.L1.value)
+  row2DHTable             = DHInform(distance.L2.value,    0,    distance.L4.value)
+  row3DHTable             = DHInform(distance.L3.value,    0,    0)
+  
+  # declare the self.endEffector of end_effector of each leg of robot in global self.endEffector
+  globalCoordinateFL = coordinatePoint(-330, 161.12, -187)    # check oke
+  globalCoordinateFR = coordinatePoint(-330, -161.12, -187)   # check oke
+  globalCoordinateRL = coordinatePoint(-330, 161.12, 187)     # check oke
+  globalCoordinateRR = coordinatePoint(-330, -161.12, 187)    # check oke
+  
+  # declare the object of each leg of robot``
+  legFL = kinematicEachLeg(row1DHTable, row2DHTable, row3DHTable, globalCoordinateFL, leg.FL.value)
+  legRR = kinematicEachLeg(row1DHTable, row2DHTable, row3DHTable, globalCoordinateRR, leg.RR.value)
+  legRL = kinematicEachLeg(row1DHTable, row2DHTable, row3DHTable, globalCoordinateRL, leg.RL.value)
+  legFR = kinematicEachLeg(row1DHTable, row2DHTable, row3DHTable, globalCoordinateFR, leg.FR.value)
+  
+  # define the quadruped robot
+  dogRobotHK241 = quadrupedRobot(legRR, legRL, legFR, legFL)
+
+  dogRobotHK241.updateTrajectoryAllLegs()
+
+  trajectoryFR = dogRobotHK241.trajectoryLeg[leg.FR.value -1]
+  trajectoryRR = dogRobotHK241.trajectoryLeg[leg.RR.value -1]
+
+  print("Position")
+  for item in trajectoryFR:
+    print(item)
+  
+  # setup ID for each ODrive on CAN network
+  ODriveID = [0x01, 0x02, 0x03]
+  # [-0.6, -2.5920281697767567, 0.7670972579325023]
+  # [-0.6, -2.5119967629737694, 0.8014408065937144]
+  # [-0.6, -2.399843324299733, 0.821382514970479]
+  # [-0.6, -2.2602877167442363, 0.8279376204134645]
+  # [-0.6, -2.097133729593992, 0.821382514970479]
+  # [-0.6, -1.9131901407636014, 0.8014408065937144]
+  # [-0.6, -1.7095219587802508, 0.7670972579325023]
+  # [-0.6, -2.514032801089388, 0.9689071117163267]
+  # for i in range(0, 8):
+  #   print("FR2: ", trajectoryFR[i][2])
+  #   print("FR1: ", trajectoryFR[i][1])
+  #   print("####")
+
+  # declare the CAN protocol
+  CAN = CanNode()
+  CAN.sendClosedLoop(5)
+  time.sleep(1)
+  CAN.sendClosedLoop(4)
+  time.sleep(1)
+  CAN.sendClosedLoop(1)
+  time.sleep(1)
+  CAN.sendClosedLoop(2)
+  time.sleep(1)
+  try:
+    idxRR = 4
+    idxFR = 6
+    while True:
+      
+      CAN.sendPos(5, trajectoryFR[idxFR][2])
+      time.sleep(1)
+      CAN.sendPos(4, trajectoryFR[idxFR][1])
+      time.sleep(1)
+      CAN.sendPos(2, trajectoryRR[idxRR][1])
+      time.sleep(1)
+      CAN.sendPos(1, trajectoryRR[idxRR][2])
+      time.sleep(1)
+      idxRR -= 1
+      idxFR -= 1
+      if idxRR < 0:
+        idxRR = 7
+      if idxFR < 0:
+        idxFR = 7
+
+  except KeyboardInterrupt:
+    CAN.sendIdle(5)
+    time.sleep(1)
+    CAN.sendIdle(4)
+    time.sleep(1)
+    CAN.sendIdle(1)
+    time.sleep(1)
+    CAN.sendIdle(2)
+    time.sleep(1)
+    CAN.bus.shutdown()
+  # CAN.sendPositionContinuously(ODriveID, trajectoryLegRR)
+  
+>>>>>>> 25c12bcfaf9e2b525bc5332f97404f0df5ee0f76:ros2_ws/src/can_node/can_node/implement.py
 
