@@ -41,7 +41,7 @@ from convertGlobal2LocalCoordinate import homoMatrix
 =======
 from can_controller import CanNode
 import time
->>>>>>> 25c12bcfaf9e2b525bc5332f97404f0df5ee0f76:ros2_ws/src/can_node/can_node/implement.py
+>>>>>>> 25c12bcfaf9e5bc5332f97404f0df5ee0f76:ros2_ws/src/can_node/can_node/implement.py
 
 
 #---------------------------------------------------------------------------------------------------------------------#
