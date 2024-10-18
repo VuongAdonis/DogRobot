@@ -20,5 +20,5 @@ $ ros2 run gamepad_node gamepad
 ## Controller:
 To control moving of the dog's robot
 
-
-
+# Phase test for the Robot:
+phase test is placed in path "DogRobot\ros2_ws\src\controller\controller.quadrupedRobot.py"
