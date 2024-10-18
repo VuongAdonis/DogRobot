@@ -31,6 +31,11 @@ class GamepadRecorder(Node):
         if self.current_time - self.prev_time > 5:
             self.prev_time = self.current_time
             print("Value save: ", msg.buttons, msg.axes)
+            for button in msg.buttons:
+                print(button)
+            print("################")
+            for axes in msg.axes:
+                print(axes)
             print("print count: ", self.count)
             self.count += 1
 
