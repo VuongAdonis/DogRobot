@@ -10,7 +10,6 @@ setup.py
 ../../build/gamepad_node/gamepad_node.egg-info/zip-safe
 gamepad_node/__init__.py
 gamepad_node/gamepad.py
-gamepad_node/joy.py
 resource/gamepad_node
 test/test_copyright.py
 test/test_flake8.py

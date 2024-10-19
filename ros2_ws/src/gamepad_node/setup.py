@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "gamepad = gamepad_node:gamepad:main"
+            "gamepad = gamepad_node.gamepad:main",
         ],
     },
 )

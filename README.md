@@ -9,6 +9,16 @@ The source to read the input of gamepad 360
 
 gamepad.py: file to read the input of gamepad 360
 
+Button Y:
+
+Button A:
+
+Button X:
+
+Button B:
+
+joy1: control move of the robot
+
 If you want to use the other gamepad, change the joy_config to this name of gamepad you want to use.
 
 teleop_node = subprocess.Popen(['ros2', 'launch', 'teleop_twist_joy', 'teleop-launch.py', "joy_config:='xbox'"])

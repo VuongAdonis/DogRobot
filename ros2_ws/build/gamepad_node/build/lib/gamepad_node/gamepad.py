@@ -14,23 +14,28 @@ class GamepadRecorder(Node):
             self.joy_callback, # callback function
             10 # queue size
         )
-        self.publisher_ = self.publisher_ = self.create_publisher(String, 'topic', 10)
+        self.publisher_ = self.create_publisher(String, 'topic', 10)
         self.gamepad_values = []  # Danh sách lưu giá trị gamepad
         self.prev_time = time.time()
         self.count = 0
     
     # function to send the message to the node control
     def publishMessage(self):
-        msg = []
+        msg = String()
         self.publisher_.publish(msg)
 
     # function process input get from the teleop
     def joy_callback(self, msg):
         self.current_time = time.time()
         
-        if self.current_time - self.prev_time > 5:
+        if self.current_time - self.prev_time > 1:
             self.prev_time = self.current_time
             print("Value save: ", msg.buttons, msg.axes)
+
+            print("joy1 value X: ", msg.axes[0])
+            print("joy1 value Y: ", msg.axes[1])
+
+
             print("print count: ", self.count)
             self.count += 1
 
@@ -42,14 +47,10 @@ def main():
 
     gamepad_recorder = GamepadRecorder()
 
-    try:
-        # run rclpy.spin to process the event
-        rclpy.spin(gamepad_recorder)
-    except KeyboardInterrupt:
-        teleop_node.terminate()
-        gamepad_recorder.destroy_node()
-        rclpy.shutdown()
-        print("Stop completed.")
+    rclpy.spin(gamepad_recorder)
+    teleop_node.terminate()
+    gamepad_recorder.destroy_node()
+    rclpy.shutdown()
         
 if __name__ == '__main__':
     main()

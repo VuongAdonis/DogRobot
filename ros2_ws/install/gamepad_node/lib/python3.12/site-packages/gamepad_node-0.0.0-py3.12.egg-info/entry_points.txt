@@ -1,2 +1,2 @@
 [console_scripts]
-joy = controller.joy:main
+gamepad = gamepad_node.gamepad:main
