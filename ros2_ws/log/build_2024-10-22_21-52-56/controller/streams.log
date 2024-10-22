@@ -1,0 +1,27 @@
+[0.889s] Invoking command in '/home/DATA/DogRobot/ros2_ws/src/controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/DATA/DogRobot/ros2_ws/build/controller/build install --record /home/DATA/DogRobot/ros2_ws/build/controller/install.log --single-version-externally-managed install_data
+[1.185s] running egg_info
+[1.206s] writing ../../build/controller/controller.egg-info/PKG-INFO
+[1.207s] writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt
+[1.207s] writing entry points to ../../build/controller/controller.egg-info/entry_points.txt
+[1.207s] writing requirements to ../../build/controller/controller.egg-info/requires.txt
+[1.207s] writing top-level names to ../../build/controller/controller.egg-info/top_level.txt
+[1.253s] reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[1.254s] writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[1.254s] running build
+[1.254s] running build_py
+[1.254s] copying controller/kinematicRobot.py -> /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller
+[1.254s] copying controller/quadrupedRobot.py -> /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller
+[1.255s] running install
+[1.261s] running install_lib
+[1.283s] copying /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller/kinematicRobot.py -> /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[1.283s] copying /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller/quadrupedRobot.py -> /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[1.284s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/kinematicRobot.py to kinematicRobot.cpython-312.pyc
+[1.287s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/quadrupedRobot.py to quadrupedRobot.cpython-312.pyc
+[1.288s] running install_data
+[1.288s] running install_egg_info
+[1.312s] removing '/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info' (and everything under it)
+[1.312s] Copying ../../build/controller/controller.egg-info to /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info
+[1.313s] running install_scripts
+[1.459s] Installing control script to /home/DATA/DogRobot/ros2_ws/install/controller/lib/controller
+[1.459s] writing list of installed files to '/home/DATA/DogRobot/ros2_ws/build/controller/install.log'
+[1.488s] Invoked command in '/home/DATA/DogRobot/ros2_ws/src/controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/DATA/DogRobot/ros2_ws/build/controller/build install --record /home/DATA/DogRobot/ros2_ws/build/controller/install.log --single-version-externally-managed install_data

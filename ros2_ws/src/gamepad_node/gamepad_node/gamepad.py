@@ -1,3 +1,10 @@
+# * File: gamepad.py
+# * Author: ROBOT_DOG_TEAM
+# * Creation Date: October 17, 2024
+# * Last Modified: October 17, 2024
+# * Description: the program to read input of gamepad
+# * Status: developing (Done, brainStorm, developing):
+
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
@@ -34,7 +41,8 @@ class GamepadRecorder(Node):
 
             print("joy1 value X: ", msg.axes[0])
             print("joy1 value Y: ", msg.axes[1])
-
+            print("joy1 type X: ", type(msg.axes[0]))
+            print("joy1 type Y: ", type(msg.axes[1]))
 
             print("print count: ", self.count)
             self.count += 1

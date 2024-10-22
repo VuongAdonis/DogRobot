@@ -34,7 +34,8 @@ class GamepadRecorder(Node):
 
             print("joy1 value X: ", msg.axes[0])
             print("joy1 value Y: ", msg.axes[1])
-
+            print("joy1 type X: ", type(msg.axes[0]))
+            print("joy1 type Y: ", type(msg.axes[1]))
 
             print("print count: ", self.count)
             self.count += 1

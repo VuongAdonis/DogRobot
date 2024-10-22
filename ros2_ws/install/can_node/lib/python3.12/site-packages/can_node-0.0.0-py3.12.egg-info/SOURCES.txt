@@ -9,7 +9,7 @@ setup.py
 ../../build/can_node/can_node.egg-info/top_level.txt
 ../../build/can_node/can_node.egg-info/zip-safe
 can_node/__init__.py
-can_node/can_controller.py
+can_node/canController.py
 can_node/publisher.py
 can_node/subcriber.py
 resource/can_node
