@@ -12,6 +12,7 @@ import sys
 sys.path.append("../../can_node/can_node")
 from canController import CanNode
 import time
+from math import pi, atan2
 
 
 #---------------------------------------------------------------------------------------------------------------------#
@@ -28,6 +29,7 @@ import time
 class quadrupedRobot:
   
   def __init__(self):
+    # may be modified x and z, not y
     globalCoordinateFL = coordinatePoint(-330, 161.12, -187)    
     globalCoordinateFR = coordinatePoint(-330, -161.12, -187) 
     globalCoordinateRL = coordinatePoint(-330, 161.12, 187) 
@@ -39,30 +41,57 @@ class quadrupedRobot:
     self.legFR = kinematicEachLeg(globalCoordinateFR, leg.FR.value)
     
   def updateTrajectoryAllLegs(self, vectorAngle):
-    self.trajectoryRR = self.legRR.updateTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
-    self.trajectoryRL = self.legRL.updateTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
-    self.trajectoryFR = self.legFR.updateTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
-    self.trajectoryFL = self.legFL.updateTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
+    self.trajectoryRROriginal = self.legRR.updateTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
+    self.trajectoryRLOriginal = self.legRL.updateTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
+    self.trajectoryFROriginal = self.legFR.updateTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
+    self.trajectoryFLOriginal = self.legFL.updateTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
     
+    # if abs(vectorAngle) <= atan2(161.12, 187):
+    #   self.trajectoryRRTemp = trajectoryRROriginal      
+    #   self.trajectoryRLTemp = trajectoryRLOriginal
+    #   self.trajectoryFRTemp = trajectoryFROriginal
+    #   self.trajectoryFLTemp = trajectoryFLOriginal
+    
+    # else:
+    #   if abs(vectorAngle) <= (pi - atan2(161.12, 187)):
+    #     if vectorAngle < 0:
+    #       self.trajectoryRRTemp = trajectoryFROriginal
+    #       self.trajectoryRLTemp = trajectoryRROriginal
+    #       self.trajectoryFRTemp = trajectoryFLOriginal
+    #       self.trajectoryFLTemp = trajectoryRLOriginal
+    #     else:
+    #       self.trajectoryRRTemp = trajectoryRLOriginal
+    #       self.trajectoryRLTemp = trajectoryFLOriginal
+    #       self.trajectoryFRTemp = trajectoryRROriginal
+    #       self.trajectoryFLTemp = trajectoryFROriginal
+    #   else:
+    #     self.trajectoryRRTemp = trajectoryFLOriginal
+    #     self.trajectoryRLTemp = trajectoryFROriginal
+    #     self.trajectoryFRTemp = trajectoryRLOriginal
+    #     self.trajectoryFLTemp = trajectoryRROriginal
+        
   def getTrajectory(self):
-    return self.trajectoryRR, self.trajectoryRL, self.trajectoryFR, self.trajectoryFL
+    return self.trajectoryRROriginal, self.trajectoryRLOriginal, self.trajectoryFROriginal, self.trajectoryFLOriginal
+    # return self.trajectoryRRTemp, self.trajectoryRLTemp, self.trajectoryFRTemp, self.trajectoryFLTemp
 #---------------------------------------------------------------------------------------------------------------------#
 
 
 def main():
+  angleVector = 0   # updated from the gamePad
   robotDogTeam = quadrupedRobot()
-  robotDogTeam.updateTrajectoryAllLegs(0)
-  
-  trajectoryRR, trajectoryRL, trajectoryFR, trajectoryFL = robotDogTeam.getTrajectory()
-  
-  for i in range(len(trajectoryRR)):
-    print("RR: ", trajectoryRR[i])
-    print("RL: ", trajectoryRL[i])
-    print("FR: ", trajectoryFR[i])
-    print("FL: ", trajectoryFL[i])
-
-    print("---------------------------")  
     
+  robotDogTeam.updateTrajectoryAllLegs(angleVector)
+  trajectoryRR, trajectoryRL, trajectoryFR, trajectoryFL = robotDogTeam.getTrajectory()
+  print("----------------TRAJECTORY-----------------")
+  for i in range(len(trajectoryRR)):
+    print("-------------point", i+ 1, "------------------")
+    print("RR:", trajectoryRR[i])
+    # print("RL:", trajectoryRL[i])
+    # print("FR:", trajectoryFR[i])
+    # print("FL:", trajectoryFL[i])
+  print("#############################################")
+      
+      
     
   # CAN = CanNode()
   # CAN.sendClosedLoop(5)

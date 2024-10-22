@@ -240,25 +240,71 @@ class kinematicEachLeg:
     #-----------------------------------------------------------------------------------------
     return pairPositionJoint012
       
-  def updateTrajectoryLeg(self, deviation, angleVector= 0):
-    coordinatePoint1 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z + 3*deviation)
-    coordinatePoint2 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z + 2*deviation)
-    coordinatePoint3 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z +   deviation)
-    coordinatePoint4 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z              )
-    coordinatePoint5 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z -   deviation)
-    coordinatePoint6 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z - 2*deviation)
-    coordinatePoint7 = coordinatePoint(self.endEffector.X,      self.endEffector.Y, self.endEffector.Z - 3*deviation)
-    coordinatePoint8 = coordinatePoint(self.endEffector.X+ 50 ,  self.endEffector.Y, self.endEffector.Z              )
+  # value of some variables can be modified: angleVector, high, deviation, X coordinate
+  def updateTrajectoryLeg(self, deviation, angleVector):
+    high = 40
+    sign123Y = 0
+    sign123Z = 0
+    sign567Y = 0
+    sign567Z = 0
+    stepY = 0
+    stepZ = 0
+    if abs(angleVector) <= pi/2:
+      if angleVector >= 0:  # y < 0 and z < 0
+        # point 1, 2, 3 has y increase, z increase
+        sign123Y = 1
+        sign123Z = 1
+        # point 5, 6, 7 has y decrease, z decrease
+        sign567Y = -1
+        sign567Z = -1
+      if angleVector < 0: # y > 0 and z < 0
+        # point 1, 2, 3 has y decrease, z increase
+        sign123Y = -1
+        sign123Z = 1
+        # point 5, 6, 7 has y increase, z decrease
+        sign567Y = 1
+        sign567Z = -1   
+      stepY = deviation*sin(abs(angleVector))
+      stepZ = deviation*cos(abs(angleVector))
+      
+    if abs(angleVector) > pi/2:  
+      if angleVector > 0:   
+        # point 1, 2, 3 has y increase, z decrease
+        sign123Y = 1
+        sign123Z = -1
+        # point 5, 6, 7 has y decrease, z increase
+        sign567Y = -1
+        sign567Z = 1
+      if angleVector < 0:
+        # point 1, 2, 3 has y decrease, z decrease
+        sign123Y = -1
+        sign123Z = -1
+        # point 5, 6, 7 has y increase, z increase
+        sign567Y = 1
+        sign567Z = 1
+      stepY = deviation*cos(abs(angleVector)- pi/2)
+      stepZ = deviation*sin(abs(angleVector) -pi/2)   
+      
+    corPnt1 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign123Y, self.endEffector.Z + 3*stepZ*sign123Z)
+    corPnt2 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign123Y, self.endEffector.Z + 2*stepZ*sign123Z)
+    corPnt3 = coordinatePoint(self.endEffector.X      , self.endEffector.Y +  stepY*sign123Y , self.endEffector.Z +   stepZ*sign123Z)
+    corPnt4 = coordinatePoint(self.endEffector.X      , self.endEffector.Y                   , self.endEffector.Z                   )
+    corPnt5 = coordinatePoint(self.endEffector.X      , self.endEffector.Y +  stepY*sign567Y , self.endEffector.Z +   stepZ*sign567Z)
+    corPnt6 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign567Y, self.endEffector.Z + 2*stepZ*sign567Z)
+    corPnt7 = coordinatePoint(self.endEffector.X       , self.endEffector.Y + 3*stepY*sign567Y, self.endEffector.Z + 3*stepZ*sign567Z)
+    corPnt8 = coordinatePoint(self.endEffector.X+ high, self.endEffector.Y                   , self.endEffector.Z                   )
     
-    posPnt1 = self.backwardKinematic(coordinatePoint1.getCoordinate())
-    posPnt2 = self.backwardKinematic(coordinatePoint2.getCoordinate())
-    posPnt3 = self.backwardKinematic(coordinatePoint3.getCoordinate())
-    posPnt4 = self.backwardKinematic(coordinatePoint4.getCoordinate())
-    posPnt5 = self.backwardKinematic(coordinatePoint5.getCoordinate())
-    posPnt6 = self.backwardKinematic(coordinatePoint6.getCoordinate())
-    posPnt7 = self.backwardKinematic(coordinatePoint7.getCoordinate())
-    posPnt8 = self.backwardKinematic(coordinatePoint8.getCoordinate())
+
+    posPnt1 = self.backwardKinematic(corPnt1.getCoordinate())
+    posPnt2 = self.backwardKinematic(corPnt2.getCoordinate())
+    posPnt3 = self.backwardKinematic(corPnt3.getCoordinate())
+    posPnt4 = self.backwardKinematic(corPnt4.getCoordinate())
+    posPnt5 = self.backwardKinematic(corPnt5.getCoordinate())
+    posPnt6 = self.backwardKinematic(corPnt6.getCoordinate())
+    posPnt7 = self.backwardKinematic(corPnt7.getCoordinate())
+    posPnt8 = self.backwardKinematic(corPnt8.getCoordinate())
     
+    # return [corPnt1, corPnt2, corPnt3, corPnt4, corPnt5, corPnt6, corPnt7, corPnt8]
     return [posPnt1, posPnt2, posPnt3, posPnt4, posPnt5, posPnt6, posPnt7, posPnt8]
 #---------------------------------------------------------------------------------------------------------------------#
 
