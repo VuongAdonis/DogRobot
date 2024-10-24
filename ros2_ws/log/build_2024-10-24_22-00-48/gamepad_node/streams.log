@@ -1,0 +1,21 @@
+[2.360s] Invoking command in '/home/DATA/DogRobot/ros2_ws/src/gamepad_node': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/gamepad_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/gamepad_node build --build-base /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build install --record /home/DATA/DogRobot/ros2_ws/build/gamepad_node/install.log --single-version-externally-managed install_data
+[2.867s] running egg_info
+[2.945s] writing ../../build/gamepad_node/gamepad_node.egg-info/PKG-INFO
+[2.945s] writing dependency_links to ../../build/gamepad_node/gamepad_node.egg-info/dependency_links.txt
+[2.946s] writing entry points to ../../build/gamepad_node/gamepad_node.egg-info/entry_points.txt
+[2.946s] writing requirements to ../../build/gamepad_node/gamepad_node.egg-info/requires.txt
+[2.946s] writing top-level names to ../../build/gamepad_node/gamepad_node.egg-info/top_level.txt
+[3.086s] reading manifest file '../../build/gamepad_node/gamepad_node.egg-info/SOURCES.txt'
+[3.088s] writing manifest file '../../build/gamepad_node/gamepad_node.egg-info/SOURCES.txt'
+[3.088s] running build
+[3.088s] running build_py
+[3.089s] running install
+[3.102s] running install_lib
+[3.166s] running install_data
+[3.168s] running install_egg_info
+[3.267s] removing '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages/gamepad_node-0.0.0-py3.12.egg-info' (and everything under it)
+[3.268s] Copying ../../build/gamepad_node/gamepad_node.egg-info to /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages/gamepad_node-0.0.0-py3.12.egg-info
+[3.270s] running install_scripts
+[3.696s] Installing gamepad script to /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/gamepad_node
+[3.697s] writing list of installed files to '/home/DATA/DogRobot/ros2_ws/build/gamepad_node/install.log'
+[3.823s] Invoked command in '/home/DATA/DogRobot/ros2_ws/src/gamepad_node' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/gamepad_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/gamepad_node build --build-base /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build install --record /home/DATA/DogRobot/ros2_ws/build/gamepad_node/install.log --single-version-externally-managed install_data

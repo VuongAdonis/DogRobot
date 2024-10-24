@@ -13,8 +13,8 @@ class AdditionClientAsync(Node):
 
     def send_request(self):
         request = AddTwoInts.Request()
-        request.a = int(sys.argv[1])
-        request.b = int(sys.argv[2])
+        # request.a = int(sys.argv[1])
+        # request.b = int(sys.argv[2])
         self.future = self.client.call_async(request)
 
 def main(args=None):
@@ -22,6 +22,7 @@ def main(args=None):
 
     # create node
     addition_client= AdditionClientAsync()
+
     addition_client.send_request()
 
     # use/spin node
@@ -36,7 +37,7 @@ def main(args=None):
                 )
             else:
                 addition_client.get_logger().info(
-                    f"Result of addition is {response.sum}"
+                    f"Result of addition is {response.position}"
                 )
                 break
 

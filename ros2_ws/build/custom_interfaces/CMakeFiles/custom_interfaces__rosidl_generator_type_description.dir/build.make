@@ -67,14 +67,20 @@ include CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/comp
 include CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/progress.make
 
 CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/srv/AddTwoInts.json
+CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/msg/CANmessage.json
 
 rosidl_generator_type_description/custom_interfaces/srv/AddTwoInts.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
 rosidl_generator_type_description/custom_interfaces/srv/AddTwoInts.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
 rosidl_generator_type_description/custom_interfaces/srv/AddTwoInts.json: rosidl_adapter/custom_interfaces/srv/AddTwoInts.idl
+rosidl_generator_type_description/custom_interfaces/srv/AddTwoInts.json: rosidl_adapter/custom_interfaces/msg/CANmessage.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_type_description__arguments.json
 
+rosidl_generator_type_description/custom_interfaces/msg/CANmessage.json: rosidl_generator_type_description/custom_interfaces/srv/AddTwoInts.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/custom_interfaces/msg/CANmessage.json
+
 custom_interfaces__rosidl_generator_type_description: CMakeFiles/custom_interfaces__rosidl_generator_type_description
+custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/msg/CANmessage.json
 custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/srv/AddTwoInts.json
 custom_interfaces__rosidl_generator_type_description: CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/build.make
 .PHONY : custom_interfaces__rosidl_generator_type_description

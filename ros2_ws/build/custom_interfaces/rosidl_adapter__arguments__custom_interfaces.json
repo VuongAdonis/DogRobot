@@ -1,6 +1,7 @@
 {
   "package_name": "custom_interfaces",
   "non_idl_tuples": [
-    "/home/DATA/DogRobot/ros2_ws/src/custom_interfaces:srv/AddTwoInts.srv"
+    "/home/DATA/DogRobot/ros2_ws/src/custom_interfaces:srv/AddTwoInts.srv",
+    "/home/DATA/DogRobot/ros2_ws/src/custom_interfaces:msg/CANmessage.msg"
   ]
 }

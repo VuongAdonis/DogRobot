@@ -71,6 +71,11 @@ CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/de
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__struct.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__traits.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__type_support.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/ca_nmessage.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__builder.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__struct.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__traits.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__type_support.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -93,6 +98,7 @@ rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/shar
 rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
 rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: rosidl_adapter/custom_interfaces/srv/AddTwoInts.idl
+rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: rosidl_adapter/custom_interfaces/msg/CANmessage.idl
 rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -111,10 +117,30 @@ rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__traits.hpp: rosi
 rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__type_support.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__type_support.hpp
 
+rosidl_generator_cpp/custom_interfaces/msg/ca_nmessage.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/ca_nmessage.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__builder.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__builder.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__struct.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__struct.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__traits.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__traits.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__type_support.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__type_support.hpp
+
 rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 custom_interfaces__cpp: CMakeFiles/custom_interfaces__cpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/ca_nmessage.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__builder.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__struct.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__traits.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__type_support.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__builder.hpp

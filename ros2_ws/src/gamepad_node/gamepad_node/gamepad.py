@@ -11,6 +11,7 @@ from sensor_msgs.msg import Joy
 from std_msgs.msg import String
 import subprocess
 import time
+from custom_interfaces.srv import AddTwoInts
 
 class GamepadRecorder(Node):
     def __init__(self):
@@ -25,6 +26,19 @@ class GamepadRecorder(Node):
         self.gamepad_values = []  # Danh sách lưu giá trị gamepad
         self.prev_time = time.time()
         self.count = 0
+
+        self.service = self.create_service(
+            AddTwoInts,
+            "add_two_ints",
+            self.add_two_ints_callback
+        )
+
+    # service function of gamepad
+    def add_two_ints_callback(self, request, response):
+        response.position = [self.x, self.y]
+        # self.get_logger().info(f"Incoming request\na: {request.a} b:{request.b}")
+        self.get_logger().info(f"Incoming request\n")
+        return response
     
     # function to send the message to the node control
     def publishMessage(self):
@@ -34,18 +48,8 @@ class GamepadRecorder(Node):
     # function process input get from the teleop
     def joy_callback(self, msg):
         self.current_time = time.time()
-        
-        if self.current_time - self.prev_time > 1:
-            self.prev_time = self.current_time
-            print("Value save: ", msg.buttons, msg.axes)
-
-            print("joy1 value X: ", msg.axes[0])
-            print("joy1 value Y: ", msg.axes[1])
-            print("joy1 type X: ", type(msg.axes[0]))
-            print("joy1 type Y: ", type(msg.axes[1]))
-
-            print("print count: ", self.count)
-            self.count += 1
+        self.x = msg.axes[0]
+        self.y = msg.axes[1]
 
 def main():
     rclpy.init()

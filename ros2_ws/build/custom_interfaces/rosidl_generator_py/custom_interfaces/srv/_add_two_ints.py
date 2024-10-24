@@ -12,8 +12,6 @@ ros_python_check_fields = getenv('ROS_PYTHON_CHECK_FIELDS', default='')
 
 # Import statements for member types
 
-import builtins  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -62,21 +60,15 @@ class AddTwoInts_Request(metaclass=Metaclass_AddTwoInts_Request):
     """Message class 'AddTwoInts_Request'."""
 
     __slots__ = [
-        '_a',
-        '_b',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
-        'a': 'int64',
-        'b': 'int64',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -88,8 +80,6 @@ class AddTwoInts_Request(metaclass=Metaclass_AddTwoInts_Request):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.a = kwargs.get('a', int())
-        self.b = kwargs.get('b', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -121,10 +111,6 @@ class AddTwoInts_Request(metaclass=Metaclass_AddTwoInts_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.a != other.a:
-            return False
-        if self.b != other.b:
-            return False
         return True
 
     @classmethod
@@ -132,41 +118,15 @@ class AddTwoInts_Request(metaclass=Metaclass_AddTwoInts_Request):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @builtins.property
-    def a(self):
-        """Message field 'a'."""
-        return self._a
-
-    @a.setter
-    def a(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, int), \
-                "The 'a' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'a' field must be an integer in [-9223372036854775808, 9223372036854775807]"
-        self._a = value
-
-    @builtins.property
-    def b(self):
-        """Message field 'b'."""
-        return self._b
-
-    @b.setter
-    def b(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, int), \
-                "The 'b' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'b' field must be an integer in [-9223372036854775808, 9223372036854775807]"
-        self._b = value
-
 
 # Import statements for member types
 
-# already imported above
-# import builtins
+# Member 'position'
+import array  # noqa: E402, I100
+
+import builtins  # noqa: E402, I100
+
+import math  # noqa: E402, I100
 
 # already imported above
 # import rosidl_parser.definition
@@ -217,18 +177,18 @@ class AddTwoInts_Response(metaclass=Metaclass_AddTwoInts_Response):
     """Message class 'AddTwoInts_Response'."""
 
     __slots__ = [
-        '_sum',
+        '_position',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
-        'sum': 'int64',
+        'position': 'sequence<double>',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -240,7 +200,7 @@ class AddTwoInts_Response(metaclass=Metaclass_AddTwoInts_Response):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.sum = kwargs.get('sum', int())
+        self.position = array.array('d', kwargs.get('position', []))
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -272,7 +232,7 @@ class AddTwoInts_Response(metaclass=Metaclass_AddTwoInts_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.sum != other.sum:
+        if self.position != other.position:
             return False
         return True
 
@@ -281,20 +241,33 @@ class AddTwoInts_Response(metaclass=Metaclass_AddTwoInts_Response):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @builtins.property  # noqa: A003
-    def sum(self):  # noqa: A003
-        """Message field 'sum'."""
-        return self._sum
+    @builtins.property
+    def position(self):
+        """Message field 'position'."""
+        return self._position
 
-    @sum.setter  # noqa: A003
-    def sum(self, value):  # noqa: A003
+    @position.setter
+    def position(self, value):
         if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'd', \
+                    "The 'position' array.array() must have the type code of 'd'"
+                self._position = value
+                return
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
             assert \
-                isinstance(value, int), \
-                "The 'sum' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'sum' field must be an integer in [-9223372036854775808, 9223372036854775807]"
-        self._sum = value
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 all(isinstance(v, float) for v in value) and
+                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
+                "The 'position' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
+        self._position = array.array('d', value)
 
 
 # Import statements for member types

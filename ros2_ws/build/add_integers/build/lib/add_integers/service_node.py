@@ -12,8 +12,9 @@ class AdditionService(Node):
         )
 
     def add_two_ints_callback(self, request, response):
-        response.sum = request.a + request.b
-        self.get_logger().info(f"Incoming request\na: {request.a} b:{request.b}")
+        response.position = [1.0, 2.0]
+        # self.get_logger().info(f"Incoming request\na: {request.a} b:{request.b}")
+        self.get_logger().info(f"Incoming request\na")
         return response
 
 def main(args=None):

@@ -65,19 +65,9 @@
         "type_name": "custom_interfaces/srv/AddTwoInts_Request",
         "fields": [
           {
-            "name": "a",
+            "name": "structure_needs_at_least_one_member",
             "type": {
-              "type_id": 8,
-              "capacity": 0,
-              "string_capacity": 0,
-              "nested_type_name": ""
-            },
-            "default_value": ""
-          },
-          {
-            "name": "b",
-            "type": {
-              "type_id": 8,
+              "type_id": 3,
               "capacity": 0,
               "string_capacity": 0,
               "nested_type_name": ""
@@ -90,9 +80,9 @@
         "type_name": "custom_interfaces/srv/AddTwoInts_Response",
         "fields": [
           {
-            "name": "sum",
+            "name": "position",
             "type": {
-              "type_id": 8,
+              "type_id": 155,
               "capacity": 0,
               "string_capacity": 0,
               "nested_type_name": ""
@@ -151,7 +141,7 @@
   "type_hashes": [
     {
       "type_name": "custom_interfaces/srv/AddTwoInts_Event",
-      "hash_string": "RIHS01_7ebdcad3e26c5ff68195d897639b0fbf8088e58faa4f6f59e06c8320253307a5"
+      "hash_string": "RIHS01_5c2d996b49751d75a2550836d54597dbbb02ad482c533920da4c3b5128b8ad1d"
     },
     {
       "type_name": "builtin_interfaces/msg/Time",
@@ -159,11 +149,11 @@
     },
     {
       "type_name": "custom_interfaces/srv/AddTwoInts_Request",
-      "hash_string": "RIHS01_1ac7e2293e278d6db4906b7e3216c4cf5b4fe9d035bdf8033112e97d15d929de"
+      "hash_string": "RIHS01_a2c1a898905dc84c2476ed5990bcf1b7ee419fe70fca34b012d35f1f1d1f3bed"
     },
     {
       "type_name": "custom_interfaces/srv/AddTwoInts_Response",
-      "hash_string": "RIHS01_4d86109022c91e9ab43521b04c3aed6b1ac01b720d05fbd8a5f4898e98e50ff4"
+      "hash_string": "RIHS01_9450d1440f98019e60d9ed727f74d1e8135c0636e37633fa648ad26fa2d05b08"
     },
     {
       "type_name": "service_msgs/msg/ServiceEventInfo",

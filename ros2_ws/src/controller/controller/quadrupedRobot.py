@@ -11,6 +11,7 @@ from controller.convertGlobal2LocalCoordinate import leg
 import sys
 sys.path.append("../../can_node/can_node")
 from can_node.canController import CanNode
+from custom_interfaces.srv import AddTwoInts
 import time
 from math import pi, atan2
 
@@ -83,54 +84,37 @@ class quadrupedRobot:
     # return self.trajectoryRRTemp, self.trajectoryRLTemp, self.trajectoryFRTemp, self.trajectoryFLTemp
 #---------------------------------------------------------------------------------------------------------------------#
 
-class GamepadRecorder(Node):
-    def __init__(self):
-        super().__init__('gamepad_recorder')
-        self.subscription = self.create_subscription(
-            Joy, # message type
-            'joy', # topic
-            self.joy_callback, # callback function
-            10 # queue size
-        )
-        self.publisher_ = self.create_publisher(String, 'topic', 10)
-        self.gamepad_values = []  # Danh sách lưu giá trị gamepad
-        self.prev_time = time.time()
-        self.count = 0
+class AdditionClientAsync(Node):
+  def __init__(self):
+      super().__init__("addition_client_async")
+      self.client = self.create_client(AddTwoInts, "add_two_ints")
+      while not self.client.wait_for_service(timeout_sec=1.0):
+          self.get_logger().info("service not available, waiting again...")
+
+  def send_request(self):
+      request = AddTwoInts.Request()
+      # request.a = int(sys.argv[1])
+      # request.b = int(sys.argv[2])
+      self.future = self.client.call_async(request)
+
+  def get_position(addition_client):
     
-    # function to send the message to the node control
-    def publishMessage(self):
-        msg = String()
-        self.publisher_.publish(msg)
-
-    # function process input get from the teleop
-    def joy_callback(self, msg):
-        self.current_time = time.time()
-        
-        if self.current_time - self.prev_time > 1:
-            self.prev_time = self.current_time
-            print("Value save: ", msg.buttons, msg.axes)
-
-            print("joy1 value X: ", msg.axes[0])
-            print("joy1 value Y: ", msg.axes[1])
-            print("joy1 type X: ", type(msg.axes[0]))
-            print("joy1 type Y: ", type(msg.axes[1]))
-
-            print("print count: ", self.count)
-            self.count += 1
-
-            angleVector = atan2(-msg.axes[0], msg.axes[1])   # updated from the gamePad
-            robotDogTeam = quadrupedRobot()
-              
-            robotDogTeam.updateTrajectoryAllLegs(angleVector)
-            trajectoryRR, trajectoryRL, trajectoryFR, trajectoryFL = robotDogTeam.getTrajectory()
-            print("----------------TRAJECTORY-----------------")
-            for i in range(len(trajectoryFL)):
-              print("-------------point", i+ 1, "------------------")
-              print("FL:", trajectoryFL[i])
-              # print("RL:", trajectoryRL[i])
-              # print("FR:", trajectoryFR[i])
-              # print("FL:", trajectoryFL[i])
-            print("#############################################")
+    addition_client.send_request()
+    while rclpy.ok():
+      rclpy.spin_once(addition_client)
+      if addition_client.future.done():
+          try:
+              response = addition_client.future.result()
+          except Exception as e:
+              addition_client.get_logger().info(
+                  f"Service call failed {e}"
+              )
+          else:
+              addition_client.get_logger().info(  
+                  f"Result of addition is {response.position}"
+              )
+              break
+    return response
 
 def main():
   # angleVector = atan2(-x, y)   # updated from the gamePad
@@ -146,17 +130,31 @@ def main():
   #   # print("FR:", trajectoryFR[i])
   #   # print("FL:", trajectoryFL[i])
   # print("#############################################")
-      
+
     rclpy.init()
-    # use teleop to get the input of xbox gamepad
-    teleop_node = subprocess.Popen(['ros2', 'launch', 'teleop_twist_joy', 'teleop-launch.py', "joy_config:='xbox'"])
-    time.sleep(1)  # wait for teleop run
-
-    gamepad_recorder = GamepadRecorder()
-
-    rclpy.spin(gamepad_recorder)
-    teleop_node.terminate()
-    gamepad_recorder.destroy_node()
+    addition_client= AdditionClientAsync()
+    
+    while True:
+      key = input("Enter key")
+      if key == 'a':
+        response = addition_client.get_position(addition_client)
+        angleVector = atan2(-response.position[0], response.position[1])   # updated from the gamePad
+        robotDogTeam = quadrupedRobot()
+          
+        robotDogTeam.updateTrajectoryAllLegs(angleVector)
+        trajectoryRR, trajectoryRL, trajectoryFR, trajectoryFL = robotDogTeam.getTrajectory()
+        print("----------------TRAJECTORY-----------------")
+        for i in range(len(trajectoryFL)):
+          print("-------------point", i+ 1, "------------------")
+          print("FL:", trajectoryFL[i])
+          # print("RL:", trajectoryRL[i])
+          # print("FR:", trajectoryFR[i])
+          # print("FL:", trajectoryFL[i])
+        print("#############################################")
+      elif key == 'q':
+         break
+      
+    addition_client.destroy_node()
     rclpy.shutdown()
     
   # CAN = CanNode()

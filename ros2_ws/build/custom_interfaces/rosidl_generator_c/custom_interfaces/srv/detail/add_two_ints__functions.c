@@ -16,8 +16,7 @@ custom_interfaces__srv__AddTwoInts_Request__init(custom_interfaces__srv__AddTwoI
   if (!msg) {
     return false;
   }
-  // a
-  // b
+  // structure_needs_at_least_one_member
   return true;
 }
 
@@ -27,8 +26,7 @@ custom_interfaces__srv__AddTwoInts_Request__fini(custom_interfaces__srv__AddTwoI
   if (!msg) {
     return;
   }
-  // a
-  // b
+  // structure_needs_at_least_one_member
 }
 
 bool
@@ -37,12 +35,8 @@ custom_interfaces__srv__AddTwoInts_Request__are_equal(const custom_interfaces__s
   if (!lhs || !rhs) {
     return false;
   }
-  // a
-  if (lhs->a != rhs->a) {
-    return false;
-  }
-  // b
-  if (lhs->b != rhs->b) {
+  // structure_needs_at_least_one_member
+  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
     return false;
   }
   return true;
@@ -56,10 +50,8 @@ custom_interfaces__srv__AddTwoInts_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // a
-  output->a = input->a;
-  // b
-  output->b = input->b;
+  // structure_needs_at_least_one_member
+  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
   return true;
 }
 
@@ -243,13 +235,21 @@ custom_interfaces__srv__AddTwoInts_Request__Sequence__copy(
 }
 
 
+// Include directives for member types
+// Member `position`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 bool
 custom_interfaces__srv__AddTwoInts_Response__init(custom_interfaces__srv__AddTwoInts_Response * msg)
 {
   if (!msg) {
     return false;
   }
-  // sum
+  // position
+  if (!rosidl_runtime_c__double__Sequence__init(&msg->position, 0)) {
+    custom_interfaces__srv__AddTwoInts_Response__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -259,7 +259,8 @@ custom_interfaces__srv__AddTwoInts_Response__fini(custom_interfaces__srv__AddTwo
   if (!msg) {
     return;
   }
-  // sum
+  // position
+  rosidl_runtime_c__double__Sequence__fini(&msg->position);
 }
 
 bool
@@ -268,8 +269,10 @@ custom_interfaces__srv__AddTwoInts_Response__are_equal(const custom_interfaces__
   if (!lhs || !rhs) {
     return false;
   }
-  // sum
-  if (lhs->sum != rhs->sum) {
+  // position
+  if (!rosidl_runtime_c__double__Sequence__are_equal(
+      &(lhs->position), &(rhs->position)))
+  {
     return false;
   }
   return true;
@@ -283,8 +286,12 @@ custom_interfaces__srv__AddTwoInts_Response__copy(
   if (!input || !output) {
     return false;
   }
-  // sum
-  output->sum = input->sum;
+  // position
+  if (!rosidl_runtime_c__double__Sequence__copy(
+      &(input->position), &(output->position)))
+  {
+    return false;
+  }
   return true;
 }
 

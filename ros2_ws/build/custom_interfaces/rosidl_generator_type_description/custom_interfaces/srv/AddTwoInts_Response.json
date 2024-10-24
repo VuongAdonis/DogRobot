@@ -4,9 +4,9 @@
       "type_name": "custom_interfaces/srv/AddTwoInts_Response",
       "fields": [
         {
-          "name": "sum",
+          "name": "position",
           "type": {
-            "type_id": 8,
+            "type_id": 155,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -20,7 +20,7 @@
   "type_hashes": [
     {
       "type_name": "custom_interfaces/srv/AddTwoInts_Response",
-      "hash_string": "RIHS01_4d86109022c91e9ab43521b04c3aed6b1ac01b720d05fbd8a5f4898e98e50ff4"
+      "hash_string": "RIHS01_9450d1440f98019e60d9ed727f74d1e8135c0636e37633fa648ad26fa2d05b08"
     }
   ]
 }

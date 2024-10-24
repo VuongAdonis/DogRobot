@@ -48,14 +48,9 @@ bool cdr_serialize_custom_interfaces__srv__AddTwoInts_Request(
   const custom_interfaces__srv__AddTwoInts_Request * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: a
+  // Field name: structure_needs_at_least_one_member
   {
-    cdr << ros_message->a;
-  }
-
-  // Field name: b
-  {
-    cdr << ros_message->b;
+    cdr << ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -66,14 +61,9 @@ bool cdr_deserialize_custom_interfaces__srv__AddTwoInts_Request(
   eprosima::fastcdr::Cdr & cdr,
   custom_interfaces__srv__AddTwoInts_Request * ros_message)
 {
-  // Field name: a
+  // Field name: structure_needs_at_least_one_member
   {
-    cdr >> ros_message->a;
-  }
-
-  // Field name: b
-  {
-    cdr >> ros_message->b;
+    cdr >> ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -94,16 +84,9 @@ size_t get_serialized_size_custom_interfaces__srv__AddTwoInts_Request(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: a
+  // Field name: structure_needs_at_least_one_member
   {
-    size_t item_size = sizeof(ros_message->a);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: b
-  {
-    size_t item_size = sizeof(ros_message->b);
+    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -130,20 +113,11 @@ size_t max_serialized_size_custom_interfaces__srv__AddTwoInts_Request(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: a
+  // Field name: structure_needs_at_least_one_member
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-
-  // Field name: b
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
 
@@ -155,7 +129,7 @@ size_t max_serialized_size_custom_interfaces__srv__AddTwoInts_Request(
     using DataType = custom_interfaces__srv__AddTwoInts_Request;
     is_plain =
       (
-      offsetof(DataType, b) +
+      offsetof(DataType, structure_needs_at_least_one_member) +
       last_member_size
       ) == ret_val;
   }
@@ -167,14 +141,9 @@ bool cdr_serialize_key_custom_interfaces__srv__AddTwoInts_Request(
   const custom_interfaces__srv__AddTwoInts_Request * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: a
+  // Field name: structure_needs_at_least_one_member
   {
-    cdr << ros_message->a;
-  }
-
-  // Field name: b
-  {
-    cdr << ros_message->b;
+    cdr << ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -195,16 +164,9 @@ size_t get_serialized_size_key_custom_interfaces__srv__AddTwoInts_Request(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: a
+  // Field name: structure_needs_at_least_one_member
   {
-    size_t item_size = sizeof(ros_message->a);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: b
-  {
-    size_t item_size = sizeof(ros_message->b);
+    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -229,20 +191,11 @@ size_t max_serialized_size_key_custom_interfaces__srv__AddTwoInts_Request(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: a
+  // Field name: structure_needs_at_least_one_member
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-
-  // Field name: b
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -253,7 +206,7 @@ size_t max_serialized_size_key_custom_interfaces__srv__AddTwoInts_Request(
     using DataType = custom_interfaces__srv__AddTwoInts_Request;
     is_plain =
       (
-      offsetof(DataType, b) +
+      offsetof(DataType, structure_needs_at_least_one_member) +
       last_member_size
       ) == ret_val;
   }
@@ -382,6 +335,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/primitives_sequence.h"  // position
+#include "rosidl_runtime_c/primitives_sequence_functions.h"  // position
 
 // forward declare type support functions
 
@@ -394,9 +349,12 @@ bool cdr_serialize_custom_interfaces__srv__AddTwoInts_Response(
   const custom_interfaces__srv__AddTwoInts_Response * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: sum
+  // Field name: position
   {
-    cdr << ros_message->sum;
+    size_t size = ros_message->position.size;
+    auto array_ptr = ros_message->position.data;
+    cdr << static_cast<uint32_t>(size);
+    cdr.serialize_array(array_ptr, size);
   }
 
   return true;
@@ -407,9 +365,20 @@ bool cdr_deserialize_custom_interfaces__srv__AddTwoInts_Response(
   eprosima::fastcdr::Cdr & cdr,
   custom_interfaces__srv__AddTwoInts_Response * ros_message)
 {
-  // Field name: sum
+  // Field name: position
   {
-    cdr >> ros_message->sum;
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    if (ros_message->position.data) {
+      rosidl_runtime_c__double__Sequence__fini(&ros_message->position);
+    }
+    if (!rosidl_runtime_c__double__Sequence__init(&ros_message->position, size)) {
+      fprintf(stderr, "failed to create array for field 'position'");
+      return false;
+    }
+    auto array_ptr = ros_message->position.data;
+    cdr.deserialize_array(array_ptr, size);
   }
 
   return true;
@@ -430,10 +399,15 @@ size_t get_serialized_size_custom_interfaces__srv__AddTwoInts_Response(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: sum
+  // Field name: position
   {
-    size_t item_size = sizeof(ros_message->sum);
-    current_alignment += item_size +
+    size_t array_size = ros_message->position.size;
+    auto array_ptr = ros_message->position.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -459,9 +433,13 @@ size_t max_serialized_size_custom_interfaces__srv__AddTwoInts_Response(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: sum
+  // Field name: position
   {
-    size_t array_size = 1;
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
@@ -476,7 +454,7 @@ size_t max_serialized_size_custom_interfaces__srv__AddTwoInts_Response(
     using DataType = custom_interfaces__srv__AddTwoInts_Response;
     is_plain =
       (
-      offsetof(DataType, sum) +
+      offsetof(DataType, position) +
       last_member_size
       ) == ret_val;
   }
@@ -488,9 +466,12 @@ bool cdr_serialize_key_custom_interfaces__srv__AddTwoInts_Response(
   const custom_interfaces__srv__AddTwoInts_Response * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: sum
+  // Field name: position
   {
-    cdr << ros_message->sum;
+    size_t size = ros_message->position.size;
+    auto array_ptr = ros_message->position.data;
+    cdr << static_cast<uint32_t>(size);
+    cdr.serialize_array(array_ptr, size);
   }
 
   return true;
@@ -511,10 +492,15 @@ size_t get_serialized_size_key_custom_interfaces__srv__AddTwoInts_Response(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: sum
+  // Field name: position
   {
-    size_t item_size = sizeof(ros_message->sum);
-    current_alignment += item_size +
+    size_t array_size = ros_message->position.size;
+    auto array_ptr = ros_message->position.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -538,9 +524,13 @@ size_t max_serialized_size_key_custom_interfaces__srv__AddTwoInts_Response(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: sum
+  // Field name: position
   {
-    size_t array_size = 1;
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
@@ -554,7 +544,7 @@ size_t max_serialized_size_key_custom_interfaces__srv__AddTwoInts_Response(
     using DataType = custom_interfaces__srv__AddTwoInts_Response;
     is_plain =
       (
-      offsetof(DataType, sum) +
+      offsetof(DataType, position) +
       last_member_size
       ) == ret_val;
   }

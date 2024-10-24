@@ -23,8 +23,7 @@ extern "C"
 /// Struct defined in srv/AddTwoInts in the package custom_interfaces.
 typedef struct custom_interfaces__srv__AddTwoInts_Request
 {
-  int64_t a;
-  int64_t b;
+  uint8_t structure_needs_at_least_one_member;
 } custom_interfaces__srv__AddTwoInts_Request;
 
 // Struct for a sequence of custom_interfaces__srv__AddTwoInts_Request.
@@ -39,10 +38,14 @@ typedef struct custom_interfaces__srv__AddTwoInts_Request__Sequence
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'position'
+#include "rosidl_runtime_c/primitives_sequence.h"
+
 /// Struct defined in srv/AddTwoInts in the package custom_interfaces.
 typedef struct custom_interfaces__srv__AddTwoInts_Response
 {
-  int64_t sum;
+  rosidl_runtime_c__double__Sequence position;
 } custom_interfaces__srv__AddTwoInts_Response;
 
 // Struct for a sequence of custom_interfaces__srv__AddTwoInts_Response.

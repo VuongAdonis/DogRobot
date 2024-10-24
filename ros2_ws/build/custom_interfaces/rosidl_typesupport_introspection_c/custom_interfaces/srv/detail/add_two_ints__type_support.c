@@ -31,35 +31,17 @@ void custom_interfaces__srv__AddTwoInts_Request__rosidl_typesupport_introspectio
   custom_interfaces__srv__AddTwoInts_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__srv__AddTwoInts_Request__rosidl_typesupport_introspection_c__AddTwoInts_Request_message_member_array[2] = {
+static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__srv__AddTwoInts_Request__rosidl_typesupport_introspection_c__AddTwoInts_Request_message_member_array[1] = {
   {
-    "a",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    "structure_needs_at_least_one_member",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces__srv__AddTwoInts_Request, a),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "b",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(custom_interfaces__srv__AddTwoInts_Request, b),  // bytes offset in struct
+    offsetof(custom_interfaces__srv__AddTwoInts_Request, structure_needs_at_least_one_member),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -73,7 +55,7 @@ static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__srv_
 static const rosidl_typesupport_introspection_c__MessageMembers custom_interfaces__srv__AddTwoInts_Request__rosidl_typesupport_introspection_c__AddTwoInts_Request_message_members = {
   "custom_interfaces__srv",  // message namespace
   "AddTwoInts_Request",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(custom_interfaces__srv__AddTwoInts_Request),
   false,  // has_any_key_member_
   custom_interfaces__srv__AddTwoInts_Request__rosidl_typesupport_introspection_c__AddTwoInts_Request_message_member_array,  // message members
@@ -123,6 +105,10 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 // #include "custom_interfaces/srv/detail/add_two_ints__struct.h"
 
 
+// Include directives for member types
+// Member `position`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -142,24 +128,79 @@ void custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspecti
   custom_interfaces__srv__AddTwoInts_Response__fini(message_memory);
 }
 
+size_t custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__size_function__AddTwoInts_Response__position(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__get_const_function__AddTwoInts_Response__position(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__get_function__AddTwoInts_Response__position(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__fetch_function__AddTwoInts_Response__position(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const double * item =
+    ((const double *)
+    custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__get_const_function__AddTwoInts_Response__position(untyped_member, index));
+  double * value =
+    (double *)(untyped_value);
+  *value = *item;
+}
+
+void custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__assign_function__AddTwoInts_Response__position(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  double * item =
+    ((double *)
+    custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__get_function__AddTwoInts_Response__position(untyped_member, index));
+  const double * value =
+    (const double *)(untyped_value);
+  *item = *value;
+}
+
+bool custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__resize_function__AddTwoInts_Response__position(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  rosidl_runtime_c__double__Sequence__fini(member);
+  return rosidl_runtime_c__double__Sequence__init(member, size);
+}
+
 static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__AddTwoInts_Response_message_member_array[1] = {
   {
-    "sum",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    "position",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
-    false,  // is array
+    true,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces__srv__AddTwoInts_Response, sum),  // bytes offset in struct
+    offsetof(custom_interfaces__srv__AddTwoInts_Response, position),  // bytes offset in struct
     NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
+    custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__size_function__AddTwoInts_Response__position,  // size() function pointer
+    custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__get_const_function__AddTwoInts_Response__position,  // get_const(index) function pointer
+    custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__get_function__AddTwoInts_Response__position,  // get(index) function pointer
+    custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__fetch_function__AddTwoInts_Response__position,  // fetch(index, &value) function pointer
+    custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__assign_function__AddTwoInts_Response__position,  // assign(index, value) function pointer
+    custom_interfaces__srv__AddTwoInts_Response__rosidl_typesupport_introspection_c__resize_function__AddTwoInts_Response__position  // resize(index) function pointer
   }
 };
 

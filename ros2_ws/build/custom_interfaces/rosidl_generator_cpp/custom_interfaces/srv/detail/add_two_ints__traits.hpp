@@ -27,45 +27,17 @@ inline void to_flow_style_yaml(
   const AddTwoInts_Request & msg,
   std::ostream & out)
 {
-  out << "{";
-  // member: a
-  {
-    out << "a: ";
-    rosidl_generator_traits::value_to_yaml(msg.a, out);
-    out << ", ";
-  }
-
-  // member: b
-  {
-    out << "b: ";
-    rosidl_generator_traits::value_to_yaml(msg.b, out);
-  }
-  out << "}";
+  (void)msg;
+  out << "null";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const AddTwoInts_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: a
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "a: ";
-    rosidl_generator_traits::value_to_yaml(msg.a, out);
-    out << "\n";
-  }
-
-  // member: b
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "b: ";
-    rosidl_generator_traits::value_to_yaml(msg.b, out);
-    out << "\n";
-  }
+  (void)msg;
+  (void)indentation;
+  out << "null\n";
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const AddTwoInts_Request & msg, bool use_flow_style = false)
@@ -137,10 +109,21 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: sum
+  // member: position
   {
-    out << "sum: ";
-    rosidl_generator_traits::value_to_yaml(msg.sum, out);
+    if (msg.position.size() == 0) {
+      out << "position: []";
+    } else {
+      out << "position: [";
+      size_t pending_items = msg.position.size();
+      for (auto item : msg.position) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -149,14 +132,24 @@ inline void to_block_style_yaml(
   const AddTwoInts_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: sum
+  // member: position
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "sum: ";
-    rosidl_generator_traits::value_to_yaml(msg.sum, out);
-    out << "\n";
+    if (msg.position.size() == 0) {
+      out << "position: []\n";
+    } else {
+      out << "position:\n";
+      for (auto item : msg.position) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
   }
 }  // NOLINT(readability/fn_size)
 
@@ -206,11 +199,11 @@ inline const char * name<custom_interfaces::srv::AddTwoInts_Response>()
 
 template<>
 struct has_fixed_size<custom_interfaces::srv::AddTwoInts_Response>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<custom_interfaces::srv::AddTwoInts_Response>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<custom_interfaces::srv::AddTwoInts_Response>

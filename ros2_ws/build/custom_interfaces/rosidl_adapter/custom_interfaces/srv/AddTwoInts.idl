@@ -6,12 +6,10 @@
 module custom_interfaces {
   module srv {
     struct AddTwoInts_Request {
-      int64 a;
-
-      int64 b;
+      uint8 structure_needs_at_least_one_member;
     };
     struct AddTwoInts_Response {
-      int64 sum;
+      sequence<double> position;
     };
   };
 };

@@ -1,0 +1,62 @@
+[0.021s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/add_integers:/home/DATA/DogRobot/ros2_ws/install/can_node:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/custom_interfaces -- -j8 -l8
+[0.266s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.266s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.266s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.266s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.267s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.267s] -- Found rosidl_adapter: 4.6.4 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.548s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[0.676s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.824s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.826s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[1.128s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[1.165s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.325s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[1.325s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[1.325s]   custom_interfaces --arguments-file
+[1.326s]   /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_adapter__arguments__custom_interfaces.json
+[1.326s]   --output-dir
+[1.326s]   /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_adapter/custom_interfaces
+[1.326s]   --output-file
+[1.326s]   /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_adapter/custom_interfaces.idls)
+[1.326s]   returned error code 1:
+[1.327s] 
+[1.327s]   Error processing 'string, float64[] positionRR' of
+[1.327s]   'custom_interfaces/CANmessage': ''string,' is an invalid message name.  It
+[1.327s]   should have the pattern '^[A-Z][A-Za-z0-9]*$''
+[1.327s] 
+[1.327s]   Traceback (most recent call last):
+[1.328s] 
+[1.328s]     File "<frozen runpy>", line 198, in _run_module_as_main
+[1.328s]     File "<frozen runpy>", line 88, in _run_code
+[1.328s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.328s]       sys.exit(main())
+[1.328s]                ^^^^^^
+[1.329s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.329s]       abs_idl_file = convert_to_idl(
+[1.329s]                      ^^^^^^^^^^^^^^^
+[1.329s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[1.329s]       return convert_msg_to_idl(
+[1.329s]              ^^^^^^^^^^^^^^^^^^^
+[1.330s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[1.330s]       msg = parse_message_string(package_name, input_file.stem, content)
+[1.330s]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.330s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 521, in parse_message_string
+[1.330s]       Type(type_string, context_package_name=pkg_name),
+[1.330s]       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.331s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 278, in __init__
+[1.331s]       super(Type, self).__init__(
+[1.331s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 206, in __init__
+[1.331s]       raise InvalidResourceName(
+[1.331s] 
+[1.331s]   rosidl_adapter.parser.InvalidResourceName: 'string,' is an invalid message
+[1.332s]   name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[1.332s] 
+[1.332s] Call Stack (most recent call first):
+[1.332s]   /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[1.332s]   CMakeLists.txt:21 (rosidl_generate_interfaces)
+[1.332s] 
+[1.333s] [0m
+[1.333s] -- Configuring incomplete, errors occurred!
+[1.340s] gmake: *** [Makefile:815: cmake_check_build_system] Error 1
+[1.344s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/custom_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/add_integers:/home/DATA/DogRobot/ros2_ws/install/can_node:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/custom_interfaces -- -j8 -l8

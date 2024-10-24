@@ -1,5 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/custom_interfaces__cpp"
+  "rosidl_generator_cpp/custom_interfaces/msg/ca_nmessage.hpp"
+  "rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__builder.hpp"
+  "rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__struct.hpp"
+  "rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__traits.hpp"
+  "rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__type_support.hpp"
   "rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp"
   "rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp"
   "rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__builder.hpp"

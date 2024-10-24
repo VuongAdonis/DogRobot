@@ -1,0 +1,21 @@
+[1.271s] Invoking command in '/home/DATA/DogRobot/ros2_ws/src/can_node': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/can_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/can_node build --build-base /home/DATA/DogRobot/ros2_ws/build/can_node/build install --record /home/DATA/DogRobot/ros2_ws/build/can_node/install.log --single-version-externally-managed install_data
+[1.611s] running egg_info
+[1.634s] writing ../../build/can_node/can_node.egg-info/PKG-INFO
+[1.634s] writing dependency_links to ../../build/can_node/can_node.egg-info/dependency_links.txt
+[1.634s] writing entry points to ../../build/can_node/can_node.egg-info/entry_points.txt
+[1.635s] writing requirements to ../../build/can_node/can_node.egg-info/requires.txt
+[1.635s] writing top-level names to ../../build/can_node/can_node.egg-info/top_level.txt
+[1.682s] reading manifest file '../../build/can_node/can_node.egg-info/SOURCES.txt'
+[1.682s] writing manifest file '../../build/can_node/can_node.egg-info/SOURCES.txt'
+[1.683s] running build
+[1.683s] running build_py
+[1.683s] running install
+[1.691s] running install_lib
+[1.715s] running install_data
+[1.715s] running install_egg_info
+[1.739s] removing '/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages/can_node-0.0.0-py3.12.egg-info' (and everything under it)
+[1.739s] Copying ../../build/can_node/can_node.egg-info to /home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages/can_node-0.0.0-py3.12.egg-info
+[1.740s] running install_scripts
+[1.893s] Installing listener script to /home/DATA/DogRobot/ros2_ws/install/can_node/lib/can_node
+[1.893s] Installing talker script to /home/DATA/DogRobot/ros2_ws/install/can_node/lib/can_node
+[1.893s] writing list of installed files to '/home/DATA/DogRobot/ros2_ws/build/can_node/install.log'

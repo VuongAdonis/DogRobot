@@ -1,0 +1,22 @@
+[1.545s] Invoking command in '/home/DATA/DogRobot/ros2_ws/src/add_integers': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/add_integers/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/my_launch_package/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/add_integers build --build-base /home/DATA/DogRobot/ros2_ws/build/add_integers/build install --record /home/DATA/DogRobot/ros2_ws/build/add_integers/install.log --single-version-externally-managed install_data
+[1.989s] running egg_info
+[2.019s] writing ../../build/add_integers/add_integers.egg-info/PKG-INFO
+[2.019s] writing dependency_links to ../../build/add_integers/add_integers.egg-info/dependency_links.txt
+[2.020s] writing entry points to ../../build/add_integers/add_integers.egg-info/entry_points.txt
+[2.020s] writing requirements to ../../build/add_integers/add_integers.egg-info/requires.txt
+[2.020s] writing top-level names to ../../build/add_integers/add_integers.egg-info/top_level.txt
+[2.100s] reading manifest file '../../build/add_integers/add_integers.egg-info/SOURCES.txt'
+[2.101s] writing manifest file '../../build/add_integers/add_integers.egg-info/SOURCES.txt'
+[2.102s] running build
+[2.102s] running build_py
+[2.102s] running install
+[2.116s] running install_lib
+[2.152s] running install_data
+[2.152s] running install_egg_info
+[2.184s] removing '/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages/add_integers-0.0.0-py3.12.egg-info' (and everything under it)
+[2.185s] Copying ../../build/add_integers/add_integers.egg-info to /home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages/add_integers-0.0.0-py3.12.egg-info
+[2.186s] running install_scripts
+[2.396s] Installing addition_client script to /home/DATA/DogRobot/ros2_ws/install/add_integers/lib/add_integers
+[2.396s] Installing addition_service script to /home/DATA/DogRobot/ros2_ws/install/add_integers/lib/add_integers
+[2.396s] writing list of installed files to '/home/DATA/DogRobot/ros2_ws/build/add_integers/install.log'
+[2.493s] Invoked command in '/home/DATA/DogRobot/ros2_ws/src/add_integers' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/add_integers/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/my_launch_package/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/add_integers build --build-base /home/DATA/DogRobot/ros2_ws/build/add_integers/build install --record /home/DATA/DogRobot/ros2_ws/build/add_integers/install.log --single-version-externally-managed install_data

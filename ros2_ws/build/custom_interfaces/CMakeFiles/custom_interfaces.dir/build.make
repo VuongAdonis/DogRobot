@@ -67,6 +67,7 @@ include CMakeFiles/custom_interfaces.dir/compiler_depend.make
 include CMakeFiles/custom_interfaces.dir/progress.make
 
 CMakeFiles/custom_interfaces: /home/DATA/DogRobot/ros2_ws/src/custom_interfaces/srv/AddTwoInts.srv
+CMakeFiles/custom_interfaces: /home/DATA/DogRobot/ros2_ws/src/custom_interfaces/msg/CANmessage.msg
 CMakeFiles/custom_interfaces: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 
 custom_interfaces: CMakeFiles/custom_interfaces

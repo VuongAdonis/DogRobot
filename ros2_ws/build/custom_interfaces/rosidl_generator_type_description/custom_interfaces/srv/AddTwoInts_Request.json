@@ -4,19 +4,9 @@
       "type_name": "custom_interfaces/srv/AddTwoInts_Request",
       "fields": [
         {
-          "name": "a",
+          "name": "structure_needs_at_least_one_member",
           "type": {
-            "type_id": 8,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "b",
-          "type": {
-            "type_id": 8,
+            "type_id": 3,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -30,7 +20,7 @@
   "type_hashes": [
     {
       "type_name": "custom_interfaces/srv/AddTwoInts_Request",
-      "hash_string": "RIHS01_1ac7e2293e278d6db4906b7e3216c4cf5b4fe9d035bdf8033112e97d15d929de"
+      "hash_string": "RIHS01_a2c1a898905dc84c2476ed5990bcf1b7ee419fe70fca34b012d35f1f1d1f3bed"
     }
   ]
 }

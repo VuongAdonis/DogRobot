@@ -21,42 +21,6 @@ namespace custom_interfaces
 namespace srv
 {
 
-namespace builder
-{
-
-class Init_AddTwoInts_Request_b
-{
-public:
-  explicit Init_AddTwoInts_Request_b(::custom_interfaces::srv::AddTwoInts_Request & msg)
-  : msg_(msg)
-  {}
-  ::custom_interfaces::srv::AddTwoInts_Request b(::custom_interfaces::srv::AddTwoInts_Request::_b_type arg)
-  {
-    msg_.b = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::custom_interfaces::srv::AddTwoInts_Request msg_;
-};
-
-class Init_AddTwoInts_Request_a
-{
-public:
-  Init_AddTwoInts_Request_a()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  Init_AddTwoInts_Request_b a(::custom_interfaces::srv::AddTwoInts_Request::_a_type arg)
-  {
-    msg_.a = std::move(arg);
-    return Init_AddTwoInts_Request_b(msg_);
-  }
-
-private:
-  ::custom_interfaces::srv::AddTwoInts_Request msg_;
-};
-
-}  // namespace builder
 
 }  // namespace srv
 
@@ -67,7 +31,7 @@ template<>
 inline
 auto build<::custom_interfaces::srv::AddTwoInts_Request>()
 {
-  return custom_interfaces::srv::builder::Init_AddTwoInts_Request_a();
+  return ::custom_interfaces::srv::AddTwoInts_Request(rosidl_runtime_cpp::MessageInitialization::ZERO);
 }
 
 }  // namespace custom_interfaces
@@ -82,15 +46,15 @@ namespace srv
 namespace builder
 {
 
-class Init_AddTwoInts_Response_sum
+class Init_AddTwoInts_Response_position
 {
 public:
-  Init_AddTwoInts_Response_sum()
+  Init_AddTwoInts_Response_position()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::custom_interfaces::srv::AddTwoInts_Response sum(::custom_interfaces::srv::AddTwoInts_Response::_sum_type arg)
+  ::custom_interfaces::srv::AddTwoInts_Response position(::custom_interfaces::srv::AddTwoInts_Response::_position_type arg)
   {
-    msg_.sum = std::move(arg);
+    msg_.position = std::move(arg);
     return std::move(msg_);
   }
 
@@ -109,7 +73,7 @@ template<>
 inline
 auto build<::custom_interfaces::srv::AddTwoInts_Response>()
 {
-  return custom_interfaces::srv::builder::Init_AddTwoInts_Response_sum();
+  return custom_interfaces::srv::builder::Init_AddTwoInts_Response_position();
 }
 
 }  // namespace custom_interfaces

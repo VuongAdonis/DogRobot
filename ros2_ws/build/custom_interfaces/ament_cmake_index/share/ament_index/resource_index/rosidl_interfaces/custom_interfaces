@@ -1,2 +1,4 @@
+msg/CANmessage.idl
+msg/CANmessage.msg
 srv/AddTwoInts.idl
 srv/AddTwoInts.srv

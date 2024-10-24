@@ -1,0 +1,217 @@
+[0.025s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/custom_interfaces -- -j8 -l8
+[0.873s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.873s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.873s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.874s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.874s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.874s] -- Found rosidl_adapter: 4.6.4 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.875s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[0.875s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.875s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.876s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[1.290s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[1.304s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.320s] -- Added test 'lint_cmake' to check CMake code style
+[1.320s] -- Added test 'xmllint' to check XML markup files
+[1.323s] -- Configuring done (1.3s)
+[1.383s] -- Generating done (0.0s)
+[1.391s] -- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/custom_interfaces
+[1.454s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[1.480s] [  2%] Built target ament_cmake_python_copy_custom_interfaces
+[1.750s] [  2%] Built target custom_interfaces__rosidl_generator_type_description
+[1.764s] [  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.775s] [  8%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.902s] running egg_info
+[1.940s] writing custom_interfaces.egg-info/PKG-INFO
+[1.940s] writing dependency_links to custom_interfaces.egg-info/dependency_links.txt
+[1.940s] writing top-level names to custom_interfaces.egg-info/top_level.txt
+[2.056s] reading manifest file 'custom_interfaces.egg-info/SOURCES.txt'
+[2.057s] writing manifest file 'custom_interfaces.egg-info/SOURCES.txt'
+[2.107s] [  8%] Built target ament_cmake_python_build_custom_interfaces_egg
+[2.159s] [  8%] Built target custom_interfaces__cpp
+[2.372s] [ 14%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.o[0m
+[2.373s] [ 14%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.o[0m
+[2.379s] [ 17%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.o[0m
+[2.529s] [ 20%] [32m[1mLinking C shared library libcustom_interfaces__rosidl_generator_c.so[0m
+[2.570s] [ 20%] Built target custom_interfaces__rosidl_generator_c
+[2.588s] [ 23%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.588s] [ 26%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.588s] [ 29%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.599s] [ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.603s] [ 35%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.608s] [ 38%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.098s] [ 41%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/srv/add_two_ints__type_support.cpp.o[0m
+[3.147s] [ 44%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/srv/add_two_ints__type_support.cpp.o[0m
+[3.283s] [ 47%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_c.so[0m
+[3.319s] [ 50%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/srv/detail/add_two_ints__type_support_c.cpp.o[0m
+[3.351s] [ 52%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.o[0m
+[3.360s] [ 55%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/dds_fastrtps/add_two_ints__type_support.cpp.o[0m
+[3.361s] [ 58%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/add_two_ints__type_support.cpp.o[0m
+[3.472s] [ 58%] Built target custom_interfaces__rosidl_typesupport_c
+[3.475s] [ 61%] [32m[1mLinking C shared library libcustom_interfaces__rosidl_typesupport_introspection_c.so[0m
+[3.582s] [ 61%] Built target custom_interfaces__rosidl_typesupport_introspection_c
+[4.280s] [ 64%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_cpp.so[0m
+[4.416s] [ 64%] Built target custom_interfaces__rosidl_typesupport_cpp
+[4.496s] [ 67%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[4.537s] [ 70%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[4.553s] [ 70%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c
+[4.623s] [ 70%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp
+[4.713s] [ 73%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.790s] [ 73%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp
+[4.810s] [ 73%] Built target custom_interfaces
+[4.831s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.180s] [ 76%] Built target custom_interfaces__py
+[5.202s] [ 79%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/srv/_add_two_ints_s.c.o[0m
+[5.363s] [ 82%] [32m[1mLinking C shared library libcustom_interfaces__rosidl_generator_py.so[0m
+[5.401s] [ 82%] Built target custom_interfaces__rosidl_generator_py
+[5.424s] [ 91%] [32mBuilding C object CMakeFiles/custom_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[5.424s] [ 91%] [32mBuilding C object CMakeFiles/custom_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[5.424s] [ 91%] [32mBuilding C object CMakeFiles/custom_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.541s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[5.542s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so[0m
+[5.545s] [100%] [32m[1mLinking C shared module rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[5.572s] [100%] Built target custom_interfaces_s__rosidl_typesupport_c
+[5.572s] [100%] Built target custom_interfaces_s__rosidl_typesupport_introspection_c
+[5.575s] [100%] Built target custom_interfaces_s__rosidl_typesupport_fastrtps_c
+[5.586s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/custom_interfaces -- -j8 -l8
+[5.645s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/custom_interfaces
+[5.653s] -- Install configuration: ""
+[5.653s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces
+[5.654s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/srv/AddTwoInts.json
+[5.654s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[5.654s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[5.654s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/add_two_ints.h
+[5.654s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[5.654s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__type_support.c
+[5.654s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__functions.h
+[5.654s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__struct.h
+[5.654s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__functions.c
+[5.654s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__type_support.h
+[5.654s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__description.c
+[5.655s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[5.655s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_c__visibility_control.h
+[5.655s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/library_path.sh
+[5.655s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/library_path.dsv
+[5.655s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so
+[5.655s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so" to ""
+[5.655s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[5.655s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[5.655s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[5.655s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__rosidl_typesupport_fastrtps_c.h
+[5.655s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[5.655s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.656s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_c.so
+[5.656s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[5.656s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[5.656s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[5.656s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[5.656s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__type_support.c
+[5.656s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__rosidl_typesupport_introspection_c.h
+[5.656s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[5.656s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.656s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so
+[5.656s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[5.657s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so
+[5.657s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so" to ""
+[5.657s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[5.657s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[5.657s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[5.657s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__type_support.hpp
+[5.657s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__struct.hpp
+[5.657s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__traits.hpp
+[5.657s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__builder.hpp
+[5.658s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/add_two_ints.hpp
+[5.658s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[5.658s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[5.658s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[5.658s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[5.658s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[5.658s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__rosidl_typesupport_fastrtps_cpp.hpp
+[5.658s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/dds_fastrtps
+[5.658s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[5.658s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.658s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[5.658s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.659s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[5.659s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[5.659s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[5.659s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__type_support.cpp
+[5.659s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__rosidl_typesupport_introspection_cpp.hpp
+[5.659s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so
+[5.659s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[5.659s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so
+[5.660s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so" to ""
+[5.660s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.sh
+[5.660s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.dsv
+[5.660s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info
+[5.660s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[5.660s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[5.660s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[5.660s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[5.661s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces
+[5.661s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[5.661s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv
+[5.661s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/__init__.py
+[5.661s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_add_two_ints.py
+[5.661s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_add_two_ints_s.c
+[5.661s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c
+[5.661s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/__init__.py
+[5.661s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so
+[5.661s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.661s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[5.662s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so
+[5.699s] Listing '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces'...
+[5.699s] Compiling '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/__init__.py'...
+[5.700s] Listing '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv'...
+[5.700s] Compiling '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/__init__.py'...
+[5.700s] Compiling '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_add_two_ints.py'...
+[5.707s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[5.707s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""
+[5.707s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so
+[5.707s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so" to ""
+[5.707s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so
+[5.708s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so" to ""
+[5.708s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_py.so
+[5.708s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_py.so" to ""
+[5.708s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/srv/AddTwoInts.idl
+[5.708s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/srv/AddTwoInts.srv
+[5.708s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/ament_index/resource_index/package_run_dependencies/custom_interfaces
+[5.708s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/ament_index/resource_index/parent_prefix_path/custom_interfaces
+[5.708s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.sh
+[5.709s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.dsv
+[5.709s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/path.sh
+[5.709s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/path.dsv
+[5.709s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/local_setup.bash
+[5.709s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/local_setup.sh
+[5.709s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/local_setup.zsh
+[5.709s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/local_setup.dsv
+[5.709s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.dsv
+[5.709s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/ament_index/resource_index/packages/custom_interfaces
+[5.710s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport.cmake
+[5.710s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport-noconfig.cmake
+[5.710s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[5.710s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.710s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[5.710s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.710s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport.cmake
+[5.710s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[5.710s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cppExport.cmake
+[5.710s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.710s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.710s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake-extras.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig.cmake
+[5.711s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig-version.cmake
+[5.712s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.xml
+[5.713s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/custom_interfaces

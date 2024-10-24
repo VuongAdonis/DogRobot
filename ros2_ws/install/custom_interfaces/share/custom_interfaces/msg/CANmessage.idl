@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from custom_interfaces/msg/CANmessage.msg
+// generated code does not contain a copyright notice
+
+
+module custom_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "This contain the position to control the leg of robot")
+    struct CANmessage {
+      string name1;
+
+      sequence<double> positionrr;
+
+      string name2;
+
+      sequence<double> positionrl;
+
+      string name3;
+
+      sequence<double> positionfr;
+
+      string name4;
+
+      sequence<double> positionfl;
+    };
+  };
+};

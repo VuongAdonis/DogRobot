@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/custom_interfaces__rosidl_generator_type_description"
+  "rosidl_generator_type_description/custom_interfaces/msg/CANmessage.json"
   "rosidl_generator_type_description/custom_interfaces/srv/AddTwoInts.json"
 )
 
