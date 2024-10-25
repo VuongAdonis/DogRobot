@@ -4,17 +4,39 @@ import struct
 import rclpy
 from rclpy.node import Node
 from custom_interfaces.msg import PublishMessage
+from enum import Enum
+
+class legRR(Enum):
+	shoulder 	= 0
+	thigh 		= 1
+	shank		= 2
+
+class legFR(Enum):
+	shoulder 	= 3
+	thigh 		= 4
+	shank		= 5
+
+class legRL(Enum):
+	shoulder 	= 6
+	thigh 		= 7
+	shank		= 8
+
+class legFL(Enum):
+	shoulder 	= 9
+	thigh 		= 10
+	shank		= 11
+     
 
 class CanNode(Node):
     def __init__(self):
         # self.bus = bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
-        # self.sendClosedLoop(1)
+        # self.sendClosedLoop(legRR.thigh.value)
         # time.sleep(0.1)
-        # self.sendClosedLoop(2)
+        # self.sendClosedLoop(legRR.shank.value)
         # time.sleep(0.1)
-        # self.sendClosedLoop(4)
+        # self.sendClosedLoop(legFR.thigh.value)
         # time.sleep(0.1)
-        # self.sendClosedLoop(5)
+        # self.sendClosedLoop(legFR.shank.value)
         # time.sleep(0.1)
         print("All ODrives have been set to ClosedLoop")
 
@@ -27,13 +49,13 @@ class CanNode(Node):
         )
 
     def StopSend(self):
-        # self.sendIdle(1)
+        # self.sendIdle(legRR.thigh.value)
         # time.sleep(0.1)
-        # self.sendIdle(2)
+        # self.sendIdle(legRR.shank.value)
         # time.sleep(0.1)
-        # self.sendIdle(3)
+        # self.sendIdle(legFR.thigh.value)
         # time.sleep(0.1)
-        # self.sendIdle(4)
+        # self.sendIdle(legFR.shank.value)
         # time.sleep(0.1)
         print("All ODrives have been set to Idle")
         
@@ -52,13 +74,13 @@ class CanNode(Node):
 
 
         # send message
-        # self.sendPos(5, posFR[2])
+        # self.sendPos(legFR.shank.value, posFR[2])
         # time.sleep(1)
-        # self.sendPos(4, posFR[1])
+        # self.sendPos(legFR.thigh.value, posFR[1])
         # time.sleep(1)
-        # self.sendPos(2, posRR[1])
+        # self.sendPos(legRR.thigh.value, posRR[1])
         # time.sleep(1)
-        # self.sendPos(1, posRR[2])
+        # self.sendPos(legRR.shank.value, posRR[2])
         # time.sleep(1)
 
 
