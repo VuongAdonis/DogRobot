@@ -15,8 +15,8 @@ find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/AddTwoInts.srv"
-  "msg/CANmessage.msg"
+  "srv/GamepadSrv.srv"
+  "msg/PublishMessage.msg"
 )
 
 ### END ADD for service  ###

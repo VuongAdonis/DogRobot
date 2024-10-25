@@ -66,87 +66,87 @@ include CMakeFiles/custom_interfaces__cpp.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/custom_interfaces__cpp.dir/progress.make
 
-CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
-CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__builder.hpp
-CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__struct.hpp
-CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__traits.hpp
-CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__type_support.hpp
-CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/ca_nmessage.hpp
-CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__builder.hpp
-CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__struct.hpp
-CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__traits.hpp
-CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__type_support.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__builder.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__struct.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__traits.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__type_support.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/publish_message.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__builder.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__struct.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__traits.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__type_support.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_cpp/__init__.py
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__builder.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__struct.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__traits.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__type_support.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__builder.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__struct.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__traits.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__type_support.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__builder.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__struct.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__traits.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__type_support.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__builder.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: rosidl_adapter/custom_interfaces/srv/AddTwoInts.idl
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: rosidl_adapter/custom_interfaces/msg/CANmessage.idl
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
-rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_cpp/__init__.py
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__builder.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__struct.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__traits.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__type_support.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__builder.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__struct.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__traits.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__type_support.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__builder.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__struct.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__traits.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__type_support.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__builder.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: rosidl_adapter/custom_interfaces/srv/GamepadSrv.idl
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: rosidl_adapter/custom_interfaces/msg/PublishMessage.idl
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp__arguments.json
 
-rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__builder.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__builder.hpp
+rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__builder.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__builder.hpp
 
-rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__struct.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__struct.hpp
+rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__struct.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__struct.hpp
 
-rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__traits.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__traits.hpp
+rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__traits.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__traits.hpp
 
-rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__type_support.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__type_support.hpp
+rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__type_support.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__type_support.hpp
 
-rosidl_generator_cpp/custom_interfaces/msg/ca_nmessage.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/ca_nmessage.hpp
+rosidl_generator_cpp/custom_interfaces/msg/publish_message.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/publish_message.hpp
 
-rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__builder.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__builder.hpp
+rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__builder.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__builder.hpp
 
-rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__struct.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__struct.hpp
+rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__struct.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__struct.hpp
 
-rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__traits.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__traits.hpp
+rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__traits.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__traits.hpp
 
-rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__type_support.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__type_support.hpp
+rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__type_support.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__type_support.hpp
 
-rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
+rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 custom_interfaces__cpp: CMakeFiles/custom_interfaces__cpp
-custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/ca_nmessage.hpp
-custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__builder.hpp
-custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__struct.hpp
-custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__traits.hpp
-custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/ca_nmessage__type_support.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__builder.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__struct.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__traits.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__type_support.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/publish_message.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
-custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/add_two_ints.hpp
-custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__builder.hpp
-custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__struct.hpp
-custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__traits.hpp
-custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/add_two_ints__type_support.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__builder.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__struct.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__traits.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__type_support.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
 custom_interfaces__cpp: CMakeFiles/custom_interfaces__cpp.dir/build.make
 .PHONY : custom_interfaces__cpp
 

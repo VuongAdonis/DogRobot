@@ -1,14 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/ca_nmessage__type_support.cpp.o"
-  "CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/ca_nmessage__type_support.cpp.o.d"
-  "CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/dds_fastrtps/add_two_ints__type_support.cpp.o"
-  "CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/dds_fastrtps/add_two_ints__type_support.cpp.o.d"
+  "CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/publish_message__type_support.cpp.o"
+  "CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/publish_message__type_support.cpp.o.d"
+  "CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/dds_fastrtps/gamepad_srv__type_support.cpp.o"
+  "CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/dds_fastrtps/gamepad_srv__type_support.cpp.o.d"
   "libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.pdb"
   "libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so"
-  "rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/ca_nmessage__rosidl_typesupport_fastrtps_cpp.hpp"
-  "rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/ca_nmessage__type_support.cpp"
-  "rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/add_two_ints__rosidl_typesupport_fastrtps_cpp.hpp"
-  "rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/dds_fastrtps/add_two_ints__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/publish_message__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/publish_message__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/dds_fastrtps/gamepad_srv__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/gamepad_srv__rosidl_typesupport_fastrtps_cpp.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,1 +1,1 @@
-from custom_interfaces.msg._ca_nmessage import CANmessage  # noqa: F401
+from custom_interfaces.msg._publish_message import PublishMessage  # noqa: F401

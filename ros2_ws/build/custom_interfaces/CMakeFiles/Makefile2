@@ -176,9 +176,9 @@ CMakeFiles/custom_interfaces_uninstall.dir/clean:
 # Target rules for target CMakeFiles/custom_interfaces.dir
 
 # All Build rule for target.
+CMakeFiles/custom_interfaces.dir/all: CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/all
 CMakeFiles/custom_interfaces.dir/all: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/all
 CMakeFiles/custom_interfaces.dir/all: CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/all
-CMakeFiles/custom_interfaces.dir/all: CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/all
 CMakeFiles/custom_interfaces.dir/all: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/all
 CMakeFiles/custom_interfaces.dir/all: CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/all
 CMakeFiles/custom_interfaces.dir/all: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/all

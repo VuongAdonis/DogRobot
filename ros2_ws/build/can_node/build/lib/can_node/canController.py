@@ -3,7 +3,7 @@ import time
 import struct
 import rclpy
 from rclpy.node import Node
-from custom_interfaces.msg import CANmessage
+from custom_interfaces.msg import PublishMessage
 
 class CanNode(Node):
     def __init__(self):
@@ -18,10 +18,10 @@ class CanNode(Node):
         # time.sleep(0.1)
         print("All ODrives have been set to ClosedLoop")
 
-        super().__init__("Subcriber_Node")
+        super().__init__("SubscriberNode")
         self.subscription = self.create_subscription(
-            CANmessage,
-            'CAN_topic',
+            PublishMessage,
+            'publishTopic',
             self.CAN_listen_callback,
             10
         )
@@ -190,7 +190,7 @@ def main(args=None):
         rclpy.spin(robotDogHk241)
     except KeyboardInterrupt:
         robotDogHk241.StopSend()
-        robotDogHk241.bus.shutdown() 
+        # robotDogHk241.bus.shutdown() 
         print("SLCAN bus has been turned off properly.")
         robotDogHk241.destroy_node()
         rclpy.shutdown()

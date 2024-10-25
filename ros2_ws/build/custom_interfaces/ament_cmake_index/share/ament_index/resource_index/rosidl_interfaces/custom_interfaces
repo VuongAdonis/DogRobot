@@ -1,4 +1,4 @@
-msg/CANmessage.idl
-msg/CANmessage.msg
-srv/AddTwoInts.idl
-srv/AddTwoInts.srv
+msg/PublishMessage.idl
+msg/PublishMessage.msg
+srv/GamepadSrv.idl
+srv/GamepadSrv.srv

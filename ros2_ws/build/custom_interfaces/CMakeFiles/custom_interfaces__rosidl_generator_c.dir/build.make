@@ -69,174 +69,174 @@ include CMakeFiles/custom_interfaces__rosidl_generator_c.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
 
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/lib/rosidl_generator_c/rosidl_generator_c
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_c/__init__.py
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/action__type_support.h.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/action__type_support.c.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/empty__description.c.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/full__description.c.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl.h.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__description.c.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__functions.c.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__functions.h.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__struct.h.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__type_support.c.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__type_support.h.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__functions.c.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__functions.h.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__struct.h.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__type_support.h.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/srv__type_support.c.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/srv__type_support.h.em
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: rosidl_adapter/custom_interfaces/srv/AddTwoInts.idl
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: rosidl_adapter/custom_interfaces/msg/CANmessage.idl
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
-rosidl_generator_c/custom_interfaces/srv/add_two_ints.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/lib/rosidl_generator_c/rosidl_generator_c
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_c/__init__.py
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/action__type_support.h.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/action__type_support.c.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/empty__description.c.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/full__description.c.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl.h.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__description.c.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__functions.c.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__functions.h.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__struct.h.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__type_support.c.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__type_support.h.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__functions.c.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__functions.h.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__struct.h.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__type_support.h.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/srv__type_support.c.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/srv__type_support.h.em
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: rosidl_adapter/custom_interfaces/srv/GamepadSrv.idl
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: rosidl_adapter/custom_interfaces/msg/PublishMessage.idl
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c__arguments.json
 
-rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.h: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.h
+rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.h: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.h
 
-rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__struct.h: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__struct.h
+rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__struct.h: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__struct.h
 
-rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.h: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.h
+rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.h: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.h
 
-rosidl_generator_c/custom_interfaces/msg/ca_nmessage.h: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/ca_nmessage.h
+rosidl_generator_c/custom_interfaces/msg/publish_message.h: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/publish_message.h
 
-rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.h: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.h
+rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.h: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.h
 
-rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__struct.h: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__struct.h
+rosidl_generator_c/custom_interfaces/msg/detail/publish_message__struct.h: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/publish_message__struct.h
 
-rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.h: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.h
+rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.h: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.h
 
-rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c
+rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c
 
-rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c
+rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c
 
-rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c
+rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c
 
-rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c
+rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c
 
-rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c
+rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c
 
-rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c
+rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.o: rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.o -c /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.o: rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.o -c /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.i
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.i
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.s
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.s
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.o: rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.o -c /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.o: rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.o -c /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.i
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.i
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.s
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.s
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.o: rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.o -c /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o: rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o -c /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.i
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.i
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.s
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.s
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.o: rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.o -c /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.o: rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.o -c /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.i
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.i
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.s
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.s
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.o: rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.o -c /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.o: rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.o -c /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.i
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.i
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.s
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.s
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.o: rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.o -c /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.o: rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.o -c /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.i
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.i
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.s
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.s
 
 # Object files for target custom_interfaces__rosidl_generator_c
 custom_interfaces__rosidl_generator_c_OBJECTS = \
-"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.o" \
-"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.o" \
-"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.o" \
-"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.o" \
-"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.o" \
-"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.o"
+"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.o" \
+"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.o" \
+"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o" \
+"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.o" \
+"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.o" \
+"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.o"
 
 # External object files for target custom_interfaces__rosidl_generator_c
 custom_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 
-libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c.o
-libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c.o
-libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c.o
-libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c.o
-libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c.o
-libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c.o
+libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.o
+libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.o
+libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o
+libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.o
+libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.o
+libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.o
 libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/build.make
 libcustom_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_generator_c.so
 libcustom_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_generator_c.so
@@ -254,20 +254,20 @@ CMakeFiles/custom_interfaces__rosidl_generator_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/custom_interfaces__rosidl_generator_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/custom_interfaces__rosidl_generator_c.dir/clean
 
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/ca_nmessage.h
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__description.c
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.c
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__functions.h
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__struct.h
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.c
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/ca_nmessage__type_support.h
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/add_two_ints.h
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__description.c
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.c
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__functions.h
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__struct.h
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.c
-CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/add_two_ints__type_support.h
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.h
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/publish_message__struct.h
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.h
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/publish_message.h
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.h
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__struct.h
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.h
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/gamepad_srv.h
 	cd /home/DATA/DogRobot/ros2_ws/build/custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/DATA/DogRobot/ros2_ws/src/custom_interfaces /home/DATA/DogRobot/ros2_ws/src/custom_interfaces /home/DATA/DogRobot/ros2_ws/build/custom_interfaces /home/DATA/DogRobot/ros2_ws/build/custom_interfaces /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles/custom_interfaces__rosidl_generator_c.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend
 
