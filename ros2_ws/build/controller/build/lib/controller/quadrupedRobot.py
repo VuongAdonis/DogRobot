@@ -22,6 +22,7 @@ from sensor_msgs.msg import Joy
 from std_msgs.msg import String
 import subprocess
 import time
+from custom_interfaces.msg import CANmessage
 
 
 #---------------------------------------------------------------------------------------------------------------------#
@@ -93,28 +94,46 @@ class AdditionClientAsync(Node):
 
   def send_request(self):
       request = AddTwoInts.Request()
-      # request.a = int(sys.argv[1])
-      # request.b = int(sys.argv[2])
       self.future = self.client.call_async(request)
 
-  def get_position(addition_client):
-    
-    addition_client.send_request()
+
+
+  def get_position(self):
+    self.send_request()
     while rclpy.ok():
-      rclpy.spin_once(addition_client)
-      if addition_client.future.done():
+      rclpy.spin_once(self)
+      if self.future.done():
           try:
-              response = addition_client.future.result()
+              response = self.future.result()
           except Exception as e:
-              addition_client.get_logger().info(
+              self.get_logger().info(
                   f"Service call failed {e}"
               )
           else:
-              addition_client.get_logger().info(  
+              self.get_logger().info(  
                   f"Result of addition is {response.position}"
               )
               break
     return response
+
+class CAN_communication(Node):
+  def __init__(self):
+    super().__init__("CAN_publisher")
+    self.publisher_ = self.create_publisher(CANmessage, 'CAN_topic', 10)
+
+  def send_CAN_message(self, trajectoryRR, trajectoryRL, trajectoryFR, trajectoryFL):
+    msg = CANmessage()
+    msg.namerr = "RR"
+    msg.positionrr = trajectoryRR
+    msg.namerl = "RL"
+    msg.positionrl = trajectoryRL
+    msg.namefr = "FR"
+    msg.positionfr = trajectoryFR
+    msg.namefl = "RL"
+    msg.positionfl = trajectoryFL
+
+    # send message to the CAN node
+    self.publisher_.publish(msg)
 
 def main():
   # angleVector = atan2(-x, y)   # updated from the gamePad
@@ -133,16 +152,20 @@ def main():
 
     rclpy.init()
     addition_client= AdditionClientAsync()
+    CAN_node = CAN_communication()
     
     while True:
       key = input("Enter key")
       if key == 'a':
-        response = addition_client.get_position(addition_client)
+        response = addition_client.get_position()
         angleVector = atan2(-response.position[0], response.position[1])   # updated from the gamePad
         robotDogTeam = quadrupedRobot()
           
         robotDogTeam.updateTrajectoryAllLegs(angleVector)
         trajectoryRR, trajectoryRL, trajectoryFR, trajectoryFL = robotDogTeam.getTrajectory()
+
+        CAN_node.send_CAN_message(trajectoryRR[0], trajectoryRL[0], trajectoryFR[0], trajectoryFL[0])
+
         print("----------------TRAJECTORY-----------------")
         for i in range(len(trajectoryFL)):
           print("-------------point", i+ 1, "------------------")
@@ -155,6 +178,7 @@ def main():
          break
       
     addition_client.destroy_node()
+    CAN_node.destroy_node()
     rclpy.shutdown()
     
   # CAN = CanNode()

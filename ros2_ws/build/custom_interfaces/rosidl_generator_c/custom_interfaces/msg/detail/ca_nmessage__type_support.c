@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
-#include "custom_interfaces/msg/detail/ca_nmessage__type_support.h"
 #include "custom_interfaces/msg/detail/ca_nmessage__struct.h"
+#include "custom_interfaces/msg/detail/ca_nmessage__type_support.h"
 #include "custom_interfaces/msg/detail/ca_nmessage__functions.h"
 
 #ifdef __cplusplus

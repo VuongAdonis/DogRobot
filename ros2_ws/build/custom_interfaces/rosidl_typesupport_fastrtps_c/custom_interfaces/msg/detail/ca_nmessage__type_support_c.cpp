@@ -38,8 +38,8 @@ extern "C"
 
 #include "rosidl_runtime_c/primitives_sequence.h"  // positionfl, positionfr, positionrl, positionrr
 #include "rosidl_runtime_c/primitives_sequence_functions.h"  // positionfl, positionfr, positionrl, positionrr
-#include "rosidl_runtime_c/string.h"  // name1, name2, name3, name4
-#include "rosidl_runtime_c/string_functions.h"  // name1, name2, name3, name4
+#include "rosidl_runtime_c/string.h"  // namefl, namefr, namerl, namerr
+#include "rosidl_runtime_c/string_functions.h"  // namefl, namefr, namerl, namerr
 
 // forward declare type support functions
 
@@ -52,9 +52,9 @@ bool cdr_serialize_custom_interfaces__msg__CANmessage(
   const custom_interfaces__msg__CANmessage * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: name1
+  // Field name: namerr
   {
-    const rosidl_runtime_c__String * str = &ros_message->name1;
+    const rosidl_runtime_c__String * str = &ros_message->namerr;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -74,9 +74,9 @@ bool cdr_serialize_custom_interfaces__msg__CANmessage(
     cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: name2
+  // Field name: namerl
   {
-    const rosidl_runtime_c__String * str = &ros_message->name2;
+    const rosidl_runtime_c__String * str = &ros_message->namerl;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -96,9 +96,9 @@ bool cdr_serialize_custom_interfaces__msg__CANmessage(
     cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: name3
+  // Field name: namefr
   {
-    const rosidl_runtime_c__String * str = &ros_message->name3;
+    const rosidl_runtime_c__String * str = &ros_message->namefr;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -118,9 +118,9 @@ bool cdr_serialize_custom_interfaces__msg__CANmessage(
     cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: name4
+  // Field name: namefl
   {
-    const rosidl_runtime_c__String * str = &ros_message->name4;
+    const rosidl_runtime_c__String * str = &ros_message->namefl;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -148,18 +148,18 @@ bool cdr_deserialize_custom_interfaces__msg__CANmessage(
   eprosima::fastcdr::Cdr & cdr,
   custom_interfaces__msg__CANmessage * ros_message)
 {
-  // Field name: name1
+  // Field name: namerr
   {
     std::string tmp;
     cdr >> tmp;
-    if (!ros_message->name1.data) {
-      rosidl_runtime_c__String__init(&ros_message->name1);
+    if (!ros_message->namerr.data) {
+      rosidl_runtime_c__String__init(&ros_message->namerr);
     }
     bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->name1,
+      &ros_message->namerr,
       tmp.c_str());
     if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'name1'\n");
+      fprintf(stderr, "failed to assign string into field 'namerr'\n");
       return false;
     }
   }
@@ -180,18 +180,18 @@ bool cdr_deserialize_custom_interfaces__msg__CANmessage(
     cdr.deserialize_array(array_ptr, size);
   }
 
-  // Field name: name2
+  // Field name: namerl
   {
     std::string tmp;
     cdr >> tmp;
-    if (!ros_message->name2.data) {
-      rosidl_runtime_c__String__init(&ros_message->name2);
+    if (!ros_message->namerl.data) {
+      rosidl_runtime_c__String__init(&ros_message->namerl);
     }
     bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->name2,
+      &ros_message->namerl,
       tmp.c_str());
     if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'name2'\n");
+      fprintf(stderr, "failed to assign string into field 'namerl'\n");
       return false;
     }
   }
@@ -212,18 +212,18 @@ bool cdr_deserialize_custom_interfaces__msg__CANmessage(
     cdr.deserialize_array(array_ptr, size);
   }
 
-  // Field name: name3
+  // Field name: namefr
   {
     std::string tmp;
     cdr >> tmp;
-    if (!ros_message->name3.data) {
-      rosidl_runtime_c__String__init(&ros_message->name3);
+    if (!ros_message->namefr.data) {
+      rosidl_runtime_c__String__init(&ros_message->namefr);
     }
     bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->name3,
+      &ros_message->namefr,
       tmp.c_str());
     if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'name3'\n");
+      fprintf(stderr, "failed to assign string into field 'namefr'\n");
       return false;
     }
   }
@@ -244,18 +244,18 @@ bool cdr_deserialize_custom_interfaces__msg__CANmessage(
     cdr.deserialize_array(array_ptr, size);
   }
 
-  // Field name: name4
+  // Field name: namefl
   {
     std::string tmp;
     cdr >> tmp;
-    if (!ros_message->name4.data) {
-      rosidl_runtime_c__String__init(&ros_message->name4);
+    if (!ros_message->namefl.data) {
+      rosidl_runtime_c__String__init(&ros_message->namefl);
     }
     bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->name4,
+      &ros_message->namefl,
       tmp.c_str());
     if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'name4'\n");
+      fprintf(stderr, "failed to assign string into field 'namefl'\n");
       return false;
     }
   }
@@ -294,10 +294,10 @@ size_t get_serialized_size_custom_interfaces__msg__CANmessage(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: name1
+  // Field name: namerr
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name1.size + 1);
+    (ros_message->namerr.size + 1);
 
   // Field name: positionrr
   {
@@ -311,10 +311,10 @@ size_t get_serialized_size_custom_interfaces__msg__CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: name2
+  // Field name: namerl
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name2.size + 1);
+    (ros_message->namerl.size + 1);
 
   // Field name: positionrl
   {
@@ -328,10 +328,10 @@ size_t get_serialized_size_custom_interfaces__msg__CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: name3
+  // Field name: namefr
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name3.size + 1);
+    (ros_message->namefr.size + 1);
 
   // Field name: positionfr
   {
@@ -345,10 +345,10 @@ size_t get_serialized_size_custom_interfaces__msg__CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: name4
+  // Field name: namefl
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name4.size + 1);
+    (ros_message->namefl.size + 1);
 
   // Field name: positionfl
   {
@@ -384,7 +384,7 @@ size_t max_serialized_size_custom_interfaces__msg__CANmessage(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: name1
+  // Field name: namerr
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -408,7 +408,7 @@ size_t max_serialized_size_custom_interfaces__msg__CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: name2
+  // Field name: namerl
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -432,7 +432,7 @@ size_t max_serialized_size_custom_interfaces__msg__CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: name3
+  // Field name: namefr
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -456,7 +456,7 @@ size_t max_serialized_size_custom_interfaces__msg__CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: name4
+  // Field name: namefl
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -501,9 +501,9 @@ bool cdr_serialize_key_custom_interfaces__msg__CANmessage(
   const custom_interfaces__msg__CANmessage * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: name1
+  // Field name: namerr
   {
-    const rosidl_runtime_c__String * str = &ros_message->name1;
+    const rosidl_runtime_c__String * str = &ros_message->namerr;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -523,9 +523,9 @@ bool cdr_serialize_key_custom_interfaces__msg__CANmessage(
     cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: name2
+  // Field name: namerl
   {
-    const rosidl_runtime_c__String * str = &ros_message->name2;
+    const rosidl_runtime_c__String * str = &ros_message->namerl;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -545,9 +545,9 @@ bool cdr_serialize_key_custom_interfaces__msg__CANmessage(
     cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: name3
+  // Field name: namefr
   {
-    const rosidl_runtime_c__String * str = &ros_message->name3;
+    const rosidl_runtime_c__String * str = &ros_message->namefr;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -567,9 +567,9 @@ bool cdr_serialize_key_custom_interfaces__msg__CANmessage(
     cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: name4
+  // Field name: namefl
   {
-    const rosidl_runtime_c__String * str = &ros_message->name4;
+    const rosidl_runtime_c__String * str = &ros_message->namefl;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -607,10 +607,10 @@ size_t get_serialized_size_key_custom_interfaces__msg__CANmessage(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: name1
+  // Field name: namerr
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name1.size + 1);
+    (ros_message->namerr.size + 1);
 
   // Field name: positionrr
   {
@@ -624,10 +624,10 @@ size_t get_serialized_size_key_custom_interfaces__msg__CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: name2
+  // Field name: namerl
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name2.size + 1);
+    (ros_message->namerl.size + 1);
 
   // Field name: positionrl
   {
@@ -641,10 +641,10 @@ size_t get_serialized_size_key_custom_interfaces__msg__CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: name3
+  // Field name: namefr
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name3.size + 1);
+    (ros_message->namefr.size + 1);
 
   // Field name: positionfr
   {
@@ -658,10 +658,10 @@ size_t get_serialized_size_key_custom_interfaces__msg__CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: name4
+  // Field name: namefl
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name4.size + 1);
+    (ros_message->namefl.size + 1);
 
   // Field name: positionfl
   {
@@ -695,7 +695,7 @@ size_t max_serialized_size_key_custom_interfaces__msg__CANmessage(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: name1
+  // Field name: namerr
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -719,7 +719,7 @@ size_t max_serialized_size_key_custom_interfaces__msg__CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: name2
+  // Field name: namerl
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -743,7 +743,7 @@ size_t max_serialized_size_key_custom_interfaces__msg__CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: name3
+  // Field name: namefr
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -767,7 +767,7 @@ size_t max_serialized_size_key_custom_interfaces__msg__CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: name4
+  // Field name: namefl
   {
     size_t array_size = 1;
     full_bounded = false;

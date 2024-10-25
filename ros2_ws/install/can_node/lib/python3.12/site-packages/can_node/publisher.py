@@ -9,7 +9,7 @@ class PublishNode(Node):
     def __init__(self):
         super().__init__("Publish_Node")
         self.counter = 0
-        self.publisher_ = self.create_publisher(CANmessage, 'topic', 10)
+        self.publisher_ = self.create_publisher(CANmessage, 'CAN_topic', 10)
         timer_period = 1 # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0

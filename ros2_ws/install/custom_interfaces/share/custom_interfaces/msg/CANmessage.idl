@@ -8,19 +8,19 @@ module custom_interfaces {
     @verbatim (language="comment", text=
       "This contain the position to control the leg of robot")
     struct CANmessage {
-      string name1;
+      string namerr;
 
       sequence<double> positionrr;
 
-      string name2;
+      string namerl;
 
       sequence<double> positionrl;
 
-      string name3;
+      string namefr;
 
       sequence<double> positionfr;
 
-      string name4;
+      string namefl;
 
       sequence<double> positionfl;
     };

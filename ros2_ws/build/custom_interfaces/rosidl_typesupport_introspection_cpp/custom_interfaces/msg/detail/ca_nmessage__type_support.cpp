@@ -220,7 +220,7 @@ void resize_function__CANmessage__positionfl(void * untyped_member, size_t size)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember CANmessage_message_member_array[8] = {
   {
-    "name1",  // name
+    "namerr",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
@@ -228,7 +228,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember CANmessage_me
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces::msg::CANmessage, name1),  // bytes offset in struct
+    offsetof(custom_interfaces::msg::CANmessage, namerr),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -256,7 +256,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember CANmessage_me
     resize_function__CANmessage__positionrr  // resize(index) function pointer
   },
   {
-    "name2",  // name
+    "namerl",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
@@ -264,7 +264,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember CANmessage_me
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces::msg::CANmessage, name2),  // bytes offset in struct
+    offsetof(custom_interfaces::msg::CANmessage, namerl),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -292,7 +292,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember CANmessage_me
     resize_function__CANmessage__positionrl  // resize(index) function pointer
   },
   {
-    "name3",  // name
+    "namefr",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
@@ -300,7 +300,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember CANmessage_me
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces::msg::CANmessage, name3),  // bytes offset in struct
+    offsetof(custom_interfaces::msg::CANmessage, namefr),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -328,7 +328,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember CANmessage_me
     resize_function__CANmessage__positionfr  // resize(index) function pointer
   },
   {
-    "name4",  // name
+    "namefl",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
@@ -336,7 +336,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember CANmessage_me
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces::msg::CANmessage, name4),  // bytes offset in struct
+    offsetof(custom_interfaces::msg::CANmessage, namefl),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

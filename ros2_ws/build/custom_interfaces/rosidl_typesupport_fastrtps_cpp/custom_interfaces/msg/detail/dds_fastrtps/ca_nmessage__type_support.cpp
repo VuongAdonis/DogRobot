@@ -36,32 +36,32 @@ cdr_serialize(
   const custom_interfaces::msg::CANmessage & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: name1
-  cdr << ros_message.name1;
+  // Member: namerr
+  cdr << ros_message.namerr;
 
   // Member: positionrr
   {
     cdr << ros_message.positionrr;
   }
 
-  // Member: name2
-  cdr << ros_message.name2;
+  // Member: namerl
+  cdr << ros_message.namerl;
 
   // Member: positionrl
   {
     cdr << ros_message.positionrl;
   }
 
-  // Member: name3
-  cdr << ros_message.name3;
+  // Member: namefr
+  cdr << ros_message.namefr;
 
   // Member: positionfr
   {
     cdr << ros_message.positionfr;
   }
 
-  // Member: name4
-  cdr << ros_message.name4;
+  // Member: namefl
+  cdr << ros_message.namefl;
 
   // Member: positionfl
   {
@@ -77,32 +77,32 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   custom_interfaces::msg::CANmessage & ros_message)
 {
-  // Member: name1
-  cdr >> ros_message.name1;
+  // Member: namerr
+  cdr >> ros_message.namerr;
 
   // Member: positionrr
   {
     cdr >> ros_message.positionrr;
   }
 
-  // Member: name2
-  cdr >> ros_message.name2;
+  // Member: namerl
+  cdr >> ros_message.namerl;
 
   // Member: positionrl
   {
     cdr >> ros_message.positionrl;
   }
 
-  // Member: name3
-  cdr >> ros_message.name3;
+  // Member: namefr
+  cdr >> ros_message.namefr;
 
   // Member: positionfr
   {
     cdr >> ros_message.positionfr;
   }
 
-  // Member: name4
-  cdr >> ros_message.name4;
+  // Member: namefl
+  cdr >> ros_message.namefl;
 
   // Member: positionfl
   {
@@ -126,10 +126,10 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: name1
+  // Member: namerr
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name1.size() + 1);
+    (ros_message.namerr.size() + 1);
 
   // Member: positionrr
   {
@@ -141,10 +141,10 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: name2
+  // Member: namerl
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name2.size() + 1);
+    (ros_message.namerl.size() + 1);
 
   // Member: positionrl
   {
@@ -156,10 +156,10 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: name3
+  // Member: namefr
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name3.size() + 1);
+    (ros_message.namefr.size() + 1);
 
   // Member: positionfr
   {
@@ -171,10 +171,10 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: name4
+  // Member: namefl
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name4.size() + 1);
+    (ros_message.namefl.size() + 1);
 
   // Member: positionfl
   {
@@ -209,7 +209,7 @@ max_serialized_size_CANmessage(
   full_bounded = true;
   is_plain = true;
 
-  // Member: name1
+  // Member: namerr
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -231,7 +231,7 @@ max_serialized_size_CANmessage(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // Member: name2
+  // Member: namerl
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -253,7 +253,7 @@ max_serialized_size_CANmessage(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // Member: name3
+  // Member: namefr
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -275,7 +275,7 @@ max_serialized_size_CANmessage(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // Member: name4
+  // Member: namefl
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -320,32 +320,32 @@ cdr_serialize_key(
   const custom_interfaces::msg::CANmessage & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: name1
-  cdr << ros_message.name1;
+  // Member: namerr
+  cdr << ros_message.namerr;
 
   // Member: positionrr
   {
     cdr << ros_message.positionrr;
   }
 
-  // Member: name2
-  cdr << ros_message.name2;
+  // Member: namerl
+  cdr << ros_message.namerl;
 
   // Member: positionrl
   {
     cdr << ros_message.positionrl;
   }
 
-  // Member: name3
-  cdr << ros_message.name3;
+  // Member: namefr
+  cdr << ros_message.namefr;
 
   // Member: positionfr
   {
     cdr << ros_message.positionfr;
   }
 
-  // Member: name4
-  cdr << ros_message.name4;
+  // Member: namefl
+  cdr << ros_message.namefl;
 
   // Member: positionfl
   {
@@ -368,10 +368,10 @@ get_serialized_size_key(
   (void)padding;
   (void)wchar_size;
 
-  // Member: name1
+  // Member: namerr
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name1.size() + 1);
+    (ros_message.namerr.size() + 1);
 
   // Member: positionrr
   {
@@ -383,10 +383,10 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: name2
+  // Member: namerl
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name2.size() + 1);
+    (ros_message.namerl.size() + 1);
 
   // Member: positionrl
   {
@@ -398,10 +398,10 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: name3
+  // Member: namefr
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name3.size() + 1);
+    (ros_message.namefr.size() + 1);
 
   // Member: positionfr
   {
@@ -413,10 +413,10 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: name4
+  // Member: namefl
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name4.size() + 1);
+    (ros_message.namefl.size() + 1);
 
   // Member: positionfl
   {
@@ -450,7 +450,7 @@ max_serialized_size_key_CANmessage(
   full_bounded = true;
   is_plain = true;
 
-  // Member: name1
+  // Member: namerr
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -474,7 +474,7 @@ max_serialized_size_key_CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: name2
+  // Member: namerl
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -498,7 +498,7 @@ max_serialized_size_key_CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: name3
+  // Member: namefr
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -522,7 +522,7 @@ max_serialized_size_key_CANmessage(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: name4
+  // Member: namefl
   {
     size_t array_size = 1;
     full_bounded = false;

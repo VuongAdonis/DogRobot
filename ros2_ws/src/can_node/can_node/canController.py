@@ -1,10 +1,67 @@
 import can
 import time
 import struct
+import rclpy
+from rclpy.node import Node
+from custom_interfaces.msg import CANmessage
 
-class CanNode():
+class CanNode(Node):
     def __init__(self):
-        self.bus = bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
+        # self.bus = bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
+        # self.sendClosedLoop(1)
+        # time.sleep(0.1)
+        # self.sendClosedLoop(2)
+        # time.sleep(0.1)
+        # self.sendClosedLoop(4)
+        # time.sleep(0.1)
+        # self.sendClosedLoop(5)
+        # time.sleep(0.1)
+        print("All ODrives have been set to ClosedLoop")
+
+        super().__init__("CAN_subscriber")
+        self.subscription = self.create_subscription(
+            CANmessage,
+            'CAN_topic',
+            self.CAN_listen_callback,
+            10
+        )
+
+    def StopSend(self):
+        # self.sendIdle(1)
+        # time.sleep(0.1)
+        # self.sendIdle(2)
+        # time.sleep(0.1)
+        # self.sendIdle(3)
+        # time.sleep(0.1)
+        # self.sendIdle(4)
+        # time.sleep(0.1)
+        print("All ODrives have been set to Idle")
+        
+    # This function is used to process the position after get from the main control
+    def CAN_listen_callback(self, msg):
+        posRR = msg.positionrr
+        posRL = msg.positionrl
+        posFR = msg.positionfr
+        posFL = msg.positionfl
+
+        print("Message come: ")
+        print("posRR = ", posRR)
+        print("posRL = ", posRL)
+        print("posFR = ", posFR)
+        print("posFL = ", posFL)
+
+
+        # send message
+        # self.sendPos(5, posFR[2])
+        # time.sleep(1)
+        # self.sendPos(4, posFR[1])
+        # time.sleep(1)
+        # self.sendPos(2, posRR[1])
+        # time.sleep(1)
+        # self.sendPos(1, posRR[2])
+        # time.sleep(1)
+
+
 
     def sendClosedLoop(self, id):
         # Change the Odrive to state CLOSED_LOOP
@@ -123,28 +180,22 @@ class CanNode():
 
             print("SLCAN bus has been turned off properly.")
 
-# def main(args=None):
-#     # bus = initialCAN()
-#     # bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
-#     robotDogHk241 = CanNode()
-#     try:
-#         robotDogHk241.sendClosedLoop(1)
-#         robotDogHk241.sendClosedLoop(2)
-#         time.sleep(5)
-#         robotDogHk241.sendPos(1, 0.35)
-#         # robotDogHk241.sendPos(2, )
-#         time.sleep(5)
-#         robotDogHk241.sendIdle(1)
-#         robotDogHk241.sendIdle(2)
-        
-#     except can.CanError:
-#         print("Message NOT sent")
+def main(args=None):
+    # bus = initialCAN()
+    # bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
+    rclpy.init(args=args)
+    robotDogHk241 = CanNode()
+    try:
+        # run rclpy.spin to process the event
+        rclpy.spin(robotDogHk241)
+    except KeyboardInterrupt:
+        robotDogHk241.StopSend()
+        # robotDogHk241.bus.shutdown() 
+        print("SLCAN bus has been turned off properly.")
+        robotDogHk241.destroy_node()
+        rclpy.shutdown()
+        print("Stop completed")
 
-#     finally:
-#         # Đảm bảo việc tắt bus đúng cách
-#         robotDogHk241.bus.shutdown()  # Hoặc sử dụng 'bus.close()' nếu có phương thức này
 
-#         print("SLCAN bus has been turned off properly.")
-
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()

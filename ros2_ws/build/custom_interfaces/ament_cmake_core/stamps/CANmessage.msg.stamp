@@ -1,9 +1,9 @@
 # This contain the position to control the leg of robot
-string name1
+string namerr
 float64[] positionrr
-string name2
+string namerl
 float64[] positionrl
-string name3
+string namefr
 float64[] positionfr
-string name4
+string namefl
 float64[] positionfl

@@ -11,10 +11,10 @@ custom_interfaces__msg__CANmessage__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x86, 0x99, 0xb9, 0x5e, 0xfc, 0xda, 0x10, 0xb7,
-      0xa0, 0xc8, 0x3a, 0x79, 0xbc, 0xb6, 0x1c, 0x9e,
-      0x52, 0xa1, 0xc0, 0xed, 0x9d, 0x29, 0x4d, 0xad,
-      0x2c, 0x32, 0xba, 0x81, 0x7d, 0xd7, 0xd7, 0xe7,
+      0x42, 0x67, 0x2e, 0x8b, 0x65, 0x1a, 0xc6, 0x99,
+      0x68, 0xa3, 0x4d, 0xbf, 0xa2, 0x2d, 0xeb, 0xbc,
+      0xc9, 0x64, 0x0b, 0xa7, 0xc7, 0x61, 0xaa, 0xa5,
+      0x4c, 0x8f, 0x22, 0x38, 0x5f, 0x84, 0xa6, 0x59,
     }};
   return &hash;
 }
@@ -31,18 +31,18 @@ custom_interfaces__msg__CANmessage__get_type_hash(
 static char custom_interfaces__msg__CANmessage__TYPE_NAME[] = "custom_interfaces/msg/CANmessage";
 
 // Define type names, field names, and default values
-static char custom_interfaces__msg__CANmessage__FIELD_NAME__name1[] = "name1";
+static char custom_interfaces__msg__CANmessage__FIELD_NAME__namerr[] = "namerr";
 static char custom_interfaces__msg__CANmessage__FIELD_NAME__positionrr[] = "positionrr";
-static char custom_interfaces__msg__CANmessage__FIELD_NAME__name2[] = "name2";
+static char custom_interfaces__msg__CANmessage__FIELD_NAME__namerl[] = "namerl";
 static char custom_interfaces__msg__CANmessage__FIELD_NAME__positionrl[] = "positionrl";
-static char custom_interfaces__msg__CANmessage__FIELD_NAME__name3[] = "name3";
+static char custom_interfaces__msg__CANmessage__FIELD_NAME__namefr[] = "namefr";
 static char custom_interfaces__msg__CANmessage__FIELD_NAME__positionfr[] = "positionfr";
-static char custom_interfaces__msg__CANmessage__FIELD_NAME__name4[] = "name4";
+static char custom_interfaces__msg__CANmessage__FIELD_NAME__namefl[] = "namefl";
 static char custom_interfaces__msg__CANmessage__FIELD_NAME__positionfl[] = "positionfl";
 
 static rosidl_runtime_c__type_description__Field custom_interfaces__msg__CANmessage__FIELDS[] = {
   {
-    {custom_interfaces__msg__CANmessage__FIELD_NAME__name1, 5, 5},
+    {custom_interfaces__msg__CANmessage__FIELD_NAME__namerr, 6, 6},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_STRING,
       0,
@@ -62,7 +62,7 @@ static rosidl_runtime_c__type_description__Field custom_interfaces__msg__CANmess
     {NULL, 0, 0},
   },
   {
-    {custom_interfaces__msg__CANmessage__FIELD_NAME__name2, 5, 5},
+    {custom_interfaces__msg__CANmessage__FIELD_NAME__namerl, 6, 6},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_STRING,
       0,
@@ -82,7 +82,7 @@ static rosidl_runtime_c__type_description__Field custom_interfaces__msg__CANmess
     {NULL, 0, 0},
   },
   {
-    {custom_interfaces__msg__CANmessage__FIELD_NAME__name3, 5, 5},
+    {custom_interfaces__msg__CANmessage__FIELD_NAME__namefr, 6, 6},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_STRING,
       0,
@@ -102,7 +102,7 @@ static rosidl_runtime_c__type_description__Field custom_interfaces__msg__CANmess
     {NULL, 0, 0},
   },
   {
-    {custom_interfaces__msg__CANmessage__FIELD_NAME__name4, 5, 5},
+    {custom_interfaces__msg__CANmessage__FIELD_NAME__namefl, 6, 6},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_STRING,
       0,
@@ -144,13 +144,13 @@ custom_interfaces__msg__CANmessage__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "# This contain the position to control the leg of robot\n"
-  "string name1\n"
+  "string namerr\n"
   "float64[] positionrr\n"
-  "string name2\n"
+  "string namerl\n"
   "float64[] positionrl\n"
-  "string name3\n"
+  "string namefr\n"
   "float64[] positionfr\n"
-  "string name4\n"
+  "string namefl\n"
   "float64[] positionfl";
 
 static char msg_encoding[] = "msg";
@@ -165,7 +165,7 @@ custom_interfaces__msg__CANmessage__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {custom_interfaces__msg__CANmessage__TYPE_NAME, 32, 32},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 191, 191},
+    {toplevel_type_raw_source, 195, 195},
   };
   return &source;
 }

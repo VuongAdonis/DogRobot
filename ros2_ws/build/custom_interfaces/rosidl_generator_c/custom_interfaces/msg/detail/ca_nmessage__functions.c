@@ -12,10 +12,10 @@
 
 
 // Include directives for member types
-// Member `name1`
-// Member `name2`
-// Member `name3`
-// Member `name4`
+// Member `namerr`
+// Member `namerl`
+// Member `namefr`
+// Member `namefl`
 #include "rosidl_runtime_c/string_functions.h"
 // Member `positionrr`
 // Member `positionrl`
@@ -29,8 +29,8 @@ custom_interfaces__msg__CANmessage__init(custom_interfaces__msg__CANmessage * ms
   if (!msg) {
     return false;
   }
-  // name1
-  if (!rosidl_runtime_c__String__init(&msg->name1)) {
+  // namerr
+  if (!rosidl_runtime_c__String__init(&msg->namerr)) {
     custom_interfaces__msg__CANmessage__fini(msg);
     return false;
   }
@@ -39,8 +39,8 @@ custom_interfaces__msg__CANmessage__init(custom_interfaces__msg__CANmessage * ms
     custom_interfaces__msg__CANmessage__fini(msg);
     return false;
   }
-  // name2
-  if (!rosidl_runtime_c__String__init(&msg->name2)) {
+  // namerl
+  if (!rosidl_runtime_c__String__init(&msg->namerl)) {
     custom_interfaces__msg__CANmessage__fini(msg);
     return false;
   }
@@ -49,8 +49,8 @@ custom_interfaces__msg__CANmessage__init(custom_interfaces__msg__CANmessage * ms
     custom_interfaces__msg__CANmessage__fini(msg);
     return false;
   }
-  // name3
-  if (!rosidl_runtime_c__String__init(&msg->name3)) {
+  // namefr
+  if (!rosidl_runtime_c__String__init(&msg->namefr)) {
     custom_interfaces__msg__CANmessage__fini(msg);
     return false;
   }
@@ -59,8 +59,8 @@ custom_interfaces__msg__CANmessage__init(custom_interfaces__msg__CANmessage * ms
     custom_interfaces__msg__CANmessage__fini(msg);
     return false;
   }
-  // name4
-  if (!rosidl_runtime_c__String__init(&msg->name4)) {
+  // namefl
+  if (!rosidl_runtime_c__String__init(&msg->namefl)) {
     custom_interfaces__msg__CANmessage__fini(msg);
     return false;
   }
@@ -78,20 +78,20 @@ custom_interfaces__msg__CANmessage__fini(custom_interfaces__msg__CANmessage * ms
   if (!msg) {
     return;
   }
-  // name1
-  rosidl_runtime_c__String__fini(&msg->name1);
+  // namerr
+  rosidl_runtime_c__String__fini(&msg->namerr);
   // positionrr
   rosidl_runtime_c__double__Sequence__fini(&msg->positionrr);
-  // name2
-  rosidl_runtime_c__String__fini(&msg->name2);
+  // namerl
+  rosidl_runtime_c__String__fini(&msg->namerl);
   // positionrl
   rosidl_runtime_c__double__Sequence__fini(&msg->positionrl);
-  // name3
-  rosidl_runtime_c__String__fini(&msg->name3);
+  // namefr
+  rosidl_runtime_c__String__fini(&msg->namefr);
   // positionfr
   rosidl_runtime_c__double__Sequence__fini(&msg->positionfr);
-  // name4
-  rosidl_runtime_c__String__fini(&msg->name4);
+  // namefl
+  rosidl_runtime_c__String__fini(&msg->namefl);
   // positionfl
   rosidl_runtime_c__double__Sequence__fini(&msg->positionfl);
 }
@@ -102,9 +102,9 @@ custom_interfaces__msg__CANmessage__are_equal(const custom_interfaces__msg__CANm
   if (!lhs || !rhs) {
     return false;
   }
-  // name1
+  // namerr
   if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->name1), &(rhs->name1)))
+      &(lhs->namerr), &(rhs->namerr)))
   {
     return false;
   }
@@ -114,9 +114,9 @@ custom_interfaces__msg__CANmessage__are_equal(const custom_interfaces__msg__CANm
   {
     return false;
   }
-  // name2
+  // namerl
   if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->name2), &(rhs->name2)))
+      &(lhs->namerl), &(rhs->namerl)))
   {
     return false;
   }
@@ -126,9 +126,9 @@ custom_interfaces__msg__CANmessage__are_equal(const custom_interfaces__msg__CANm
   {
     return false;
   }
-  // name3
+  // namefr
   if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->name3), &(rhs->name3)))
+      &(lhs->namefr), &(rhs->namefr)))
   {
     return false;
   }
@@ -138,9 +138,9 @@ custom_interfaces__msg__CANmessage__are_equal(const custom_interfaces__msg__CANm
   {
     return false;
   }
-  // name4
+  // namefl
   if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->name4), &(rhs->name4)))
+      &(lhs->namefl), &(rhs->namefl)))
   {
     return false;
   }
@@ -161,9 +161,9 @@ custom_interfaces__msg__CANmessage__copy(
   if (!input || !output) {
     return false;
   }
-  // name1
+  // namerr
   if (!rosidl_runtime_c__String__copy(
-      &(input->name1), &(output->name1)))
+      &(input->namerr), &(output->namerr)))
   {
     return false;
   }
@@ -173,9 +173,9 @@ custom_interfaces__msg__CANmessage__copy(
   {
     return false;
   }
-  // name2
+  // namerl
   if (!rosidl_runtime_c__String__copy(
-      &(input->name2), &(output->name2)))
+      &(input->namerl), &(output->namerl)))
   {
     return false;
   }
@@ -185,9 +185,9 @@ custom_interfaces__msg__CANmessage__copy(
   {
     return false;
   }
-  // name3
+  // namefr
   if (!rosidl_runtime_c__String__copy(
-      &(input->name3), &(output->name3)))
+      &(input->namefr), &(output->namefr)))
   {
     return false;
   }
@@ -197,9 +197,9 @@ custom_interfaces__msg__CANmessage__copy(
   {
     return false;
   }
-  // name4
+  // namefl
   if (!rosidl_runtime_c__String__copy(
-      &(input->name4), &(output->name4)))
+      &(input->namefl), &(output->namefl)))
   {
     return false;
   }

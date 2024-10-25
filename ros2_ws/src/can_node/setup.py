@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             "talker = can_node.publisher:main",
-            "listener = can_node.subcriber:main"
+            "listener = can_node.subcriber:main",
+            "can = can_node.canController:main"
         ],
     },
 )

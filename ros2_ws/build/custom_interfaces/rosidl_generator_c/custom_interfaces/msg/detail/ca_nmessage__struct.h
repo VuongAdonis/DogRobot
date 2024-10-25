@@ -20,10 +20,10 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'name1'
-// Member 'name2'
-// Member 'name3'
-// Member 'name4'
+// Member 'namerr'
+// Member 'namerl'
+// Member 'namefr'
+// Member 'namefl'
 #include "rosidl_runtime_c/string.h"
 // Member 'positionrr'
 // Member 'positionrl'
@@ -37,13 +37,13 @@ extern "C"
  */
 typedef struct custom_interfaces__msg__CANmessage
 {
-  rosidl_runtime_c__String name1;
+  rosidl_runtime_c__String namerr;
   rosidl_runtime_c__double__Sequence positionrr;
-  rosidl_runtime_c__String name2;
+  rosidl_runtime_c__String namerl;
   rosidl_runtime_c__double__Sequence positionrl;
-  rosidl_runtime_c__String name3;
+  rosidl_runtime_c__String namefr;
   rosidl_runtime_c__double__Sequence positionfr;
-  rosidl_runtime_c__String name4;
+  rosidl_runtime_c__String namefl;
   rosidl_runtime_c__double__Sequence positionfl;
 } custom_interfaces__msg__CANmessage;
 

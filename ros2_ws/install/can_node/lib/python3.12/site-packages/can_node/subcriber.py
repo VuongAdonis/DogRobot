@@ -11,7 +11,7 @@ class SubscriberNode(Node):
         super().__init__("Subcriber_Node")
         self.subscription = self.create_subscription(
             CANmessage,
-            'topic',
+            'CAN_topic',
             self.listener_callback,
             10
         )

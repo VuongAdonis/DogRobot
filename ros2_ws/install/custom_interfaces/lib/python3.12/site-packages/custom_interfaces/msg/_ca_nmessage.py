@@ -70,25 +70,25 @@ class CANmessage(metaclass=Metaclass_CANmessage):
     """Message class 'CANmessage'."""
 
     __slots__ = [
-        '_name1',
+        '_namerr',
         '_positionrr',
-        '_name2',
+        '_namerl',
         '_positionrl',
-        '_name3',
+        '_namefr',
         '_positionfr',
-        '_name4',
+        '_namefl',
         '_positionfl',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
-        'name1': 'string',
+        'namerr': 'string',
         'positionrr': 'sequence<double>',
-        'name2': 'string',
+        'namerl': 'string',
         'positionrl': 'sequence<double>',
-        'name3': 'string',
+        'namefr': 'string',
         'positionfr': 'sequence<double>',
-        'name4': 'string',
+        'namefl': 'string',
         'positionfl': 'sequence<double>',
     }
 
@@ -114,13 +114,13 @@ class CANmessage(metaclass=Metaclass_CANmessage):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.name1 = kwargs.get('name1', str())
+        self.namerr = kwargs.get('namerr', str())
         self.positionrr = array.array('d', kwargs.get('positionrr', []))
-        self.name2 = kwargs.get('name2', str())
+        self.namerl = kwargs.get('namerl', str())
         self.positionrl = array.array('d', kwargs.get('positionrl', []))
-        self.name3 = kwargs.get('name3', str())
+        self.namefr = kwargs.get('namefr', str())
         self.positionfr = array.array('d', kwargs.get('positionfr', []))
-        self.name4 = kwargs.get('name4', str())
+        self.namefl = kwargs.get('namefl', str())
         self.positionfl = array.array('d', kwargs.get('positionfl', []))
 
     def __repr__(self):
@@ -153,19 +153,19 @@ class CANmessage(metaclass=Metaclass_CANmessage):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.name1 != other.name1:
+        if self.namerr != other.namerr:
             return False
         if self.positionrr != other.positionrr:
             return False
-        if self.name2 != other.name2:
+        if self.namerl != other.namerl:
             return False
         if self.positionrl != other.positionrl:
             return False
-        if self.name3 != other.name3:
+        if self.namefr != other.namefr:
             return False
         if self.positionfr != other.positionfr:
             return False
-        if self.name4 != other.name4:
+        if self.namefl != other.namefl:
             return False
         if self.positionfl != other.positionfl:
             return False
@@ -177,17 +177,17 @@ class CANmessage(metaclass=Metaclass_CANmessage):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def name1(self):
-        """Message field 'name1'."""
-        return self._name1
+    def namerr(self):
+        """Message field 'namerr'."""
+        return self._namerr
 
-    @name1.setter
-    def name1(self, value):
+    @namerr.setter
+    def namerr(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, str), \
-                "The 'name1' field must be of type 'str'"
-        self._name1 = value
+                "The 'namerr' field must be of type 'str'"
+        self._namerr = value
 
     @builtins.property
     def positionrr(self):
@@ -218,17 +218,17 @@ class CANmessage(metaclass=Metaclass_CANmessage):
         self._positionrr = array.array('d', value)
 
     @builtins.property
-    def name2(self):
-        """Message field 'name2'."""
-        return self._name2
+    def namerl(self):
+        """Message field 'namerl'."""
+        return self._namerl
 
-    @name2.setter
-    def name2(self, value):
+    @namerl.setter
+    def namerl(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, str), \
-                "The 'name2' field must be of type 'str'"
-        self._name2 = value
+                "The 'namerl' field must be of type 'str'"
+        self._namerl = value
 
     @builtins.property
     def positionrl(self):
@@ -259,17 +259,17 @@ class CANmessage(metaclass=Metaclass_CANmessage):
         self._positionrl = array.array('d', value)
 
     @builtins.property
-    def name3(self):
-        """Message field 'name3'."""
-        return self._name3
+    def namefr(self):
+        """Message field 'namefr'."""
+        return self._namefr
 
-    @name3.setter
-    def name3(self, value):
+    @namefr.setter
+    def namefr(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, str), \
-                "The 'name3' field must be of type 'str'"
-        self._name3 = value
+                "The 'namefr' field must be of type 'str'"
+        self._namefr = value
 
     @builtins.property
     def positionfr(self):
@@ -300,17 +300,17 @@ class CANmessage(metaclass=Metaclass_CANmessage):
         self._positionfr = array.array('d', value)
 
     @builtins.property
-    def name4(self):
-        """Message field 'name4'."""
-        return self._name4
+    def namefl(self):
+        """Message field 'namefl'."""
+        return self._namefl
 
-    @name4.setter
-    def name4(self, value):
+    @namefl.setter
+    def namefl(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, str), \
-                "The 'name4' field must be of type 'str'"
-        self._name4 = value
+                "The 'namefl' field must be of type 'str'"
+        self._namefl = value
 
     @builtins.property
     def positionfl(self):

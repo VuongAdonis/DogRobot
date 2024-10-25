@@ -1,3 +1,4 @@
 [console_scripts]
+can = can_node.canController:main
 listener = can_node.subcriber:main
 talker = can_node.publisher:main

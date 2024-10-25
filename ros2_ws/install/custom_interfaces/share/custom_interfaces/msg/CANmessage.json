@@ -4,7 +4,7 @@
       "type_name": "custom_interfaces/msg/CANmessage",
       "fields": [
         {
-          "name": "name1",
+          "name": "namerr",
           "type": {
             "type_id": 17,
             "capacity": 0,
@@ -24,7 +24,7 @@
           "default_value": ""
         },
         {
-          "name": "name2",
+          "name": "namerl",
           "type": {
             "type_id": 17,
             "capacity": 0,
@@ -44,7 +44,7 @@
           "default_value": ""
         },
         {
-          "name": "name3",
+          "name": "namefr",
           "type": {
             "type_id": 17,
             "capacity": 0,
@@ -64,7 +64,7 @@
           "default_value": ""
         },
         {
-          "name": "name4",
+          "name": "namefl",
           "type": {
             "type_id": 17,
             "capacity": 0,
@@ -90,7 +90,7 @@
   "type_hashes": [
     {
       "type_name": "custom_interfaces/msg/CANmessage",
-      "hash_string": "RIHS01_8699b95efcda10b7a0c83a79bcb61c9e52a1c0ed9d294dad2c32ba817dd7d7e7"
+      "hash_string": "RIHS01_42672e8b651ac69968a34dbfa22debbcc9640ba7c761aaa54c8f22385f84a659"
     }
   ]
 }

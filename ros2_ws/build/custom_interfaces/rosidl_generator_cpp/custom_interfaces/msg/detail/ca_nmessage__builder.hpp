@@ -40,15 +40,15 @@ private:
   ::custom_interfaces::msg::CANmessage msg_;
 };
 
-class Init_CANmessage_name4
+class Init_CANmessage_namefl
 {
 public:
-  explicit Init_CANmessage_name4(::custom_interfaces::msg::CANmessage & msg)
+  explicit Init_CANmessage_namefl(::custom_interfaces::msg::CANmessage & msg)
   : msg_(msg)
   {}
-  Init_CANmessage_positionfl name4(::custom_interfaces::msg::CANmessage::_name4_type arg)
+  Init_CANmessage_positionfl namefl(::custom_interfaces::msg::CANmessage::_namefl_type arg)
   {
-    msg_.name4 = std::move(arg);
+    msg_.namefl = std::move(arg);
     return Init_CANmessage_positionfl(msg_);
   }
 
@@ -62,25 +62,25 @@ public:
   explicit Init_CANmessage_positionfr(::custom_interfaces::msg::CANmessage & msg)
   : msg_(msg)
   {}
-  Init_CANmessage_name4 positionfr(::custom_interfaces::msg::CANmessage::_positionfr_type arg)
+  Init_CANmessage_namefl positionfr(::custom_interfaces::msg::CANmessage::_positionfr_type arg)
   {
     msg_.positionfr = std::move(arg);
-    return Init_CANmessage_name4(msg_);
+    return Init_CANmessage_namefl(msg_);
   }
 
 private:
   ::custom_interfaces::msg::CANmessage msg_;
 };
 
-class Init_CANmessage_name3
+class Init_CANmessage_namefr
 {
 public:
-  explicit Init_CANmessage_name3(::custom_interfaces::msg::CANmessage & msg)
+  explicit Init_CANmessage_namefr(::custom_interfaces::msg::CANmessage & msg)
   : msg_(msg)
   {}
-  Init_CANmessage_positionfr name3(::custom_interfaces::msg::CANmessage::_name3_type arg)
+  Init_CANmessage_positionfr namefr(::custom_interfaces::msg::CANmessage::_namefr_type arg)
   {
-    msg_.name3 = std::move(arg);
+    msg_.namefr = std::move(arg);
     return Init_CANmessage_positionfr(msg_);
   }
 
@@ -94,25 +94,25 @@ public:
   explicit Init_CANmessage_positionrl(::custom_interfaces::msg::CANmessage & msg)
   : msg_(msg)
   {}
-  Init_CANmessage_name3 positionrl(::custom_interfaces::msg::CANmessage::_positionrl_type arg)
+  Init_CANmessage_namefr positionrl(::custom_interfaces::msg::CANmessage::_positionrl_type arg)
   {
     msg_.positionrl = std::move(arg);
-    return Init_CANmessage_name3(msg_);
+    return Init_CANmessage_namefr(msg_);
   }
 
 private:
   ::custom_interfaces::msg::CANmessage msg_;
 };
 
-class Init_CANmessage_name2
+class Init_CANmessage_namerl
 {
 public:
-  explicit Init_CANmessage_name2(::custom_interfaces::msg::CANmessage & msg)
+  explicit Init_CANmessage_namerl(::custom_interfaces::msg::CANmessage & msg)
   : msg_(msg)
   {}
-  Init_CANmessage_positionrl name2(::custom_interfaces::msg::CANmessage::_name2_type arg)
+  Init_CANmessage_positionrl namerl(::custom_interfaces::msg::CANmessage::_namerl_type arg)
   {
-    msg_.name2 = std::move(arg);
+    msg_.namerl = std::move(arg);
     return Init_CANmessage_positionrl(msg_);
   }
 
@@ -126,25 +126,25 @@ public:
   explicit Init_CANmessage_positionrr(::custom_interfaces::msg::CANmessage & msg)
   : msg_(msg)
   {}
-  Init_CANmessage_name2 positionrr(::custom_interfaces::msg::CANmessage::_positionrr_type arg)
+  Init_CANmessage_namerl positionrr(::custom_interfaces::msg::CANmessage::_positionrr_type arg)
   {
     msg_.positionrr = std::move(arg);
-    return Init_CANmessage_name2(msg_);
+    return Init_CANmessage_namerl(msg_);
   }
 
 private:
   ::custom_interfaces::msg::CANmessage msg_;
 };
 
-class Init_CANmessage_name1
+class Init_CANmessage_namerr
 {
 public:
-  Init_CANmessage_name1()
+  Init_CANmessage_namerr()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_CANmessage_positionrr name1(::custom_interfaces::msg::CANmessage::_name1_type arg)
+  Init_CANmessage_positionrr namerr(::custom_interfaces::msg::CANmessage::_namerr_type arg)
   {
-    msg_.name1 = std::move(arg);
+    msg_.namerr = std::move(arg);
     return Init_CANmessage_positionrr(msg_);
   }
 
@@ -163,7 +163,7 @@ template<>
 inline
 auto build<::custom_interfaces::msg::CANmessage>()
 {
-  return custom_interfaces::msg::builder::Init_CANmessage_name1();
+  return custom_interfaces::msg::builder::Init_CANmessage_namerr();
 }
 
 }  // namespace custom_interfaces

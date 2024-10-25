@@ -41,60 +41,60 @@ struct CANmessage_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->name1 = "";
-      this->name2 = "";
-      this->name3 = "";
-      this->name4 = "";
+      this->namerr = "";
+      this->namerl = "";
+      this->namefr = "";
+      this->namefl = "";
     }
   }
 
   explicit CANmessage_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : name1(_alloc),
-    name2(_alloc),
-    name3(_alloc),
-    name4(_alloc)
+  : namerr(_alloc),
+    namerl(_alloc),
+    namefr(_alloc),
+    namefl(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->name1 = "";
-      this->name2 = "";
-      this->name3 = "";
-      this->name4 = "";
+      this->namerr = "";
+      this->namerl = "";
+      this->namefr = "";
+      this->namefl = "";
     }
   }
 
   // field types and members
-  using _name1_type =
+  using _namerr_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _name1_type name1;
+  _namerr_type namerr;
   using _positionrr_type =
     std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
   _positionrr_type positionrr;
-  using _name2_type =
+  using _namerl_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _name2_type name2;
+  _namerl_type namerl;
   using _positionrl_type =
     std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
   _positionrl_type positionrl;
-  using _name3_type =
+  using _namefr_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _name3_type name3;
+  _namefr_type namefr;
   using _positionfr_type =
     std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
   _positionfr_type positionfr;
-  using _name4_type =
+  using _namefl_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _name4_type name4;
+  _namefl_type namefl;
   using _positionfl_type =
     std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
   _positionfl_type positionfl;
 
   // setters for named parameter idiom
-  Type & set__name1(
+  Type & set__namerr(
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->name1 = _arg;
+    this->namerr = _arg;
     return *this;
   }
   Type & set__positionrr(
@@ -103,10 +103,10 @@ struct CANmessage_
     this->positionrr = _arg;
     return *this;
   }
-  Type & set__name2(
+  Type & set__namerl(
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->name2 = _arg;
+    this->namerl = _arg;
     return *this;
   }
   Type & set__positionrl(
@@ -115,10 +115,10 @@ struct CANmessage_
     this->positionrl = _arg;
     return *this;
   }
-  Type & set__name3(
+  Type & set__namefr(
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->name3 = _arg;
+    this->namefr = _arg;
     return *this;
   }
   Type & set__positionfr(
@@ -127,10 +127,10 @@ struct CANmessage_
     this->positionfr = _arg;
     return *this;
   }
-  Type & set__name4(
+  Type & set__namefl(
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->name4 = _arg;
+    this->namefl = _arg;
     return *this;
   }
   Type & set__positionfl(
@@ -182,25 +182,25 @@ struct CANmessage_
   // comparison operators
   bool operator==(const CANmessage_ & other) const
   {
-    if (this->name1 != other.name1) {
+    if (this->namerr != other.namerr) {
       return false;
     }
     if (this->positionrr != other.positionrr) {
       return false;
     }
-    if (this->name2 != other.name2) {
+    if (this->namerl != other.namerl) {
       return false;
     }
     if (this->positionrl != other.positionrl) {
       return false;
     }
-    if (this->name3 != other.name3) {
+    if (this->namefr != other.namefr) {
       return false;
     }
     if (this->positionfr != other.positionfr) {
       return false;
     }
-    if (this->name4 != other.name4) {
+    if (this->namefl != other.namefl) {
       return false;
     }
     if (this->positionfl != other.positionfl) {

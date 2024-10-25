@@ -22,8 +22,7 @@ class GamepadRecorder(Node):
             self.joy_callback, # callback function
             10 # queue size
         )
-        self.publisher_ = self.create_publisher(String, 'topic', 10)
-        self.gamepad_values = []  # Danh sách lưu giá trị gamepad
+        self.gamepad_values = []  # list save the gamepad's value
         self.prev_time = time.time()
         self.count = 0
 
@@ -39,11 +38,6 @@ class GamepadRecorder(Node):
         # self.get_logger().info(f"Incoming request\na: {request.a} b:{request.b}")
         self.get_logger().info(f"Incoming request\n")
         return response
-    
-    # function to send the message to the node control
-    def publishMessage(self):
-        msg = String()
-        self.publisher_.publish(msg)
 
     # function process input get from the teleop
     def joy_callback(self, msg):

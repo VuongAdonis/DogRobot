@@ -28,10 +28,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: name1
+  // member: namerr
   {
-    out << "name1: ";
-    rosidl_generator_traits::value_to_yaml(msg.name1, out);
+    out << "namerr: ";
+    rosidl_generator_traits::value_to_yaml(msg.namerr, out);
     out << ", ";
   }
 
@@ -53,10 +53,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: name2
+  // member: namerl
   {
-    out << "name2: ";
-    rosidl_generator_traits::value_to_yaml(msg.name2, out);
+    out << "namerl: ";
+    rosidl_generator_traits::value_to_yaml(msg.namerl, out);
     out << ", ";
   }
 
@@ -78,10 +78,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: name3
+  // member: namefr
   {
-    out << "name3: ";
-    rosidl_generator_traits::value_to_yaml(msg.name3, out);
+    out << "namefr: ";
+    rosidl_generator_traits::value_to_yaml(msg.namefr, out);
     out << ", ";
   }
 
@@ -103,10 +103,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: name4
+  // member: namefl
   {
-    out << "name4: ";
-    rosidl_generator_traits::value_to_yaml(msg.name4, out);
+    out << "namefl: ";
+    rosidl_generator_traits::value_to_yaml(msg.namefl, out);
     out << ", ";
   }
 
@@ -133,13 +133,13 @@ inline void to_block_style_yaml(
   const CANmessage & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: name1
+  // member: namerr
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "name1: ";
-    rosidl_generator_traits::value_to_yaml(msg.name1, out);
+    out << "namerr: ";
+    rosidl_generator_traits::value_to_yaml(msg.namerr, out);
     out << "\n";
   }
 
@@ -163,13 +163,13 @@ inline void to_block_style_yaml(
     }
   }
 
-  // member: name2
+  // member: namerl
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "name2: ";
-    rosidl_generator_traits::value_to_yaml(msg.name2, out);
+    out << "namerl: ";
+    rosidl_generator_traits::value_to_yaml(msg.namerl, out);
     out << "\n";
   }
 
@@ -193,13 +193,13 @@ inline void to_block_style_yaml(
     }
   }
 
-  // member: name3
+  // member: namefr
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "name3: ";
-    rosidl_generator_traits::value_to_yaml(msg.name3, out);
+    out << "namefr: ";
+    rosidl_generator_traits::value_to_yaml(msg.namefr, out);
     out << "\n";
   }
 
@@ -223,13 +223,13 @@ inline void to_block_style_yaml(
     }
   }
 
-  // member: name4
+  // member: namefl
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "name4: ";
-    rosidl_generator_traits::value_to_yaml(msg.name4, out);
+    out << "namefl: ";
+    rosidl_generator_traits::value_to_yaml(msg.namefl, out);
     out << "\n";
   }
 

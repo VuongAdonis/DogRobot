@@ -56,8 +56,8 @@ bool custom_interfaces__msg__ca_nmessage__convert_from_py(PyObject * _pymsg, voi
     assert(strncmp("custom_interfaces.msg._ca_nmessage.CANmessage", full_classname_dest, 45) == 0);
   }
   custom_interfaces__msg__CANmessage * ros_message = _ros_message;
-  {  // name1
-    PyObject * field = PyObject_GetAttrString(_pymsg, "name1");
+  {  // namerr
+    PyObject * field = PyObject_GetAttrString(_pymsg, "namerr");
     if (!field) {
       return false;
     }
@@ -67,7 +67,7 @@ bool custom_interfaces__msg__ca_nmessage__convert_from_py(PyObject * _pymsg, voi
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->name1, PyBytes_AS_STRING(encoded_field));
+    rosidl_runtime_c__String__assign(&ros_message->namerr, PyBytes_AS_STRING(encoded_field));
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
@@ -133,8 +133,8 @@ bool custom_interfaces__msg__ca_nmessage__convert_from_py(PyObject * _pymsg, voi
     }
     Py_DECREF(field);
   }
-  {  // name2
-    PyObject * field = PyObject_GetAttrString(_pymsg, "name2");
+  {  // namerl
+    PyObject * field = PyObject_GetAttrString(_pymsg, "namerl");
     if (!field) {
       return false;
     }
@@ -144,7 +144,7 @@ bool custom_interfaces__msg__ca_nmessage__convert_from_py(PyObject * _pymsg, voi
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->name2, PyBytes_AS_STRING(encoded_field));
+    rosidl_runtime_c__String__assign(&ros_message->namerl, PyBytes_AS_STRING(encoded_field));
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
@@ -210,8 +210,8 @@ bool custom_interfaces__msg__ca_nmessage__convert_from_py(PyObject * _pymsg, voi
     }
     Py_DECREF(field);
   }
-  {  // name3
-    PyObject * field = PyObject_GetAttrString(_pymsg, "name3");
+  {  // namefr
+    PyObject * field = PyObject_GetAttrString(_pymsg, "namefr");
     if (!field) {
       return false;
     }
@@ -221,7 +221,7 @@ bool custom_interfaces__msg__ca_nmessage__convert_from_py(PyObject * _pymsg, voi
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->name3, PyBytes_AS_STRING(encoded_field));
+    rosidl_runtime_c__String__assign(&ros_message->namefr, PyBytes_AS_STRING(encoded_field));
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
@@ -287,8 +287,8 @@ bool custom_interfaces__msg__ca_nmessage__convert_from_py(PyObject * _pymsg, voi
     }
     Py_DECREF(field);
   }
-  {  // name4
-    PyObject * field = PyObject_GetAttrString(_pymsg, "name4");
+  {  // namefl
+    PyObject * field = PyObject_GetAttrString(_pymsg, "namefl");
     if (!field) {
       return false;
     }
@@ -298,7 +298,7 @@ bool custom_interfaces__msg__ca_nmessage__convert_from_py(PyObject * _pymsg, voi
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->name4, PyBytes_AS_STRING(encoded_field));
+    rosidl_runtime_c__String__assign(&ros_message->namefl, PyBytes_AS_STRING(encoded_field));
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
@@ -386,17 +386,17 @@ PyObject * custom_interfaces__msg__ca_nmessage__convert_to_py(void * raw_ros_mes
     }
   }
   custom_interfaces__msg__CANmessage * ros_message = (custom_interfaces__msg__CANmessage *)raw_ros_message;
-  {  // name1
+  {  // namerr
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(
-      ros_message->name1.data,
-      strlen(ros_message->name1.data),
+      ros_message->namerr.data,
+      strlen(ros_message->namerr.data),
       "replace");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "name1", field);
+      int rc = PyObject_SetAttrString(_pymessage, "namerr", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -460,17 +460,17 @@ PyObject * custom_interfaces__msg__ca_nmessage__convert_to_py(void * raw_ros_mes
     }
     Py_DECREF(field);
   }
-  {  // name2
+  {  // namerl
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(
-      ros_message->name2.data,
-      strlen(ros_message->name2.data),
+      ros_message->namerl.data,
+      strlen(ros_message->namerl.data),
       "replace");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "name2", field);
+      int rc = PyObject_SetAttrString(_pymessage, "namerl", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -534,17 +534,17 @@ PyObject * custom_interfaces__msg__ca_nmessage__convert_to_py(void * raw_ros_mes
     }
     Py_DECREF(field);
   }
-  {  // name3
+  {  // namefr
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(
-      ros_message->name3.data,
-      strlen(ros_message->name3.data),
+      ros_message->namefr.data,
+      strlen(ros_message->namefr.data),
       "replace");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "name3", field);
+      int rc = PyObject_SetAttrString(_pymessage, "namefr", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -608,17 +608,17 @@ PyObject * custom_interfaces__msg__ca_nmessage__convert_to_py(void * raw_ros_mes
     }
     Py_DECREF(field);
   }
-  {  // name4
+  {  // namefl
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(
-      ros_message->name4.data,
-      strlen(ros_message->name4.data),
+      ros_message->namefl.data,
+      strlen(ros_message->namefl.data),
       "replace");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "name4", field);
+      int rc = PyObject_SetAttrString(_pymessage, "namefl", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
