@@ -4,6 +4,11 @@
 The source for control CAN communication
 issue: noise when control 2 ODrive
 
+To run can_node:
+$ ros2 run can_node can
+
+Note: The publisher and subscriber file in the can_node is just use to test for the ROS2, not relative to the robot.
+
 ## gamepad_node:
 The source to read the input of gamepad 360
 
@@ -29,6 +34,9 @@ $ ros2 run gamepad_node gamepad
 
 ## Controller:
 To control moving of the dog's robot
+
+To run the quadrupedRobot:
+$ ros2 run controller control
 
 # Phase test for the Robot:
 phase test is placed in path "DogRobot\ros2_ws\src\controller\controller.quadrupedRobot.py"
