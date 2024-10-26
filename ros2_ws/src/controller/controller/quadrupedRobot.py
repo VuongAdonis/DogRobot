@@ -200,10 +200,14 @@ def main():
     time.sleep(4)
     
     # declare the current index of each leg
-    idxRR = 4, idxRL = 4, idxFR = 4, idxFL = 4
+    idxRR = 4
+    idxRL = 4
+    idxFR = 4
+    idxFL = 4
     
     # declare the variable to store x, y which are extracted from gamePad
-    xGamePadOld = 0, yGamePadOld = 0, xGamePadNew = xGamePadOld, yGamePadNew= yGamePadOld
+    newAngleGamePad  = 0
+    oldAngleGamePad = newAngleGamePad
     
     while True:
       try:
@@ -212,42 +216,50 @@ def main():
           
           # read x, y from gamePad(todo)
           responseGamePad = serviceGamePadRos2.get_position()
-          xGamePadNew = responseGamePad.position[0]
-          yGamePadNew = responseGamePad.position[1]
+          xGamePad = responseGamePad.position[0]
+          yGamePad = responseGamePad.position[1]
           
-          if (abs(xGamePadNew) < 0.1) and (abs(yGamePadNew) < 0.1):
-            # send message to CAN_node to control all leg to point4(todo)
+          if (abs(xGamePad) < 0.1) and (abs(yGamePad) < 0.1):
             if (idxRR != 4) or (idxRL != 4) or (idxFR != 4) or (idxFL != 4):
-              idxRR = 4, idxRL = 4, idxFR = 4, idxFL= 4
+              idxRR = 4
+              idxRL = 4
+              idxFR = 4
+              idxFL= 4
               # CAN send message to move 4 leg to point4
               # move RL to 8 and to 4
               # move FR to 8 and to 4
               # move RR to 8 and to 4
               # move FL to 8 and to 4
-              topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
-          else:
-            # check x new and y new are different with x y old
-            if (abs(xGamePadNew - xGamePadOld) > 0.2) or (abs(yGamePadNew - yGamePadOld) > 0.2):
-              angleGamePad = atan2(-xGamePadNew, yGamePadNew)
-              robotDogTeam.updatePosTrajectoryAllLegs(angleGamePad)
-              idxRR = 5, idxRL = 1, idxFR = 7, idxFL = 3
-              # send message to CAN_node to control the pos of motor(motor) (todo)
-              # CAN send message 
-              # move FR to 8 and to 7
-              # move FL to 8 and to 3
-              # move RL to 8 and to 1
-              # move RR to 8 and to 5
-              topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
-            else:  # gamepad x= y = 0
-              idxRR =  8 if (idxRR -1) < 1 else idxRR -1
-              idxRL =  8 if (idxRL -1) < 1 else idxRL -1
-              idxFR =  8 if (idxFR -1) < 1 else idxFR -1
-              idxFL =  8 if (idxFL -1) < 1 else idxFL -1
-              # send message to CAN_node to control the pos of motor(todo)
-              topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
               
+              topicCANRos2.send_message(robotDogTeam.posCurrentRR, robotDogTeam.posCurrentRL, robotDogTeam.posCurrentFR, robotDogTeam.posCurrentFL)
+            
+          else:
+            newAngleGamePad = atan2(-xGamePad, yGamePad)
+            robotDogTeam.updatePosTrajectoryAllLegs(newAngleGamePad)
+            idxRR = 5
+            idxRL = 1
+            idxFR = 7
+            idxFL = 3
+            # send message to CAN_node to control the pos of motor(motor) (todo)
+            # CAN send message 
+            # move FR to 8 and to 7
+            # move FL to 8 and to 3
+            # move RL to 8 and to 1
+            # move RR to 8 and to 5
+            topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
+
+            # else: 
+            #   if abs(newAngleGamePad) < 
+            #   idxRR =  8 if (idxRR -1) < 1 else idxRR -1
+            #   idxRL =  8 if (idxRL -1) < 1 else idxRL -1
+            #   idxFR =  8 if (idxFR -1) < 1 else idxFR -1
+            #   idxFL =  8 if (idxFL -1) < 1 else idxFL -1
+            #   # send message to CAN_node to control the pos of motor(todo)
+            #   topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
+          
           # update x old and y old with x, y new
-          xGamePadOld = xGamePadNew, yGamePadOld = yGamePadNew      
+          # oldAngleGamePad = newAngleGamePad
+
         else:
           idxRR =  8 if (idxRR -1) < 1 else idxRR -1
           idxRL =  8 if (idxRL -1) < 1 else idxRL -1
@@ -260,37 +272,7 @@ def main():
         topicCANRos2.destroy_node()
         rclpy.shutdown()
         
-      
-      
-      
-      
-      
-      
-      
-      key = input("Enter key: ")
-      if key == 'a':
-        response = serviceGamePadRos2.get_position()
-        angleVector = atan2(-response.position[0], response.position[1])   # updated from the gamePad
-        robotDogTeam = quadrupedRobot()
-          
-        robotDogTeam.updateTrajectoryAllLegs(angleVector)
-        trajectoryRR, trajectoryRL, trajectoryFR, trajectoryFL = robotDogTeam.getTrajectory()
-
-        topicCANRos2.send_message(trajectoryRR[0], trajectoryRL[0], trajectoryFR[0], trajectoryFL[0])
-
-        print("----------------TRAJECTORY-----------------")
-        for i in range(len(trajectoryFL)):
-          print("-------------point", i+ 1, "------------------")
-          print("FL:", trajectoryFL[i])
-          # print("RL:", trajectoryRL[i])
-          # print("FR:", trajectoryFR[i])
-          # print("FL:", trajectoryFL[i])
-        print("#############################################")
-      elif key == 'q':
-         break
-      
-   
-    
+  
   # CAN = CanNode()
   # CAN.sendClosedLoop(5)
   # time.sleep(1)

@@ -1,0 +1,29 @@
+[1.511s] Invoking command in '/home/DATA/Test/DogRobot/ros2_ws/src/controller': AMENT_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/add_integers:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/Test/DogRobot/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/Test/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/my_launch_package/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/DATA/Test/DogRobot/ros2_ws/build/controller/build install --record /home/DATA/Test/DogRobot/ros2_ws/build/controller/install.log --single-version-externally-managed install_data
+[2.001s] running egg_info
+[2.038s] writing ../../build/controller/controller.egg-info/PKG-INFO
+[2.038s] writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt
+[2.038s] writing entry points to ../../build/controller/controller.egg-info/entry_points.txt
+[2.039s] writing requirements to ../../build/controller/controller.egg-info/requires.txt
+[2.039s] writing top-level names to ../../build/controller/controller.egg-info/top_level.txt
+[2.100s] reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[2.101s] writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[2.102s] running build
+[2.102s] running build_py
+[2.104s] copying controller/quadrupedRobot.py -> /home/DATA/Test/DogRobot/ros2_ws/build/controller/build/lib/controller
+[2.104s] running install
+[2.114s] running install_lib
+[2.145s] copying /home/DATA/Test/DogRobot/ros2_ws/build/controller/build/lib/controller/quadrupedRobot.py -> /home/DATA/Test/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[2.147s] byte-compiling /home/DATA/Test/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/quadrupedRobot.py to quadrupedRobot.cpython-312.pyc
+[2.150s]   File "/home/DATA/Test/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/quadrupedRobot.py", line 227
+[2.150s]     idxRR = 4, idxRL = 4, idxFR = 4, idxFL= 4
+[2.151s]     ^^^^^^^^^
+[2.151s] SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+[2.151s] 
+[2.151s] running install_data
+[2.151s] running install_egg_info
+[2.187s] removing '/home/DATA/Test/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info' (and everything under it)
+[2.187s] Copying ../../build/controller/controller.egg-info to /home/DATA/Test/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info
+[2.189s] running install_scripts
+[2.427s] Installing control script to /home/DATA/Test/DogRobot/ros2_ws/install/controller/lib/controller
+[2.428s] writing list of installed files to '/home/DATA/Test/DogRobot/ros2_ws/build/controller/install.log'
+[2.496s] Invoked command in '/home/DATA/Test/DogRobot/ros2_ws/src/controller' returned '0': AMENT_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/add_integers:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/Test/DogRobot/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/Test/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/my_launch_package/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/DATA/Test/DogRobot/ros2_ws/build/controller/build install --record /home/DATA/Test/DogRobot/ros2_ws/build/controller/install.log --single-version-externally-managed install_data

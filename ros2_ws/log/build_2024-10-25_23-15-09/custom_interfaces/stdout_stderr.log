@@ -1,0 +1,275 @@
+[0mCMake Error: The current CMakeCache.txt directory /home/DATA/Test/DogRobot/ros2_ws/build/custom_interfaces/CMakeCache.txt is different than the directory /home/DATA/DogRobot/ros2_ws/build/custom_interfaces where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+-- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rosidl_adapter: 4.6.4 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+-- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/custom_interfaces
+[  2%] Built target custom_interfaces__rosidl_generator_type_description
+[  2%] Built target ament_cmake_python_copy_custom_interfaces
+[  4%] Built target custom_interfaces__cpp
+[  6%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.o[0m
+[ 18%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o[0m
+[ 20%] [32m[1mLinking C shared library libcustom_interfaces__rosidl_generator_c.so[0m
+[ 22%] Built target custom_interfaces__rosidl_generator_c
+[ 25%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/gamepad_srv__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/publish_message__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/srv/gamepad_srv__type_support.cpp.o[0m
+[ 31%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/srv/gamepad_srv__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/dds_fastrtps/gamepad_srv__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/srv/detail/gamepad_srv__type_support_c.cpp.o[0m
+running egg_info
+writing custom_interfaces.egg-info/PKG-INFO
+writing dependency_links to custom_interfaces.egg-info/dependency_links.txt
+writing top-level names to custom_interfaces.egg-info/top_level.txt
+[ 40%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/publish_message__type_support.c.o[0m
+reading manifest file 'custom_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'custom_interfaces.egg-info/SOURCES.txt'
+[ 43%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/publish_message__type_support.cpp.o[0m
+[ 45%] [32m[1mLinking C shared library libcustom_interfaces__rosidl_typesupport_introspection_c.so[0m
+[ 47%] Built target custom_interfaces__rosidl_typesupport_introspection_c
+[ 47%] Built target ament_cmake_python_build_custom_interfaces_egg
+[ 50%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_c.so[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/publish_message__type_support.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/publish_message__type_support_c.cpp.o[0m
+[ 56%] Built target custom_interfaces__rosidl_typesupport_c
+[ 59%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/msg/publish_message__type_support.cpp.o[0m
+[ 61%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_cpp.so[0m
+[ 63%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[ 65%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[ 68%] Built target custom_interfaces__rosidl_typesupport_cpp
+[ 70%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp
+[ 72%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 75%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c
+[ 77%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 77%] Built target custom_interfaces
+[ 79%] Built target custom_interfaces__py
+[ 81%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/srv/_gamepad_srv_s.c.o[0m
+[ 84%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_publish_message_s.c.o[0m
+[ 86%] [32m[1mLinking C shared library libcustom_interfaces__rosidl_generator_py.so[0m
+[ 86%] Built target custom_interfaces__rosidl_generator_py
+[ 88%] [32mBuilding C object CMakeFiles/custom_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/custom_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/custom_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 95%] [32m[1mLinking C shared module rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so[0m
+[ 97%] [32m[1mLinking C shared module rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[100%] [32m[1mLinking C shared module rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[100%] Built target custom_interfaces_s__rosidl_typesupport_c
+[100%] Built target custom_interfaces_s__rosidl_typesupport_introspection_c
+[100%] Built target custom_interfaces_s__rosidl_typesupport_fastrtps_c
+-- Install configuration: ""
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/srv/GamepadSrv.json
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/msg/PublishMessage.json
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/add_two_ints.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/gamepad_srv.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__type_support.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__type_support.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__functions.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__struct.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__description.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__type_support.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__struct.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__functions.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__functions.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__type_support.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__functions.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__description.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_c__visibility_control.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/ca_nmessage.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/publish_message.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__functions.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__type_support.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__functions.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__struct.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__type_support.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__struct.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__functions.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__description.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__type_support.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__type_support.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__description.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__functions.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/library_path.sh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/library_path.dsv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_c.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__type_support.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__type_support.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__rosidl_typesupport_introspection_c.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__rosidl_typesupport_introspection_c.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__type_support.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__rosidl_typesupport_introspection_c.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__type_support.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__rosidl_typesupport_introspection_c.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__struct.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__builder.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__type_support.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__struct.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__traits.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__traits.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__type_support.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__builder.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/gamepad_srv.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/add_two_ints.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/ca_nmessage.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__builder.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__traits.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__builder.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__struct.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__type_support.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__traits.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__type_support.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__struct.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/publish_message.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/dds_fastrtps
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/dds_fastrtps
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__type_support.cpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/add_two_ints__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/gamepad_srv__type_support.cpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/ca_nmessage__type_support.cpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/publish_message__type_support.cpp
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.sh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.dsv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_gamepad_srv.py
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/__init__.py
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_add_two_ints.py
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_add_two_ints_s.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_gamepad_srv_s.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_ca_nmessage_s.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_publish_message_s.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/__init__.py
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_ca_nmessage.py
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_publish_message.py
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/__init__.py
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so
+Listing '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces'...
+Compiling '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/__init__.py'...
+Listing '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg'...
+Listing '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv'...
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_py.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/srv/GamepadSrv.idl
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/msg/PublishMessage.idl
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/srv/GamepadSrv.srv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/msg/PublishMessage.msg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/ament_index/resource_index/package_run_dependencies/custom_interfaces
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/ament_index/resource_index/parent_prefix_path/custom_interfaces
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.sh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/path.sh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/environment/path.dsv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/local_setup.bash
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/local_setup.sh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/local_setup.zsh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/local_setup.dsv
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.dsv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/ament_index/resource_index/packages/custom_interfaces
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport-noconfig.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cppExport.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport-noconfig.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake-extras.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig-version.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/package.xml

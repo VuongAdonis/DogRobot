@@ -6,5 +6,7 @@ custom_interfaces.egg-info/dependency_links.txt
 custom_interfaces.egg-info/top_level.txt
 custom_interfaces/msg/__init__.py
 custom_interfaces/msg/_ca_nmessage.py
+custom_interfaces/msg/_publish_message.py
 custom_interfaces/srv/__init__.py
 custom_interfaces/srv/_add_two_ints.py
+custom_interfaces/srv/_gamepad_srv.py

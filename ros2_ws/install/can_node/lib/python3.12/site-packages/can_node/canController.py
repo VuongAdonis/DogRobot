@@ -25,6 +25,7 @@ class CanNode(Node):
             self.CAN_listen_callback,
             10
         )
+        self.count = 0
 
     def StopSend(self):
         # self.sendIdle(1)
@@ -43,8 +44,10 @@ class CanNode(Node):
         posRL = msg.positionrl
         posFR = msg.positionfr
         posFL = msg.positionfl
+        
+        self.count += 1
 
-        print("Message come: ")
+        print("Message come: ", self.count)
         print("posRR = ", posRR)
         print("posRL = ", posRL)
         print("posFR = ", posFR)

@@ -1,0 +1,5 @@
+  File "/home/DATA/Test/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/quadrupedRobot.py", line 209
+    xGamePadOld = 0, yGamePadOld = 0, xGamePadNew = xGamePadOld, yGamePadNew= yGamePadOld
+    ^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+

@@ -1,0 +1,5 @@
+  File "/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/quadrupedRobot.py", line 203
+    idxRR = 4, idxRL = 4, idxFR = 4, idxFL = 4
+    ^^^^^^^^^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+
