@@ -62,29 +62,34 @@ class quadrupedRobot:
     posTrajectoryFR = self.legFR.updatePosTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
     posTrajectoryFL = self.legFL.updatePosTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
 
-    if abs(vectorAngle) <= atan2(161.12, 187):
-      self.trajectoryRRTemp = posTrajectoryRR      
-      self.trajectoryRLTemp = posTrajectoryRL
-      self.trajectoryFRTemp = posTrajectoryFR
-      self.trajectoryFLTemp = posTrajectoryFL
+    self.trajectoryRRTemp = posTrajectoryRR      
+    self.trajectoryRLTemp = posTrajectoryRL
+    self.trajectoryFRTemp = posTrajectoryFR
+    self.trajectoryFLTemp = posTrajectoryFL
     
-    else:
-      if abs(vectorAngle) <= (pi - atan2(161.12, 187)):
-        if vectorAngle < 0:
-          self.trajectoryRRTemp = posTrajectoryFR
-          self.trajectoryRLTemp = posTrajectoryRR
-          self.trajectoryFRTemp = posTrajectoryFL
-          self.trajectoryFLTemp = posTrajectoryRL
-        else:
-          self.trajectoryRRTemp = posTrajectoryRL
-          self.trajectoryRLTemp = posTrajectoryFL
-          self.trajectoryFRTemp = posTrajectoryRR
-          self.trajectoryFLTemp = posTrajectoryFR
-      else:
-        self.trajectoryRRTemp = posTrajectoryFL
-        self.trajectoryRLTemp = posTrajectoryFR
-        self.trajectoryFRTemp = posTrajectoryRL
-        self.trajectoryFLTemp = posTrajectoryRR
+    # if abs(vectorAngle) <= atan2(161.12, 187):
+    #   self.trajectoryRRTemp = posTrajectoryRR      
+    #   self.trajectoryRLTemp = posTrajectoryRL
+    #   self.trajectoryFRTemp = posTrajectoryFR
+    #   self.trajectoryFLTemp = posTrajectoryFL
+    
+    # else:
+    #   if abs(vectorAngle) <= (pi - atan2(161.12, 187)):
+    #     if vectorAngle < 0:
+    #       self.trajectoryRRTemp = posTrajectoryFR
+    #       self.trajectoryRLTemp = posTrajectoryRR
+    #       self.trajectoryFRTemp = posTrajectoryFL
+    #       self.trajectoryFLTemp = posTrajectoryRL
+    #     else:
+    #       self.trajectoryRRTemp = posTrajectoryRL
+    #       self.trajectoryRLTemp = posTrajectoryFL
+    #       self.trajectoryFRTemp = posTrajectoryRR
+    #       self.trajectoryFLTemp = posTrajectoryFR
+    #   else:
+    #     self.trajectoryRRTemp = posTrajectoryFL
+    #     self.trajectoryRLTemp = posTrajectoryFR
+    #     self.trajectoryFRTemp = posTrajectoryRL
+    #     self.trajectoryFLTemp = posTrajectoryRR
       
   # recalculate the point 4 of trajectory
   def selfBalancingIMU(self, pitch, yaw):
@@ -206,7 +211,7 @@ def main():
     idxFL = 4
     
     # declare the variable to store x, y which are extracted from gamePad
-    newAngleGamePad  = 0
+    newAngleGamePad  = np.inf
     oldAngleGamePad = newAngleGamePad
     
     while True:
@@ -219,6 +224,7 @@ def main():
           xGamePad = responseGamePad.position[0]
           yGamePad = responseGamePad.position[1]
           
+          # joystick drop
           if (abs(xGamePad) < 0.1) and (abs(yGamePad) < 0.1):
             if (idxRR != 4) or (idxRL != 4) or (idxFR != 4) or (idxFL != 4):
               idxRR = 4
@@ -229,34 +235,39 @@ def main():
               # move RL to 8 and to 4
               # move FR to 8 and to 4
               # move RR to 8 and to 4
-              # move FL to 8 and to 4
-              
+              # move FL to 8 and to 4        
               topicCANRos2.send_message(robotDogTeam.posCurrentRR, robotDogTeam.posCurrentRL, robotDogTeam.posCurrentFR, robotDogTeam.posCurrentFL)
-            
+              time.sleep(1)
+              oldAngleGamePad = np.inf
+          # joystick is activating
           else:
             newAngleGamePad = atan2(-xGamePad, yGamePad)
-            robotDogTeam.updatePosTrajectoryAllLegs(newAngleGamePad)
-            idxRR = 5
-            idxRL = 1
-            idxFR = 7
-            idxFL = 3
-            # send message to CAN_node to control the pos of motor(motor) (todo)
-            # CAN send message 
-            # move FR to 8 and to 7
-            # move FL to 8 and to 3
-            # move RL to 8 and to 1
-            # move RR to 8 and to 5
-            topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
-
-            # else: 
-            #   if abs(newAngleGamePad) < 
-            #   idxRR =  8 if (idxRR -1) < 1 else idxRR -1
-            #   idxRL =  8 if (idxRL -1) < 1 else idxRL -1
-            #   idxFR =  8 if (idxFR -1) < 1 else idxFR -1
-            #   idxFL =  8 if (idxFL -1) < 1 else idxFL -1
-            #   # send message to CAN_node to control the pos of motor(todo)
-            #   topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
-          
+            if oldAngleGamePad != newAngleGamePad:
+              robotDogTeam.updatePosTrajectoryAllLegs(newAngleGamePad)
+              if (idxRR != 4) and (idxRL != 4) and (idxFR != 4) and (idxFL != 4):
+                topicCANRos2.send_message(robotDogTeam.posCurrentRR, robotDogTeam.posCurrentRL, robotDogTeam.posCurrentFR, robotDogTeam.posCurrentFL)
+                time.sleep(1)
+              idxRR = 5
+              idxRL = 1
+              idxFR = 7
+              idxFL = 3
+              # send message to CAN_node to control the pos of motor(motor) (todo)
+              # CAN send message 
+              # move FR to 8 and to 7
+              # move FL to 8 and to 3
+              # move RL to 8 and to 1
+              # move RR to 8 and to 5
+              topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
+              time.sleep(1)
+              oldAngleGamePad = newAngleGamePad
+            else: 
+              idxRR =  8 if (idxRR -1) < 1 else idxRR -1
+              idxRL =  8 if (idxRL -1) < 1 else idxRL -1
+              idxFR =  8 if (idxFR -1) < 1 else idxFR -1
+              idxFL =  8 if (idxFL -1) < 1 else idxFL -1
+              # send message to CAN_node to control the pos of motor(todo)
+              topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
+              time.sleep(1)
           # update x old and y old with x, y new
           # oldAngleGamePad = newAngleGamePad
 
@@ -267,6 +278,7 @@ def main():
           idxFL =  8 if (idxFL -1) < 1 else idxFL -1
           # CAN send message
           topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
+          time.sleep(1)
       except KeyboardInterrupt:
         serviceGamePadRos2.destroy_node()
         topicCANRos2.destroy_node()

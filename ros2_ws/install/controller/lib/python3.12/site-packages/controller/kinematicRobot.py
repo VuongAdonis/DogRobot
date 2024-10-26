@@ -178,21 +178,21 @@ class kinematicEachLeg:
 
     if (joint1ThetaTemp0 == joint1ThetaTemp1):
       if (self.legType== leg.RR.value) or (self.legType== leg.FL.value):
-        if abs(joint1ThetaTemp0) > 2*pi/3:    # modify limit of angle joint1
+        if abs(joint1ThetaTemp0) > pi/2:    # modify limit of angle joint1
           joint1ThetaTemp.append(joint1ThetaTemp0)
       if (self.legType== leg.RL.value) or (self.legType== leg.FR.value):
-        if abs(joint1ThetaTemp0) < pi/3:   # modify limit of angle joint1
+        if abs(joint1ThetaTemp0) < pi/2:   # modify limit of angle joint1
           joint1ThetaTemp.append(joint1ThetaTemp0)
     else:
       if (self.legType== leg.RR.value) or (self.legType== leg.FL.value):
-        if abs(joint1ThetaTemp0) > 2*pi/3:    # modify limit of angle joint1
+        if abs(joint1ThetaTemp0) > pi/2:    # modify limit of angle joint1
           joint1ThetaTemp.append(joint1ThetaTemp0)
-        if abs(joint1ThetaTemp1) > 2*pi/3:    # modify limit of angle joint1
+        if abs(joint1ThetaTemp1) > 2*pi/4:    # modify limit of angle joint1
           joint1ThetaTemp.append(joint1ThetaTemp1)
       if (self.legType == leg.RL.value) or (self.legType== leg.FR.value):
-        if abs(joint1ThetaTemp0) < pi/3:    # modify limit of angle joint1
+        if abs(joint1ThetaTemp0) < pi/2:    # modify limit of angle joint1
           joint1ThetaTemp.append(joint1ThetaTemp0)
-        if abs(joint1ThetaTemp1) < pi/3:    # modify limit of angle joint1
+        if abs(joint1ThetaTemp1) < pi/2:    # modify limit of angle joint1
           joint1ThetaTemp.append(joint1ThetaTemp1)
           
     return joint1ThetaTemp
@@ -204,11 +204,11 @@ class kinematicEachLeg:
       return joint2ThetaTemp
     sinJoint2 = sqrt(1- cosJoint2**2)
     # the value of atan2 with (sin and cos is equal or greater than 0) is from 0 to pi/2
-    if atan2(sinJoint2, cosJoint2) <= pi/2:  # may be modified
-      if (self.legType == leg.RR.value) or (self.legType == leg.FR.value):
-        joint2ThetaTemp = [atan2(sinJoint2, cosJoint2)]
-      if (self.legType == leg.FL.value) or (self.legType == leg.RL.value):
-        joint2ThetaTemp = [-atan2(sinJoint2, cosJoint2)]
+    # if atan2(sinJoint2, cosJoint2) <= pi/2:  # may be modified
+    if (self.legType == leg.RR.value) or (self.legType == leg.FR.value):
+      joint2ThetaTemp = [atan2(sinJoint2, cosJoint2)]
+    if (self.legType == leg.FL.value) or (self.legType == leg.RL.value):
+      joint2ThetaTemp = [-atan2(sinJoint2, cosJoint2)]
       
     return joint2ThetaTemp
   
@@ -240,8 +240,8 @@ class kinematicEachLeg:
           XPredict, YPredict, ZPredict= self.forwardKinematic(joint0ThetaTemp, joint1ThetaTemp, joint2ThetaTemp)
           if (XPredict- X)**2 + (YPredict- Y)**2 + (ZPredict -Z)**2 < 0.001:
             angleJointList = [joint0ThetaTemp, joint1ThetaTemp, joint2ThetaTemp]
-            # posJointList   = self.cvt2PosObject.convertAngle2Position(angleJointList, self.legType)
-            pairPositionJoint012 = angleJointList
+            posJointList   = self.cvt2PosObject.convertAngle2Position(angleJointList, self.legType)
+            pairPositionJoint012 = posJointList
     #-----------------------------------------------------------------------------------------
     return pairPositionJoint012
       

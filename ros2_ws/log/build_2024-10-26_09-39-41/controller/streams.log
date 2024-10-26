@@ -1,0 +1,32 @@
+[0.963s] Invoking command in '/home/DATA/DogRobot/ros2_ws/src/controller': AMENT_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/DATA/DogRobot/ros2_ws/build/controller/build install --record /home/DATA/DogRobot/ros2_ws/build/controller/install.log --single-version-externally-managed install_data
+[1.252s] running egg_info
+[1.274s] writing ../../build/controller/controller.egg-info/PKG-INFO
+[1.274s] writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt
+[1.274s] writing entry points to ../../build/controller/controller.egg-info/entry_points.txt
+[1.274s] writing requirements to ../../build/controller/controller.egg-info/requires.txt
+[1.274s] writing top-level names to ../../build/controller/controller.egg-info/top_level.txt
+[1.320s] reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[1.321s] writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[1.321s] running build
+[1.321s] running build_py
+[1.321s] copying controller/quadrupedRobot.py -> /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller
+[1.322s] copying controller/convertAngle2Position.py -> /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller
+[1.322s] running install
+[1.328s] running install_lib
+[1.351s] copying /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller/quadrupedRobot.py -> /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[1.351s] copying /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller/convertAngle2Position.py -> /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[1.352s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/quadrupedRobot.py to quadrupedRobot.cpython-312.pyc
+[1.354s]   File "/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/quadrupedRobot.py", line 203
+[1.354s]     idxRR = 4, idxRL = 4, idxFR = 4, idxFL = 4
+[1.354s]     ^^^^^^^^^
+[1.354s] SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+[1.354s] 
+[1.355s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/convertAngle2Position.py to convertAngle2Position.cpython-312.pyc
+[1.355s] running install_data
+[1.356s] running install_egg_info
+[1.379s] removing '/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info' (and everything under it)
+[1.379s] Copying ../../build/controller/controller.egg-info to /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info
+[1.380s] running install_scripts
+[1.521s] Installing control script to /home/DATA/DogRobot/ros2_ws/install/controller/lib/controller
+[1.521s] writing list of installed files to '/home/DATA/DogRobot/ros2_ws/build/controller/install.log'
+[1.551s] Invoked command in '/home/DATA/DogRobot/ros2_ws/src/controller' returned '0': AMENT_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/DATA/DogRobot/ros2_ws/build/controller/build install --record /home/DATA/DogRobot/ros2_ws/build/controller/install.log --single-version-externally-managed install_data

@@ -48,15 +48,15 @@ class CanNode(Node):
         self.count += 1
 
         print("Message come: ", self.count)
-        print("posRR = ", posRR)
-        print("posRL = ", posRL)
+        # print("posRR = ", posRR)
+        # print("posRL = ", posRL)
         print("posFR = ", posFR)
-        print("posFL = ", posFL)
+        # print("posFL = ", posFL)
 
 
         # send message
         # self.sendPos(5, posFR[2])
-        # time.sleep(1)
+        time.sleep(1)
         # self.sendPos(4, posFR[1])
         # time.sleep(1)
         # self.sendPos(2, posRR[1])

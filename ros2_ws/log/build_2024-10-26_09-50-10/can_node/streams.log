@@ -1,0 +1,26 @@
+[2.137s] Invoking command in '/home/DATA/DogRobot/ros2_ws/src/can_node': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/can_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/my_launch_package/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/can_node build --build-base /home/DATA/DogRobot/ros2_ws/build/can_node/build install --record /home/DATA/DogRobot/ros2_ws/build/can_node/install.log --single-version-externally-managed install_data
+[2.547s] running egg_info
+[2.569s] writing ../../build/can_node/can_node.egg-info/PKG-INFO
+[2.570s] writing dependency_links to ../../build/can_node/can_node.egg-info/dependency_links.txt
+[2.570s] writing entry points to ../../build/can_node/can_node.egg-info/entry_points.txt
+[2.570s] writing requirements to ../../build/can_node/can_node.egg-info/requires.txt
+[2.570s] writing top-level names to ../../build/can_node/can_node.egg-info/top_level.txt
+[2.614s] reading manifest file '../../build/can_node/can_node.egg-info/SOURCES.txt'
+[2.615s] writing manifest file '../../build/can_node/can_node.egg-info/SOURCES.txt'
+[2.615s] running build
+[2.616s] running build_py
+[2.616s] copying can_node/canController.py -> /home/DATA/DogRobot/ros2_ws/build/can_node/build/lib/can_node
+[2.616s] running install
+[2.622s] running install_lib
+[2.645s] copying /home/DATA/DogRobot/ros2_ws/build/can_node/build/lib/can_node/canController.py -> /home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages/can_node
+[2.645s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages/can_node/canController.py to canController.cpython-312.pyc
+[2.647s] running install_data
+[2.647s] running install_egg_info
+[2.672s] removing '/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages/can_node-0.0.0-py3.12.egg-info' (and everything under it)
+[2.672s] Copying ../../build/can_node/can_node.egg-info to /home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages/can_node-0.0.0-py3.12.egg-info
+[2.673s] running install_scripts
+[2.835s] Installing can script to /home/DATA/DogRobot/ros2_ws/install/can_node/lib/can_node
+[2.835s] Installing listener script to /home/DATA/DogRobot/ros2_ws/install/can_node/lib/can_node
+[2.835s] Installing talker script to /home/DATA/DogRobot/ros2_ws/install/can_node/lib/can_node
+[2.835s] writing list of installed files to '/home/DATA/DogRobot/ros2_ws/build/can_node/install.log'
+[2.869s] Invoked command in '/home/DATA/DogRobot/ros2_ws/src/can_node' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/can_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/my_launch_package/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/can_node build --build-base /home/DATA/DogRobot/ros2_ws/build/can_node/build install --record /home/DATA/DogRobot/ros2_ws/build/can_node/install.log --single-version-externally-managed install_data
