@@ -237,7 +237,7 @@ def main():
               # move RR to 8 and to 4
               # move FL to 8 and to 4        
               topicCANRos2.send_message(robotDogTeam.posCurrentRR, robotDogTeam.posCurrentRL, robotDogTeam.posCurrentFR, robotDogTeam.posCurrentFL)
-              time.sleep(1)
+              time.sleep(0.1)
               oldAngleGamePad = np.inf
           # joystick is activating
           else:
@@ -246,7 +246,7 @@ def main():
               robotDogTeam.updatePosTrajectoryAllLegs(newAngleGamePad)
               if (idxRR != 4) and (idxRL != 4) and (idxFR != 4) and (idxFL != 4):
                 topicCANRos2.send_message(robotDogTeam.posCurrentRR, robotDogTeam.posCurrentRL, robotDogTeam.posCurrentFR, robotDogTeam.posCurrentFL)
-                time.sleep(1)
+                time.sleep(0.1)
               idxRR = 5
               idxRL = 1
               idxFR = 7
@@ -258,7 +258,7 @@ def main():
               # move RL to 8 and to 1
               # move RR to 8 and to 5
               topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
-              time.sleep(1)
+              time.sleep(0.1)
               oldAngleGamePad = newAngleGamePad
             else: 
               idxRR =  8 if (idxRR -1) < 1 else idxRR -1
@@ -267,7 +267,7 @@ def main():
               idxFL =  8 if (idxFL -1) < 1 else idxFL -1
               # send message to CAN_node to control the pos of motor(todo)
               topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
-              time.sleep(1)
+              time.sleep(0.1)
           # update x old and y old with x, y new
           # oldAngleGamePad = newAngleGamePad
 
@@ -278,7 +278,7 @@ def main():
           idxFL =  8 if (idxFL -1) < 1 else idxFL -1
           # CAN send message
           topicCANRos2.send_message(robotDogTeam.trajectoryRRTemp[idxRR -1], robotDogTeam.trajectoryRLTemp[idxRL-1], robotDogTeam.trajectoryFRTemp[idxFR-1], robotDogTeam.trajectoryFLTemp[idxFL-1])
-          time.sleep(1)
+          time.sleep(0.5)
       except KeyboardInterrupt:
         serviceGamePadRos2.destroy_node()
         topicCANRos2.destroy_node()

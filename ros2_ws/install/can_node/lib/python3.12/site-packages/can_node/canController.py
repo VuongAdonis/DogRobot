@@ -7,15 +7,17 @@ from custom_interfaces.msg import PublishMessage
 
 class CanNode(Node):
     def __init__(self):
-        # self.bus = bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
+        self.bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
         # self.sendClosedLoop(1)
-        # time.sleep(0.1)
-        # self.sendClosedLoop(2)
-        # time.sleep(0.1)
-        # self.sendClosedLoop(4)
-        # time.sleep(0.1)
-        # self.sendClosedLoop(5)
-        # time.sleep(0.1)
+        time.sleep(0.1)
+        self.sendClosedLoop(3)
+        time.sleep(0.1)
+        self.sendClosedLoop(4)
+        time.sleep(0.1)
+        self.sendClosedLoop(5)
+        time.sleep(0.1)
+
+
         print("All ODrives have been set to ClosedLoop")
 
         super().__init__("SubscriberNode")
@@ -30,12 +32,12 @@ class CanNode(Node):
     def StopSend(self):
         # self.sendIdle(1)
         # time.sleep(0.1)
-        # self.sendIdle(2)
-        # time.sleep(0.1)
-        # self.sendIdle(3)
-        # time.sleep(0.1)
-        # self.sendIdle(4)
-        # time.sleep(0.1)
+        self.sendIdle(3)
+        time.sleep(0.1)
+        self.sendIdle(4)
+        time.sleep(0.1)
+        self.sendIdle(5)
+        time.sleep(0.1)
         print("All ODrives have been set to Idle")
         
     # This function is used to process the position after get from the main control
@@ -55,14 +57,12 @@ class CanNode(Node):
 
 
         # send message
-        # self.sendPos(5, posFR[2])
-        time.sleep(1)
-        # self.sendPos(4, posFR[1])
-        # time.sleep(1)
-        # self.sendPos(2, posRR[1])
-        # time.sleep(1)
-        # self.sendPos(1, posRR[2])
-        # time.sleep(1)
+        self.sendPos(5, posFR[2])
+        time.sleep(0.005)
+        self.sendPos(4, posFR[1])
+        time.sleep(0.005)
+        self.sendPos(3, posFR[0])
+        time.sleep(0.005)
 
 
 
@@ -193,7 +193,7 @@ def main(args=None):
         rclpy.spin(robotDogHk241)
     except KeyboardInterrupt:
         robotDogHk241.StopSend()
-        # robotDogHk241.bus.shutdown() 
+        robotDogHk241.bus.shutdown() 
         print("SLCAN bus has been turned off properly.")
         robotDogHk241.destroy_node()
         rclpy.shutdown()

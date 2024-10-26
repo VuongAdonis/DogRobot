@@ -62,26 +62,29 @@ class originalPosFL(Enum):
 class position:
   
   def convertAngle2PositionJoint0(self, angle, legType):
-    joint0PositionCurrent = originalPosRR.joint0Middle.value
     if legType == leg.RR.value:
+      joint0PositionCurrent = originalPosRR.joint0Middle.value
       if angle > 0.0001:
         joint0PositionCurrent = originalPosRR.joint0Middle.value + abs(angle)*stepPerDegree.joint0.value
       if angle < -0.0001:
         joint0PositionCurrent = originalPosRR.joint0Middle.value - abs(angle)*stepPerDegree.joint0.value
 
     if legType == leg.FR.value:
+      joint0PositionCurrent = originalPosFR.joint0Middle.value
       if angle > 0.0001:
         joint0PositionCurrent = originalPosFR.joint0Middle.value + abs(angle)*stepPerDegree.joint0.value
       if angle < -0.0001:
         joint0PositionCurrent = originalPosFR.joint0Middle.value - abs(angle)*stepPerDegree.joint0.value
 
     if legType == leg.RL.value:
+      joint0PositionCurrent = originalPosRL.joint0Middle.value
       if angle > 0.0001:
         joint0PositionCurrent = originalPosRL.joint0Middle.value + abs(angle)*stepPerDegree.joint0.value
       if angle < -0.0001:
         joint0PositionCurrent = originalPosRL.joint0Middle.value - abs(angle)*stepPerDegree.joint0.value
   
     if legType == leg.FL.value:
+      joint0PositionCurrent = originalPosFL.joint0Middle.value
       if angle > 0.0001:
         joint0PositionCurrent = originalPosFL.joint0Middle.value + abs(angle)*stepPerDegree.joint0.value
       if angle < -0.0001:
@@ -89,8 +92,8 @@ class position:
     return joint0PositionCurrent
 
   def convertAngle2PositionJoint1(self, angle, legType):
-    joint1PositionCurrent   = originalPosRR.joint1Middle.value
     if legType == leg.RR.value:
+      joint1PositionCurrent   = originalPosRR.joint1Middle.value
       if angle > 0.0001:
         joint1PositionCurrent = originalPosRR.joint1Middle.value - abs(pi- angle)*stepPerDegree.joint1.value
       else:
@@ -98,6 +101,7 @@ class position:
           joint1PositionCurrent = originalPosRR.joint1Middle.value + abs(pi+ angle)*stepPerDegree.joint1.value
           
     if legType == leg.RL.value:
+      joint1PositionCurrent   = originalPosRL.joint1Middle.value
       if angle > 0.0001:
         joint1PositionCurrent = originalPosRL.joint1Middle.value - abs(angle)*stepPerDegree.joint1.value
       else:
@@ -105,6 +109,7 @@ class position:
           joint1PositionCurrent = originalPosRL.joint1Middle.value + abs(angle)*stepPerDegree.joint1.value
     
     if legType == leg.FR.value:
+      joint1PositionCurrent   = originalPosFR.joint1Middle.value
       if angle > 0.0001:
         joint1PositionCurrent = originalPosFR.joint1Middle.value + abs(angle)*stepPerDegree.joint1.value
       else:
@@ -112,6 +117,7 @@ class position:
            joint1PositionCurrent = originalPosFR.joint1Middle.value - abs(angle)*stepPerDegree.joint1.value
       
     if legType == leg.FL.value:
+      joint1PositionCurrent   = originalPosFL.joint1Middle.value
       if angle > 0.0001:
         joint1PositionCurrent = originalPosFL.joint1Middle.value - abs(pi- angle)*stepPerDegree.joint1.value
       else:
@@ -120,17 +126,20 @@ class position:
     return joint1PositionCurrent
   
   def convertAngle2PositionJoint2(self, angle, legType):
-    joint2PositionCurrent = originalPosFL.joint2Middle.value
     if legType == leg.RR.value: # angle > 0
+      joint2PositionCurrent = originalPosRR.joint2Middle.value
       if angle > 0.0001:
         joint2PositionCurrent = originalPosRR.joint2Middle.value + abs(angle)*stepPerDegree.joint2.value
     if legType == leg.FR.value: # angle > 0
+      joint2PositionCurrent = originalPosFR.joint2Middle.value
       if angle > 0.0001:
-        joint2PositionCurrent = originalPosFR.joint2Middle.value - abs(angle)*stepPerDegree.joint2.value
+        joint2PositionCurrent = originalPosFR.joint2Middle.value + abs(angle)*stepPerDegree.joint2.value
     if legType == leg.RL.value: # angle < 0
+      joint2PositionCurrent = originalPosRL.joint2Middle.value
       if angle < -0.0001:
         joint2PositionCurrent = originalPosRL.joint2Middle.value + abs(angle)*stepPerDegree.joint2.value
     if legType == leg.FL.value: # angle < 0
+      joint2PositionCurrent = originalPosFL.joint2Middle.value
       if angle < -0.0001:
         joint2PositionCurrent = originalPosFL.joint2Middle.value + abs(angle)*stepPerDegree.joint2.value
     return joint2PositionCurrent
