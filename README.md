@@ -40,3 +40,12 @@ $ ros2 run controller control
 
 # Phase test for the Robot:
 phase test is placed in path "DogRobot\ros2_ws\src\controller\controller.quadrupedRobot.py"
+
+# Communication:
+## 1. Between control and gamepad:
+- We using the service of the ROS2
+- quadrupedRobot(client) send request to the gamepad (server) to get the response contain value of joy1.
+
+## 2. Between control and can_node
+- We using publish and subscribe to a topic of ROS2
+- The quadrupedRobot will publish the message type PublishMessage in the custom_interfaces/msg. The can_node will receive and then send the position to the ODrive using CAN bus
