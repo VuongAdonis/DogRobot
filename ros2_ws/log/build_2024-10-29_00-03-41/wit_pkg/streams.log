@@ -1,0 +1,28 @@
+[0.010s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.037s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.259s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.288s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.297s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.310s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.324s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.390s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.392s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.456s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.615s] -- Configuring done (0.6s)
+[0.627s] -- Generating done (0.0s)
+[0.629s] -- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[0.666s] [ 50%] [32m[1mLinking C executable cpp_exe2[0m
+[0.666s] [ 50%] [32m[1mLinking C executable cpp_exe3[0m
+[0.713s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[0.714s] (.text+0x1b): undefined reference to `main'
+[0.715s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[0.715s] (.text+0x1b): undefined reference to `main'
+[0.715s] collect2: error: ld returned 1 exit status
+[0.716s] collect2: error: ld returned 1 exit status
+[0.717s] gmake[2]: *** [CMakeFiles/cpp_exe2.dir/build.make:163: cpp_exe2] Error 1
+[0.717s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/cpp_exe2.dir/all] Error 2
+[0.717s] gmake[1]: *** Waiting for unfinished jobs....
+[0.718s] gmake[2]: *** [CMakeFiles/cpp_exe3.dir/build.make:163: cpp_exe3] Error 1
+[0.718s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/cpp_exe3.dir/all] Error 2
+[0.718s] gmake: *** [Makefile:146: all] Error 2
+[0.721s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8

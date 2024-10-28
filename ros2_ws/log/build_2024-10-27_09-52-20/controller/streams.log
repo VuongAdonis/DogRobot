@@ -1,0 +1,33 @@
+[0.824s] Invoking command in '/home/DATA/DogRobot/ros2_ws/src/controller': AMENT_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/DATA/DogRobot/ros2_ws/build/controller/build install --record /home/DATA/DogRobot/ros2_ws/build/controller/install.log --single-version-externally-managed install_data
+[1.100s] running egg_info
+[1.121s] writing ../../build/controller/controller.egg-info/PKG-INFO
+[1.121s] writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt
+[1.121s] writing entry points to ../../build/controller/controller.egg-info/entry_points.txt
+[1.121s] writing requirements to ../../build/controller/controller.egg-info/requires.txt
+[1.121s] writing top-level names to ../../build/controller/controller.egg-info/top_level.txt
+[1.164s] reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[1.165s] writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[1.165s] running build
+[1.165s] running build_py
+[1.165s] copying controller/readIMU.py -> /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller
+[1.165s] copying controller/kinematicRobot.py -> /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller
+[1.166s] copying controller/quadrupedRobot.py -> /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller
+[1.166s] copying controller/convertAngle2Position.py -> /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller
+[1.166s] running install
+[1.172s] running install_lib
+[1.193s] copying /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller/readIMU.py -> /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[1.194s] copying /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller/kinematicRobot.py -> /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[1.194s] copying /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller/quadrupedRobot.py -> /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[1.194s] copying /home/DATA/DogRobot/ros2_ws/build/controller/build/lib/controller/convertAngle2Position.py -> /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller
+[1.194s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/readIMU.py to readIMU.cpython-312.pyc
+[1.195s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/kinematicRobot.py to kinematicRobot.cpython-312.pyc
+[1.197s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/quadrupedRobot.py to quadrupedRobot.cpython-312.pyc
+[1.199s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/convertAngle2Position.py to convertAngle2Position.cpython-312.pyc
+[1.200s] running install_data
+[1.201s] running install_egg_info
+[1.223s] removing '/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info' (and everything under it)
+[1.223s] Copying ../../build/controller/controller.egg-info to /home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info
+[1.224s] running install_scripts
+[1.360s] Installing control script to /home/DATA/DogRobot/ros2_ws/install/controller/lib/controller
+[1.361s] writing list of installed files to '/home/DATA/DogRobot/ros2_ws/build/controller/install.log'
+[1.386s] Invoked command in '/home/DATA/DogRobot/ros2_ws/src/controller' returned '0': AMENT_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/DATA/DogRobot/ros2_ws/build/controller/build install --record /home/DATA/DogRobot/ros2_ws/build/controller/install.log --single-version-externally-managed install_data

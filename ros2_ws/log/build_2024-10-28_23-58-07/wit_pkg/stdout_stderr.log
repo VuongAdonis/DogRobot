@@ -1,0 +1,117 @@
+-- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[ 50%] [32mBuilding C object CMakeFiles/cpp_exe1.dir/src/main.c.o[0m
+[ 50%] [32mBuilding C object CMakeFiles/cpp_exe2.dir/src/serial.c.o[0m
+[ 50%] [32mBuilding C object CMakeFiles/cpp_exe3.dir/src/wit_c_sdk.c.o[0m
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:[m[K In function ‘[01m[KWitSerialDataIn[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:181:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  181 |                 if(s_uiWitDataCnt [01;35m[K<[m[K (s_ucWitDataBuff[2] + 5))return ;
+      |                                   [01;35m[K^[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:[m[K In function ‘[01m[KWitCanDataIn[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:238:27:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+  238 |                         if[01;35m[K([m[KucData[1] == 0x53)
+      |                           [01;35m[K^[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:251:19:[m[K [01;36m[Knote: [m[Khere
+  251 |                   [01;36m[Kcase[m[K WIT_PROTOCOL_CAN:
+      |                   [01;36m[K^~~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:[m[K In function ‘[01m[Kserial_open[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:7:15:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 1 of ‘[01m[Kopen[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+    7 |     fd = open([01;35m[Kdev[m[K, O_RDWR|O_NOCTTY);
+      |               [01;35m[K^~~[m[K
+      |               [01;35m[K|[m[K
+      |               [01;35m[Kunsigned char *[m[K
+In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:9[m[K,
+                 from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:1[m[K:
+[01m[K/usr/include/fcntl.h:209:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char *[m[K’ but argument is of type ‘[01m[Kunsigned char *[m[K’
+  209 | extern int open ([01;36m[Kconst char *__file[m[K, int __oflag, ...) __nonnull ((1));
+      |                  [01;36m[K~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:35:30:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 1 of ‘[01m[Kserial_open[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+   35 |     if((fd = serial_open([01;35m[Kargv[1][m[K , 115200)<0))
+      |                          [01;35m[K~~~~^~~[m[K
+      |                              [01;35m[K|[m[K
+      |                              [01;35m[Kchar *[m[K
+In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:1[m[K:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:21:32:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+   21 | int serial_open([01;36m[Kunsigned char* dev[m[K, unsigned int baud);
+      |                 [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:56:40:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 2 of ‘[01m[Kserial_read_data[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+   56 |             while(serial_read_data(fd, [01;35m[KcBuff[m[K, 1))
+      |                                        [01;35m[K^~~~~[m[K
+      |                                        [01;35m[K|[m[K
+      |                                        [01;35m[Kchar *[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:23:45:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+   23 | int serial_read_data(int fd, [01;36m[Kunsigned char *val[m[K, int len);
+      |                              [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:44:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kret[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   44 |         int i , [01;35m[Kret[m[K;
+      |                 [01;35m[K^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:[m[K In function ‘[01m[KSensorDataUpdata[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:103:18:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  103 |     for(i = 0; i [01;35m[K<[m[K uiRegNum; i++)
+      |                  [01;35m[K^[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:[m[K In function ‘[01m[KAutoScanSensor[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:151:34:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 1 of ‘[01m[Kserial_open[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+  151 |                 fd = serial_open([01;35m[Kdev[m[K , c_uiBaud[i]);
+      |                                  [01;35m[K^~~[m[K
+      |                                  [01;35m[K|[m[K
+      |                                  [01;35m[Kchar *[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:21:32:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+   21 | int serial_open([01;36m[Kunsigned char* dev[m[K, unsigned int baud);
+      |                 [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:159:52:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 2 of ‘[01m[Kserial_read_data[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+  159 |                         while(serial_read_data(fd, [01;35m[KcBuff[m[K, 1))
+      |                                                    [01;35m[K^~~~~[m[K
+      |                                                    [01;35m[K|[m[K
+      |                                                    [01;35m[Kchar *[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:23:45:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+   23 | int serial_read_data(int fd, [01;36m[Kunsigned char *val[m[K, int len);
+      |                              [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[ 66%] [32m[1mLinking C executable cpp_exe2[0m
+[ 83%] [32m[1mLinking C executable cpp_exe1[0m
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+[100%] [32m[1mLinking C executable cpp_exe3[0m
+gmake[2]: *** [CMakeFiles/cpp_exe2.dir/build.make:97: cpp_exe2] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/cpp_exe2.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/cpp_exe3.dir/build.make:97: cpp_exe3] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/cpp_exe3.dir/all] Error 2
+/usr/bin/ld: CMakeFiles/cpp_exe1.dir/src/main.c.o: warning: relocation against `sReg' in read-only section `.text'
+/usr/bin/ld: CMakeFiles/cpp_exe1.dir/src/main.c.o: in function `main':
+main.c:(.text+0x55): undefined reference to `serial_open'
+/usr/bin/ld: main.c:(.text+0xc8): undefined reference to `WitInit'
+/usr/bin/ld: main.c:(.text+0xd7): undefined reference to `WitRegisterCallBack'
+/usr/bin/ld: main.c:(.text+0x109): undefined reference to `WitSerialDataIn'
+/usr/bin/ld: main.c:(.text+0x122): undefined reference to `serial_read_data'
+/usr/bin/ld: main.c:(.text+0x164): undefined reference to `sReg'
+/usr/bin/ld: main.c:(.text+0x1aa): undefined reference to `sReg'
+/usr/bin/ld: main.c:(.text+0x1f0): undefined reference to `sReg'
+/usr/bin/ld: main.c:(.text+0x38b): undefined reference to `sReg'
+/usr/bin/ld: main.c:(.text+0x395): undefined reference to `sReg'
+/usr/bin/ld: CMakeFiles/cpp_exe1.dir/src/main.c.o:main.c:(.text+0x39f): more undefined references to `sReg' follow
+/usr/bin/ld: CMakeFiles/cpp_exe1.dir/src/main.c.o: in function `AutoScanSensor':
+main.c:(.text+0x4f0): undefined reference to `serial_close'
+/usr/bin/ld: main.c:(.text+0x534): undefined reference to `serial_open'
+/usr/bin/ld: main.c:(.text+0x557): undefined reference to `WitReadReg'
+/usr/bin/ld: main.c:(.text+0x571): undefined reference to `WitSerialDataIn'
+/usr/bin/ld: main.c:(.text+0x58a): undefined reference to `serial_read_data'
+/usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/cpp_exe1.dir/build.make:163: cpp_exe1] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/cpp_exe1.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

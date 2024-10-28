@@ -1,0 +1,15 @@
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/package_run_dependencies/wit_pkg
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/parent_prefix_path/wit_pkg
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/ament_prefix_path.sh
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/ament_prefix_path.dsv
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/path.sh
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/path.dsv
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.bash
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.sh
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.zsh
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.dsv
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/package.dsv
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/packages/wit_pkg
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/wit_pkgConfig.cmake
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/wit_pkgConfig-version.cmake
+/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/package.xml

@@ -1,0 +1,82 @@
+[0.011s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.041s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.275s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.305s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.316s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.330s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.346s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.414s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.416s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.483s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.654s] -- Configuring done (0.6s)
+[0.663s] -- Generating done (0.0s)
+[0.664s] -- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[0.701s] [ 50%] [32mBuilding C object CMakeFiles/cpp_exe.dir/src/main.c.o[0m
+[0.750s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:[m[K In function ‘[01m[Kmain[m[K’:
+[0.750s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:35:30:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 1 of ‘[01m[Kserial_open[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+[0.750s]    35 |     if((fd = serial_open([01;35m[Kargv[1][m[K , 115200)<0))
+[0.750s]       |                          [01;35m[K~~~~^~~[m[K
+[0.750s]       |                              [01;35m[K|[m[K
+[0.750s]       |                              [01;35m[Kchar *[m[K
+[0.750s] In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:1[m[K:
+[0.750s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:21:32:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+[0.750s]    21 | int serial_open([01;36m[Kunsigned char* dev[m[K, unsigned int baud);
+[0.751s]       |                 [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[0.751s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:56:40:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 2 of ‘[01m[Kserial_read_data[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+[0.751s]    56 |             while(serial_read_data(fd, [01;35m[KcBuff[m[K, 1))
+[0.751s]       |                                        [01;35m[K^~~~~[m[K
+[0.751s]       |                                        [01;35m[K|[m[K
+[0.751s]       |                                        [01;35m[Kchar *[m[K
+[0.751s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:23:45:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+[0.751s]    23 | int serial_read_data(int fd, [01;36m[Kunsigned char *val[m[K, int len);
+[0.751s]       |                              [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[0.751s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:44:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kret[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[0.751s]    44 |         int i , [01;35m[Kret[m[K;
+[0.752s]       |                 [01;35m[K^~~[m[K
+[0.752s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:[m[K In function ‘[01m[KSensorDataUpdata[m[K’:
+[0.752s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:103:18:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[0.752s]   103 |     for(i = 0; i [01;35m[K<[m[K uiRegNum; i++)
+[0.752s]       |                  [01;35m[K^[m[K
+[0.752s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:[m[K In function ‘[01m[KAutoScanSensor[m[K’:
+[0.752s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:151:34:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 1 of ‘[01m[Kserial_open[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+[0.752s]   151 |                 fd = serial_open([01;35m[Kdev[m[K , c_uiBaud[i]);
+[0.752s]       |                                  [01;35m[K^~~[m[K
+[0.752s]       |                                  [01;35m[K|[m[K
+[0.752s]       |                                  [01;35m[Kchar *[m[K
+[0.752s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:21:32:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+[0.752s]    21 | int serial_open([01;36m[Kunsigned char* dev[m[K, unsigned int baud);
+[0.752s]       |                 [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[0.753s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/main.c:159:52:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 2 of ‘[01m[Kserial_read_data[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+[0.753s]   159 |                         while(serial_read_data(fd, [01;35m[KcBuff[m[K, 1))
+[0.753s]       |                                                    [01;35m[K^~~~~[m[K
+[0.753s]       |                                                    [01;35m[K|[m[K
+[0.753s]       |                                                    [01;35m[Kchar *[m[K
+[0.753s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:23:45:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+[0.753s]    23 | int serial_read_data(int fd, [01;36m[Kunsigned char *val[m[K, int len);
+[0.753s]       |                              [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[0.776s] [100%] [32m[1mLinking C executable cpp_exe[0m
+[0.841s] /usr/bin/ld: CMakeFiles/cpp_exe.dir/src/main.c.o: warning: relocation against `sReg' in read-only section `.text'
+[0.843s] /usr/bin/ld: CMakeFiles/cpp_exe.dir/src/main.c.o: in function `main':
+[0.843s] main.c:(.text+0x55): undefined reference to `serial_open'
+[0.843s] /usr/bin/ld: main.c:(.text+0xc8): undefined reference to `WitInit'
+[0.843s] /usr/bin/ld: main.c:(.text+0xd7): undefined reference to `WitRegisterCallBack'
+[0.844s] /usr/bin/ld: main.c:(.text+0x109): undefined reference to `WitSerialDataIn'
+[0.844s] /usr/bin/ld: main.c:(.text+0x122): undefined reference to `serial_read_data'
+[0.844s] /usr/bin/ld: main.c:(.text+0x164): undefined reference to `sReg'
+[0.844s] /usr/bin/ld: main.c:(.text+0x1aa): undefined reference to `sReg'
+[0.844s] /usr/bin/ld: main.c:(.text+0x1f0): undefined reference to `sReg'
+[0.844s] /usr/bin/ld: main.c:(.text+0x38b): undefined reference to `sReg'
+[0.844s] /usr/bin/ld: main.c:(.text+0x395): undefined reference to `sReg'
+[0.844s] /usr/bin/ld: CMakeFiles/cpp_exe.dir/src/main.c.o:main.c:(.text+0x39f): more undefined references to `sReg' follow
+[0.844s] /usr/bin/ld: CMakeFiles/cpp_exe.dir/src/main.c.o: in function `AutoScanSensor':
+[0.844s] main.c:(.text+0x4f0): undefined reference to `serial_close'
+[0.844s] /usr/bin/ld: main.c:(.text+0x534): undefined reference to `serial_open'
+[0.845s] /usr/bin/ld: main.c:(.text+0x557): undefined reference to `WitReadReg'
+[0.845s] /usr/bin/ld: main.c:(.text+0x571): undefined reference to `WitSerialDataIn'
+[0.845s] /usr/bin/ld: main.c:(.text+0x58a): undefined reference to `serial_read_data'
+[0.845s] /usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+[0.845s] collect2: error: ld returned 1 exit status
+[0.847s] gmake[2]: *** [CMakeFiles/cpp_exe.dir/build.make:163: cpp_exe] Error 1
+[0.847s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/cpp_exe.dir/all] Error 2
+[0.847s] gmake: *** [Makefile:146: all] Error 2
+[0.849s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8

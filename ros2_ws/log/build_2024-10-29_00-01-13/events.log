@@ -1,0 +1,97 @@
+[0.000000] (-) TimerEvent: {}
+[0.000212] (-) JobUnselected: {'identifier': 'add_integers'}
+[0.000245] (-) JobUnselected: {'identifier': 'can_node'}
+[0.000264] (-) JobUnselected: {'identifier': 'controller'}
+[0.000279] (-) JobUnselected: {'identifier': 'custom_interfaces'}
+[0.000292] (-) JobUnselected: {'identifier': 'gamepad_node'}
+[0.000305] (-) JobUnselected: {'identifier': 'my_launch_package'}
+[0.000319] (wit_pkg) JobQueued: {'identifier': 'wit_pkg', 'dependencies': OrderedDict()}
+[0.000516] (wit_pkg) JobStarted: {'identifier': 'wit_pkg'}
+[0.008329] (wit_pkg) JobProgress: {'identifier': 'wit_pkg', 'progress': 'cmake'}
+[0.008875] (wit_pkg) JobProgress: {'identifier': 'wit_pkg', 'progress': 'build'}
+[0.009411] (wit_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/DATA/DogRobot/ros2_ws/build/wit_pkg', '--', '-j8', '-l8'], 'cwd': '/home/DATA/DogRobot/ros2_ws/build/wit_pkg', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'adonis', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/adonis', 'OLDPWD': '/home/DATA/DogRobot/ros2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2879', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/DATA/DogRobot/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'adonis', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'adonis', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/adonis-Nitro-AN515-55:@/tmp/.ICE-unix/2731,unix/adonis-Nitro-AN515-55:/tmp/.ICE-unix/2731', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/f39233e3_c32a_403b_bb85_f6ba63684e90', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.108', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/DATA/DogRobot/ros2_ws/install/wit_pkg:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/DATA/DogRobot/ros2_ws/build/wit_pkg', 'QT_QPA_PLATFORM': 'xcb', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/DATA/DogRobot/ros2_ws/install/my_launch_package/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/can_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/add_integers/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/DATA/DogRobot/ros2_ws/install/wit_pkg:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy'}), 'shell': False}
+[0.038452] (wit_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099865] (-) TimerEvent: {}
+[0.200091] (-) TimerEvent: {}
+[0.257776] (wit_pkg) StdoutLine: {'line': b'-- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.286393] (wit_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.296407] (wit_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.300189] (-) TimerEvent: {}
+[0.309260] (wit_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.323742] (wit_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.390303] (wit_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.391823] (wit_pkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.400292] (-) TimerEvent: {}
+[0.457651] (wit_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.500426] (-) TimerEvent: {}
+[0.600672] (-) TimerEvent: {}
+[0.619456] (wit_pkg) StdoutLine: {'line': b'-- Configuring done (0.6s)\n'}
+[0.634236] (wit_pkg) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.635907] (wit_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/wit_pkg\n'}
+[0.673466] (wit_pkg) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/cpp_exe3.dir/src/wit_c_sdk.c.o\x1b[0m\n'}
+[0.676631] (wit_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding C object CMakeFiles/cpp_exe2.dir/src/serial.c.o\x1b[0m\n'}
+[0.676869] (wit_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking C executable cpp_exe1\x1b[0m\n'}
+[0.696016] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[KWitSerialDataIn\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[0.696316] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:181:35:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kuint32_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kunsigned int\x1b[m\x1b[K\xe2\x80\x99} and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.696500] (wit_pkg) StderrLine: {'line': b'  181 |                 if(s_uiWitDataCnt \x1b[01;35m\x1b[K<\x1b[m\x1b[K (s_ucWitDataBuff[2] + 5))return ;\n'}
+[0.696674] (wit_pkg) StderrLine: {'line': b'      |                                   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.700778] (-) TimerEvent: {}
+[0.701749] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[KWitCanDataIn\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[0.702020] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:238:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kthis statement may fall through [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=\x07-Wimplicit-fallthrough=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.702130] (wit_pkg) StderrLine: {'line': b'  238 |                         if\x1b[01;35m\x1b[K(\x1b[m\x1b[KucData[1] == 0x53)\n'}
+[0.702211] (wit_pkg) StderrLine: {'line': b'      |                           \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.702289] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:251:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Khere\n'}
+[0.702380] (wit_pkg) StderrLine: {'line': b'  251 |                   \x1b[01;36m\x1b[Kcase\x1b[m\x1b[K WIT_PROTOCOL_CAN:\n'}
+[0.702468] (wit_pkg) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[0.717311] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kserial_open\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[0.717590] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:7:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kpointer targets in passing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kopen\x1b[m\x1b[K\xe2\x80\x99 differ in signedness [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign\x07-Wpointer-sign\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.717681] (wit_pkg) StderrLine: {'line': b'    7 |     fd = open(\x1b[01;35m\x1b[Kdev\x1b[m\x1b[K, O_RDWR|O_NOCTTY);\n'}
+[0.717754] (wit_pkg) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[0.717828] (wit_pkg) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K|\x1b[m\x1b[K\n'}
+[0.717898] (wit_pkg) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[Kunsigned char *\x1b[m\x1b[K\n'}
+[0.717966] (wit_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:9\x1b[m\x1b[K,\n'}
+[0.718037] (wit_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:1\x1b[m\x1b[K:\n'}
+[0.718126] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/fcntl.h:209:30:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[Kconst char *\x1b[m\x1b[K\xe2\x80\x99 but argument is of type \xe2\x80\x98\x1b[01m\x1b[Kunsigned char *\x1b[m\x1b[K\xe2\x80\x99\n'}
+[0.718196] (wit_pkg) StderrLine: {'line': b'  209 | extern int open (\x1b[01;36m\x1b[Kconst char *__file\x1b[m\x1b[K, int __oflag, ...) __nonnull ((1));\n'}
+[0.718261] (wit_pkg) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K~~~~~~~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[0.723139] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/cpp_exe1.dir/src/main.c.o: warning: relocation against `sReg' in read-only section `.text'\n"}
+[0.724939] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/cpp_exe1.dir/src/main.c.o: in function `main':\n"}
+[0.725202] (wit_pkg) StderrLine: {'line': b"main.c:(.text+0x55): undefined reference to `serial_open'\n"}
+[0.725285] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0xc8): undefined reference to `WitInit'\n"}
+[0.725360] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0xd7): undefined reference to `WitRegisterCallBack'\n"}
+[0.725432] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0x109): undefined reference to `WitSerialDataIn'\n"}
+[0.725525] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0x122): undefined reference to `serial_read_data'\n"}
+[0.725608] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0x164): undefined reference to `sReg'\n"}
+[0.725676] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0x1aa): undefined reference to `sReg'\n"}
+[0.725744] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0x1f0): undefined reference to `sReg'\n"}
+[0.725839] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0x38b): undefined reference to `sReg'\n"}
+[0.725930] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0x395): undefined reference to `sReg'\n"}
+[0.726020] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/cpp_exe1.dir/src/main.c.o:main.c:(.text+0x39f): more undefined references to `sReg' follow\n"}
+[0.726111] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/cpp_exe1.dir/src/main.c.o: in function `AutoScanSensor':\n"}
+[0.726220] (wit_pkg) StderrLine: {'line': b"main.c:(.text+0x4f0): undefined reference to `serial_close'\n"}
+[0.726287] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0x534): undefined reference to `serial_open'\n"}
+[0.726354] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0x557): undefined reference to `WitReadReg'\n"}
+[0.726419] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0x571): undefined reference to `WitSerialDataIn'\n"}
+[0.726518] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: main.c:(.text+0x58a): undefined reference to `serial_read_data'\n"}
+[0.726588] (wit_pkg) StderrLine: {'line': b'/usr/bin/ld: warning: creating DT_TEXTREL in a PIE\n'}
+[0.726935] (wit_pkg) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[0.728892] (wit_pkg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/cpp_exe1.dir/build.make:163: cpp_exe1] Error 1\n'}
+[0.729215] (wit_pkg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/cpp_exe1.dir/all] Error 2\n'}
+[0.729374] (wit_pkg) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[0.740305] (wit_pkg) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking C executable cpp_exe2\x1b[0m\n'}
+[0.749762] (wit_pkg) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking C executable cpp_exe3\x1b[0m\n'}
+[0.786222] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':\n"}
+[0.786460] (wit_pkg) StderrLine: {'line': b"(.text+0x1b): undefined reference to `main'\n"}
+[0.787959] (wit_pkg) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[0.789673] (wit_pkg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/cpp_exe2.dir/build.make:163: cpp_exe2] Error 1\n'}
+[0.789846] (wit_pkg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/cpp_exe2.dir/all] Error 2\n'}
+[0.795643] (wit_pkg) StderrLine: {'line': b"/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':\n"}
+[0.795803] (wit_pkg) StderrLine: {'line': b"(.text+0x1b): undefined reference to `main'\n"}
+[0.797260] (wit_pkg) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[0.798838] (wit_pkg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/cpp_exe3.dir/build.make:163: cpp_exe3] Error 1\n'}
+[0.798985] (wit_pkg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/cpp_exe3.dir/all] Error 2\n'}
+[0.799149] (wit_pkg) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[0.800779] (wit_pkg) CommandEnded: {'returncode': 2}
+[0.801122] (-) TimerEvent: {}
+[0.839253] (wit_pkg) JobEnded: {'identifier': 'wit_pkg', 'rc': 2}
+[0.849795] (-) EventReactorShutdown: {}
