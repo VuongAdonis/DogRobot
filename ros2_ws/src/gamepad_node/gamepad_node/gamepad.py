@@ -25,6 +25,9 @@ class GamepadRecorder(Node):
         self.gamepad_values = []  # list save the gamepad's value
         self.prev_time = time.time()
         self.count = 0
+        self.buttonStandUp = 0
+        self.buttonStandDown = 0
+        self.buttonStandNormal = 0
 
         self.service = self.create_service(
             GamepadSrv,
@@ -35,6 +38,10 @@ class GamepadRecorder(Node):
     # service function of gamepad
     def gamepad_callback(self, request, response):
         response.position = [self.x, self.y]
+        response.button_stand_up = self.buttonStandUp
+        response.button_stand_down = self.buttonStandDown
+        response.button_stand_normal = self.buttonStandNormal
+
         # self.get_logger().info(f"Incoming request\na: {request.a} b:{request.b}")
         self.get_logger().info(f"Incoming request\n")
         return response
@@ -44,6 +51,15 @@ class GamepadRecorder(Node):
         self.current_time = time.time()
         self.x = msg.axes[0]
         self.y = msg.axes[1]
+        self.buttonStandUp = msg.buttons[3]
+        self.buttonStandDown = msg.buttons[0]
+        self.buttonStandNormal = msg.buttons[7]
+
+        print("UP: ", self.buttonStandUp)
+        print("DOWN: ", self.buttonStandDown)
+        print("NORMAL: ", self.buttonStandNormal)
+        time.sleep(2)
+
 
 def main():
     rclpy.init()

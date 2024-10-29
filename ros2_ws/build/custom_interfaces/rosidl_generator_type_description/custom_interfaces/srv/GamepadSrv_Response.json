@@ -12,6 +12,36 @@
             "nested_type_name": ""
           },
           "default_value": ""
+        },
+        {
+          "name": "button_stand_up",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "button_stand_down",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "button_stand_normal",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
         }
       ]
     },
@@ -20,7 +50,7 @@
   "type_hashes": [
     {
       "type_name": "custom_interfaces/srv/GamepadSrv_Response",
-      "hash_string": "RIHS01_55d61f1dbe84af270f0cc93f94c324c7ace232a7d25aaa93c1d68f3964153b5d"
+      "hash_string": "RIHS01_3348ca4cf7eb4fd98614d105aae62e114554f7b1bdde0781c850690122da4b4b"
     }
   ]
 }

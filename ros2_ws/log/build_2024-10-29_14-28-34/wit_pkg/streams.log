@@ -1,0 +1,17 @@
+[0.255s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.284s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.545s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.590s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.600s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.613s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.628s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.708s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.710s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.789s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.873s] [31mCMake Error at CMakeLists.txt:18 (target_link_libraries):
+[0.873s]   Cannot specify link libraries for target "REG" which is not built by this
+[0.873s]   project.
+[0.873s] 
+[0.873s] [0m
+[0.873s] -- Configuring incomplete, errors occurred!
+[0.878s] gmake: *** [Makefile:308: cmake_check_build_system] Error 1

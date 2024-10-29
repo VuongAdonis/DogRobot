@@ -250,6 +250,9 @@ custom_interfaces__srv__GamepadSrv_Response__init(custom_interfaces__srv__Gamepa
     custom_interfaces__srv__GamepadSrv_Response__fini(msg);
     return false;
   }
+  // button_stand_up
+  // button_stand_down
+  // button_stand_normal
   return true;
 }
 
@@ -261,6 +264,9 @@ custom_interfaces__srv__GamepadSrv_Response__fini(custom_interfaces__srv__Gamepa
   }
   // position
   rosidl_runtime_c__double__Sequence__fini(&msg->position);
+  // button_stand_up
+  // button_stand_down
+  // button_stand_normal
 }
 
 bool
@@ -273,6 +279,18 @@ custom_interfaces__srv__GamepadSrv_Response__are_equal(const custom_interfaces__
   if (!rosidl_runtime_c__double__Sequence__are_equal(
       &(lhs->position), &(rhs->position)))
   {
+    return false;
+  }
+  // button_stand_up
+  if (lhs->button_stand_up != rhs->button_stand_up) {
+    return false;
+  }
+  // button_stand_down
+  if (lhs->button_stand_down != rhs->button_stand_down) {
+    return false;
+  }
+  // button_stand_normal
+  if (lhs->button_stand_normal != rhs->button_stand_normal) {
     return false;
   }
   return true;
@@ -292,6 +310,12 @@ custom_interfaces__srv__GamepadSrv_Response__copy(
   {
     return false;
   }
+  // button_stand_up
+  output->button_stand_up = input->button_stand_up;
+  // button_stand_down
+  output->button_stand_down = input->button_stand_down;
+  // button_stand_normal
+  output->button_stand_normal = input->button_stand_normal;
   return true;
 }
 

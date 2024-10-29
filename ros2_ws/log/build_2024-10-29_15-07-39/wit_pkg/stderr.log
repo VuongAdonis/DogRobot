@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:54 (file):
+  file INSTALL cannot find
+  "/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial": No such
+  file or directory.
+
+[0m

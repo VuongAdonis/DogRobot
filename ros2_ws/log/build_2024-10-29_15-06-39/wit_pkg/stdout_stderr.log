@@ -1,0 +1,8 @@
+[ 50%] [32mBuilding C object CMakeFiles/serial.dir/src/serial.c.o[0m
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:1:10:[m[K [01;31m[Kfatal error: [m[Kwit_pkg/include/wit_pkg/serial.h: No such file or directory
+    1 | #include [01;31m[K"wit_pkg/include/wit_pkg/serial.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/serial.dir/build.make:76: CMakeFiles/serial.dir/src/serial.c.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/serial.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

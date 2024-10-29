@@ -46,6 +46,9 @@ typedef struct custom_interfaces__srv__GamepadSrv_Request__Sequence
 typedef struct custom_interfaces__srv__GamepadSrv_Response
 {
   rosidl_runtime_c__double__Sequence position;
+  int8_t button_stand_up;
+  int8_t button_stand_down;
+  int8_t button_stand_normal;
 } custom_interfaces__srv__GamepadSrv_Response;
 
 // Struct for a sequence of custom_interfaces__srv__GamepadSrv_Response.

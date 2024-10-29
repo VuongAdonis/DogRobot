@@ -183,7 +183,7 @@ bool custom_interfaces__srv__GamepadSrv_Response__rosidl_typesupport_introspecti
   return rosidl_runtime_c__double__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__srv__GamepadSrv_Response__rosidl_typesupport_introspection_c__GamepadSrv_Response_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__srv__GamepadSrv_Response__rosidl_typesupport_introspection_c__GamepadSrv_Response_message_member_array[4] = {
   {
     "position",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
@@ -201,13 +201,67 @@ static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__srv_
     custom_interfaces__srv__GamepadSrv_Response__rosidl_typesupport_introspection_c__fetch_function__GamepadSrv_Response__position,  // fetch(index, &value) function pointer
     custom_interfaces__srv__GamepadSrv_Response__rosidl_typesupport_introspection_c__assign_function__GamepadSrv_Response__position,  // assign(index, value) function pointer
     custom_interfaces__srv__GamepadSrv_Response__rosidl_typesupport_introspection_c__resize_function__GamepadSrv_Response__position  // resize(index) function pointer
+  },
+  {
+    "button_stand_up",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(custom_interfaces__srv__GamepadSrv_Response, button_stand_up),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "button_stand_down",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(custom_interfaces__srv__GamepadSrv_Response, button_stand_down),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "button_stand_normal",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(custom_interfaces__srv__GamepadSrv_Response, button_stand_normal),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers custom_interfaces__srv__GamepadSrv_Response__rosidl_typesupport_introspection_c__GamepadSrv_Response_message_members = {
   "custom_interfaces__srv",  // message namespace
   "GamepadSrv_Response",  // message name
-  1,  // number of fields
+  4,  // number of fields
   sizeof(custom_interfaces__srv__GamepadSrv_Response),
   false,  // has_any_key_member_
   custom_interfaces__srv__GamepadSrv_Response__rosidl_typesupport_introspection_c__GamepadSrv_Response_message_member_array,  // message members

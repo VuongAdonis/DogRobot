@@ -1,0 +1,40 @@
+-- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found wit_pkg: 0.0.0 (/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake)
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[ 66%] Built target serial
+[ 66%] Built target wit_c_sdk
+[ 83%] [32m[1mLinking C executable consumer[0m
+/usr/bin/ld: CMakeFiles/consumer.dir/src/readIMU.c.o: warning: relocation against `sReg' in read-only section `.text'
+/usr/bin/ld: CMakeFiles/consumer.dir/src/readIMU.c.o: in function `main':
+readIMU.c:(.text+0x55): undefined reference to `serial_open'
+/usr/bin/ld: readIMU.c:(.text+0xc8): undefined reference to `WitInit'
+/usr/bin/ld: readIMU.c:(.text+0xd7): undefined reference to `WitRegisterCallBack'
+/usr/bin/ld: readIMU.c:(.text+0x109): undefined reference to `WitSerialDataIn'
+/usr/bin/ld: readIMU.c:(.text+0x122): undefined reference to `serial_read_data'
+/usr/bin/ld: readIMU.c:(.text+0x164): undefined reference to `sReg'
+/usr/bin/ld: readIMU.c:(.text+0x1aa): undefined reference to `sReg'
+/usr/bin/ld: readIMU.c:(.text+0x1f0): undefined reference to `sReg'
+/usr/bin/ld: readIMU.c:(.text+0x38b): undefined reference to `sReg'
+/usr/bin/ld: readIMU.c:(.text+0x395): undefined reference to `sReg'
+/usr/bin/ld: CMakeFiles/consumer.dir/src/readIMU.c.o:readIMU.c:(.text+0x39f): more undefined references to `sReg' follow
+/usr/bin/ld: CMakeFiles/consumer.dir/src/readIMU.c.o: in function `AutoScanSensor':
+readIMU.c:(.text+0x4f0): undefined reference to `serial_close'
+/usr/bin/ld: readIMU.c:(.text+0x534): undefined reference to `serial_open'
+/usr/bin/ld: readIMU.c:(.text+0x557): undefined reference to `WitReadReg'
+/usr/bin/ld: readIMU.c:(.text+0x571): undefined reference to `WitSerialDataIn'
+/usr/bin/ld: readIMU.c:(.text+0x58a): undefined reference to `serial_read_data'
+/usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/consumer.dir/build.make:97: consumer] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/consumer.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,45 @@
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:35:26:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 1 of ‘[01m[Kserial_open[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+   35 |     if((fd = serial_open([01;35m[K"/dev/ttyUSB0"[m[K , 115200)<0))
+      |                          [01;35m[K^~~~~~~~~~~~~~[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kchar *[m[K
+In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:1[m[K:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:21:32:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+   21 | int serial_open([01;36m[Kunsigned char* dev[m[K, unsigned int baud);
+      |                 [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:56:40:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 2 of ‘[01m[Kserial_read_data[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+   56 |             while(serial_read_data(fd, [01;35m[KcBuff[m[K, 1))
+      |                                        [01;35m[K^~~~~[m[K
+      |                                        [01;35m[K|[m[K
+      |                                        [01;35m[Kchar *[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:23:45:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+   23 | int serial_read_data(int fd, [01;36m[Kunsigned char *val[m[K, int len);
+      |                              [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:44:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kret[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   44 |         int i , [01;35m[Kret[m[K;
+      |                 [01;35m[K^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:26:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   26 | int main([01;35m[Kint argc[m[K,char* argv[]){
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:[m[K In function ‘[01m[KSensorDataUpdata[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:103:18:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  103 |     for(i = 0; i [01;35m[K<[m[K uiRegNum; i++)
+      |                  [01;35m[K^[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:[m[K In function ‘[01m[KAutoScanSensor[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:151:34:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 1 of ‘[01m[Kserial_open[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+  151 |                 fd = serial_open([01;35m[Kdev[m[K , c_uiBaud[i]);
+      |                                  [01;35m[K^~~[m[K
+      |                                  [01;35m[K|[m[K
+      |                                  [01;35m[Kchar *[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:21:32:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+   21 | int serial_open([01;36m[Kunsigned char* dev[m[K, unsigned int baud);
+      |                 [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:159:52:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 2 of ‘[01m[Kserial_read_data[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+  159 |                         while(serial_read_data(fd, [01;35m[KcBuff[m[K, 1))
+      |                                                    [01;35m[K^~~~~[m[K
+      |                                                    [01;35m[K|[m[K
+      |                                                    [01;35m[Kchar *[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:23:45:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+   23 | int serial_read_data(int fd, [01;36m[Kunsigned char *val[m[K, int len);
+      |                              [01;36m[K~~~~~~~~~~~~~~~^~~[m[K

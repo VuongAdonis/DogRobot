@@ -439,6 +439,9 @@ rosidl_typesupport_introspection_c_DIR:PATH=/opt/ros/jazzy/share/rosidl_typesupp
 //The directory containing a CMake configuration file for rosidl_typesupport_introspection_cpp.
 rosidl_typesupport_introspection_cpp_DIR:PATH=/opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/cmake
 
+//Dependencies for the target
+serial_LIB_DEPENDS:STATIC=general;rclcpp::rclcpp;
+
 //The directory containing a CMake configuration file for service_msgs.
 service_msgs_DIR:PATH=/opt/ros/jazzy/share/service_msgs/cmake
 
@@ -451,8 +454,14 @@ tracetools_DIR:PATH=/opt/ros/jazzy/share/tracetools/cmake
 //The directory containing a CMake configuration file for type_description_interfaces.
 type_description_interfaces_DIR:PATH=/opt/ros/jazzy/share/type_description_interfaces/cmake
 
+//Dependencies for the target
+wit_c_sdk_LIB_DEPENDS:STATIC=general;rclcpp::rclcpp;
+
 //Value Computed by CMake
 wit_pkg_BINARY_DIR:STATIC=/home/DATA/DogRobot/ros2_ws/build/wit_pkg
+
+//The directory containing a CMake configuration file for wit_pkg.
+wit_pkg_DIR:PATH=/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake
 
 //Value Computed by CMake
 wit_pkg_IS_TOP_LEVEL:STATIC=ON

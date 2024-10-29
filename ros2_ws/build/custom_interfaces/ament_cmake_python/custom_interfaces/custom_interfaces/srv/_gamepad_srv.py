@@ -178,17 +178,26 @@ class GamepadSrv_Response(metaclass=Metaclass_GamepadSrv_Response):
 
     __slots__ = [
         '_position',
+        '_button_stand_up',
+        '_button_stand_down',
+        '_button_stand_normal',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
         'position': 'sequence<double>',
+        'button_stand_up': 'int8',
+        'button_stand_down': 'int8',
+        'button_stand_normal': 'int8',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
+        rosidl_parser.definition.BasicType('int8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int8'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -201,6 +210,9 @@ class GamepadSrv_Response(metaclass=Metaclass_GamepadSrv_Response):
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.position = array.array('d', kwargs.get('position', []))
+        self.button_stand_up = kwargs.get('button_stand_up', int())
+        self.button_stand_down = kwargs.get('button_stand_down', int())
+        self.button_stand_normal = kwargs.get('button_stand_normal', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -233,6 +245,12 @@ class GamepadSrv_Response(metaclass=Metaclass_GamepadSrv_Response):
         if not isinstance(other, self.__class__):
             return False
         if self.position != other.position:
+            return False
+        if self.button_stand_up != other.button_stand_up:
+            return False
+        if self.button_stand_down != other.button_stand_down:
+            return False
+        if self.button_stand_normal != other.button_stand_normal:
             return False
         return True
 
@@ -268,6 +286,51 @@ class GamepadSrv_Response(metaclass=Metaclass_GamepadSrv_Response):
                  all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
                 "The 'position' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
         self._position = array.array('d', value)
+
+    @builtins.property
+    def button_stand_up(self):
+        """Message field 'button_stand_up'."""
+        return self._button_stand_up
+
+    @button_stand_up.setter
+    def button_stand_up(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, int), \
+                "The 'button_stand_up' field must be of type 'int'"
+            assert value >= -128 and value < 128, \
+                "The 'button_stand_up' field must be an integer in [-128, 127]"
+        self._button_stand_up = value
+
+    @builtins.property
+    def button_stand_down(self):
+        """Message field 'button_stand_down'."""
+        return self._button_stand_down
+
+    @button_stand_down.setter
+    def button_stand_down(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, int), \
+                "The 'button_stand_down' field must be of type 'int'"
+            assert value >= -128 and value < 128, \
+                "The 'button_stand_down' field must be an integer in [-128, 127]"
+        self._button_stand_down = value
+
+    @builtins.property
+    def button_stand_normal(self):
+        """Message field 'button_stand_normal'."""
+        return self._button_stand_normal
+
+    @button_stand_normal.setter
+    def button_stand_normal(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, int), \
+                "The 'button_stand_normal' field must be of type 'int'"
+            assert value >= -128 and value < 128, \
+                "The 'button_stand_normal' field must be an integer in [-128, 127]"
+        self._button_stand_normal = value
 
 
 # Import statements for member types

@@ -10,6 +10,12 @@ module custom_interfaces {
     };
     struct GamepadSrv_Response {
       sequence<double> position;
+
+      int8 button_stand_up;
+
+      int8 button_stand_down;
+
+      int8 button_stand_normal;
     };
   };
 };

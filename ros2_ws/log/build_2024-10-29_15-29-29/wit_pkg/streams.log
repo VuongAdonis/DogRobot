@@ -1,0 +1,26 @@
+[0.011s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.036s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.253s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.280s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.289s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.301s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.316s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.381s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.382s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.456s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.524s] -- Found wit_pkg: 0.0.0 (/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake)
+[0.615s] -- Configuring done (0.6s)
+[0.622s] -- Generating done (0.0s)
+[0.624s] -- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[0.660s] [ 33%] [32mBuilding C object CMakeFiles/consumer.dir/src/readIMU.c.o[0m
+[0.660s] [ 50%] Built target wit_c_sdk
+[0.661s] [ 83%] Built target serial
+[0.668s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:174:[m[K [01;35m[Kwarning: [m[KISO C forbids an empty translation unit [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[0.680s] [100%] [32m[1mLinking C executable consumer[0m
+[0.704s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[0.704s] (.text+0x1b): undefined reference to `main'
+[0.706s] collect2: error: ld returned 1 exit status
+[0.707s] gmake[2]: *** [CMakeFiles/consumer.dir/build.make:97: consumer] Error 1
+[0.708s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/consumer.dir/all] Error 2
+[0.708s] gmake: *** [Makefile:146: all] Error 2
+[0.710s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8

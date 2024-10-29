@@ -1,0 +1,42 @@
+[0.010s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.036s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.250s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.277s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.287s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.299s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.313s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.380s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.381s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.447s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.539s] -- Found wit_pkg: 0.0.0 (/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake)
+[0.641s] -- Configuring done (0.6s)
+[0.649s] -- Generating done (0.0s)
+[0.651s] -- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[0.687s] [ 50%] [32m[1mLinking C executable consumer[0m
+[0.687s] [ 83%] Built target serial
+[0.688s] [ 83%] Built target wit_c_sdk
+[0.708s] /usr/bin/ld: CMakeFiles/consumer.dir/src/readIMU.c.o: warning: relocation against `sReg' in read-only section `.text'
+[0.710s] /usr/bin/ld: CMakeFiles/consumer.dir/src/readIMU.c.o: in function `main':
+[0.710s] readIMU.c:(.text+0x55): undefined reference to `serial_open'
+[0.710s] /usr/bin/ld: readIMU.c:(.text+0xc8): undefined reference to `WitInit'
+[0.710s] /usr/bin/ld: readIMU.c:(.text+0xd7): undefined reference to `WitRegisterCallBack'
+[0.710s] /usr/bin/ld: readIMU.c:(.text+0x109): undefined reference to `WitSerialDataIn'
+[0.711s] /usr/bin/ld: readIMU.c:(.text+0x122): undefined reference to `serial_read_data'
+[0.711s] /usr/bin/ld: readIMU.c:(.text+0x164): undefined reference to `sReg'
+[0.711s] /usr/bin/ld: readIMU.c:(.text+0x1aa): undefined reference to `sReg'
+[0.711s] /usr/bin/ld: readIMU.c:(.text+0x1f0): undefined reference to `sReg'
+[0.711s] /usr/bin/ld: readIMU.c:(.text+0x38b): undefined reference to `sReg'
+[0.711s] /usr/bin/ld: readIMU.c:(.text+0x395): undefined reference to `sReg'
+[0.711s] /usr/bin/ld: CMakeFiles/consumer.dir/src/readIMU.c.o:readIMU.c:(.text+0x39f): more undefined references to `sReg' follow
+[0.711s] /usr/bin/ld: CMakeFiles/consumer.dir/src/readIMU.c.o: in function `AutoScanSensor':
+[0.712s] readIMU.c:(.text+0x4f0): undefined reference to `serial_close'
+[0.712s] /usr/bin/ld: readIMU.c:(.text+0x534): undefined reference to `serial_open'
+[0.712s] /usr/bin/ld: readIMU.c:(.text+0x557): undefined reference to `WitReadReg'
+[0.712s] /usr/bin/ld: readIMU.c:(.text+0x571): undefined reference to `WitSerialDataIn'
+[0.712s] /usr/bin/ld: readIMU.c:(.text+0x58a): undefined reference to `serial_read_data'
+[0.712s] /usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+[0.712s] collect2: error: ld returned 1 exit status
+[0.713s] gmake[2]: *** [CMakeFiles/consumer.dir/build.make:97: consumer] Error 1
+[0.713s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/consumer.dir/all] Error 2
+[0.713s] gmake: *** [Makefile:146: all] Error 2
+[0.715s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8

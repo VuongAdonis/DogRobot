@@ -46,16 +46,64 @@ namespace srv
 namespace builder
 {
 
+class Init_GamepadSrv_Response_button_stand_normal
+{
+public:
+  explicit Init_GamepadSrv_Response_button_stand_normal(::custom_interfaces::srv::GamepadSrv_Response & msg)
+  : msg_(msg)
+  {}
+  ::custom_interfaces::srv::GamepadSrv_Response button_stand_normal(::custom_interfaces::srv::GamepadSrv_Response::_button_stand_normal_type arg)
+  {
+    msg_.button_stand_normal = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::custom_interfaces::srv::GamepadSrv_Response msg_;
+};
+
+class Init_GamepadSrv_Response_button_stand_down
+{
+public:
+  explicit Init_GamepadSrv_Response_button_stand_down(::custom_interfaces::srv::GamepadSrv_Response & msg)
+  : msg_(msg)
+  {}
+  Init_GamepadSrv_Response_button_stand_normal button_stand_down(::custom_interfaces::srv::GamepadSrv_Response::_button_stand_down_type arg)
+  {
+    msg_.button_stand_down = std::move(arg);
+    return Init_GamepadSrv_Response_button_stand_normal(msg_);
+  }
+
+private:
+  ::custom_interfaces::srv::GamepadSrv_Response msg_;
+};
+
+class Init_GamepadSrv_Response_button_stand_up
+{
+public:
+  explicit Init_GamepadSrv_Response_button_stand_up(::custom_interfaces::srv::GamepadSrv_Response & msg)
+  : msg_(msg)
+  {}
+  Init_GamepadSrv_Response_button_stand_down button_stand_up(::custom_interfaces::srv::GamepadSrv_Response::_button_stand_up_type arg)
+  {
+    msg_.button_stand_up = std::move(arg);
+    return Init_GamepadSrv_Response_button_stand_down(msg_);
+  }
+
+private:
+  ::custom_interfaces::srv::GamepadSrv_Response msg_;
+};
+
 class Init_GamepadSrv_Response_position
 {
 public:
   Init_GamepadSrv_Response_position()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::custom_interfaces::srv::GamepadSrv_Response position(::custom_interfaces::srv::GamepadSrv_Response::_position_type arg)
+  Init_GamepadSrv_Response_button_stand_up position(::custom_interfaces::srv::GamepadSrv_Response::_position_type arg)
   {
     msg_.position = std::move(arg);
-    return std::move(msg_);
+    return Init_GamepadSrv_Response_button_stand_up(msg_);
   }
 
 private:

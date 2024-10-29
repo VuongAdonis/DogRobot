@@ -124,6 +124,27 @@ inline void to_flow_style_yaml(
       }
       out << "]";
     }
+    out << ", ";
+  }
+
+  // member: button_stand_up
+  {
+    out << "button_stand_up: ";
+    rosidl_generator_traits::value_to_yaml(msg.button_stand_up, out);
+    out << ", ";
+  }
+
+  // member: button_stand_down
+  {
+    out << "button_stand_down: ";
+    rosidl_generator_traits::value_to_yaml(msg.button_stand_down, out);
+    out << ", ";
+  }
+
+  // member: button_stand_normal
+  {
+    out << "button_stand_normal: ";
+    rosidl_generator_traits::value_to_yaml(msg.button_stand_normal, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -150,6 +171,36 @@ inline void to_block_style_yaml(
         out << "\n";
       }
     }
+  }
+
+  // member: button_stand_up
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "button_stand_up: ";
+    rosidl_generator_traits::value_to_yaml(msg.button_stand_up, out);
+    out << "\n";
+  }
+
+  // member: button_stand_down
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "button_stand_down: ";
+    rosidl_generator_traits::value_to_yaml(msg.button_stand_down, out);
+    out << "\n";
+  }
+
+  // member: button_stand_normal
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "button_stand_normal: ";
+    rosidl_generator_traits::value_to_yaml(msg.button_stand_normal, out);
+    out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 

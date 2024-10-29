@@ -1,7 +1,8 @@
 /home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles/uninstall.dir
 /home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles/wit_pkg_uninstall.dir
-/home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles/cpp_exe2.dir
-/home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles/cpp_exe3.dir
+/home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles/serial.dir
+/home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles/wit_c_sdk.dir
+/home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles/readIMU.dir
 /home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles/test.dir
 /home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles/edit_cache.dir
 /home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles/rebuild_cache.dir

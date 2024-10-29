@@ -191,6 +191,33 @@ bool custom_interfaces__srv__gamepad_srv__response__convert_from_py(PyObject * _
     }
     Py_DECREF(field);
   }
+  {  // button_stand_up
+    PyObject * field = PyObject_GetAttrString(_pymsg, "button_stand_up");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->button_stand_up = (int8_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // button_stand_down
+    PyObject * field = PyObject_GetAttrString(_pymsg, "button_stand_down");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->button_stand_down = (int8_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // button_stand_normal
+    PyObject * field = PyObject_GetAttrString(_pymsg, "button_stand_normal");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->button_stand_normal = (int8_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -269,6 +296,39 @@ PyObject * custom_interfaces__srv__gamepad_srv__response__convert_to_py(void * r
       Py_DECREF(ret);
     }
     Py_DECREF(field);
+  }
+  {  // button_stand_up
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->button_stand_up);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "button_stand_up", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // button_stand_down
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->button_stand_down);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "button_stand_down", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // button_stand_normal
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->button_stand_normal);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "button_stand_normal", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
   }
 
   // ownership of _pymessage is transferred to the caller

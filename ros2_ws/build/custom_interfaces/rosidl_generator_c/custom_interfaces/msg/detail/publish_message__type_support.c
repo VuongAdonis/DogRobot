@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "custom_interfaces/msg/detail/publish_message__functions.h"
 #include "custom_interfaces/msg/detail/publish_message__type_support.h"
+#include "custom_interfaces/msg/detail/publish_message__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "custom_interfaces/msg/detail/publish_message__struct.h"
 

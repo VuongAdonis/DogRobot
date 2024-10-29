@@ -1,0 +1,40 @@
+[0.010s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.036s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.248s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.275s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.284s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.296s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.310s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.376s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.378s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.444s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.533s] -- Found wit_pkg: 0.0.0 (/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake)
+[0.636s] -- Configuring done (0.6s)
+[0.646s] -- Generating done (0.0s)
+[0.648s] -- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[0.685s] [ 50%] [32mBuilding C object CMakeFiles/serial.dir/src/serial.c.o[0m
+[0.707s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:[m[K In function ‘[01m[Kserial_open[m[K’:
+[0.707s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:7:15:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 1 of ‘[01m[Kopen[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+[0.707s]     7 |     fd = open([01;35m[Kdev[m[K, O_RDWR|O_NOCTTY);
+[0.707s]       |               [01;35m[K^~~[m[K
+[0.707s]       |               [01;35m[K|[m[K
+[0.707s]       |               [01;35m[Kunsigned char *[m[K
+[0.707s] In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:9[m[K,
+[0.708s]                  from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:1[m[K:
+[0.708s] [01m[K/usr/include/fcntl.h:209:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char *[m[K’ but argument is of type ‘[01m[Kunsigned char *[m[K’
+[0.708s]   209 | extern int open ([01;36m[Kconst char *__file[m[K, int __oflag, ...) __nonnull ((1));
+[0.708s]       |                  [01;36m[K~~~~~~~~~~~~^~~~~~[m[K
+[0.729s] [100%] [32m[1mLinking C static library libserial.a[0m
+[0.761s] [100%] Built target serial
+[0.772s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.804s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[0.813s] -- Install configuration: ""
+[0.813s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/library_path.sh
+[0.813s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/library_path.dsv
+[0.813s] [31mCMake Error at cmake_install.cmake:54 (file):
+[0.813s]   file INSTALL cannot find
+[0.813s]   "/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/serial": No such file or
+[0.813s]   directory.
+[0.813s] 
+[0.813s] [0m
+[0.815s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/wit_pkg

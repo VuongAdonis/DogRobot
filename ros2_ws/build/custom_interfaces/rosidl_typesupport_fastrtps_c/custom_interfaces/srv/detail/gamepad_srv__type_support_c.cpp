@@ -357,6 +357,21 @@ bool cdr_serialize_custom_interfaces__srv__GamepadSrv_Response(
     cdr.serialize_array(array_ptr, size);
   }
 
+  // Field name: button_stand_up
+  {
+    cdr << ros_message->button_stand_up;
+  }
+
+  // Field name: button_stand_down
+  {
+    cdr << ros_message->button_stand_down;
+  }
+
+  // Field name: button_stand_normal
+  {
+    cdr << ros_message->button_stand_normal;
+  }
+
   return true;
 }
 
@@ -379,6 +394,21 @@ bool cdr_deserialize_custom_interfaces__srv__GamepadSrv_Response(
     }
     auto array_ptr = ros_message->position.data;
     cdr.deserialize_array(array_ptr, size);
+  }
+
+  // Field name: button_stand_up
+  {
+    cdr >> ros_message->button_stand_up;
+  }
+
+  // Field name: button_stand_down
+  {
+    cdr >> ros_message->button_stand_down;
+  }
+
+  // Field name: button_stand_normal
+  {
+    cdr >> ros_message->button_stand_normal;
   }
 
   return true;
@@ -408,6 +438,27 @@ size_t get_serialized_size_custom_interfaces__srv__GamepadSrv_Response(
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
     current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: button_stand_up
+  {
+    size_t item_size = sizeof(ros_message->button_stand_up);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: button_stand_down
+  {
+    size_t item_size = sizeof(ros_message->button_stand_down);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: button_stand_normal
+  {
+    size_t item_size = sizeof(ros_message->button_stand_normal);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -445,6 +496,27 @@ size_t max_serialized_size_custom_interfaces__srv__GamepadSrv_Response(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
+  // Field name: button_stand_up
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: button_stand_down
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: button_stand_normal
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -454,7 +526,7 @@ size_t max_serialized_size_custom_interfaces__srv__GamepadSrv_Response(
     using DataType = custom_interfaces__srv__GamepadSrv_Response;
     is_plain =
       (
-      offsetof(DataType, position) +
+      offsetof(DataType, button_stand_normal) +
       last_member_size
       ) == ret_val;
   }
@@ -472,6 +544,21 @@ bool cdr_serialize_key_custom_interfaces__srv__GamepadSrv_Response(
     auto array_ptr = ros_message->position.data;
     cdr << static_cast<uint32_t>(size);
     cdr.serialize_array(array_ptr, size);
+  }
+
+  // Field name: button_stand_up
+  {
+    cdr << ros_message->button_stand_up;
+  }
+
+  // Field name: button_stand_down
+  {
+    cdr << ros_message->button_stand_down;
+  }
+
+  // Field name: button_stand_normal
+  {
+    cdr << ros_message->button_stand_normal;
   }
 
   return true;
@@ -501,6 +588,27 @@ size_t get_serialized_size_key_custom_interfaces__srv__GamepadSrv_Response(
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
     current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: button_stand_up
+  {
+    size_t item_size = sizeof(ros_message->button_stand_up);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: button_stand_down
+  {
+    size_t item_size = sizeof(ros_message->button_stand_down);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: button_stand_normal
+  {
+    size_t item_size = sizeof(ros_message->button_stand_normal);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -536,6 +644,27 @@ size_t max_serialized_size_key_custom_interfaces__srv__GamepadSrv_Response(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
+  // Field name: button_stand_up
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: button_stand_down
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: button_stand_normal
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -544,7 +673,7 @@ size_t max_serialized_size_key_custom_interfaces__srv__GamepadSrv_Response(
     using DataType = custom_interfaces__srv__GamepadSrv_Response;
     is_plain =
       (
-      offsetof(DataType, position) +
+      offsetof(DataType, button_stand_normal) +
       last_member_size
       ) == ret_val;
   }

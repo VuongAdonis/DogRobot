@@ -1,0 +1,79 @@
+[0.011s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.060s] [ 66%] Built target wit_c_sdk
+[0.060s] [ 66%] Built target serial
+[0.081s] [ 83%] [32mBuilding C object CMakeFiles/readIMU.dir/src/readIMU.c.o[0m
+[0.128s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:[m[K In function ‘[01m[Kmain[m[K’:
+[0.128s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:37:30:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 1 of ‘[01m[Kserial_open[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+[0.128s]    37 |     if((fd = serial_open([01;35m[Kargv[1][m[K , 115200)<0))
+[0.128s]       |                          [01;35m[K~~~~^~~[m[K
+[0.129s]       |                              [01;35m[K|[m[K
+[0.129s]       |                              [01;35m[Kchar *[m[K
+[0.129s] In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:1[m[K:
+[0.129s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:21:32:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+[0.129s]    21 | int serial_open([01;36m[Kunsigned char* dev[m[K, unsigned int baud);
+[0.129s]       |                 [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[0.129s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:58:40:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 2 of ‘[01m[Kserial_read_data[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+[0.129s]    58 |             while(serial_read_data(fd, [01;35m[KcBuff[m[K, 1))
+[0.130s]       |                                        [01;35m[K^~~~~[m[K
+[0.130s]       |                                        [01;35m[K|[m[K
+[0.130s]       |                                        [01;35m[Kchar *[m[K
+[0.130s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:23:45:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+[0.130s]    23 | int serial_read_data(int fd, [01;36m[Kunsigned char *val[m[K, int len);
+[0.130s]       |                              [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[0.130s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:46:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kret[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[0.131s]    46 |         int i , [01;35m[Kret[m[K;
+[0.131s]       |                 [01;35m[K^~~[m[K
+[0.131s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:26:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.131s]    26 | int main([01;35m[Kint argc[m[K,char* argv[]){
+[0.131s]       |          [01;35m[K~~~~^~~~[m[K
+[0.131s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:[m[K In function ‘[01m[KSensorDataUpdata[m[K’:
+[0.131s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:105:18:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[0.131s]   105 |     for(i = 0; i [01;35m[K<[m[K uiRegNum; i++)
+[0.132s]       |                  [01;35m[K^[m[K
+[0.132s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:[m[K In function ‘[01m[KAutoScanSensor[m[K’:
+[0.132s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:153:34:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 1 of ‘[01m[Kserial_open[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+[0.132s]   153 |                 fd = serial_open([01;35m[Kdev[m[K , c_uiBaud[i]);
+[0.132s]       |                                  [01;35m[K^~~[m[K
+[0.132s]       |                                  [01;35m[K|[m[K
+[0.132s]       |                                  [01;35m[Kchar *[m[K
+[0.133s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:21:32:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+[0.133s]    21 | int serial_open([01;36m[Kunsigned char* dev[m[K, unsigned int baud);
+[0.133s]       |                 [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[0.133s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:161:52:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 2 of ‘[01m[Kserial_read_data[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+[0.133s]   161 |                         while(serial_read_data(fd, [01;35m[KcBuff[m[K, 1))
+[0.133s]       |                                                    [01;35m[K^~~~~[m[K
+[0.133s]       |                                                    [01;35m[K|[m[K
+[0.133s]       |                                                    [01;35m[Kchar *[m[K
+[0.134s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:23:45:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+[0.134s]    23 | int serial_read_data(int fd, [01;36m[Kunsigned char *val[m[K, int len);
+[0.134s]       |                              [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[0.156s] [100%] [32m[1mLinking C executable readIMU[0m
+[0.219s] [100%] Built target readIMU
+[0.232s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.272s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[0.281s] -- Install configuration: ""
+[0.281s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libserial.so.
+[0.282s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libserial.so
+[0.282s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libwit_c_sdk.so.
+[0.282s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libwit_c_sdk.so
+[0.282s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/wit_pkg/readIMU
+[0.282s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/wit_pkg/readIMU" to ""
+[0.282s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/package_run_dependencies/wit_pkg
+[0.283s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/parent_prefix_path/wit_pkg
+[0.283s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/ament_prefix_path.sh
+[0.283s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/ament_prefix_path.dsv
+[0.283s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/path.sh
+[0.283s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/path.dsv
+[0.283s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.bash
+[0.284s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.sh
+[0.284s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.zsh
+[0.284s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.dsv
+[0.284s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/package.dsv
+[0.284s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/packages/wit_pkg
+[0.284s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/export_wit_pkgExport.cmake
+[0.284s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/export_wit_pkgExport-noconfig.cmake
+[0.284s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/ament_cmake_export_targets-extras.cmake
+[0.285s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/wit_pkgConfig.cmake
+[0.285s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/wit_pkgConfig-version.cmake
+[0.285s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/package.xml
+[0.286s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/wit_pkg

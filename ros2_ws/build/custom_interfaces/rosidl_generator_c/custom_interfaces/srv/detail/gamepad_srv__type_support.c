@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "custom_interfaces/srv/detail/gamepad_srv__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "custom_interfaces/srv/detail/gamepad_srv__struct.h"
 #include "custom_interfaces/srv/detail/gamepad_srv__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "custom_interfaces/srv/detail/gamepad_srv__functions.h"
 
 #ifdef __cplusplus
 extern "C"

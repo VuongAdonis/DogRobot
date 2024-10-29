@@ -1,0 +1,44 @@
+[0.011s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.036s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.258s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.285s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.294s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.307s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.321s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.386s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.388s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.458s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.619s] -- Configuring done (0.6s)
+[0.634s] -- Generating done (0.0s)
+[0.636s] -- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[0.672s] [ 66%] Built target serial
+[0.673s] [ 66%] Built target wit_c_sdk
+[0.695s] [100%] Built target readIMU
+[0.707s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.744s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[0.752s] -- Install configuration: ""
+[0.752s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libserial.so.
+[0.752s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libserial.so
+[0.752s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libwit_c_sdk.so.
+[0.752s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libwit_c_sdk.so
+[0.753s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/wit_pkg/readIMU
+[0.753s] -- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/wit_pkg/readIMU" to ""
+[0.753s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/package_run_dependencies/wit_pkg
+[0.753s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/parent_prefix_path/wit_pkg
+[0.753s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/ament_prefix_path.sh
+[0.753s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/ament_prefix_path.dsv
+[0.753s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/path.sh
+[0.754s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/path.dsv
+[0.754s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.bash
+[0.754s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.sh
+[0.754s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.zsh
+[0.754s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.dsv
+[0.754s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/package.dsv
+[0.754s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/packages/wit_pkg
+[0.755s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/export_wit_pkgExport.cmake
+[0.755s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/export_wit_pkgExport-noconfig.cmake
+[0.755s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/ament_cmake_export_targets-extras.cmake
+[0.755s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/wit_pkgConfig.cmake
+[0.755s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/wit_pkgConfig-version.cmake
+[0.756s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/package.xml
+[0.756s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/wit_pkg

@@ -1,3 +1,6 @@
 
 ---
-float64[] position
+float64[]   position
+int8        button_stand_up
+int8        button_stand_down
+int8        button_stand_normal

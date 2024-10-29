@@ -1,0 +1,39 @@
+[0.010s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.060s] [ 25%] [32mBuilding C object CMakeFiles/wit_c_sdk.dir/src/wit_c_sdk.c.o[0m
+[0.061s] [ 75%] Built target serial
+[0.075s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:[m[K In function ‘[01m[KWitSerialDataIn[m[K’:
+[0.075s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:181:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[0.075s]   181 |                 if(s_uiWitDataCnt [01;35m[K<[m[K (s_ucWitDataBuff[2] + 5))return ;
+[0.075s]       |                                   [01;35m[K^[m[K
+[0.081s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:[m[K In function ‘[01m[KWitCanDataIn[m[K’:
+[0.081s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:238:27:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+[0.081s]   238 |                         if[01;35m[K([m[KucData[1] == 0x53)
+[0.081s]       |                           [01;35m[K^[m[K
+[0.081s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:251:19:[m[K [01;36m[Knote: [m[Khere
+[0.081s]   251 |                   [01;36m[Kcase[m[K WIT_PROTOCOL_CAN:
+[0.081s]       |                   [01;36m[K^~~~[m[K
+[0.146s] [100%] [32m[1mLinking C shared library libwit_c_sdk.so[0m
+[0.204s] [100%] Built target wit_c_sdk
+[0.217s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.255s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[0.264s] -- Install configuration: ""
+[0.264s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libserial.so.0.0.0
+[0.265s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libserial.so
+[0.265s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libwit_c_sdk.so.0.0.0
+[0.265s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libwit_c_sdk.so
+[0.265s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/package_run_dependencies/wit_pkg
+[0.265s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/parent_prefix_path/wit_pkg
+[0.265s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/ament_prefix_path.sh
+[0.265s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/ament_prefix_path.dsv
+[0.265s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/path.sh
+[0.265s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/path.dsv
+[0.265s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.bash
+[0.266s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.sh
+[0.266s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.zsh
+[0.266s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.dsv
+[0.266s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/package.dsv
+[0.266s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/packages/wit_pkg
+[0.266s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/wit_pkgConfig.cmake
+[0.266s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/wit_pkgConfig-version.cmake
+[0.266s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/package.xml
+[0.268s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/wit_pkg

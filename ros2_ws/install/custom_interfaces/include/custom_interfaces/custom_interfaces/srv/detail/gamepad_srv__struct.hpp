@@ -145,25 +145,64 @@ struct GamepadSrv_Response_
 
   explicit GamepadSrv_Response_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->button_stand_up = 0;
+      this->button_stand_down = 0;
+      this->button_stand_normal = 0;
+    }
   }
 
   explicit GamepadSrv_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
     (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->button_stand_up = 0;
+      this->button_stand_down = 0;
+      this->button_stand_normal = 0;
+    }
   }
 
   // field types and members
   using _position_type =
     std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
   _position_type position;
+  using _button_stand_up_type =
+    int8_t;
+  _button_stand_up_type button_stand_up;
+  using _button_stand_down_type =
+    int8_t;
+  _button_stand_down_type button_stand_down;
+  using _button_stand_normal_type =
+    int8_t;
+  _button_stand_normal_type button_stand_normal;
 
   // setters for named parameter idiom
   Type & set__position(
     const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
   {
     this->position = _arg;
+    return *this;
+  }
+  Type & set__button_stand_up(
+    const int8_t & _arg)
+  {
+    this->button_stand_up = _arg;
+    return *this;
+  }
+  Type & set__button_stand_down(
+    const int8_t & _arg)
+  {
+    this->button_stand_down = _arg;
+    return *this;
+  }
+  Type & set__button_stand_normal(
+    const int8_t & _arg)
+  {
+    this->button_stand_normal = _arg;
     return *this;
   }
 
@@ -210,6 +249,15 @@ struct GamepadSrv_Response_
   bool operator==(const GamepadSrv_Response_ & other) const
   {
     if (this->position != other.position) {
+      return false;
+    }
+    if (this->button_stand_up != other.button_stand_up) {
+      return false;
+    }
+    if (this->button_stand_down != other.button_stand_down) {
+      return false;
+    }
+    if (this->button_stand_normal != other.button_stand_normal) {
       return false;
     }
     return true;

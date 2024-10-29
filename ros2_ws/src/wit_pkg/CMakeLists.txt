@@ -1,33 +1,50 @@
 cmake_minimum_required(VERSION 3.8)
+
 project(wit_pkg)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
+    add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 
-# Include cpp "include" directory
-include_directories(include)
+# let the compiler search for headers in the include folder
+include_directories(include/wit_pkg)
 
-# Create cpp executable
-add_executable(cpp_exe1 src/main.c)
-ament_target_dependencies(cpp_exe1 rclcpp)
-target_link_libraries(REG serial wit_c_sdk)
+# Define the serial library
+add_library(serial SHARED src/serial.c)
+set_target_properties(serial PROPERTIES VERSION "${${PROJECT_NAME}_VERSION}")
 
-add_executable(cpp_exe2 src/serial.c)
-ament_target_dependencies(cpp_exe2 rclcpp)
+# Define the wit_c_sdk library
+add_library(wit_c_sdk SHARED src/wit_c_sdk.c)
+set_target_properties(wit_c_sdk PROPERTIES VERSION "${${PROJECT_NAME}_VERSION}")
 
-add_executable(cpp_exe3 src/wit_c_sdk.c)
-ament_target_dependencies(cpp_exe3 rclcpp)
+# Set ament dependencies for libraries (sau khi định nghĩa chúng)
+ament_target_dependencies(serial rclcpp)
+ament_target_dependencies(wit_c_sdk rclcpp)
 
-
-# Install cpp executables
-install(TARGETS 
-  cpp_exe1
-  DESTINATION lib/${PROJECT_NAME}
+# Install the libraries
+install(
+    TARGETS serial wit_c_sdk
+    EXPORT export_${PROJECT_NAME}
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION bin
+    INCLUDES DESTINATION include
 )
 
+# Định nghĩa executable
+add_executable(readIMU src/readIMU.c)
+
+# Link hệ thống thư viện với executable
+target_link_libraries(readIMU serial wit_c_sdk)
+
+# Cài đặt các header
+install(TARGETS readIMU DESTINATION lib/${PROJECT_NAME})
+
+ament_export_targets(export_${PROJECT_NAME})
+
+# Khai báo gói
 ament_package()

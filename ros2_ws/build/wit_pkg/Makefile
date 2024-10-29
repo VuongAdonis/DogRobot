@@ -198,37 +198,74 @@ wit_pkg_uninstall/fast:
 .PHONY : wit_pkg_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named cpp_exe2
+# Target rules for targets named serial
 
 # Build rule for target.
-cpp_exe2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_exe2
-.PHONY : cpp_exe2
+serial: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial
+.PHONY : serial
 
 # fast build rule for target.
-cpp_exe2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe2.dir/build.make CMakeFiles/cpp_exe2.dir/build
-.PHONY : cpp_exe2/fast
+serial/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial.dir/build.make CMakeFiles/serial.dir/build
+.PHONY : serial/fast
 
 #=============================================================================
-# Target rules for targets named cpp_exe3
+# Target rules for targets named wit_c_sdk
 
 # Build rule for target.
-cpp_exe3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_exe3
-.PHONY : cpp_exe3
+wit_c_sdk: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 wit_c_sdk
+.PHONY : wit_c_sdk
 
 # fast build rule for target.
-cpp_exe3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe3.dir/build.make CMakeFiles/cpp_exe3.dir/build
-.PHONY : cpp_exe3/fast
+wit_c_sdk/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wit_c_sdk.dir/build.make CMakeFiles/wit_c_sdk.dir/build
+.PHONY : wit_c_sdk/fast
+
+#=============================================================================
+# Target rules for targets named readIMU
+
+# Build rule for target.
+readIMU: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 readIMU
+.PHONY : readIMU
+
+# fast build rule for target.
+readIMU/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/build
+.PHONY : readIMU/fast
+
+src/readIMU.o: src/readIMU.c.o
+.PHONY : src/readIMU.o
+
+# target to build an object file
+src/readIMU.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/src/readIMU.c.o
+.PHONY : src/readIMU.c.o
+
+src/readIMU.i: src/readIMU.c.i
+.PHONY : src/readIMU.i
+
+# target to preprocess a source file
+src/readIMU.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/src/readIMU.c.i
+.PHONY : src/readIMU.c.i
+
+src/readIMU.s: src/readIMU.c.s
+.PHONY : src/readIMU.s
+
+# target to generate assembly for a file
+src/readIMU.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/src/readIMU.c.s
+.PHONY : src/readIMU.c.s
 
 src/serial.o: src/serial.c.o
 .PHONY : src/serial.o
 
 # target to build an object file
 src/serial.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe2.dir/build.make CMakeFiles/cpp_exe2.dir/src/serial.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial.dir/build.make CMakeFiles/serial.dir/src/serial.c.o
 .PHONY : src/serial.c.o
 
 src/serial.i: src/serial.c.i
@@ -236,7 +273,7 @@ src/serial.i: src/serial.c.i
 
 # target to preprocess a source file
 src/serial.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe2.dir/build.make CMakeFiles/cpp_exe2.dir/src/serial.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial.dir/build.make CMakeFiles/serial.dir/src/serial.c.i
 .PHONY : src/serial.c.i
 
 src/serial.s: src/serial.c.s
@@ -244,7 +281,7 @@ src/serial.s: src/serial.c.s
 
 # target to generate assembly for a file
 src/serial.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe2.dir/build.make CMakeFiles/cpp_exe2.dir/src/serial.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial.dir/build.make CMakeFiles/serial.dir/src/serial.c.s
 .PHONY : src/serial.c.s
 
 src/wit_c_sdk.o: src/wit_c_sdk.c.o
@@ -252,7 +289,7 @@ src/wit_c_sdk.o: src/wit_c_sdk.c.o
 
 # target to build an object file
 src/wit_c_sdk.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe3.dir/build.make CMakeFiles/cpp_exe3.dir/src/wit_c_sdk.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wit_c_sdk.dir/build.make CMakeFiles/wit_c_sdk.dir/src/wit_c_sdk.c.o
 .PHONY : src/wit_c_sdk.c.o
 
 src/wit_c_sdk.i: src/wit_c_sdk.c.i
@@ -260,7 +297,7 @@ src/wit_c_sdk.i: src/wit_c_sdk.c.i
 
 # target to preprocess a source file
 src/wit_c_sdk.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe3.dir/build.make CMakeFiles/cpp_exe3.dir/src/wit_c_sdk.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wit_c_sdk.dir/build.make CMakeFiles/wit_c_sdk.dir/src/wit_c_sdk.c.i
 .PHONY : src/wit_c_sdk.c.i
 
 src/wit_c_sdk.s: src/wit_c_sdk.c.s
@@ -268,7 +305,7 @@ src/wit_c_sdk.s: src/wit_c_sdk.c.s
 
 # target to generate assembly for a file
 src/wit_c_sdk.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe3.dir/build.make CMakeFiles/cpp_exe3.dir/src/wit_c_sdk.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wit_c_sdk.dir/build.make CMakeFiles/wit_c_sdk.dir/src/wit_c_sdk.c.s
 .PHONY : src/wit_c_sdk.c.s
 
 # Help Target
@@ -286,8 +323,12 @@ help:
 	@echo "... test"
 	@echo "... uninstall"
 	@echo "... wit_pkg_uninstall"
-	@echo "... cpp_exe2"
-	@echo "... cpp_exe3"
+	@echo "... readIMU"
+	@echo "... serial"
+	@echo "... wit_c_sdk"
+	@echo "... src/readIMU.o"
+	@echo "... src/readIMU.i"
+	@echo "... src/readIMU.s"
 	@echo "... src/serial.o"
 	@echo "... src/serial.i"
 	@echo "... src/serial.s"

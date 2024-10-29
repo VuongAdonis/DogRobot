@@ -63,8 +63,9 @@ CMAKE_BINARY_DIR = /home/DATA/DogRobot/ros2_ws/build/wit_pkg
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/cpp_exe2.dir/all
-all: CMakeFiles/cpp_exe3.dir/all
+all: CMakeFiles/serial.dir/all
+all: CMakeFiles/wit_c_sdk.dir/all
+all: CMakeFiles/readIMU.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,8 +75,9 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/wit_pkg_uninstall.dir/clean
-clean: CMakeFiles/cpp_exe2.dir/clean
-clean: CMakeFiles/cpp_exe3.dir/clean
+clean: CMakeFiles/serial.dir/clean
+clean: CMakeFiles/wit_c_sdk.dir/clean
+clean: CMakeFiles/readIMU.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -131,56 +133,83 @@ CMakeFiles/wit_pkg_uninstall.dir/clean:
 .PHONY : CMakeFiles/wit_pkg_uninstall.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/cpp_exe2.dir
+# Target rules for target CMakeFiles/serial.dir
 
 # All Build rule for target.
-CMakeFiles/cpp_exe2.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe2.dir/build.make CMakeFiles/cpp_exe2.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe2.dir/build.make CMakeFiles/cpp_exe2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles --progress-num=1,2 "Built target cpp_exe2"
-.PHONY : CMakeFiles/cpp_exe2.dir/all
+CMakeFiles/serial.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial.dir/build.make CMakeFiles/serial.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial.dir/build.make CMakeFiles/serial.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles --progress-num=3,4 "Built target serial"
+.PHONY : CMakeFiles/serial.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/cpp_exe2.dir/rule: cmake_check_build_system
+CMakeFiles/serial.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cpp_exe2.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/serial.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles 0
-.PHONY : CMakeFiles/cpp_exe2.dir/rule
+.PHONY : CMakeFiles/serial.dir/rule
 
 # Convenience name for target.
-cpp_exe2: CMakeFiles/cpp_exe2.dir/rule
-.PHONY : cpp_exe2
+serial: CMakeFiles/serial.dir/rule
+.PHONY : serial
 
 # clean rule for target.
-CMakeFiles/cpp_exe2.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe2.dir/build.make CMakeFiles/cpp_exe2.dir/clean
-.PHONY : CMakeFiles/cpp_exe2.dir/clean
+CMakeFiles/serial.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial.dir/build.make CMakeFiles/serial.dir/clean
+.PHONY : CMakeFiles/serial.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/cpp_exe3.dir
+# Target rules for target CMakeFiles/wit_c_sdk.dir
 
 # All Build rule for target.
-CMakeFiles/cpp_exe3.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe3.dir/build.make CMakeFiles/cpp_exe3.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe3.dir/build.make CMakeFiles/cpp_exe3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles --progress-num=3,4 "Built target cpp_exe3"
-.PHONY : CMakeFiles/cpp_exe3.dir/all
+CMakeFiles/wit_c_sdk.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wit_c_sdk.dir/build.make CMakeFiles/wit_c_sdk.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wit_c_sdk.dir/build.make CMakeFiles/wit_c_sdk.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles --progress-num=5,6 "Built target wit_c_sdk"
+.PHONY : CMakeFiles/wit_c_sdk.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/cpp_exe3.dir/rule: cmake_check_build_system
+CMakeFiles/wit_c_sdk.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cpp_exe3.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/wit_c_sdk.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles 0
-.PHONY : CMakeFiles/cpp_exe3.dir/rule
+.PHONY : CMakeFiles/wit_c_sdk.dir/rule
 
 # Convenience name for target.
-cpp_exe3: CMakeFiles/cpp_exe3.dir/rule
-.PHONY : cpp_exe3
+wit_c_sdk: CMakeFiles/wit_c_sdk.dir/rule
+.PHONY : wit_c_sdk
 
 # clean rule for target.
-CMakeFiles/cpp_exe3.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_exe3.dir/build.make CMakeFiles/cpp_exe3.dir/clean
-.PHONY : CMakeFiles/cpp_exe3.dir/clean
+CMakeFiles/wit_c_sdk.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wit_c_sdk.dir/build.make CMakeFiles/wit_c_sdk.dir/clean
+.PHONY : CMakeFiles/wit_c_sdk.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/readIMU.dir
+
+# All Build rule for target.
+CMakeFiles/readIMU.dir/all: CMakeFiles/serial.dir/all
+CMakeFiles/readIMU.dir/all: CMakeFiles/wit_c_sdk.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles --progress-num=1,2 "Built target readIMU"
+.PHONY : CMakeFiles/readIMU.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/readIMU.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/readIMU.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/DATA/DogRobot/ros2_ws/build/wit_pkg/CMakeFiles 0
+.PHONY : CMakeFiles/readIMU.dir/rule
+
+# Convenience name for target.
+readIMU: CMakeFiles/readIMU.dir/rule
+.PHONY : readIMU
+
+# clean rule for target.
+CMakeFiles/readIMU.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/clean
+.PHONY : CMakeFiles/readIMU.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

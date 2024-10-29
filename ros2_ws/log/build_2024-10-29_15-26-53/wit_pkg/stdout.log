@@ -1,0 +1,24 @@
+[ 25%] [32mBuilding C object CMakeFiles/wit_c_sdk.dir/src/wit_c_sdk.c.o[0m
+[ 75%] Built target serial
+[100%] [32m[1mLinking C shared library libwit_c_sdk.so[0m
+[100%] Built target wit_c_sdk
+-- Install configuration: ""
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libserial.so.0.0.0
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libserial.so
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libwit_c_sdk.so.0.0.0
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libwit_c_sdk.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/package_run_dependencies/wit_pkg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/parent_prefix_path/wit_pkg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/ament_prefix_path.sh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/path.sh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/path.dsv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.bash
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.sh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.zsh
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.dsv
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/package.dsv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/packages/wit_pkg
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/wit_pkgConfig.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/wit_pkgConfig-version.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/package.xml
