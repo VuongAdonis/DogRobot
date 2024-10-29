@@ -102,4 +102,11 @@ CMakeFiles/readIMU.dir/src/readIMU.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/REG.h \
- /home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/REG.h
+ /home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/REG.h \
+ /usr/include/dirent.h /usr/include/x86_64-linux-gnu/bits/dirent.h \
+ /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
+ /usr/include/x86_64-linux-gnu/bits/dirent_ext.h

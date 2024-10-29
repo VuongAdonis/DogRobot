@@ -2,6 +2,9 @@
 #include "wit_c_sdk.h"
 #include "REG.h"
 #include <stdint.h>
+#include <dirent.h>
+#include <unistd.h>
+
 
 
 #define ACC_UPDATE		0x01
@@ -22,24 +25,37 @@ static void AutoScanSensor(char* dev);
 static void SensorDataUpdata(uint32_t uiReg, uint32_t uiRegNum);
 static void Delayms(uint16_t ucMs);
 
-
+#define BUFFER_SIZE 256
 int main(int argc,char* argv[]){
 	
-	// if(argc < 2)
-	// {
-	// 	printf("please input dev name\n");
-	// 	return 0;
-	// }
+	DIR *dir;
+    struct dirent *ent;
+    char serial_port[BUFFER_SIZE];
+    int found = 0;
 
-	argv[1] = "/dev/ttyUSB1";
+    // Mở thư mục /dev
+    if ((dir = opendir("/dev")) != NULL) {
+        // Quét qua các file trong thư mục
+        while ((ent = readdir(dir)) != NULL) {
+            // Kiểm tra nếu file là cổng serial
+            if (strncmp(ent->d_name, "ttyUSB", 6) == 0) {
+                snprintf(serial_port, sizeof(serial_port), "/dev/%s", ent->d_name);
+                printf("Found serial port: %s\n", serial_port);
+                found = 1;
+				break;
+			}
+		}
+	}
+
+	// argv[1] = "/dev/ttyUSB1";
 
 
-    if((fd = serial_open(argv[1] , 115200)<0))
+    if((fd = serial_open(serial_port , 115200)<0))
 	 {
-	     printf("open %s fail\n", argv[1]);
+	     printf("open %s fail\n", serial_port);
 	     return 0;
 	 }
-	else printf("open %s success\n", argv[1]);
+	else printf("open %s success\n", serial_port);
 
 
 	float fAcc[3], fGyro[3], fAngle[3];
@@ -50,7 +66,7 @@ int main(int argc,char* argv[]){
 	WitRegisterCallBack(SensorDataUpdata);
 	
 	printf("\r\n********************** wit-motion Normal example  ************************\r\n");
-	AutoScanSensor(argv[1]);
+	AutoScanSensor(serial_port);
 	
 	while(1)
 	{
