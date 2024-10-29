@@ -76,6 +76,11 @@ CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/de
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__struct.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__traits.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__type_support.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/imu.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/imu__builder.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/imu__struct.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/imu__traits.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/imu__type_support.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -99,6 +104,7 @@ rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share
 rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
 rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: rosidl_adapter/custom_interfaces/srv/GamepadSrv.idl
 rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: rosidl_adapter/custom_interfaces/msg/PublishMessage.idl
+rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: rosidl_adapter/custom_interfaces/srv/IMU.idl
 rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -132,6 +138,21 @@ rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__traits.hpp: r
 rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__type_support.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/publish_message__type_support.hpp
 
+rosidl_generator_cpp/custom_interfaces/srv/imu.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/imu.hpp
+
+rosidl_generator_cpp/custom_interfaces/srv/detail/imu__builder.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/imu__builder.hpp
+
+rosidl_generator_cpp/custom_interfaces/srv/detail/imu__struct.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/imu__struct.hpp
+
+rosidl_generator_cpp/custom_interfaces/srv/detail/imu__traits.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/imu__traits.hpp
+
+rosidl_generator_cpp/custom_interfaces/srv/detail/imu__type_support.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/imu__type_support.hpp
+
 rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
@@ -146,7 +167,12 @@ custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/gamepa
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__struct.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__traits.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__type_support.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/imu__builder.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/imu__struct.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/imu__traits.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/imu__type_support.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/imu.hpp
 custom_interfaces__cpp: CMakeFiles/custom_interfaces__cpp.dir/build.make
 .PHONY : custom_interfaces__cpp
 

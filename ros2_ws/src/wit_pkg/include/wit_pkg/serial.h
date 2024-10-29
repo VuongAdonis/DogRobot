@@ -2,6 +2,10 @@
 #ifndef SERIAL_H
 #define SERIAL_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <linux/types.h>
 #include <stdio.h>
 #include <time.h>
@@ -24,5 +28,8 @@ int serial_read_data(int fd, unsigned char *val, int len);
 
 int serial_write_data(int fd, unsigned char *val, int len);
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif

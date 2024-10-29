@@ -1,0 +1,42 @@
+[0.359s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.389s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.746s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.788s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.802s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.820s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.839s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.930s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.932s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.027s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.140s] [33mCMake Warning at CMakeLists.txt:12 (find_package):
+[1.140s]   By not providing "Findcustom_interfaces.cmake" in CMAKE_MODULE_PATH this
+[1.140s]   project has asked CMake to find a package configuration file provided by
+[1.140s]   "custom_interfaces", but CMake did not find one.
+[1.141s] 
+[1.141s]   Could not find a package configuration file provided by "custom_interfaces"
+[1.141s]   with any of the following names:
+[1.141s] 
+[1.141s]     custom_interfacesConfig.cmake
+[1.141s]     custom_interfaces-config.cmake
+[1.142s] 
+[1.142s]   Add the installation prefix of "custom_interfaces" to CMAKE_PREFIX_PATH or
+[1.142s]   set "custom_interfaces_DIR" to a directory containing one of the above
+[1.144s]   files.  If "custom_interfaces" provides a separate development package or
+[1.144s]   SDK, be sure it has been installed.
+[1.144s] 
+[1.145s] [0m
+[1.327s] -- Configuring done (0.9s)
+[1.357s] -- Generating done (0.0s)
+[1.360s] -- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[1.411s] [ 66%] Built target wit_c_sdk
+[1.411s] [ 66%] Built target serial
+[1.437s] [ 83%] [32mBuilding C object CMakeFiles/readIMU.dir/src/readIMU.c.o[0m
+[1.485s] In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:8[m[K:
+[1.485s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:168:10:[m[K [01;31m[Kfatal error: [m[Kcsignal: No such file or directory
+[1.485s]   168 | #include [01;31m[K<csignal>[m[K
+[1.485s]       |          [01;31m[K^~~~~~~~~[m[K
+[1.486s] compilation terminated.
+[1.486s] gmake[2]: *** [CMakeFiles/readIMU.dir/build.make:76: CMakeFiles/readIMU.dir/src/readIMU.c.o] Error 1
+[1.486s] gmake[1]: *** [CMakeFiles/Makefile2:194: CMakeFiles/readIMU.dir/all] Error 2
+[1.487s] gmake: *** [Makefile:146: all] Error 2
+[2.093s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8

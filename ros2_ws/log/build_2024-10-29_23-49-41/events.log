@@ -1,0 +1,156 @@
+[0.000000] (-) TimerEvent: {}
+[0.000265] (-) JobUnselected: {'identifier': 'add_integers'}
+[0.000312] (-) JobUnselected: {'identifier': 'can_node'}
+[0.000342] (-) JobUnselected: {'identifier': 'controller'}
+[0.000364] (-) JobUnselected: {'identifier': 'custom_interfaces'}
+[0.000400] (-) JobUnselected: {'identifier': 'gamepad_node'}
+[0.000421] (-) JobUnselected: {'identifier': 'my_launch_package'}
+[0.000442] (wit_pkg) JobQueued: {'identifier': 'wit_pkg', 'dependencies': OrderedDict({'custom_interfaces': '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces'})}
+[0.000700] (wit_pkg) JobStarted: {'identifier': 'wit_pkg'}
+[0.010166] (wit_pkg) JobProgress: {'identifier': 'wit_pkg', 'progress': 'cmake'}
+[0.010784] (wit_pkg) JobProgress: {'identifier': 'wit_pkg', 'progress': 'build'}
+[0.011495] (wit_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/DATA/DogRobot/ros2_ws/build/wit_pkg', '--', '-j8', '-l8'], 'cwd': '/home/DATA/DogRobot/ros2_ws/build/wit_pkg', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'adonis', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/adonis', 'OLDPWD': '/home/DATA/DogRobot', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2781', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'adonis', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'adonis', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/adonis-Nitro-AN515-55:@/tmp/.ICE-unix/2755,unix/adonis-Nitro-AN515-55:/tmp/.ICE-unix/2755', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/055c2873_3ff1_4d54_b287_035a01d1f605', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.1193', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/DATA/DogRobot/ros2_ws/build/wit_pkg', 'QT_QPA_PLATFORM': 'xcb', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.041276] (wit_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099797] (-) TimerEvent: {}
+[0.200029] (-) TimerEvent: {}
+[0.281485] (wit_pkg) StdoutLine: {'line': b'-- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.300124] (-) TimerEvent: {}
+[0.316183] (wit_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.326705] (wit_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.339439] (wit_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.354094] (wit_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.400213] (-) TimerEvent: {}
+[0.421263] (wit_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.422655] (wit_pkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.500340] (-) TimerEvent: {}
+[0.511843] (wit_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.600416] (-) TimerEvent: {}
+[0.603110] (wit_pkg) StdoutLine: {'line': b'-- Found custom_interfaces: 0.0.0 (/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake)\n'}
+[0.700505] (-) TimerEvent: {}
+[0.724098] (wit_pkg) StdoutLine: {'line': b'-- Configuring done (0.7s)\n'}
+[0.741590] (wit_pkg) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.743611] (wit_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/wit_pkg\n'}
+[0.783594] (wit_pkg) StdoutLine: {'line': b'[ 66%] Built target wit_c_sdk\n'}
+[0.783795] (wit_pkg) StdoutLine: {'line': b'[ 66%] Built target serial\n'}
+[0.800637] (-) TimerEvent: {}
+[0.814972] (wit_pkg) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/readIMU.dir/src/readIMU.cpp.o\x1b[0m\n'}
+[0.900729] (-) TimerEvent: {}
+[1.000996] (-) TimerEvent: {}
+[1.101333] (-) TimerEvent: {}
+[1.201619] (-) TimerEvent: {}
+[1.301886] (-) TimerEvent: {}
+[1.402173] (-) TimerEvent: {}
+[1.502414] (-) TimerEvent: {}
+[1.602654] (-) TimerEvent: {}
+[1.702885] (-) TimerEvent: {}
+[1.803162] (-) TimerEvent: {}
+[1.903414] (-) TimerEvent: {}
+[2.003655] (-) TimerEvent: {}
+[2.103888] (-) TimerEvent: {}
+[2.204163] (-) TimerEvent: {}
+[2.304454] (-) TimerEvent: {}
+[2.404699] (-) TimerEvent: {}
+[2.504994] (-) TimerEvent: {}
+[2.605247] (-) TimerEvent: {}
+[2.705539] (-) TimerEvent: {}
+[2.805887] (-) TimerEvent: {}
+[2.906171] (-) TimerEvent: {}
+[3.006419] (-) TimerEvent: {}
+[3.106684] (-) TimerEvent: {}
+[3.206938] (-) TimerEvent: {}
+[3.307231] (-) TimerEvent: {}
+[3.407522] (-) TimerEvent: {}
+[3.507800] (-) TimerEvent: {}
+[3.534920] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[01;32m\x1b[K responseFunction\x1b[m\x1b[K(std::shared_ptr<custom_interfaces::srv::IMU_Request_<std::allocator<void> > >, std::shared_ptr<custom_interfaces::srv::IMU_Response_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.535376] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:35:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[Kcustom_interfaces::srv::IMU_Response_<std::allocator<void> >::_angle_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<double, std::allocator<double> >\x1b[m\x1b[K\xe2\x80\x99} and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[3.535549] (wit_pkg) StderrLine: {'line': b'   35 |         response->angle = \x1b[01;31m\x1b[K1\x1b[m\x1b[K;\n'}
+[3.535689] (wit_pkg) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.535823] (wit_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/13/vector:72\x1b[m\x1b[K,\n'}
+[3.535955] (wit_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:19\x1b[m\x1b[K,\n'}
+[3.536090] (wit_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171\x1b[m\x1b[K,\n'}
+[3.536225] (wit_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:8\x1b[m\x1b[K:\n'}
+[3.536360] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/vector.tcc:210:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::\x1b[01;32m\x1b[Koperator=\x1b[m\x1b[K(const std::vector<_Tp, _Alloc>&) \x1b[35m\x1b[K[with _Tp = double; _Alloc = std::allocator<double>]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.536603] (wit_pkg) StderrLine: {'line': b'  210 |     \x1b[01;36m\x1b[Kvector<_Tp, _Alloc>\x1b[m\x1b[K::\n'}
+[3.536734] (wit_pkg) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.536860] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/vector.tcc:211:42:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::vector<double, std::allocator<double> >&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.537000] (wit_pkg) StderrLine: {'line': b'  211 |     operator=(\x1b[01;36m\x1b[Kconst vector<_Tp, _Alloc>& __x\x1b[m\x1b[K)\n'}
+[3.537130] (wit_pkg) StderrLine: {'line': b'      |               \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[3.537256] (wit_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/13/vector:66\x1b[m\x1b[K:\n'}
+[3.537388] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/stl_vector.h:766:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::\x1b[01;32m\x1b[Koperator=\x1b[m\x1b[K(std::vector<_Tp, _Alloc>&&) \x1b[35m\x1b[K[with _Tp = double; _Alloc = std::allocator<double>]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.537529] (wit_pkg) StderrLine: {'line': b'  766 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())\n'}
+[3.537656] (wit_pkg) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[3.537781] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/stl_vector.h:766:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<double, std::allocator<double> >&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.537909] (wit_pkg) StderrLine: {'line': b'  766 |       operator=(\x1b[01;36m\x1b[Kvector&& __x\x1b[m\x1b[K) noexcept(_Alloc_traits::_S_nothrow_move())\n'}
+[3.538034] (wit_pkg) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[3.538157] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/stl_vector.h:788:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::\x1b[01;32m\x1b[Koperator=\x1b[m\x1b[K(std::initializer_list<_Tp>) \x1b[35m\x1b[K[with _Tp = double; _Alloc = std::allocator<double>]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.538297] (wit_pkg) StderrLine: {'line': b'  788 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(initializer_list<value_type> __l)\n'}
+[3.538431] (wit_pkg) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[3.538557] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/stl_vector.h:788:46:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::initializer_list<double>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.538682] (wit_pkg) StderrLine: {'line': b'  788 |       operator=(\x1b[01;36m\x1b[Kinitializer_list<value_type> __l\x1b[m\x1b[K)\n'}
+[3.538803] (wit_pkg) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[3.538925] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:32:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Krequest\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.539062] (wit_pkg) StderrLine: {'line': b'   31 | void responseFunction(\x1b[01;35m\x1b[Kconst std::shared_ptr<custom_interfaces::srv::IMU::Request>\x1b[m\x1b[K\n'}
+[3.539185] (wit_pkg) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.539309] (wit_pkg) StderrLine: {'line': b'   32 | \x1b[01;35m\x1b[Krequest\x1b[m\x1b[K, std::shared_ptr<custom_interfaces::srv::IMU::Response> response)\n'}
+[3.539445] (wit_pkg) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.539584] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[01;32m\x1b[K main\x1b[m\x1b[K(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.539710] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:49:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp::NOde\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[3.539836] (wit_pkg) StderrLine: {'line': b'   49 |         std::shared_ptr<rclcpp::Node> node = rclcpp::\x1b[01;31m\x1b[KNOde\x1b[m\x1b[K::make_shared("imu_server");\n'}
+[3.539959] (wit_pkg) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.551524] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:43:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdir\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.551801] (wit_pkg) StderrLine: {'line': b'   43 |         DIR *\x1b[01;35m\x1b[Kdir\x1b[m\x1b[K;\n'}
+[3.551932] (wit_pkg) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.552059] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:44:20:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kent\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.552191] (wit_pkg) StderrLine: {'line': b'   44 |     struct dirent *\x1b[01;35m\x1b[Kent\x1b[m\x1b[K;\n'}
+[3.552338] (wit_pkg) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.552578] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:45:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kserial_port\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.552730] (wit_pkg) StderrLine: {'line': b'   45 |     char \x1b[01;35m\x1b[Kserial_port\x1b[m\x1b[K[BUFFER_SIZE];\n'}
+[3.552857] (wit_pkg) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.552980] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:46:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kfound\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.553120] (wit_pkg) StderrLine: {'line': b'   46 |     int \x1b[01;35m\x1b[Kfound\x1b[m\x1b[K = 0;\n'}
+[3.553242] (wit_pkg) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.553362] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[01;32m\x1b[K SensorDataUpdata\x1b[m\x1b[K(uint32_t, uint32_t)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.553516] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:140:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kuint32_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kunsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.553646] (wit_pkg) StderrLine: {'line': b'  140 |     for(i = 0; \x1b[01;35m\x1b[Ki < uiRegNum\x1b[m\x1b[K; i++)\n'}
+[3.553769] (wit_pkg) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K~~^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.553892] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[01;32m\x1b[K AutoScanSensor\x1b[m\x1b[K(char*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.554016] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:188:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kchar*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kunsigned char*\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.554154] (wit_pkg) StderrLine: {'line': b'  188 |                 fd = serial_open(\x1b[01;31m\x1b[Kdev\x1b[m\x1b[K , c_uiBaud[i]);\n'}
+[3.554278] (wit_pkg) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.554410] (wit_pkg) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[3.554538] (wit_pkg) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[Kchar*\x1b[m\x1b[K\n'}
+[3.554662] (wit_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:1\x1b[m\x1b[K:\n'}
+[3.554783] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:21:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[01;32m\x1b[K serial_open\x1b[m\x1b[K(unsigned char*, unsigned int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.554909] (wit_pkg) StderrLine: {'line': b'   21 | int serial_open(\x1b[01;36m\x1b[Kunsigned char* dev\x1b[m\x1b[K, unsigned int baud);\n'}
+[3.555030] (wit_pkg) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[3.555150] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:196:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kchar*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kunsigned char*\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.555286] (wit_pkg) StderrLine: {'line': b'  196 |                         while(serial_read_data(fd, \x1b[01;31m\x1b[KcBuff\x1b[m\x1b[K, 1))\n'}
+[3.555422] (wit_pkg) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.555553] (wit_pkg) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[3.555680] (wit_pkg) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[Kchar*\x1b[m\x1b[K\n'}
+[3.555802] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:23:45:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 2 of \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[01;32m\x1b[K serial_read_data\x1b[m\x1b[K(int, unsigned char*, int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.555936] (wit_pkg) StderrLine: {'line': b'   23 | int serial_read_data(int fd, \x1b[01;36m\x1b[Kunsigned char *val\x1b[m\x1b[K, int len);\n'}
+[3.556060] (wit_pkg) StderrLine: {'line': b'      |                              \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[3.607897] (-) TimerEvent: {}
+[3.708170] (-) TimerEvent: {}
+[3.808460] (-) TimerEvent: {}
+[3.908730] (-) TimerEvent: {}
+[4.008993] (-) TimerEvent: {}
+[4.109300] (-) TimerEvent: {}
+[4.209568] (-) TimerEvent: {}
+[4.309838] (-) TimerEvent: {}
+[4.410107] (-) TimerEvent: {}
+[4.500804] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:\x1b[m\x1b[K At global scope:\n'}
+[4.501022] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:179:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[01;32m\x1b[K AutoScanSensor\x1b[m\x1b[K(char*)\x1b[m\x1b[K\xe2\x80\x99 defined but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function\x07-Wunused-function\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.501138] (wit_pkg) StderrLine: {'line': b'  179 | static void \x1b[01;35m\x1b[KAutoScanSensor\x1b[m\x1b[K(char* dev)\n'}
+[4.501234] (wit_pkg) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.501339] (wit_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:137:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[01;32m\x1b[K SensorDataUpdata\x1b[m\x1b[K(uint32_t, uint32_t)\x1b[m\x1b[K\xe2\x80\x99 defined but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function\x07-Wunused-function\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.501483] (wit_pkg) StderrLine: {'line': b'  137 | static void \x1b[01;35m\x1b[KSensorDataUpdata\x1b[m\x1b[K(uint32_t uiReg, uint32_t uiRegNum)\n'}
+[4.501567] (wit_pkg) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.510203] (-) TimerEvent: {}
+[4.531300] (wit_pkg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/readIMU.dir/build.make:76: CMakeFiles/readIMU.dir/src/readIMU.cpp.o] Error 1\n'}
+[4.531557] (wit_pkg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:194: CMakeFiles/readIMU.dir/all] Error 2\n'}
+[4.531793] (wit_pkg) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[4.533819] (wit_pkg) CommandEnded: {'returncode': 2}
+[4.575778] (wit_pkg) JobEnded: {'identifier': 'wit_pkg', 'rc': 2}
+[4.586391] (-) EventReactorShutdown: {}

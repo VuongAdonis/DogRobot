@@ -236,29 +236,29 @@ readIMU/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/build
 .PHONY : readIMU/fast
 
-src/readIMU.o: src/readIMU.c.o
+src/readIMU.o: src/readIMU.cpp.o
 .PHONY : src/readIMU.o
 
 # target to build an object file
-src/readIMU.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/src/readIMU.c.o
-.PHONY : src/readIMU.c.o
+src/readIMU.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/src/readIMU.cpp.o
+.PHONY : src/readIMU.cpp.o
 
-src/readIMU.i: src/readIMU.c.i
+src/readIMU.i: src/readIMU.cpp.i
 .PHONY : src/readIMU.i
 
 # target to preprocess a source file
-src/readIMU.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/src/readIMU.c.i
-.PHONY : src/readIMU.c.i
+src/readIMU.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/src/readIMU.cpp.i
+.PHONY : src/readIMU.cpp.i
 
-src/readIMU.s: src/readIMU.c.s
+src/readIMU.s: src/readIMU.cpp.s
 .PHONY : src/readIMU.s
 
 # target to generate assembly for a file
-src/readIMU.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/src/readIMU.c.s
-.PHONY : src/readIMU.c.s
+src/readIMU.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/readIMU.dir/build.make CMakeFiles/readIMU.dir/src/readIMU.cpp.s
+.PHONY : src/readIMU.cpp.s
 
 src/serial.o: src/serial.c.o
 .PHONY : src/serial.o

@@ -1,0 +1,36 @@
+[0.010s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.036s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.245s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.273s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.283s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.295s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.309s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.374s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.375s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.441s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.540s] [33mCMake Warning at CMakeLists.txt:15 (find_package):
+[0.540s]   By not providing "Findcustom_interfaces.cmake" in CMAKE_MODULE_PATH this
+[0.540s]   project has asked CMake to find a package configuration file provided by
+[0.540s]   "custom_interfaces", but CMake did not find one.
+[0.541s] 
+[0.541s]   Could not find a package configuration file provided by "custom_interfaces"
+[0.541s]   with any of the following names:
+[0.541s] 
+[0.541s]     custom_interfacesConfig.cmake
+[0.541s]     custom_interfaces-config.cmake
+[0.541s] 
+[0.541s]   Add the installation prefix of "custom_interfaces" to CMAKE_PREFIX_PATH or
+[0.542s]   set "custom_interfaces_DIR" to a directory containing one of the above
+[0.542s]   files.  If "custom_interfaces" provides a separate development package or
+[0.542s]   SDK, be sure it has been installed.
+[0.542s] 
+[0.542s] [0m
+[0.542s] -- Configuring incomplete, errors occurred!
+[0.542s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:42 (message):
+[0.542s]   ament_target_dependencies() the first argument must be a valid target name
+[0.542s] Call Stack (most recent call first):
+[0.543s]   CMakeLists.txt:34 (ament_target_dependencies)
+[0.543s] 
+[0.543s] [0m
+[0.556s] gmake: *** [Makefile:349: cmake_check_build_system] Error 1
+[0.558s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8

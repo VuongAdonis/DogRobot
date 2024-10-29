@@ -22,6 +22,11 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__struct.hpp" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp"
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__traits.hpp" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp"
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__type_support.hpp" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp"
+  "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/detail/imu__builder.hpp" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp"
+  "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/detail/imu__struct.hpp" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp"
+  "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/detail/imu__traits.hpp" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp"
+  "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/detail/imu__type_support.hpp" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp"
+  "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/imu.hpp" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp"
   )
 
 

@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/__init__.py"
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_gamepad_srv.py"
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_gamepad_srv_s.c"
+  "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_imu.py"
+  "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_imu_s.c"
   "CMakeFiles/custom_interfaces__py"
 )
 

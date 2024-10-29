@@ -1,0 +1,95 @@
+[0.023s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/custom_interfaces -- -j8 -l8
+[0.333s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.334s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.334s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.334s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.334s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.354s] -- Found rosidl_adapter: 4.6.4 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.798s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[0.919s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.071s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.073s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[1.438s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[1.451s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.468s] -- Added test 'lint_cmake' to check CMake code style
+[1.469s] -- Added test 'xmllint' to check XML markup files
+[1.472s] -- Configuring done (1.4s)
+[1.517s] -- Generating done (0.0s)
+[1.520s] -- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/custom_interfaces
+[1.555s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[1.565s] [  1%] Built target ament_cmake_python_copy_custom_interfaces
+[1.884s] [  1%] Built target custom_interfaces__rosidl_generator_type_description
+[1.898s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.913s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.946s] running egg_info
+[1.976s] writing custom_interfaces.egg-info/PKG-INFO
+[1.976s] writing dependency_links to custom_interfaces.egg-info/dependency_links.txt
+[1.977s] writing top-level names to custom_interfaces.egg-info/top_level.txt
+[2.064s] reading manifest file 'custom_interfaces.egg-info/SOURCES.txt'
+[2.065s] writing manifest file 'custom_interfaces.egg-info/SOURCES.txt'
+[2.114s] [  5%] Built target ament_cmake_python_build_custom_interfaces_egg
+[2.469s] [  5%] Built target custom_interfaces__cpp
+[2.560s] [  9%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/imu__description.c.o[0m
+[2.560s] [  9%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.c.o[0m
+[2.561s] [ 11%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.c.o[0m
+[2.561s] [ 12%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__description.c.o[0m
+[2.561s] [ 14%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__description.c.o[0m
+[2.563s] [ 16%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o[0m
+[2.564s] [ 18%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.c.o[0m
+[2.566s] [ 20%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/imu__functions.c.o[0m
+[2.675s] [ 22%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/imu__type_support.c.o[0m
+[2.746s] [ 24%] [32m[1mLinking C shared library libcustom_interfaces__rosidl_generator_c.so[0m
+[2.793s] [ 24%] Built target custom_interfaces__rosidl_generator_c
+[2.810s] [ 29%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.810s] [ 29%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.810s] [ 29%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.811s] [ 31%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.815s] [ 35%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.817s] [ 35%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.448s] [ 37%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/publish_message__type_support.cpp.o[0m
+[3.453s] [ 38%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/srv/gamepad_srv__type_support.cpp.o[0m
+[3.454s] [ 40%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/srv/imu__type_support.cpp.o[0m
+[3.454s] [ 42%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/srv/gamepad_srv__type_support.cpp.o[0m
+[3.585s] [ 44%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/gamepad_srv__type_support.c.o[0m
+[3.627s] [ 46%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/publish_message__type_support.c.o[0m
+[3.631s] [ 48%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/msg/publish_message__type_support.cpp.o[0m
+[3.631s] [ 50%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/gamepad_srv__type_support.cpp.o[0m
+[3.634s] [ 51%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_c.so[0m
+[3.696s] [ 53%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/publish_message__type_support.cpp.o[0m
+[3.743s] [ 55%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/imu__type_support.c.o[0m
+[3.797s] [ 55%] Built target custom_interfaces__rosidl_typesupport_c
+[3.843s] [ 57%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/srv/imu__type_support.cpp.o[0m
+[3.902s] [ 59%] [32m[1mLinking C shared library libcustom_interfaces__rosidl_typesupport_introspection_c.so[0m
+[3.904s] [ 61%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/dds_fastrtps/gamepad_srv__type_support.cpp.o[0m
+[3.990s] [ 61%] Built target custom_interfaces__rosidl_typesupport_introspection_c
+[4.018s] [ 62%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/imu__type_support.cpp.o[0m
+[4.030s] [ 64%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/srv/detail/gamepad_srv__type_support_c.cpp.o[0m
+[4.425s] [ 66%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/publish_message__type_support_c.cpp.o[0m
+[4.859s] [ 68%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/srv/detail/imu__type_support_c.cpp.o[0m
+[4.959s] [ 70%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/publish_message__type_support.cpp.o[0m
+[5.062s] [ 72%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_cpp.so[0m
+[5.144s] [ 74%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/dds_fastrtps/imu__type_support.cpp.o[0m
+[5.366s] [ 75%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[5.441s] [ 75%] Built target custom_interfaces__rosidl_typesupport_cpp
+[5.562s] [ 75%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp
+[6.201s] [ 77%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[6.330s] [ 77%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c
+[6.508s] [ 79%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[6.597s] [ 79%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp
+[6.623s] [ 79%] Built target custom_interfaces
+[6.645s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[7.398s] [ 81%] Built target custom_interfaces__py
+[7.426s] [ 85%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/srv/_imu_s.c.o[0m
+[7.427s] [ 85%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/srv/_gamepad_srv_s.c.o[0m
+[7.427s] [ 87%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_publish_message_s.c.o[0m
+[7.681s] [ 88%] [32m[1mLinking C shared library libcustom_interfaces__rosidl_generator_py.so[0m
+[7.739s] [ 88%] Built target custom_interfaces__rosidl_generator_py
+[7.776s] [ 92%] [32mBuilding C object CMakeFiles/custom_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[7.778s] [ 92%] [32mBuilding C object CMakeFiles/custom_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[7.778s] [ 94%] [32mBuilding C object CMakeFiles/custom_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[8.008s] [ 96%] [32m[1mLinking C shared module rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[8.023s] [ 98%] [32m[1mLinking C shared module rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[8.025s] [100%] [32m[1mLinking C shared module rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so[0m
+[8.071s] [100%] Built target custom_interfaces_s__rosidl_typesupport_introspection_c
+[8.085s] [100%] Built target custom_interfaces_s__rosidl_typesupport_fastrtps_c
+[8.092s] [100%] Built target custom_interfaces_s__rosidl_typesupport_c

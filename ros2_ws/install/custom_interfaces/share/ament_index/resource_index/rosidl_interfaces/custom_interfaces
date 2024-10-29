@@ -2,3 +2,5 @@ msg/PublishMessage.idl
 msg/PublishMessage.msg
 srv/GamepadSrv.idl
 srv/GamepadSrv.srv
+srv/IMU.idl
+srv/IMU.srv

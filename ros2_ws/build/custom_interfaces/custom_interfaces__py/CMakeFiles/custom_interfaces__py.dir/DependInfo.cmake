@@ -20,6 +20,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/__init__.py" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_gamepad_srv.py" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_gamepad_srv_s.c" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_imu.py" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_imu_s.c" "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 

@@ -1,0 +1,20 @@
+[0.415s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.478s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.914s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.957s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.973s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.998s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.025s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.148s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.152s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.298s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.444s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:77 (message):
+[1.444s]   ament_target_dependencies() the passed package name 'custom_interfaces' was
+[1.444s]   not found before
+[1.446s] Call Stack (most recent call first):
+[1.446s]   CMakeLists.txt:25 (ament_target_dependencies)
+[1.446s] 
+[1.446s] [0m
+[1.446s] -- Configuring incomplete, errors occurred!
+[1.474s] gmake: *** [Makefile:349: cmake_check_build_system] Error 1
+[1.479s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8

@@ -2,17 +2,17 @@ import sys
 
 import rclpy
 from rclpy.node import Node
-from custom_interfaces.srv import AddTwoInts
+from custom_interfaces.srv import IMU
 
 class AdditionClientAsync(Node):
     def __init__(self):
         super().__init__("addition_client_async")
-        self.client = self.create_client(AddTwoInts, "add_two_ints")
+        self.client = self.create_client(IMU, "imu")
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("service not available, waiting again...")
 
     def send_request(self):
-        request = AddTwoInts.Request()
+        request = IMU.Request()
         # request.a = int(sys.argv[1])
         # request.b = int(sys.argv[2])
         self.future = self.client.call_async(request)
@@ -37,7 +37,7 @@ def main(args=None):
                 )
             else:
                 addition_client.get_logger().info(
-                    f"Result of addition is {response.position}"
+                    f"Result of addition is"
                 )
                 break
 

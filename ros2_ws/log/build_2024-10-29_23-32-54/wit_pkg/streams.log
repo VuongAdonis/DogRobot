@@ -1,0 +1,52 @@
+[0.012s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': AMENT_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.051s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.272s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.303s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.313s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.325s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.339s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.406s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.407s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.492s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.577s] -- Found custom_interfaces: 0.0.0 (/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/share/custom_interfaces/cmake)
+[0.686s] -- Configuring done (0.6s)
+[0.707s] -- Generating done (0.0s)
+[0.709s] -- Build files have been written to: /home/DATA/DogRobot/ros2_ws/build/wit_pkg
+[0.748s] [ 16%] [32mBuilding C object CMakeFiles/wit_c_sdk.dir/src/wit_c_sdk.c.o[0m
+[0.748s] [ 33%] [32mBuilding C object CMakeFiles/serial.dir/src/serial.c.o[0m
+[0.773s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:[m[K In function ‘[01m[KWitSerialDataIn[m[K’:
+[0.773s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:181:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[0.773s]   181 |                 if(s_uiWitDataCnt [01;35m[K<[m[K (s_ucWitDataBuff[2] + 5))return ;
+[0.773s]       |                                   [01;35m[K^[m[K
+[0.778s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:[m[K In function ‘[01m[KWitCanDataIn[m[K’:
+[0.778s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:238:27:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+[0.778s]   238 |                         if[01;35m[K([m[KucData[1] == 0x53)
+[0.778s]       |                           [01;35m[K^[m[K
+[0.778s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:251:19:[m[K [01;36m[Knote: [m[Khere
+[0.779s]   251 |                   [01;36m[Kcase[m[K WIT_PROTOCOL_CAN:
+[0.779s]       |                   [01;36m[K^~~~[m[K
+[0.789s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:[m[K In function ‘[01m[Kserial_open[m[K’:
+[0.790s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:7:15:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 1 of ‘[01m[Kopen[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+[0.790s]     7 |     fd = open([01;35m[Kdev[m[K, O_RDWR|O_NOCTTY);
+[0.790s]       |               [01;35m[K^~~[m[K
+[0.790s]       |               [01;35m[K|[m[K
+[0.790s]       |               [01;35m[Kunsigned char *[m[K
+[0.790s] In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:9[m[K,
+[0.790s]                  from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:1[m[K:
+[0.790s] [01m[K/usr/include/fcntl.h:209:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char *[m[K’ but argument is of type ‘[01m[Kunsigned char *[m[K’
+[0.790s]   209 | extern int open ([01;36m[Kconst char *__file[m[K, int __oflag, ...) __nonnull ((1));
+[0.790s]       |                  [01;36m[K~~~~~~~~~~~~^~~~~~[m[K
+[0.815s] [ 50%] [32m[1mLinking C shared library libserial.so[0m
+[0.825s] [ 66%] [32m[1mLinking C shared library libwit_c_sdk.so[0m
+[0.913s] [ 66%] Built target wit_c_sdk
+[0.913s] [ 66%] Built target serial
+[0.936s] [ 83%] [32mBuilding C object CMakeFiles/readIMU.dir/src/readIMU.c.o[0m
+[0.978s] In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:8[m[K:
+[0.978s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:168:10:[m[K [01;31m[Kfatal error: [m[Kcsignal: No such file or directory
+[0.978s]   168 | #include [01;31m[K<csignal>[m[K
+[0.978s]       |          [01;31m[K^~~~~~~~~[m[K
+[0.978s] compilation terminated.
+[0.979s] gmake[2]: *** [CMakeFiles/readIMU.dir/build.make:76: CMakeFiles/readIMU.dir/src/readIMU.c.o] Error 1
+[0.979s] gmake[1]: *** [CMakeFiles/Makefile2:194: CMakeFiles/readIMU.dir/all] Error 2
+[0.980s] gmake: *** [Makefile:146: all] Error 2
+[0.982s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '2': AMENT_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8

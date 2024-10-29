@@ -71,10 +71,12 @@ include /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/custom_interfaces__p
 /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c
 /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/_gamepad_srv.py
 /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_publish_message.py
+/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/_imu.py
 /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/__init__.py
 /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/__init__.py
 /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/_gamepad_srv_s.c
 /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_publish_message_s.c
+/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/_imu_s.c
 
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_py/__init__.py
@@ -91,6 +93,7 @@ rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interfaces/srv/GamepadSrv.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interfaces/msg/PublishMessage.idl
+rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interfaces/srv/IMU.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -109,6 +112,9 @@ rosidl_generator_py/custom_interfaces/srv/_gamepad_srv.py: rosidl_generator_py/c
 rosidl_generator_py/custom_interfaces/msg/_publish_message.py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/msg/_publish_message.py
 
+rosidl_generator_py/custom_interfaces/srv/_imu.py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/srv/_imu.py
+
 rosidl_generator_py/custom_interfaces/srv/__init__.py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/srv/__init__.py
 
@@ -121,6 +127,9 @@ rosidl_generator_py/custom_interfaces/srv/_gamepad_srv_s.c: rosidl_generator_py/
 rosidl_generator_py/custom_interfaces/msg/_publish_message_s.c: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/msg/_publish_message_s.c
 
+rosidl_generator_py/custom_interfaces/srv/_imu_s.c: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/srv/_imu_s.c
+
 custom_interfaces__py: /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
@@ -131,6 +140,8 @@ custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_publish_messag
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/__init__.py
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/_gamepad_srv.py
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/_gamepad_srv_s.c
+custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/_imu.py
+custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/_imu_s.c
 custom_interfaces__py: /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py.dir/build.make
 .PHONY : custom_interfaces__py
 

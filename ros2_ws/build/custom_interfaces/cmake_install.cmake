@@ -55,6 +55,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interfaces/srv" TYPE FILE FILES "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_type_description/custom_interfaces/srv/IMU.json")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/custom_interfaces/custom_interfaces" TYPE DIRECTORY FILES "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/" REGEX "/[^/]*\\.h$")
 endif()
 
@@ -375,11 +379,19 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interfaces/srv" TYPE FILE FILES "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_adapter/custom_interfaces/srv/IMU.idl")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interfaces/srv" TYPE FILE FILES "/home/DATA/DogRobot/ros2_ws/src/custom_interfaces/srv/GamepadSrv.srv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interfaces/msg" TYPE FILE FILES "/home/DATA/DogRobot/ros2_ws/src/custom_interfaces/msg/PublishMessage.msg")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interfaces/srv" TYPE FILE FILES "/home/DATA/DogRobot/ros2_ws/src/custom_interfaces/srv/IMU.srv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

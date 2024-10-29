@@ -10,3 +10,4 @@ custom_interfaces/msg/_publish_message.py
 custom_interfaces/srv/__init__.py
 custom_interfaces/srv/_add_two_ints.py
 custom_interfaces/srv/_gamepad_srv.py
+custom_interfaces/srv/_imu.py

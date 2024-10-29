@@ -10,7 +10,12 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__struct.hpp"
   "rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__traits.hpp"
   "rosidl_generator_cpp/custom_interfaces/srv/detail/gamepad_srv__type_support.hpp"
+  "rosidl_generator_cpp/custom_interfaces/srv/detail/imu__builder.hpp"
+  "rosidl_generator_cpp/custom_interfaces/srv/detail/imu__struct.hpp"
+  "rosidl_generator_cpp/custom_interfaces/srv/detail/imu__traits.hpp"
+  "rosidl_generator_cpp/custom_interfaces/srv/detail/imu__type_support.hpp"
   "rosidl_generator_cpp/custom_interfaces/srv/gamepad_srv.hpp"
+  "rosidl_generator_cpp/custom_interfaces/srv/imu.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

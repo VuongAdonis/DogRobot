@@ -9,6 +9,9 @@ CMakeFiles/custom_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generat
   rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.h \
   rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__struct.h \
   rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.h \
+  rosidl_generator_c/custom_interfaces/srv/detail/imu__functions.h \
+  rosidl_generator_c/custom_interfaces/srv/detail/imu__struct.h \
+  rosidl_generator_c/custom_interfaces/srv/detail/imu__type_support.h \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/jazzy/include/rcutils/rcutils/allocator.h \
   /opt/ros/jazzy/include/rcutils/rcutils/macros.h \
@@ -307,7 +310,11 @@ CMakeFiles/custom_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generat
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/usr/include/python3.12/methodobject.h:
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/python3.12/memoryobject.h:
 
@@ -349,8 +356,6 @@ CMakeFiles/custom_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generat
 
 /usr/include/python3.12/cpython/genobject.h:
 
-/usr/include/python3.12/modsupport.h:
-
 /usr/include/python3.12/exports.h:
 
 /usr/include/python3.12/cpython/pyframe.h:
@@ -368,6 +373,8 @@ CMakeFiles/custom_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generat
 /usr/include/python3.12/cpython/objimpl.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+rosidl_generator_c/custom_interfaces/srv/detail/imu__functions.h:
 
 /usr/include/python3.12/cpython/initconfig.h:
 
@@ -413,9 +420,9 @@ CMakeFiles/custom_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generat
 
 /usr/include/python3.12/cpython/classobject.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
-
 /usr/include/python3.12/compile.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
 
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c:
 
@@ -423,13 +430,17 @@ rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/python3.12/boolobject.h:
 
 /usr/include/python3.12/cpython/bytesobject.h:
 
-/usr/include/python3.12/boolobject.h:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
@@ -437,41 +448,7 @@ rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__type_support.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
-
-rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.h:
-
-/usr/include/python3.12/fileobject.h:
-
-/opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h:
-
-/usr/include/python3.12/dictobject.h:
-
-/usr/include/python3.12/Python.h:
-
-/opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
-
-/usr/include/python3.12/cpython/picklebufobject.h:
-
-/usr/include/python3.12/complexobject.h:
-
-/usr/include/linux/stddef.h:
-
-rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.h:
-
-/usr/include/python3.12/pymacconfig.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
 /usr/include/asm-generic/errno-base.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
-
-/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h:
-
-/usr/include/asm-generic/posix_types.h:
-
-rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__struct.h:
 
 /usr/include/python3.12/cpython/ceval.h:
 
@@ -479,29 +456,13 @@ rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
 
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
-
-/opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
-
 /usr/include/python3.12/pyerrors.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
-/usr/include/inttypes.h:
-
-/usr/include/python3.12/cpython/longintrepr.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-rosidl_generator_c/custom_interfaces/msg/detail/publish_message__struct.h:
-
-/usr/include/linux/limits.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+/opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
 
 /usr/include/python3.12/cpython/odictobject.h:
 
@@ -525,11 +486,77 @@ rosidl_generator_c/custom_interfaces/msg/detail/publish_message__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
+rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__struct.h:
+
+/usr/include/python3.12/fileobject.h:
+
+/opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
+
+/opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
+
+/usr/include/python3.12/dictobject.h:
+
+/usr/include/python3.12/Python.h:
+
+/usr/include/python3.12/cpython/picklebufobject.h:
+
+/usr/include/python3.12/complexobject.h:
+
+rosidl_generator_c/custom_interfaces/msg/detail/publish_message__type_support.h:
+
+/usr/include/python3.12/pymacconfig.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/linux/stddef.h:
+
+rosidl_generator_c/custom_interfaces/msg/detail/publish_message__functions.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
+
+/usr/include/python3.12/cpython/longintrepr.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/inttypes.h:
+
+rosidl_generator_c/custom_interfaces/msg/detail/publish_message__struct.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+rosidl_generator_c/custom_interfaces/srv/detail/imu__type_support.h:
+
+/usr/include/python3.12/cpython/pytime.h:
+
+/usr/include/python3.12/cpython/cellobject.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/opt/ros/jazzy/include/rcutils/rcutils/types/rcutils_ret.h:
+
 /usr/include/python3.12/cpython/fileobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/python3.12/cpython/object.h:
+
+/usr/include/python3.12/bytearrayobject.h:
+
+/usr/include/python3.12/rangeobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
@@ -539,21 +566,11 @@ rosidl_generator_c/custom_interfaces/msg/detail/publish_message__struct.h:
 
 /usr/include/python3.12/pyframe.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/opt/ros/jazzy/include/rcutils/rcutils/types/rcutils_ret.h:
-
 rosidl_generator_c/custom_interfaces/msg/rosidl_generator_c__visibility_control.h:
 
 /usr/include/python3.12/cpython/memoryobject.h:
 
 /usr/include/asm-generic/int-ll64.h:
-
-/usr/include/python3.12/moduleobject.h:
-
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/ctype.h:
 
@@ -577,19 +594,11 @@ rosidl_generator_c/custom_interfaces/msg/rosidl_generator_c__visibility_control.
 
 /usr/include/python3.12/objimpl.h:
 
-/usr/include/python3.12/patchlevel.h:
-
-/usr/include/strings.h:
-
 /usr/include/python3.12/fileutils.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/python3.12/cpython/pylifecycle.h:
-
-/usr/include/python3.12/cpython/pytime.h:
-
-/usr/include/python3.12/cpython/cellobject.h:
 
 /usr/include/features.h:
 
@@ -615,13 +624,15 @@ rosidl_generator_c/custom_interfaces/msg/rosidl_generator_c__visibility_control.
 
 /usr/include/x86_64-linux-gnu/bits/statx-generic.h:
 
-/usr/include/python3.12/rangeobject.h:
+/usr/include/python3.12/methodobject.h:
 
-/usr/include/python3.12/bytearrayobject.h:
+/usr/include/python3.12/modsupport.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+/usr/include/strings.h:
 
-/usr/include/x86_64-linux-gnu/bits/timex.h:
+/usr/include/python3.12/patchlevel.h:
+
+/usr/include/python3.12/moduleobject.h:
 
 /usr/include/python3.12/object.h:
 
@@ -630,6 +641,8 @@ rosidl_generator_c/custom_interfaces/msg/rosidl_generator_c__visibility_control.
 /usr/include/python3.12/cpython/pythonrun.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+rosidl_generator_c/custom_interfaces/srv/detail/imu__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
@@ -644,8 +657,6 @@ rosidl_generator_c/custom_interfaces/msg/rosidl_generator_c__visibility_control.
 /usr/include/python3.12/pyhash.h:
 
 /usr/include/python3.12/pylifecycle.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /usr/include/python3.12/pymacro.h:
 
@@ -792,8 +803,6 @@ rosidl_generator_c/custom_interfaces/msg/rosidl_generator_c__visibility_control.
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/python3.12/typeslots.h:
 

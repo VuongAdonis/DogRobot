@@ -1,0 +1,59 @@
+[ 33%] Built target wit_c_sdk
+[ 66%] Built target serial
+[ 83%] [32mBuilding CXX object CMakeFiles/readIMU.dir/src/readIMU.cpp.o[0m
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K responseFunction[m[K(std::shared_ptr<custom_interfaces::srv::IMU_Request_<std::allocator<void> > >, std::shared_ptr<custom_interfaces::srv::IMU_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:33:1:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   32 | void responseFunction([01;35m[Kconst std::shared_ptr<custom_interfaces::srv::IMU::Request>[m[K
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   33 | [01;35m[Krequest[m[K, std::shared_ptr<custom_interfaces::srv::IMU::Response> response)
+      | [01;35m[K^~~~~~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:33:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   33 | quest, [01;35m[Kstd::shared_ptr<custom_interfaces::srv::IMU::Response> response[m[K)
+      |        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:88:25:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kret[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   88 |                 int i , [01;35m[Kret[m[K;
+      |                         [01;35m[K^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:51:9:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kfound[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   51 |     int [01;35m[Kfound[m[K = 0;
+      |         [01;35m[K^~~~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K SensorDataUpdata[m[K(uint32_t, uint32_t)[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:149:18:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  149 |     for(i = 0; [01;35m[Ki < uiRegNum[m[K; i++)
+      |                [01;35m[K~~^~~~~~~~~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:68:90:[m[K [01;35m[Kwarning: [m[K‘[01m[K%s[m[K’ directive output may be truncated writing up to 255 bytes into a region of size 251 [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-truncation=-Wformat-truncation=]8;;[m[K]
+   68 |            snprintf(serial_port, sizeof(serial_port), "/dev/[01;35m[K%s[m[K", ent->d_name);
+      |                                                             [01;35m[K^~[m[K
+
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:68:49:[m[K [01;36m[Knote: [m[K‘[01m[Ksnprintf[m[K’ output between 6 and 261 bytes into a destination of size 256
+   68 |                                         [01;36m[Ksnprintf(serial_port, sizeof(serial_port), "/dev/%s", ent->d_name)[m[K;
+      |                                         [01;36m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable readIMU[0m
+[100%] Built target readIMU
+-- Install configuration: ""
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libserial.so.
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libserial.so
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libwit_c_sdk.so.
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/libwit_c_sdk.so
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/wit_pkg/readIMU
+-- Set non-toolchain portion of runtime path of "/home/DATA/DogRobot/ros2_ws/install/wit_pkg/lib/wit_pkg/readIMU" to ""
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/package_run_dependencies/wit_pkg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/parent_prefix_path/wit_pkg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/ament_prefix_path.sh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/path.sh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/path.dsv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.bash
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.sh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.zsh
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/local_setup.dsv
+-- Installing: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/package.dsv
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/ament_index/resource_index/packages/wit_pkg
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/export_wit_pkgExport.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/export_wit_pkgExport-noconfig.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/wit_pkgConfig.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake/wit_pkgConfig-version.cmake
+-- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/package.xml

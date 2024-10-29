@@ -1,0 +1,3 @@
+[ 33%] Built target serial
+[ 66%] Built target wit_c_sdk
+[ 83%] [32mBuilding C object CMakeFiles/readIMU.dir/src/readIMU.c.o[0m

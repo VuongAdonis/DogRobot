@@ -1,0 +1,8 @@
+/usr/bin/ld: CMakeFiles/readIMU.dir/src/readIMU.cpp.o: in function `AutoScanSensor(char*)':
+readIMU.cpp:(.text+0xbb3): undefined reference to `serial_close(int)'
+/usr/bin/ld: readIMU.cpp:(.text+0xbf7): undefined reference to `serial_open(unsigned char*, unsigned int)'
+/usr/bin/ld: readIMU.cpp:(.text+0xc4d): undefined reference to `serial_read_data(int, unsigned char*, int)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/readIMU.dir/build.make:173: readIMU] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:194: CMakeFiles/readIMU.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

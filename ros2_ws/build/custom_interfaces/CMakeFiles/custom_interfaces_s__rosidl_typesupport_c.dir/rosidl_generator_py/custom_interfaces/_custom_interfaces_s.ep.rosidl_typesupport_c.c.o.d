@@ -237,4 +237,7 @@ CMakeFiles/custom_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/cus
  /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__struct.h \
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
- /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.h
+ /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.h \
+ /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/imu__type_support.h \
+ /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/imu__struct.h \
+ /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/imu__functions.h

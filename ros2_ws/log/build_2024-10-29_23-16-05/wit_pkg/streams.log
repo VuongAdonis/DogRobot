@@ -1,0 +1,30 @@
+[0.010s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.036s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.267s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.296s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.306s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.318s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.332s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.398s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.399s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.475s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.575s] [31mCMake Error at CMakeLists.txt:15 (find_package):
+[0.575s]   By not providing "Findcustom_interfaces.cmake" in CMAKE_MODULE_PATH this
+[0.575s]   project has asked CMake to find a package configuration file provided by
+[0.575s]   "custom_interfaces", but CMake did not find one.
+[0.575s] 
+[0.575s]   Could not find a package configuration file provided by "custom_interfaces"
+[0.575s]   with any of the following names:
+[0.575s] 
+[0.575s]     custom_interfacesConfig.cmake
+[0.575s]     custom_interfaces-config.cmake
+[0.575s] 
+[0.576s]   Add the installation prefix of "custom_interfaces" to CMAKE_PREFIX_PATH or
+[0.576s]   set "custom_interfaces_DIR" to a directory containing one of the above
+[0.576s]   files.  If "custom_interfaces" provides a separate development package or
+[0.576s]   SDK, be sure it has been installed.
+[0.576s] 
+[0.576s] [0m
+[0.576s] -- Configuring incomplete, errors occurred!
+[0.581s] gmake: *** [Makefile:349: cmake_check_build_system] Error 1
+[0.583s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8

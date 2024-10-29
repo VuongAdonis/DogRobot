@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "custom_interfaces/srv/IMU_Response",
+      "fields": [
+        {
+          "name": "angle",
+          "type": {
+            "type_id": 155,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "custom_interfaces/srv/IMU_Response",
+      "hash_string": "RIHS01_631a66b71ffbec77e73d4958b0d4f45ca405086a4e93da676f69e85c5cf2041f"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K responseFunction[m[K(std::shared_ptr<custom_interfaces::srv::IMU_Request_<std::allocator<void> > >, std::shared_ptr<custom_interfaces::srv::IMU_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:33:1:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   32 | void responseFunction([01;35m[Kconst std::shared_ptr<custom_interfaces::srv::IMU::Request>[m[K
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   33 | [01;35m[Krequest[m[K, std::shared_ptr<custom_interfaces::srv::IMU::Response> response)
+      | [01;35m[K^~~~~~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:33:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   33 | quest, [01;35m[Kstd::shared_ptr<custom_interfaces::srv::IMU::Response> response[m[K)
+      |        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:54:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kspin_node[m[K’ was not declared in this scope
+   54 |     std::thread spin_thread([01;31m[Kspin_node[m[K, node);
+      |                             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:75:26:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kchar*[m[K’ to ‘[01m[Kunsigned char*[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   75 |     if((fd = serial_open([01;31m[Kserial_port[m[K , 115200)<0))
+      |                          [01;31m[K^~~~~~~~~~~[m[K
+      |                          [01;31m[K|[m[K
+      |                          [01;31m[Kchar*[m[K
+In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:1[m[K:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:25:32:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kint[01;32m[K serial_open[m[K(unsigned char*, unsigned int)[m[K’
+   25 | int serial_open([01;36m[Kunsigned char* dev[m[K, unsigned int baud);
+      |                 [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:96:40:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kchar*[m[K’ to ‘[01m[Kunsigned char*[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   96 |             while(serial_read_data(fd, [01;31m[KcBuff[m[K, 1))
+      |                                        [01;31m[K^~~~~[m[K
+      |                                        [01;31m[K|[m[K
+      |                                        [01;31m[Kchar*[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:27:45:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kint[01;32m[K serial_read_data[m[K(int, unsigned char*, int)[m[K’
+   27 | int serial_read_data(int fd, [01;36m[Kunsigned char *val[m[K, int len);
+      |                              [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:84:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kret[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   84 |         int i , [01;35m[Kret[m[K;
+      |                 [01;35m[K^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K SensorDataUpdata[m[K(uint32_t, uint32_t)[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:144:18:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  144 |     for(i = 0; [01;35m[Ki < uiRegNum[m[K; i++)
+      |                [01;35m[K~~^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/readIMU.dir/build.make:76: CMakeFiles/readIMU.dir/src/readIMU.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:194: CMakeFiles/readIMU.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

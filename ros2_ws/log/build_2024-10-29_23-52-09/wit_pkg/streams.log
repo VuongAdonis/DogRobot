@@ -1,0 +1,47 @@
+[0.016s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg': AMENT_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8
+[0.087s] [ 66%] Built target wit_c_sdk
+[0.088s] [ 66%] Built target serial
+[0.126s] [ 83%] [32mBuilding CXX object CMakeFiles/readIMU.dir/src/readIMU.cpp.o[0m
+[3.367s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K responseFunction[m[K(std::shared_ptr<custom_interfaces::srv::IMU_Request_<std::allocator<void> > >, std::shared_ptr<custom_interfaces::srv::IMU_Response_<std::allocator<void> > >)[m[K’:
+[3.367s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:32:1:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.367s]    31 | void responseFunction([01;35m[Kconst std::shared_ptr<custom_interfaces::srv::IMU::Request>[m[K
+[3.367s]       |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.367s]    32 | [01;35m[Krequest[m[K, std::shared_ptr<custom_interfaces::srv::IMU::Response> response)
+[3.367s]       | [01;35m[K^~~~~~~[m[K
+[3.367s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:32:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.367s]    32 | request, [01;35m[Kstd::shared_ptr<custom_interfaces::srv::IMU::Response> response[m[K)
+[3.367s]       |          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[3.382s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[3.383s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:43:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdir[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.383s]    43 |         DIR *[01;35m[Kdir[m[K;
+[3.383s]       |              [01;35m[K^~~[m[K
+[3.383s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:44:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kent[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.383s]    44 |     struct dirent *[01;35m[Kent[m[K;
+[3.383s]       |                    [01;35m[K^~~[m[K
+[3.383s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:45:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kserial_port[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.383s]    45 |     char [01;35m[Kserial_port[m[K[BUFFER_SIZE];
+[3.383s]       |          [01;35m[K^~~~~~~~~~~[m[K
+[3.383s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:46:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfound[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.383s]    46 |     int [01;35m[Kfound[m[K = 0;
+[3.384s]       |         [01;35m[K^~~~~[m[K
+[3.384s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K SensorDataUpdata[m[K(uint32_t, uint32_t)[m[K’:
+[3.384s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:140:18:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[3.384s]   140 |     for(i = 0; [01;35m[Ki < uiRegNum[m[K; i++)
+[3.384s]       |                [01;35m[K~~^~~~~~~~~~[m[K
+[4.652s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K At global scope:
+[4.652s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:179:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid[01;32m[K AutoScanSensor[m[K(char*)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[4.652s]   179 | static void [01;35m[KAutoScanSensor[m[K(char* dev)
+[4.652s]       |             [01;35m[K^~~~~~~~~~~~~~[m[K
+[4.653s] [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:137:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid[01;32m[K SensorDataUpdata[m[K(uint32_t, uint32_t)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[4.653s]   137 | static void [01;35m[KSensorDataUpdata[m[K(uint32_t uiReg, uint32_t uiRegNum)
+[4.653s]       |             [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[5.241s] [100%] [32m[1mLinking CXX executable readIMU[0m
+[5.412s] /usr/bin/ld: CMakeFiles/readIMU.dir/src/readIMU.cpp.o: in function `AutoScanSensor(char*)':
+[5.412s] readIMU.cpp:(.text+0xbb3): undefined reference to `serial_close(int)'
+[5.412s] /usr/bin/ld: readIMU.cpp:(.text+0xbf7): undefined reference to `serial_open(unsigned char*, unsigned int)'
+[5.412s] /usr/bin/ld: readIMU.cpp:(.text+0xc4d): undefined reference to `serial_read_data(int, unsigned char*, int)'
+[5.427s] collect2: error: ld returned 1 exit status
+[5.429s] gmake[2]: *** [CMakeFiles/readIMU.dir/build.make:173: readIMU] Error 1
+[5.429s] gmake[1]: *** [CMakeFiles/Makefile2:194: CMakeFiles/readIMU.dir/all] Error 2
+[5.429s] gmake: *** [Makefile:146: all] Error 2
+[5.432s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/wit_pkg' returned '2': AMENT_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/wit_pkg -- -j8 -l8

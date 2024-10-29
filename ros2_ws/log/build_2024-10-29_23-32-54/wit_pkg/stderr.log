@@ -1,0 +1,30 @@
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:[m[K In function ‘[01m[KWitSerialDataIn[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:181:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  181 |                 if(s_uiWitDataCnt [01;35m[K<[m[K (s_ucWitDataBuff[2] + 5))return ;
+      |                                   [01;35m[K^[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:[m[K In function ‘[01m[KWitCanDataIn[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:238:27:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+  238 |                         if[01;35m[K([m[KucData[1] == 0x53)
+      |                           [01;35m[K^[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/wit_c_sdk.c:251:19:[m[K [01;36m[Knote: [m[Khere
+  251 |                   [01;36m[Kcase[m[K WIT_PROTOCOL_CAN:
+      |                   [01;36m[K^~~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:[m[K In function ‘[01m[Kserial_open[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:7:15:[m[K [01;35m[Kwarning: [m[Kpointer targets in passing argument 1 of ‘[01m[Kopen[m[K’ differ in signedness [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpointer-sign-Wpointer-sign]8;;[m[K]
+    7 |     fd = open([01;35m[Kdev[m[K, O_RDWR|O_NOCTTY);
+      |               [01;35m[K^~~[m[K
+      |               [01;35m[K|[m[K
+      |               [01;35m[Kunsigned char *[m[K
+In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/include/wit_pkg/serial.h:9[m[K,
+                 from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/serial.c:1[m[K:
+[01m[K/usr/include/fcntl.h:209:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char *[m[K’ but argument is of type ‘[01m[Kunsigned char *[m[K’
+  209 | extern int open ([01;36m[Kconst char *__file[m[K, int __oflag, ...) __nonnull ((1));
+      |                  [01;36m[K~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:8[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:168:10:[m[K [01;31m[Kfatal error: [m[Kcsignal: No such file or directory
+  168 | #include [01;31m[K<csignal>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/readIMU.dir/build.make:76: CMakeFiles/readIMU.dir/src/readIMU.c.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:194: CMakeFiles/readIMU.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

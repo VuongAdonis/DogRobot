@@ -102,7 +102,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/wit_pkg/readIMU")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/wit_pkg/readIMU"
-         OLD_RPATH "/home/DATA/DogRobot/ros2_ws/build/wit_pkg:/opt/ros/jazzy/lib:"
+         OLD_RPATH "/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:/home/DATA/DogRobot/ros2_ws/build/wit_pkg:/opt/ros/jazzy/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/wit_pkg/readIMU")
