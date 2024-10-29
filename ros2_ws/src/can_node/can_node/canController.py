@@ -29,16 +29,16 @@ class legFL(Enum):
 
 class CanNode(Node):
     def __init__(self):
-        self.bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
+        # self.bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
         self.timeDelayPos = 0.005
         # self.sendClosedLoop(1)
-        time.sleep(0.1)
-        self.sendClosedLoop(legFR.shoulder.value)
-        time.sleep(0.1)
-        self.sendClosedLoop(legFR.thigh.value)
-        time.sleep(0.1)
-        self.sendClosedLoop(legFR.shank.value)
-        time.sleep(0.1)
+        # time.sleep(0.1)
+        # self.sendClosedLoop(legFR.shoulder.value)
+        # time.sleep(0.1)
+        # self.sendClosedLoop(legFR.thigh.value)
+        # time.sleep(0.1)
+        # self.sendClosedLoop(legFR.shank.value)
+        # time.sleep(0.1)
 
 
         print("All ODrives have been set to ClosedLoop")
@@ -55,12 +55,12 @@ class CanNode(Node):
     def StopSend(self):
         # self.sendIdle(1)
         # time.sleep(0.1)
-        self.sendIdle(legFR.shoulder.value)
-        time.sleep(0.1)
-        self.sendIdle(legFR.thigh.value)
-        time.sleep(0.1)
-        self.sendIdle(legFR.shank.value)
-        time.sleep(0.1)
+        # self.sendIdle(legFR.shoulder.value)
+        # time.sleep(0.1)
+        # self.sendIdle(legFR.thigh.value)
+        # time.sleep(0.1)
+        # self.sendIdle(legFR.shank.value)
+        # time.sleep(0.1)
         print("All ODrives have been set to Idle")
         
     # This function is used to process the position after get from the main control
@@ -80,12 +80,12 @@ class CanNode(Node):
 
 
         # send message
-        self.sendPos(legFR.shoulder.value, posFR[2])
-        time.sleep(self.timeDelayPos)
-        self.sendPos(legFR.thigh.value, posFR[1])
-        time.sleep(self.timeDelayPos)
-        self.sendPos(legFR.shank.value, posFR[0])
-        time.sleep(self.timeDelayPos)
+        # self.sendPos(legFR.shoulder.value, posFR[2])
+        # time.sleep(self.timeDelayPos)
+        # self.sendPos(legFR.thigh.value, posFR[1])
+        # time.sleep(self.timeDelayPos)
+        # self.sendPos(legFR.shank.value, posFR[0])
+        # time.sleep(self.timeDelayPos)
 
 
 
@@ -216,7 +216,7 @@ def main(args=None):
         rclpy.spin(robotDogHk241)
     except KeyboardInterrupt:
         robotDogHk241.StopSend()
-        robotDogHk241.bus.shutdown() 
+        # robotDogHk241.bus.shutdown() 
         print("SLCAN bus has been turned off properly.")
         robotDogHk241.destroy_node()
         rclpy.shutdown()

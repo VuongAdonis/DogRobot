@@ -55,10 +55,10 @@ class GamepadRecorder(Node):
         self.buttonStandDown = msg.buttons[0]
         self.buttonStandNormal = msg.buttons[7]
 
-        print("UP: ", self.buttonStandUp)
-        print("DOWN: ", self.buttonStandDown)
-        print("NORMAL: ", self.buttonStandNormal)
-        time.sleep(2)
+        # print("UP: ", self.buttonStandUp)
+        # print("DOWN: ", self.buttonStandDown)
+        # print("NORMAL: ", self.buttonStandNormal)
+        # time.sleep(2)
 
 
 def main():
