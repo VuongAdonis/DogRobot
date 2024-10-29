@@ -312,7 +312,15 @@ class kinematicEachLeg:
     # return [corPnt1, corPnt2, corPnt3, corPnt4, corPnt5, corPnt6, corPnt7, corPnt8]
     return [posPnt1, posPnt2, posPnt3, posPnt4, posPnt5, posPnt6, posPnt7, posPnt8]
   
-  def getPosCurrentLeg(self):
+  def getPosModeStandNormal(self):
     posPnt = self.backwardKinematic(self.endEffector.getCoordinate())
     return posPnt
+  
+  def getPosModeStandUpDown(self, heightDeviation):
+    currentPos = self.endEffector.getCoordinate()
+    currentPos[0][0] += heightDeviation
+    # check condition of currentPos[0][0]
+    posPnt = self.backwardKinematic(currentPos.getCoordinate())
+    return posPnt
+  
 #---------------------------------------------------------------------------------------------------------------------#
