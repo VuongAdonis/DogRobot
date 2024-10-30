@@ -1,0 +1,46 @@
+[ 33%] Built target wit_c_sdk
+[ 66%] Built target serial
+[ 83%] [32mBuilding CXX object CMakeFiles/readIMU.dir/src/readIMU.cpp.o[0m
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K responseFunction[m[K(std::shared_ptr<custom_interfaces::srv::IMU_Request_<std::allocator<void> > >, std::shared_ptr<custom_interfaces::srv::IMU_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:38:27:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kcustom_interfaces::srv::IMU_Response_<std::allocator<void> >::_angle_type[m[K’ {aka ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’} and ‘[01m[Kfloat [3][m[K’)
+   38 |         response->angle = [01;31m[Kangle[m[K;
+      |                           [01;31m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/vector:72[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:19[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+                 from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:9[m[K:
+[01m[K/usr/include/c++/13/bits/vector.tcc:210:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::[01;32m[Koperator=[m[K(const std::vector<_Tp, _Alloc>&) [35m[K[with _Tp = double; _Alloc = std::allocator<double>][m[K[m[K’
+  210 |     [01;36m[Kvector<_Tp, _Alloc>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/vector.tcc:211:42:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat [3][m[K’ to ‘[01m[Kconst std::vector<double, std::allocator<double> >&[m[K’
+  211 |     operator=([01;36m[Kconst vector<_Tp, _Alloc>& __x[m[K)
+      |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/13/vector:66[m[K:
+[01m[K/usr/include/c++/13/bits/stl_vector.h:766:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::[01;32m[Koperator=[m[K(std::vector<_Tp, _Alloc>&&) [35m[K[with _Tp = double; _Alloc = std::allocator<double>][m[K[m[K’
+  766 |       [01;36m[Koperator[m[K=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/stl_vector.h:766:26:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat [3][m[K’ to ‘[01m[Kstd::vector<double, std::allocator<double> >&&[m[K’
+  766 |       operator=([01;36m[Kvector&& __x[m[K) noexcept(_Alloc_traits::_S_nothrow_move())
+      |                 [01;36m[K~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/bits/stl_vector.h:788:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::[01;32m[Koperator=[m[K(std::initializer_list<_Tp>) [35m[K[with _Tp = double; _Alloc = std::allocator<double>][m[K[m[K’
+  788 |       [01;36m[Koperator[m[K=(initializer_list<value_type> __l)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/stl_vector.h:788:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat [3][m[K’ to ‘[01m[Kstd::initializer_list<double>[m[K’
+  788 |       operator=([01;36m[Kinitializer_list<value_type> __l[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:35:1:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   34 | void responseFunction([01;35m[Kconst std::shared_ptr<custom_interfaces::srv::IMU::Request>[m[K
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   35 | [01;35m[Krequest[m[K, std::shared_ptr<custom_interfaces::srv::IMU::Response> response)
+      | [01;35m[K^~~~~~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:89:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kret[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   89 |         int i , [01;35m[Kret[m[K;
+      |                 [01;35m[K^~~[m[K
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K SensorDataUpdata[m[K(uint32_t, uint32_t)[m[K’:
+[01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.cpp:152:18:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  152 |     for(i = 0; [01;35m[Ki < uiRegNum[m[K; i++)
+      |                [01;35m[K~~^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/readIMU.dir/build.make:76: CMakeFiles/readIMU.dir/src/readIMU.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:194: CMakeFiles/readIMU.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

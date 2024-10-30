@@ -24,7 +24,6 @@ def main(args=None):
     addition_client= AdditionClientAsync()
 
     addition_client.send_request()
-
     # use/spin node
     while rclpy.ok():
         rclpy.spin_once(addition_client)
@@ -37,9 +36,10 @@ def main(args=None):
                 )
             else:
                 addition_client.get_logger().info(
-                    f"Result of addition is"
+                    f"Result of addition is {response.angle}"
                 )
                 break
+                
 
     # destroy node and shutdown
     addition_client.destroy_node()

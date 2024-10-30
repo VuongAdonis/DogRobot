@@ -35,7 +35,7 @@ void responseFunction(const std::shared_ptr<custom_interfaces::srv::IMU::Request
 request, std::shared_ptr<custom_interfaces::srv::IMU::Response> response)
 {
 	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Incoming request\na");
-	// response->angle = angle;
+	response->angle = std::vector<double>(angle, angle + 3);
 
 	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "sending back response");
 
