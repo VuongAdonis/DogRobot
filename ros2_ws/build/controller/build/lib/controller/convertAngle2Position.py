@@ -1,7 +1,7 @@
 # * File: convertAngle2Position.py
 # * Author: ROBOT_DOG_TEAM
 # * Creation Date: October 2, 2024
-# * Last Modified: October 14, 2024
+# * Last Modified: October 30, 2024
 # * Description: when knowing the angle value between 2 vectors, so move the motor with position
 # * Status: developing (Done, brainStorm, developing):
 #         - check and update all originalPos of RR, RL, FL, FR
@@ -27,32 +27,24 @@ class stepPerDegree(Enum):
 
 # declare the enum for each leg of quadruped robotz
 class originalPosRR(Enum):
-  joint0UpperLimit      =           1.7
-  joint0LowerLimit      =           -2.9
-  joint0Middle          =           -0.6
-
-  joint1UpperLimit      =           1.9
-  joint1LowerLimit      =           -2.7
-  joint1Middle          =           -0.4
-
-  joint2UpperLimit      =           1
-  joint2LowerLimit      =           -0.25
-  joint2Middle          =           0.375
+  joint0Middle          =           0.4
+  joint1Middle          =           0.6
+  joint2Middle         =           -0.25
   
 class originalPosRL(Enum):
-  joint0Middle          =           -0.6
-  joint1Middle          =           -0.4
-  joint2Middle          =           0.375
+  joint0Middle          =           0
+  joint1Middle          =           -0.46
+  joint2Middle          =           0
   
 class originalPosFR(Enum):
   joint0Middle          =            0.45
-  joint1Middle          =           -0.95
-  joint2Middle          =            0.24
+  joint1Middle          =           -1
+  joint2Middle          =            0.25
 
 class originalPosFL(Enum):
-  joint0Middle          =           -0.6
-  joint1Middle          =           -0.4
-  joint2Middle          =            0.375
+  joint0Middle          =           -0.55
+  joint1Middle          =           0
+  joint2Middle          =           0
 
 #---------------------------------------------------------------------------------------------------------------------#
 # Class's name:
@@ -103,7 +95,7 @@ class position:
     if legType == leg.RL.value:
       joint1PositionCurrent   = originalPosRL.joint1Middle.value
       if angle > 0.0001:
-        joint1PositionCurrent = originalPosRL.joint1Middle.value - abs(angle)*stepPerDegree.joint1.value
+        joint1PositionCurrent = originalPosRL.joint1Middle.value + abs(angle)*stepPerDegree.joint1.value
       else:
         if angle < -0.0001:
           joint1PositionCurrent = originalPosRL.joint1Middle.value + abs(angle)*stepPerDegree.joint1.value
@@ -137,11 +129,11 @@ class position:
     if legType == leg.RL.value: # angle < 0
       joint2PositionCurrent = originalPosRL.joint2Middle.value
       if angle < -0.0001:
-        joint2PositionCurrent = originalPosRL.joint2Middle.value + abs(angle)*stepPerDegree.joint2.value
+        joint2PositionCurrent = originalPosRL.joint2Middle.value - abs(angle)*stepPerDegree.joint2.value
     if legType == leg.FL.value: # angle < 0
       joint2PositionCurrent = originalPosFL.joint2Middle.value
       if angle < -0.0001:
-        joint2PositionCurrent = originalPosFL.joint2Middle.value + abs(angle)*stepPerDegree.joint2.value
+        joint2PositionCurrent = originalPosFL.joint2Middle.value - abs(angle)*stepPerDegree.joint2.value
     return joint2PositionCurrent
 
   def convertAngle2Position(self, angleLeg, legType):

@@ -1,7 +1,7 @@
 # * File: quadrupedRobot.py
 # * Author: ROBOT_DOG_TEAM
 # * Creation Date: October 17, 2024
-# * Last Modified: October 17, 2024
+# * Last Modified: October 30, 2024
 # * Description: the program to control all operations of robot
 # * Status: developing (Done, brainStorm, developing):
 
@@ -9,6 +9,7 @@
 from controller.kinematicRobot import coordinatePoint, kinematicEachLeg
 from controller.convertGlobal2LocalCoordinate import leg
 from custom_interfaces.srv import GamepadSrv
+from custom_interfaces.srv import IMU
 from math import atan2, cos, sin, pi
 from rclpy.node import Node
 from custom_interfaces.msg import PublishMessage
@@ -32,15 +33,15 @@ class modeControl(Enum):
 #---------------------------------------------------------------------------------------------------------------------#
 
 # define the time sleep for control leg robot
-postpone = 0.05
+postpone = 0.25
 
-# Class AdditionClientAsync: the class to initialize the service in ros2 to read the x, y from gamePad_node
+# Class AdditionClientAsync: the class to initialize the service in ros2 to read the input from gamePad_node
 class AdditionClientAsync(Node):
   def __init__(self):
     super().__init__("addition_client_async")
     self.client = self.create_client(GamepadSrv, "gamepad")
     while not self.client.wait_for_service(timeout_sec=1.0):
-        self.get_logger().info("service not available, waiting again...")
+        self.get_logger().info("service for gamepad not available, waiting again...")
 
   def sendRequest(self):
       request = GamepadSrv.Request()
@@ -59,11 +60,42 @@ class AdditionClientAsync(Node):
               )
           else:
               self.get_logger().info(  
-                  f"Result of addition is {response.position}"
+                  f"Result of gamepad is {response.position}"
               )
               break
     return response
 #---------------------------------------------------------------------------------------------------------------------#
+# Class IMUClientAsync: the class to initialize the service in ros2 to read the input from IMU
+class IMUClientAsync(Node):
+    def __init__(self):
+        super().__init__("imu_client_async")
+        self.client = self.create_client(IMU, "imu")
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("service for imu not available, waiting again...")
+
+    def send_request(self):
+        request = IMU.Request()
+        # request.a = int(sys.argv[1])
+        # request.b = int(sys.argv[2])
+        self.future = self.client.call_async(request)
+    
+    def getInformFromIMU(self):
+      self.sendRequest()
+      while rclpy.ok():
+        rclpy.spin_once(self)
+        if self.future.done():
+            try:
+                response = self.future.result()
+            except Exception as e:
+                self.get_logger().info(
+                    f"Service call failed {e}"
+                )
+            else:
+                self.get_logger().info(  
+                    f"Result of IMU is {response}"
+                )
+                break
+      return response
 
 #---------------------------------------------------------------------------------------------------------------------#
 # Class PublishCommunication: the class to initialize the topic in ros2 to send message to CAN_node
@@ -80,7 +112,7 @@ class PublishCommunication(Node):
     msg.positionrl = trajectoryRL
     msg.namefr = "FR"
     msg.positionfr = trajectoryFR
-    msg.namefl = "RL"
+    msg.namefl = "FL"
     msg.positionfl = trajectoryFL
 
     # send message to the CAN node
@@ -130,10 +162,10 @@ class quadrupedRobot:
   
   def updatePosTrajectoryAllLegs(self, vectorAngle):
     # the result of posTrajectoryRR has foramt: [[], [], [], [], [], [], [], []]
-    posTrajectoryRR = self.legRR.updatePosTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
-    posTrajectoryRL = self.legRL.updatePosTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
-    posTrajectoryFR = self.legFR.updatePosTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
-    posTrajectoryFL = self.legFL.updatePosTrajectoryLeg(deviation = 35, angleVector= vectorAngle)
+    posTrajectoryRR = self.legRR.updatePosTrajectoryLeg(deviation = 25, angleVector= vectorAngle)
+    posTrajectoryRL = self.legRL.updatePosTrajectoryLeg(deviation = 25, angleVector= vectorAngle)
+    posTrajectoryFR = self.legFR.updatePosTrajectoryLeg(deviation = 25, angleVector= vectorAngle)
+    posTrajectoryFL = self.legFL.updatePosTrajectoryLeg(deviation = 25, angleVector= vectorAngle)
 
     self.trajectoryRRTemp = posTrajectoryRR      
     self.trajectoryRLTemp = posTrajectoryRL
@@ -319,11 +351,13 @@ class quadrupedRobot:
     
     rclpy.init()
     self.serviceGamePadRos2= AdditionClientAsync()
+    # self.serviceIMURos2 = IMUClientAsync()
     self.topicCANRos2  = PublishCommunication()
 
     # the first mode when turning on the quadruped robot
     self.currentMode = modeControl.standNormal.value
     self.modeControlStandNormalAllLegs()
+    time.sleep(4)
     while True:
       try:
         responseGamePad = self.serviceGamePadRos2.getInformFromGamePad()

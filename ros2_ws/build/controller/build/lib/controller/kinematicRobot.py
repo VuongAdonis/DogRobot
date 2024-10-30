@@ -1,7 +1,7 @@
 # * File: implement.py
 # * Author: ROBOT_DOG_TEAM
 # * Creation Date: September 30, 2024
-# * Last Modified: October 22, 2024
+# * Last Modified: October 30, 2024
 # * Description: this file to calculate forward and backward kinematic of ROBOT
 # * Status: developing (Done, brainStorm, developing)
 
@@ -243,11 +243,12 @@ class kinematicEachLeg:
             posJointList   = self.cvt2PosObject.convertAngle2Position(angleJointList, self.legType)
             pairPositionJoint012 = posJointList
     #-----------------------------------------------------------------------------------------
+    print("angle: ", angleJointList)
     return pairPositionJoint012
       
   # value of some variables can be modified: angleVector, high, deviation, X coordinate
   def updatePosTrajectoryLeg(self, deviation, angleVector):
-    high = 40
+    high = 60
     sign123Y = 0
     sign123Z = 0
     sign567Y = 0

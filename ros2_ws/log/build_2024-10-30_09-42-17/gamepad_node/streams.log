@@ -1,0 +1,21 @@
+[1.846s] Invoking command in '/home/DATA/DogRobot/ros2_ws/src/gamepad_node': AMENT_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/gamepad_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/gamepad_node build --build-base /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build install --record /home/DATA/DogRobot/ros2_ws/build/gamepad_node/install.log --single-version-externally-managed install_data
+[2.325s] running egg_info
+[2.353s] writing ../../build/gamepad_node/gamepad_node.egg-info/PKG-INFO
+[2.353s] writing dependency_links to ../../build/gamepad_node/gamepad_node.egg-info/dependency_links.txt
+[2.354s] writing entry points to ../../build/gamepad_node/gamepad_node.egg-info/entry_points.txt
+[2.354s] writing requirements to ../../build/gamepad_node/gamepad_node.egg-info/requires.txt
+[2.354s] writing top-level names to ../../build/gamepad_node/gamepad_node.egg-info/top_level.txt
+[2.411s] reading manifest file '../../build/gamepad_node/gamepad_node.egg-info/SOURCES.txt'
+[2.412s] writing manifest file '../../build/gamepad_node/gamepad_node.egg-info/SOURCES.txt'
+[2.412s] running build
+[2.413s] running build_py
+[2.413s] running install
+[2.421s] running install_lib
+[2.450s] running install_data
+[2.450s] running install_egg_info
+[2.495s] removing '/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages/gamepad_node-0.0.0-py3.12.egg-info' (and everything under it)
+[2.498s] Copying ../../build/gamepad_node/gamepad_node.egg-info to /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages/gamepad_node-0.0.0-py3.12.egg-info
+[2.498s] running install_scripts
+[2.738s] Installing gamepad script to /home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/gamepad_node
+[2.740s] writing list of installed files to '/home/DATA/DogRobot/ros2_ws/build/gamepad_node/install.log'
+[3.177s] Invoked command in '/home/DATA/DogRobot/ros2_ws/src/gamepad_node' returned '0': AMENT_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/gamepad_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/gamepad_node/lib/python3.12/site-packages:/home/DATA/DogRobot/ros2_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/gamepad_node build --build-base /home/DATA/DogRobot/ros2_ws/build/gamepad_node/build install --record /home/DATA/DogRobot/ros2_ws/build/gamepad_node/install.log --single-version-externally-managed install_data
