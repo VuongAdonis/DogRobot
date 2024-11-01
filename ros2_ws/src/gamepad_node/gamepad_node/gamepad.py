@@ -11,7 +11,7 @@ from sensor_msgs.msg import Joy
 from std_msgs.msg import String
 import subprocess
 import time
-from custom_interfaces.srv import GamepadSrv
+# from custom_interfaces.srv import GamepadSrv
 
 class GamepadRecorder(Node):
     def __init__(self):
@@ -29,11 +29,11 @@ class GamepadRecorder(Node):
         self.buttonStandDown = 0
         self.buttonStandNormal = 0
 
-        self.service = self.create_service(
-            GamepadSrv,
-            "gamepad",
-            self.gamepad_callback
-        )
+        # self.service = self.create_service(
+        #     GamepadSrv,
+        #     "gamepad",
+        #     self.gamepad_callback
+        # )
 
     # service function of gamepad
     def gamepad_callback(self, request, response):
@@ -51,13 +51,15 @@ class GamepadRecorder(Node):
         self.current_time = time.time()
         self.x = msg.axes[0]
         self.y = msg.axes[1]
-        self.buttonStandUp = msg.buttons[3]
-        self.buttonStandDown = msg.buttons[0]
-        self.buttonStandNormal = msg.buttons[7]
+        self.buttonStandUp = msg.buttons[0]
+        self.buttonStandDown = msg.buttons[2]
+        self.buttonStandNormal = msg.buttons[9]
 
         # print("UP: ", self.buttonStandUp)
         # print("DOWN: ", self.buttonStandDown)
         # print("NORMAL: ", self.buttonStandNormal)
+        print("Message: ", msg)
+        print("###############")
         # time.sleep(2)
 
 
