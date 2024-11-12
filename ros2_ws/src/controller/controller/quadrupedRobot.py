@@ -12,7 +12,7 @@ from math import atan2, cos, sin, pi
 from rclpy.node import Node
 from custom_interfaces.msg import PublishMessage
 from custom_interfaces.srv import GamepadSrv
-# from custom_interfaces.srv import IMU
+from custom_interfaces.srv import IMU
 from custom_interfaces.srv import CANsrv
 from enum import Enum
 
@@ -67,37 +67,37 @@ class AdditionClientAsync(Node):
     return response
 #---------------------------------------------------------------------------------------------------------------------#
 # Class IMUClientAsync: the class to initialize the service in ros2 to read the input from IMU
-# class IMUClientAsync(Node):
-#     def __init__(self):
-#         super().__init__("imu_client_async")
-#         self.client = self.create_client(IMU, "imusrv")
-#         while not self.client.wait_for_service(timeout_sec=1.0):
-#             self.get_logger().info("service for imu not available, waiting again...")
+class IMUClientAsync(Node):
+    def __init__(self):
+        super().__init__("imu_client_async")
+        self.client = self.create_client(IMU, "imusrv")
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("service for imu not available, waiting again...")
 
-#     def send_request(self):
-#         request = IMU.Request()
-#         # request.a = int(sys.argv[1])
-#         # request.b = int(sys.argv[2])
-#         self.future = self.client.call_async(request)
+    def send_request(self):
+        request = IMU.Request()
+        # request.a = int(sys.argv[1])
+        # request.b = int(sys.argv[2])
+        self.future = self.client.call_async(request)
     
-#     def getInFormFromIMU(self):
-#       self.sendRequest()
-#       while rclpy.ok():
-#         rclpy.spin_once(self)
-#         if self.future.done():
-#             try:
-#                 response = self.future.result()
-#             except Exception as e:
-#                 self.get_logger().info(
-#                     f"Service call failed {e}"
-#                 )
-#             else:
-#                 self.get_logger().info(  
-#                     f"Result of IMU is {response}"
-#                 )
-#                 break
-#       return response
-    
+    def getInFormFromIMU(self):
+      self.sendRequest()
+      while rclpy.ok():
+        rclpy.spin_once(self)
+        if self.future.done():
+            try:
+                response = self.future.result()
+            except Exception as e:
+                self.get_logger().info(
+                    f"Service call failed {e}"
+                )
+            else:
+                self.get_logger().info(  
+                    f"Result of IMU is {response}"
+                )
+                break
+      return response
+#---------------------------------------------------------------------------------------------------------------------#
 # Class CANClientAsync: the class to initialize the service in ros2 to communication with CAN
 class CANClientAsync(Node):
     def __init__(self):

@@ -4,3 +4,9 @@ custom_interfaces.egg-info/PKG-INFO
 custom_interfaces.egg-info/SOURCES.txt
 custom_interfaces.egg-info/dependency_links.txt
 custom_interfaces.egg-info/top_level.txt
+custom_interfaces/msg/__init__.py
+custom_interfaces/msg/_publish_message.py
+custom_interfaces/srv/__init__.py
+custom_interfaces/srv/_ca_nsrv.py
+custom_interfaces/srv/_gamepad_srv.py
+custom_interfaces/srv/_imu.py

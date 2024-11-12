@@ -12,19 +12,26 @@ def generate_launch_description():
     # register the signal
     signal.signal(signal.SIGINT, signal_handler)
 
-    talker = Node(
-        package='can_node', 
-        executable='talker',
-        name='talker_node',
+    control = Node(
+        package='controller', 
+        executable='control',
+        name='quadrupedRobot',
     )
 
-    listener = Node(
+    gamepad = Node(
+        package='gamepad_node',
+        executable='gamepad',
+        name='gamepad',
+    )
+
+    can = Node(
         package='can_node',
-        executable='listener',
-        name='listener_node',
+        executable='can',
+        name="canController"
     )
 
     return LaunchDescription([
-        talker,
-        listener,
+        control,
+        gamepad,
+        can
     ])
