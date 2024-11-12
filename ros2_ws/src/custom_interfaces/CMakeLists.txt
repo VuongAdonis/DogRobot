@@ -18,6 +18,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/GamepadSrv.srv"
   "msg/PublishMessage.msg"
   "srv/IMU.srv"
+  "srv/CANsrv.srv"
 )
 
 ### END ADD for service  ###

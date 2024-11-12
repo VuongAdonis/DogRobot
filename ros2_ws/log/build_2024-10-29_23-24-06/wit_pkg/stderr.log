@@ -1,8 +1,0 @@
-In file included from [01m[K/home/DATA/DogRobot/ros2_ws/src/wit_pkg/src/readIMU.c:8[m[K:
-[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:168:10:[m[K [01;31m[Kfatal error: [m[Kcsignal: No such file or directory
-  168 | #include [01;31m[K<csignal>[m[K
-      |          [01;31m[K^~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/readIMU.dir/build.make:76: CMakeFiles/readIMU.dir/src/readIMU.c.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:194: CMakeFiles/readIMU.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

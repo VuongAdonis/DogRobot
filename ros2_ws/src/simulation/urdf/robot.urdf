@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+<robot name="Dog robot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <material name="white">
+        <color rgba="1 1 1 1"/>
+    </material>
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+    <material name="green">
+        <color rgba="0 1 0 0.8"/>
+    </material>
+    <material name="blue">
+        <color rgba="0 0 1 0.8"/>
+    </material>
+   
+    <!-- <xacro:property name="pi" value="3.1415" /> -->
+
+    <xacro:property name="shoul_len" value="0.8612" />
+    <xacro:property name="shank_len" value="2" />
+    <xacro:property name="thigh_len" value="2" />
+    <xacro:property name="link_radius" value="0.025"/>
+    <xacro:property name="feet_radius" value="0.025"/>
+    
+    <xacro:property name="body_len" value="3.74" />
+    <xacro:property name="body_width" value="3.2224" />
+    <xacro:property name="body_height" value="0.5" />
+
+    <xacro:property name="limit_shoulder" value="${0.25*pi}"/>
+    <xacro:property name="limit_thigh" value="${0.5*pi}"/>
+    <xacro:property name="limit_shank" value="${0.75*pi}"/>
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <box size="${body_len} ${body_width} ${body_height}"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="${body_len} ${body_width} ${body_height}"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="10"/>
+            <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+        </inertial>
+    </link>
+
+    <!-- Define for shoulder -->
+    <!-- shoulder 1 -->
+    <link name="shoulder_link_fr">
+        <visual>
+            <geometry>
+                <cylinder length="${shoul_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="${0.5*pi} 0 0" xyz="0 ${0.5*shoul_len} 0"/>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${shoul_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="${0.5*pi} 0 0" xyz="0 ${0.5*shoul_len} 0"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="shoulder_joint_fr_to_base" type="revolute">
+        <parent link="base_link"/>
+        <child link="shoulder_link_fr"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="${-limit_shoulder}" upper="${limit_shoulder}" velocity="0.5"/>
+        <origin xyz="${0.5*body_len + link_radius} 0.75 0"/>
+    </joint>
+
+    <!-- shoulder 2 -->
+    <link name="shoulder_link_fl">
+        <visual>
+            <geometry>
+                <cylinder length="${shoul_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="${0.5*pi} 0 0" xyz="0 ${-0.5*shoul_len} 0"/>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${shoul_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="${0.5*pi} 0 0" xyz="0 ${-0.5*shoul_len} 0"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="shoulder_joint_fl_to_base" type="revolute">
+        <parent link="base_link"/>
+        <child link="shoulder_link_fl"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="${-limit_shoulder}" upper="${limit_shoulder}" velocity="0.5"/>
+        <origin xyz="${0.5*body_len + link_radius} -0.75 0"/>
+    </joint>
+
+    <!-- shoulder 3 -->
+    <link name="shoulder_link_rr">
+        <visual>
+            <geometry>
+                <cylinder length="${shoul_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="${0.5*pi} 0 0" xyz="0 ${0.5*shoul_len} 0"/>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${shoul_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="${0.5*pi} 0 0" xyz="0 ${0.5*shoul_len} 0"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="shoulder_joint_rr_to_base" type="revolute">
+        <parent link="base_link"/>
+        <child link="shoulder_link_rr"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="${-limit_shoulder}" upper="${limit_shoulder}" velocity="0.5"/>
+        <origin xyz="${-0.5*body_len + link_radius} 0.75 0"/>
+    </joint>
+
+    <!-- shoulder 4 -->
+    <link name="shoulder_link_rl">
+        <visual>
+            <geometry>
+                <cylinder length="${shoul_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="${0.5*pi} 0 0" xyz="0 ${-0.5*shoul_len} 0"/>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${shoul_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="${0.5*pi} 0 0" xyz="0 ${-0.5*shoul_len} 0"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="shoulder_joint_rl_to_base" type="revolute">
+        <parent link="base_link"/>
+        <child link="shoulder_link_rl"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="${-limit_shoulder}" upper="${limit_shoulder}" velocity="0.5"/>
+        <origin xyz="${-0.5*body_len + link_radius} -0.75 0"/>
+    </joint>
+
+    <!-- Define for thigh  -->
+    <!-- thigh 1 -->
+    <link name="thigh_link_fr">
+        <visual>
+            <geometry>
+                <cylinder length="${thigh_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*thigh_len}"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${thigh_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*thigh_len}"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="thigh_joint_fr_to_shoulder_fr" type="revolute">
+        <parent link="shoulder_link_fr"/>
+        <child link="thigh_link_fr"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="${-limit_thigh}" upper="${limit_thigh}" velocity="0.5"/>
+        <origin xyz="0 ${shoul_len} 0"/>
+    </joint>
+
+    <!-- thigh 2 -->
+    <link name="thigh_link_fl">
+        <visual>
+            <geometry>
+                <cylinder length="${thigh_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*thigh_len}"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${thigh_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*thigh_len}"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="thigh_joint_fl_to_shoulder_fl" type="revolute">
+        <parent link="shoulder_link_fl"/>
+        <child link="thigh_link_fl"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="${-limit_thigh}" upper="${limit_thigh}" velocity="0.5"/>
+        <origin xyz="0 ${-shoul_len} 0"/>
+    </joint>
+
+    <!-- thigh 3 -->
+    <link name="thigh_link_rr">
+        <visual>
+            <geometry>
+                <cylinder length="${thigh_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*thigh_len}"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${thigh_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*thigh_len}"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="thigh_joint_rr_to_shoulder_rr" type="revolute">
+        <parent link="shoulder_link_rr"/>
+        <child link="thigh_link_rr"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="${-limit_thigh}" upper="${limit_thigh}" velocity="0.5"/>
+        <origin xyz="0 ${shoul_len} 0"/>
+    </joint>
+
+    <!-- thigh 4 -->
+    <link name="thigh_link_rl">
+        <visual>
+            <geometry>
+                <cylinder length="${thigh_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*thigh_len}"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${thigh_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*thigh_len}"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="thigh_joint_fl_to_shoulder_rl" type="revolute">
+        <parent link="shoulder_link_rl"/>
+        <child link="thigh_link_rl"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="${-limit_thigh}" upper="${limit_thigh}" velocity="0.5"/>
+        <origin xyz="0 ${-shoul_len} 0"/>
+    </joint>
+
+    <!-- Define the shank  -->
+    <!-- shank 1 -->
+    <link name="shank_link_fr">
+        <visual>
+            <geometry>
+                <cylinder length="${shank_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*shank_len}"/>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${shank_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*shank_len}"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="shank_joint_fr_to_thigh_fr" type="revolute">
+        <parent link="thigh_link_fr"/>
+        <child link="shank_link_fr"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="${-limit_shank}" upper="${limit_shank}" velocity="0.5"/>
+        <origin xyz="0 0 ${-thigh_len}"/>
+    </joint>
+
+    <!-- shank 2 -->
+    <link name="shank_link_fl">
+        <visual>
+            <geometry>
+                <cylinder length="${shank_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*shank_len}"/>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${shank_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*shank_len}"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="shank_joint_fl_to_thigh_fl" type="revolute">
+        <parent link="thigh_link_fl"/>
+        <child link="shank_link_fl"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="${-limit_shank}" upper="${limit_shank}" velocity="0.5"/>
+        <origin xyz="0 0 ${-thigh_len}"/>
+    </joint>
+
+    <!-- shank 3 -->
+    <link name="shank_link_rr">
+        <visual>
+            <geometry>
+                <cylinder length="${shank_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*shank_len}"/>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${shank_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*shank_len}"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="shank_joint_rr_to_thigh_rr" type="revolute">
+        <parent link="thigh_link_rr"/>
+        <child link="shank_link_rr"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="${-limit_shank}" upper="${limit_shank}" velocity="0.5"/>
+        <origin xyz="0 0 ${-thigh_len}"/>
+    </joint>
+
+    <!-- shank 4 -->
+    <link name="shank_link_rl">
+        <visual>
+            <geometry>
+                <cylinder length="${shank_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*shank_len}"/>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${shank_len}" radius="${link_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${-0.5*shank_len}"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="shank_joint_rl_to_thigh_rl" type="revolute">
+        <parent link="thigh_link_rl"/>
+        <child link="shank_link_rl"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="${-limit_shank}" upper="${limit_shank}" velocity="0.5"/>
+        <origin xyz="0 0 ${-thigh_len}"/>
+    </joint>
+
+    <!-- Define feet  -->
+    <!-- feet 1 -->
+    <link name="feet_link_fr">
+        <visual>
+            <geometry>
+                <sphere radius="${feet_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="${feet_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="feet_joint_fr_to_shank_fr" type="fixed">
+        <parent link="shank_link_fr"/>
+        <child link="feet_link_fr"/>
+        <origin xyz="0 0 ${-shank_len}"/>
+    </joint>
+
+    <!-- feet 2 -->
+    <link name="feet_link_fl">
+        <visual>
+            <geometry>
+                <sphere radius="${feet_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="${feet_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="feet_joint_fl_to_shank_fl" type="fixed">
+        <parent link="shank_link_fl"/>
+        <child link="feet_link_fl"/>
+        <origin xyz="0 0 ${-shank_len}"/>
+    </joint>
+
+    <!-- feet 3 -->
+    <link name="feet_link_rr">
+        <visual>
+            <geometry>
+                <sphere radius="${feet_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="${feet_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="feet_joint_rr_to_shank_rr" type="fixed">
+        <parent link="shank_link_rr"/>
+        <child link="feet_link_rr"/>
+        <origin xyz="0 0 ${-shank_len}"/>
+    </joint>
+
+    <!-- feet 4 -->
+    <link name="feet_link_rl">
+        <visual>
+            <geometry>
+                <sphere radius="${feet_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="${feet_radius}"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+        </collision>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+    <joint name="feet_joint_rl_to_shank_rl" type="fixed">
+        <parent link="shank_link_rl"/>
+        <child link="feet_link_rl"/>
+        <origin xyz="0 0 ${-shank_len}"/>
+    </joint>
+
+</robot>

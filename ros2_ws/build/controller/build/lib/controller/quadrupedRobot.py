@@ -8,11 +8,12 @@
 
 from controller.kinematicRobot import coordinatePoint, kinematicEachLeg
 from controller.convertGlobal2LocalCoordinate import leg
-from custom_interfaces.srv import GamepadSrv
-from custom_interfaces.srv import IMU
 from math import atan2, cos, sin, pi
 from rclpy.node import Node
 from custom_interfaces.msg import PublishMessage
+from custom_interfaces.srv import GamepadSrv
+# from custom_interfaces.srv import IMU
+from custom_interfaces.srv import CANsrv
 from enum import Enum
 
 import time
@@ -66,21 +67,60 @@ class AdditionClientAsync(Node):
     return response
 #---------------------------------------------------------------------------------------------------------------------#
 # Class IMUClientAsync: the class to initialize the service in ros2 to read the input from IMU
-class IMUClientAsync(Node):
-    def __init__(self):
-        super().__init__("imu_client_async")
-        self.client = self.create_client(IMU, "imu")
-        while not self.client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("service for imu not available, waiting again...")
+# class IMUClientAsync(Node):
+#     def __init__(self):
+#         super().__init__("imu_client_async")
+#         self.client = self.create_client(IMU, "imusrv")
+#         while not self.client.wait_for_service(timeout_sec=1.0):
+#             self.get_logger().info("service for imu not available, waiting again...")
 
-    def send_request(self):
-        request = IMU.Request()
-        # request.a = int(sys.argv[1])
-        # request.b = int(sys.argv[2])
-        self.future = self.client.call_async(request)
+#     def send_request(self):
+#         request = IMU.Request()
+#         # request.a = int(sys.argv[1])
+#         # request.b = int(sys.argv[2])
+#         self.future = self.client.call_async(request)
     
-    def getInformFromIMU(self):
-      self.sendRequest()
+#     def getInFormFromIMU(self):
+#       self.sendRequest()
+#       while rclpy.ok():
+#         rclpy.spin_once(self)
+#         if self.future.done():
+#             try:
+#                 response = self.future.result()
+#             except Exception as e:
+#                 self.get_logger().info(
+#                     f"Service call failed {e}"
+#                 )
+#             else:
+#                 self.get_logger().info(  
+#                     f"Result of IMU is {response}"
+#                 )
+#                 break
+#       return response
+    
+# Class CANClientAsync: the class to initialize the service in ros2 to communication with CAN
+class CANClientAsync(Node):
+    def __init__(self):
+        super().__init__("can_client_async")
+        self.client = self.create_client(CANsrv, "cansrv")
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("service for CAN not available, waiting again...")
+
+    def send_message(self, trajectoryRR, trajectoryRL, trajectoryFR, trajectoryFL):
+        request = CANsrv.Request()
+        request.namerr = "RR"
+        request.positionrr = trajectoryRR
+        request.namerl = "RL"
+        request.positionrl = trajectoryRL
+        request.namefr = "FR"
+        request.positionfr = trajectoryFR
+        request.namefl = "FL"
+        request.positionfl = trajectoryFL
+        self.future = self.client.call_async(request)
+        self.getInformFromCAN()
+    
+    def getInformFromCAN(self):
+      # self.sendRequest()
       while rclpy.ok():
         rclpy.spin_once(self)
         if self.future.done():
@@ -92,31 +132,10 @@ class IMUClientAsync(Node):
                 )
             else:
                 self.get_logger().info(  
-                    f"Result of IMU is {response}"
+                    f"Result of CAN is {response}"
                 )
                 break
       return response
-
-#---------------------------------------------------------------------------------------------------------------------#
-# Class PublishCommunication: the class to initialize the topic in ros2 to send message to CAN_node
-class PublishCommunication(Node):
-  def __init__(self):
-    super().__init__("PublisherNode")
-    self.publisher_ = self.create_publisher(PublishMessage, 'publishTopic', 10)
-
-  def send_message(self, trajectoryRR, trajectoryRL, trajectoryFR, trajectoryFL):
-    msg = PublishMessage()
-    msg.namerr = "RR"
-    msg.positionrr = trajectoryRR
-    msg.namerl = "RL"
-    msg.positionrl = trajectoryRL
-    msg.namefr = "FR"
-    msg.positionfr = trajectoryFR
-    msg.namefl = "FL"
-    msg.positionfl = trajectoryFL
-
-    # send message to the CAN node
-    self.publisher_.publish(msg)
 #---------------------------------------------------------------------------------------------------------------------#
 
 
@@ -135,10 +154,10 @@ class quadrupedRobot:
   
   def __init__(self):
     # may be modified x and z, not y
-    self.globalCoordinateStartingRR = coordinatePoint(-290, -161.12, 187)
-    self.globalCoordinateStartingRL = coordinatePoint(-290, 161.12, 187) 
-    self.globalCoordinateStartingFR = coordinatePoint(-290, -161.12, -187) 
-    self.globalCoordinateStartingFL = coordinatePoint(-290, 161.12, -187)    
+    self.globalCoordinateStartingRR = coordinatePoint(-320, -161.12, 187)
+    self.globalCoordinateStartingRL = coordinatePoint(-320, 161.12, 187) 
+    self.globalCoordinateStartingFR = coordinatePoint(-320, -161.12, -187) 
+    self.globalCoordinateStartingFL = coordinatePoint(-320, 161.12, -187)    
 
     self.legRR = kinematicEachLeg(self.globalCoordinateStartingRR, leg.RR.value)
     self.legRL = kinematicEachLeg(self.globalCoordinateStartingRL, leg.RL.value)
@@ -243,7 +262,7 @@ class quadrupedRobot:
       self.idxFL = 4
     
       if ( self.posCurrentRR) and ( self.posCurrentRL) and ( self.posCurrentFR) and ( self.posCurrentFL):
-        self.topicCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
+        self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
         time.sleep(postpone)
         self.currentMode = modeControl.standNormal.value
       return
@@ -251,24 +270,24 @@ class quadrupedRobot:
     if self.currentMode == modeControl.standUpDown.value:
       if self.heightStandUpDownDeviation < 0:
         while self.heightStandUpDownDeviation < 0:
-          self.heightStandUpDownDeviation += 20
+          self.heightStandUpDownDeviation += 5
           self.posCurrentRR = self.legRR.getPosModeStandUpDown(self.heightStandUpDownDeviation)
           self.posCurrentRL = self.legRL.getPosModeStandUpDown(self.heightStandUpDownDeviation)
           self.posCurrentFR = self.legFR.getPosModeStandUpDown(self.heightStandUpDownDeviation)
           self.posCurrentFL = self.legFL.getPosModeStandUpDown(self.heightStandUpDownDeviation)
           if ( self.posCurrentRR) and ( self.posCurrentRL) and ( self.posCurrentFR) and ( self.posCurrentFL):
-            self.topicCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
+            self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
             time.sleep(postpone)
       
       if self.heightStandUpDownDeviation > 0:
         while self.heightStandUpDownDeviation > 0:
-          self.heightStandUpDownDeviation -= 20
+          self.heightStandUpDownDeviation -= 5
           self.posCurrentRR = self.legRR.getPosModeStandUpDown(self.heightStandUpDownDeviation)
           self.posCurrentRL = self.legRL.getPosModeStandUpDown(self.heightStandUpDownDeviation)
           self.posCurrentFR = self.legFR.getPosModeStandUpDown(self.heightStandUpDownDeviation)
           self.posCurrentFL = self.legFL.getPosModeStandUpDown(self.heightStandUpDownDeviation)
           if ( self.posCurrentRR) and ( self.posCurrentRL) and ( self.posCurrentFR) and ( self.posCurrentFL):
-            self.topicCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
+            self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
             time.sleep(postpone)
       self.currentMode = modeControl.standNormal.value
       return
@@ -280,24 +299,24 @@ class quadrupedRobot:
       
     if self.currentMode == modeControl.standUpDown.value or self.currentMode == modeControl.standNormal.value:
       if Up == 1:
-        self.heightStandUpDownDeviation -= 20
+        self.heightStandUpDownDeviation -= 5
       if Down== 1:
-        self.heightStandUpDownDeviation += 20
+        self.heightStandUpDownDeviation += 5
         
       self.posCurrentRR = self.legRR.getPosModeStandUpDown(self.heightStandUpDownDeviation)
       self.posCurrentRL = self.legRL.getPosModeStandUpDown(self.heightStandUpDownDeviation)
       self.posCurrentFR = self.legFR.getPosModeStandUpDown(self.heightStandUpDownDeviation)
       self.posCurrentFL = self.legFL.getPosModeStandUpDown(self.heightStandUpDownDeviation)
-      
+      # print("height: ", self.heightStandUpDownDeviation)
       if ( self.posCurrentRR) and ( self.posCurrentRL) and ( self.posCurrentFR) and ( self.posCurrentFL):
-        self.topicCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
+        self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
         time.sleep(postpone)
         self.currentMode = modeControl.standUpDown.value
       else:
         if Up == 1:
-          self.heightStandUpDownDeviation += 20
+          self.heightStandUpDownDeviation += 5
         if Down == 1:
-          self.heightStandUpDownDeviation -= 20
+          self.heightStandUpDownDeviation -= 5
         
       return
   
@@ -312,14 +331,14 @@ class quadrupedRobot:
         self.idxRL =  8 if (self.idxRL -1) < 1 else self.idxRL -1
         self.idxFR =  8 if (self.idxFR -1) < 1 else self.idxFR -1
         self.idxFL =  8 if (self.idxFL -1) < 1 else self.idxFL -1
-        self.topicCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
+        self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
         time.sleep(postpone)
         
         self.idxRR =  8 if (self.idxRR -1) < 1 else self.idxRR -1
         self.idxRL =  8 if (self.idxRL -1) < 1 else self.idxRL -1
         self.idxFR =  8 if (self.idxFR -1) < 1 else self.idxFR -1
         self.idxFL =  8 if (self.idxFL -1) < 1 else self.idxFL -1
-        self.topicCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
+        self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
         time.sleep(postpone)
     
     if self.currentMode == modeControl.standNormal.value:
@@ -331,7 +350,7 @@ class quadrupedRobot:
       self.idxRL = 1
       self.idxFR = 7
       self.idxFL = 3
-      self.topicCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
+      self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
       time.sleep(postpone)
       self.currentMode = modeControl.move.value
       return
@@ -350,9 +369,9 @@ class quadrupedRobot:
     joyY = 0.4
     
     rclpy.init()
-    self.serviceGamePadRos2= AdditionClientAsync()
+    self.serviceGamePadRos2 = AdditionClientAsync()
     # self.serviceIMURos2 = IMUClientAsync()
-    self.topicCANRos2  = PublishCommunication()
+    self.serviceCANRos2 = CANClientAsync()
 
     # the first mode when turning on the quadruped robot
     self.currentMode = modeControl.standNormal.value
@@ -384,7 +403,7 @@ class quadrupedRobot:
                 pass
       except KeyboardInterrupt:
         self.serviceGamePadRos2.destroy_node()
-        self.topicCANRos2.destroy_node()
+        self.serviceCANRos2.destroy_node()
         rclpy.shutdown()
 
 #---------------------------------------------------------------------------------------------------------------------#

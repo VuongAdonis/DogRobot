@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "custom_interfaces/srv/CANsrv_Response",
+      "fields": [
+        {
+          "name": "can_done",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "custom_interfaces/srv/CANsrv_Response",
+      "hash_string": "RIHS01_682902da9c7f391f7960c9a4aeab382f5779df86f6567f16943ef3ba6d0df87f"
+    }
+  ]
+}

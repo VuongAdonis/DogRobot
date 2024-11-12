@@ -28,23 +28,23 @@ class stepPerDegree(Enum):
 # declare the enum for each leg of quadruped robotz
 class originalPosRR(Enum):
   joint0Middle          =           0.4
-  joint1Middle          =           0.6
-  joint2Middle         =           -0.25
+  joint1Middle          =           0.52
+  joint2Middle         =            -0.04
   
 class originalPosRL(Enum):
-  joint0Middle          =           0
-  joint1Middle          =           -0.46
+  joint0Middle          =           -0.08
+  joint1Middle          =           -0.55
   joint2Middle          =           0
   
 class originalPosFR(Enum):
-  joint0Middle          =            0.45
-  joint1Middle          =           -1
-  joint2Middle          =            0.25
+  joint0Middle          =            0.43
+  joint1Middle          =           -0.95
+  joint2Middle          =            -0.05
 
 class originalPosFL(Enum):
   joint0Middle          =           -0.55
-  joint1Middle          =           0
-  joint2Middle          =           0
+  joint1Middle          =           0.08
+  joint2Middle          =           -0.09
 
 #---------------------------------------------------------------------------------------------------------------------#
 # Class's name:

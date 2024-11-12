@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from custom_interfaces/srv/CANsrv.srv
+// generated code does not contain a copyright notice
+
+
+module custom_interfaces {
+  module srv {
+    struct CANsrv_Request {
+      string namerr;
+
+      sequence<double> positionrr;
+
+      string namerl;
+
+      sequence<double> positionrl;
+
+      string namefr;
+
+      sequence<double> positionfr;
+
+      string namefl;
+
+      sequence<double> positionfl;
+    };
+    struct CANsrv_Response {
+      int8 can_done;
+    };
+  };
+};

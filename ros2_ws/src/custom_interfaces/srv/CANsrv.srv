@@ -1,0 +1,10 @@
+string namerr
+float64[] positionrr
+string namerl
+float64[] positionrl
+string namefr
+float64[] positionfr
+string namefl
+float64[] positionfl
+---
+int8        can_done

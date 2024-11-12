@@ -240,4 +240,7 @@ CMakeFiles/custom_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/cus
  /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/gamepad_srv__functions.h \
  /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/imu__type_support.h \
  /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/imu__struct.h \
- /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/imu__functions.h
+ /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/imu__functions.h \
+ /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/ca_nsrv__type_support.h \
+ /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/ca_nsrv__struct.h \
+ /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/ca_nsrv__functions.h

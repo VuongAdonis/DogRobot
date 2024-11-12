@@ -4,6 +4,7 @@ import struct
 import rclpy
 from rclpy.node import Node
 from custom_interfaces.msg import PublishMessage
+from custom_interfaces.srv import CANsrv
 from enum import Enum
 
 class legRR(Enum):
@@ -29,28 +30,28 @@ class legFL(Enum):
 
 class CanNode(Node):
     def __init__(self):
-        self.bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
-        self.timeDelayPos = 0.005
-        self.sendClosedLoop(legRR.shoulder.value)
-        time.sleep(0.1)
-        self.sendClosedLoop(legRR.thigh.value)
-        time.sleep(0.1)
-        self.sendClosedLoop(legRR.shank.value)
-        time.sleep(0.1)
+        # self.bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
+        # self.timeDelayPos = 0.005
+        # self.sendClosedLoop(legRR.shoulder.value)
+        # time.sleep(0.1)
+        # self.sendClosedLoop(legRR.thigh.value)
+        # time.sleep(0.1)
+        # self.sendClosedLoop(legRR.shank.value)
+        # time.sleep(0.1)
         
-        self.sendClosedLoop(legFR.shoulder.value)
-        time.sleep(0.1)
-        self.sendClosedLoop(legFR.thigh.value)
-        time.sleep(0.1)
-        self.sendClosedLoop(legFR.shank.value)
-        time.sleep(0.1)
+        # self.sendClosedLoop(legFR.shoulder.value)
+        # time.sleep(0.1)
+        # self.sendClosedLoop(legFR.thigh.value)
+        # time.sleep(0.1)
+        # self.sendClosedLoop(legFR.shank.value)
+        # time.sleep(0.1)
 
-        self.sendClosedLoop(legRL.shoulder.value)
-        time.sleep(0.1)
-        self.sendClosedLoop(legRL.thigh.value)
-        time.sleep(0.1)
-        self.sendClosedLoop(legRL.shank.value)
-        time.sleep(0.1)
+        # self.sendClosedLoop(legRL.shoulder.value)
+        # time.sleep(0.1)
+        # self.sendClosedLoop(legRL.thigh.value)
+        # time.sleep(0.1)
+        # self.sendClosedLoop(legRL.shank.value)
+        # time.sleep(0.1)
 
         # self.sendClosedLoop(legFL.shoulder.value)
         # time.sleep(0.1)
@@ -62,14 +63,16 @@ class CanNode(Node):
 
         print("All ODrives have been set to ClosedLoop")
 
-        super().__init__("SubscriberNode")
-        self.subscription = self.create_subscription(
-            PublishMessage,
-            'publishTopic',
-            self.CAN_listen_callback,
-            10
+        super().__init__("serviceCANNode")
+        self.service = self.create_service(
+            CANsrv,
+            "cansrv",
+            self.CAN_listen_callback
         )
         self.count = 0
+        self.CheckCANDone = [0] * 12
+        self.ODrivePos = [0] * 12
+        self.CANDone = False
 
     def StopSend(self):
         self.sendIdle(legRR.shoulder.value)
@@ -93,22 +96,24 @@ class CanNode(Node):
         self.sendIdle(legRL.shank.value)
         time.sleep(0.1)
 
-        # self.sendIdle(legFL.shoulder.value)
-        # time.sleep(0.1)
-        # self.sendIdle(legFL.thigh.value)
-        # time.sleep(0.1)
-        # self.sendIdle(legFL.shank.value)
-        # time.sleep(0.1)
+        self.sendIdle(legFL.shoulder.value)
+        time.sleep(0.1)
+        self.sendIdle(legFL.thigh.value)
+        time.sleep(0.1)
+        self.sendIdle(legFL.shank.value)
+        time.sleep(0.1)
         print("All ODrives have been set to Idle")
         
     # This function is used to process the position after get from the main control
-    def CAN_listen_callback(self, msg):
-        posRR = msg.positionrr
-        posRL = msg.positionrl
-        posFR = msg.positionfr
-        posFL = msg.positionfl
+    def CAN_listen_callback(self, request, response):
+        self.get_logger().info(f"Incoming request\n")
+        posRR = request.positionrr
+        posRL = request.positionrl
+        posFR = request.positionfr
+        posFL = request.positionfl
         
         self.count += 1
+        self.ODrivePos = posRR + posFR + posRL + posFL
 
         print("Message come: ", self.count)
         print("posRR = ", posRR)
@@ -118,26 +123,26 @@ class CanNode(Node):
 
 
         # send message
-        self.sendPos(legRR.shoulder.value, posRR[0])
-        time.sleep(self.timeDelayPos)
-        self.sendPos(legRR.thigh.value, posRR[1])
-        time.sleep(self.timeDelayPos)
-        self.sendPos(legRR.shank.value, posRR[2])
-        time.sleep(self.timeDelayPos)
+        # self.sendPos(legRR.shoulder.value, posRR[0])
+        # time.sleep(self.timeDelayPos)
+        # self.sendPos(legRR.thigh.value, posRR[1])
+        # time.sleep(self.timeDelayPos)
+        # self.sendPos(legRR.shank.value, posRR[2])
+        # time.sleep(self.timeDelayPos)
 
-        self.sendPos(legFR.shoulder.value, posFR[0])
-        time.sleep(self.timeDelayPos)
-        self.sendPos(legFR.thigh.value, posFR[1])
-        time.sleep(self.timeDelayPos)
-        self.sendPos(legFR.shank.value, posFR[2])
-        time.sleep(self.timeDelayPos)
+        # self.sendPos(legFR.shoulder.value, posFR[0])
+        # time.sleep(self.timeDelayPos)
+        # self.sendPos(legFR.thigh.value, posFR[1])
+        # time.sleep(self.timeDelayPos)
+        # self.sendPos(legFR.shank.value, posFR[2])
+        # time.sleep(self.timeDelayPos)
 
-        self.sendPos(legRL.shoulder.value, posRL[0])
-        time.sleep(self.timeDelayPos)
-        self.sendPos(legRL.thigh.value, posRL[1])
-        time.sleep(self.timeDelayPos)
-        self.sendPos(legRL.shank.value, posRL[2])
-        time.sleep(self.timeDelayPos)
+        # self.sendPos(legRL.shoulder.value, posRL[0])
+        # time.sleep(self.timeDelayPos)
+        # self.sendPos(legRL.thigh.value, posRL[1])
+        # time.sleep(self.timeDelayPos)
+        # self.sendPos(legRL.shank.value, posRL[2])
+        # time.sleep(self.timeDelayPos)
 
         # self.sendPos(legFL.shoulder.value, posFL[0])
         # time.sleep(self.timeDelayPos)
@@ -146,6 +151,20 @@ class CanNode(Node):
         # self.sendPos(legFL.shank.value, posFL[2])
         # time.sleep(self.timeDelayPos)
 
+        # # Check encoder of ODrive
+        # self.CANDone = False
+        # while not self.CANDone:
+        #      for index in range(0,12):
+        #         if self.sendGetEncoderEstimate(index) == self.ODrivePos[index]:
+        #             self.CheckCANDone[index] = 1
+
+        #      if all(x == 1 for x in self.CheckCANDone):
+        #         self.CheckCANDone = [0] * 12 
+        #         self.CANDone = True
+
+        # Send the reponse to the Quadruped to notice that motor done.
+        response.can_done = True
+        return response
 
 
     def sendClosedLoop(self, id):
@@ -240,10 +259,10 @@ class CanNode(Node):
                     print(f"Respond from  - ID: {response.arbitration_id}, data: {response.data.hex()}")
                     pos = self.getValuePos(response.data)
                     return pos
-                else:
-                    # value out of test from 0 - 2
-                    return 100
-                #     print(f"ID CAN wrong: ID: {response.arbitration_id}, Data: {response.data.hex()}")
+                # else:
+                #     # value out of test from 0 - 2
+                #     return 100
+                # #     print(f"ID CAN wrong: ID: {response.arbitration_id}, Data: {response.data.hex()}")
             else:
                 print("No respond from ODrive.")
     

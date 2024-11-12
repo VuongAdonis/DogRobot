@@ -1,6 +1,0 @@
-[ 50%] [32mBuilding C object CMakeFiles/serial.dir/src/serial.c.o[0m
-[100%] [32m[1mLinking C static library libserial.a[0m
-[100%] Built target serial
--- Install configuration: ""
--- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/library_path.sh
--- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/environment/library_path.dsv

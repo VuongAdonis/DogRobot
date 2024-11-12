@@ -55,7 +55,7 @@ int main(int argc,char* argv[]){
 	rclcpp::init(argc, argv);
 	std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("imu_server");
 	rclcpp::Service<custom_interfaces::srv::IMU>::SharedPtr service =
-	node->create_service<custom_interfaces::srv::IMU>("imu", &responseFunction);
+	node->create_service<custom_interfaces::srv::IMU>("imusrv", &responseFunction);
 	// Khởi động spin trong một thread riêng
     std::thread spin_thread(spin_node, node);
 

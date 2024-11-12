@@ -51,13 +51,16 @@ class GamepadRecorder(Node):
         self.current_time = time.time()
         self.x = msg.axes[0]
         self.y = msg.axes[1]
-        self.buttonStandUp = msg.buttons[3]
-        self.buttonStandDown = msg.buttons[0]
-        self.buttonStandNormal = msg.buttons[7]
+        self.buttonStandUp = msg.buttons[0]
+        self.buttonStandDown = msg.buttons[2]
+        self.buttonStandNormal = msg.buttons[9]
 
         # print("UP: ", self.buttonStandUp)
         # print("DOWN: ", self.buttonStandDown)
         # print("NORMAL: ", self.buttonStandNormal)
+        print("joy: ", self.x, " ", self.y)
+        # print("Message: ", msg)
+        # print("###############")
         # time.sleep(2)
 
 

@@ -1,0 +1,38 @@
+[1.557s] Invoking command in '/home/DATA/DogRobot/ros2_ws/src/simulation_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/control build --build-base /home/DATA/DogRobot/ros2_ws/build/control/build install --record /home/DATA/DogRobot/ros2_ws/build/control/install.log --single-version-externally-managed install_data
+[2.027s] running egg_info
+[2.027s] creating ../../build/control/control.egg-info
+[2.056s] writing ../../build/control/control.egg-info/PKG-INFO
+[2.056s] writing dependency_links to ../../build/control/control.egg-info/dependency_links.txt
+[2.056s] writing entry points to ../../build/control/control.egg-info/entry_points.txt
+[2.056s] writing requirements to ../../build/control/control.egg-info/requires.txt
+[2.057s] writing top-level names to ../../build/control/control.egg-info/top_level.txt
+[2.057s] writing manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[2.125s] reading manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[2.126s] adding license file 'LICENSE'
+[2.126s] writing manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[2.126s] running build
+[2.127s] running build_py
+[2.127s] creating /home/DATA/DogRobot/ros2_ws/build/control/build
+[2.127s] creating /home/DATA/DogRobot/ros2_ws/build/control/build/lib
+[2.127s] creating /home/DATA/DogRobot/ros2_ws/build/control/build/lib/control
+[2.127s] copying control/__init__.py -> /home/DATA/DogRobot/ros2_ws/build/control/build/lib/control
+[2.127s] copying control/publish.py -> /home/DATA/DogRobot/ros2_ws/build/control/build/lib/control
+[2.128s] running install
+[2.135s] running install_lib
+[2.165s] creating /home/DATA/DogRobot/ros2_ws/install/control/lib/python3.12/site-packages/control
+[2.165s] copying /home/DATA/DogRobot/ros2_ws/build/control/build/lib/control/__init__.py -> /home/DATA/DogRobot/ros2_ws/install/control/lib/python3.12/site-packages/control
+[2.165s] copying /home/DATA/DogRobot/ros2_ws/build/control/build/lib/control/publish.py -> /home/DATA/DogRobot/ros2_ws/install/control/lib/python3.12/site-packages/control
+[2.166s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/control/lib/python3.12/site-packages/control/__init__.py to __init__.cpython-312.pyc
+[2.166s] byte-compiling /home/DATA/DogRobot/ros2_ws/install/control/lib/python3.12/site-packages/control/publish.py to publish.cpython-312.pyc
+[2.167s] running install_data
+[2.167s] creating /home/DATA/DogRobot/ros2_ws/install/control/share/ament_index
+[2.167s] creating /home/DATA/DogRobot/ros2_ws/install/control/share/ament_index/resource_index
+[2.167s] creating /home/DATA/DogRobot/ros2_ws/install/control/share/ament_index/resource_index/packages
+[2.167s] copying resource/control -> /home/DATA/DogRobot/ros2_ws/install/control/share/ament_index/resource_index/packages
+[2.167s] copying package.xml -> /home/DATA/DogRobot/ros2_ws/install/control/share/control
+[2.168s] running install_egg_info
+[2.198s] Copying ../../build/control/control.egg-info to /home/DATA/DogRobot/ros2_ws/install/control/lib/python3.12/site-packages/control-0.0.0-py3.12.egg-info
+[2.199s] running install_scripts
+[2.402s] Installing control script to /home/DATA/DogRobot/ros2_ws/install/control/lib/control
+[2.403s] writing list of installed files to '/home/DATA/DogRobot/ros2_ws/build/control/install.log'
+[2.471s] Invoked command in '/home/DATA/DogRobot/ros2_ws/src/simulation_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/DATA/DogRobot/ros2_ws/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/DATA/DogRobot/ros2_ws/install/control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/control build --build-base /home/DATA/DogRobot/ros2_ws/build/control/build install --record /home/DATA/DogRobot/ros2_ws/build/control/install.log --single-version-externally-managed install_data

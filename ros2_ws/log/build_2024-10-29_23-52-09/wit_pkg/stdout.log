@@ -1,4 +1,0 @@
-[ 66%] Built target wit_c_sdk
-[ 66%] Built target serial
-[ 83%] [32mBuilding CXX object CMakeFiles/readIMU.dir/src/readIMU.cpp.o[0m
-[100%] [32m[1mLinking CXX executable readIMU[0m

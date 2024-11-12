@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "custom_interfaces/srv/detail/imu__type_support.h"
-#include "custom_interfaces/srv/detail/imu__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "custom_interfaces/srv/detail/imu__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "custom_interfaces/srv/detail/imu__functions.h"
+#include "custom_interfaces/srv/detail/imu__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

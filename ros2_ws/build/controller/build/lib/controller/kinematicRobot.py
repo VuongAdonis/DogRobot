@@ -243,12 +243,12 @@ class kinematicEachLeg:
             posJointList   = self.cvt2PosObject.convertAngle2Position(angleJointList, self.legType)
             pairPositionJoint012 = posJointList
     #-----------------------------------------------------------------------------------------
-    print("angle: ", angleJointList)
+    # print("angle: ", angleJointList)
     return pairPositionJoint012
       
   # value of some variables can be modified: angleVector, high, deviation, X coordinate
   def updatePosTrajectoryLeg(self, deviation, angleVector):
-    high = 60
+    high = 150
     sign123Y = 0
     sign123Z = 0
     sign567Y = 0

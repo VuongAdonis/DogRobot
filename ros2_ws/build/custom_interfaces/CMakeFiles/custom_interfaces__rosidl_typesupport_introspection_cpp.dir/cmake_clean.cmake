@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/publish_message__type_support.cpp.o"
   "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/publish_message__type_support.cpp.o.d"
+  "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/ca_nsrv__type_support.cpp.o"
+  "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/ca_nsrv__type_support.cpp.o.d"
   "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/gamepad_srv__type_support.cpp.o"
   "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/gamepad_srv__type_support.cpp.o.d"
   "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/imu__type_support.cpp.o"
@@ -9,6 +11,8 @@ file(REMOVE_RECURSE
   "libcustom_interfaces__rosidl_typesupport_introspection_cpp.so"
   "rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/publish_message__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/publish_message__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/ca_nsrv__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/ca_nsrv__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/gamepad_srv__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/gamepad_srv__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/imu__rosidl_typesupport_introspection_cpp.hpp"

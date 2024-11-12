@@ -463,9 +463,6 @@ wit_c_sdk_LIB_DEPENDS:STATIC=general;rclcpp::rclcpp;
 //Value Computed by CMake
 wit_pkg_BINARY_DIR:STATIC=/home/DATA/DogRobot/ros2_ws/build/wit_pkg
 
-//The directory containing a CMake configuration file for wit_pkg.
-wit_pkg_DIR:PATH=/home/DATA/DogRobot/ros2_ws/install/wit_pkg/share/wit_pkg/cmake
-
 //Value Computed by CMake
 wit_pkg_IS_TOP_LEVEL:STATIC=ON
 

@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/msg/_publish_message.py"
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/msg/_publish_message_s.c"
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/__init__.py"
+  "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_ca_nsrv.py"
+  "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_ca_nsrv_s.c"
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_gamepad_srv.py"
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_gamepad_srv_s.c"
   "/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_py/custom_interfaces/srv/_imu.py"

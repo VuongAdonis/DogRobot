@@ -3,6 +3,7 @@
   "non_idl_tuples": [
     "/home/DATA/DogRobot/ros2_ws/src/custom_interfaces:srv/GamepadSrv.srv",
     "/home/DATA/DogRobot/ros2_ws/src/custom_interfaces:msg/PublishMessage.msg",
-    "/home/DATA/DogRobot/ros2_ws/src/custom_interfaces:srv/IMU.srv"
+    "/home/DATA/DogRobot/ros2_ws/src/custom_interfaces:srv/IMU.srv",
+    "/home/DATA/DogRobot/ros2_ws/src/custom_interfaces:srv/CANsrv.srv"
   ]
 }

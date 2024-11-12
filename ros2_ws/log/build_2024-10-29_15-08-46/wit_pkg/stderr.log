@@ -1,6 +1,0 @@
-[31mCMake Error at CMakeLists.txt:23 (install):
-  install DIRECTORY given non-directory "include/wit_pkg/serial.h" to
-  install.
-
-[0m
-gmake: *** [Makefile:267: cmake_check_build_system] Error 1

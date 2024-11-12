@@ -1,4 +1,0 @@
-[ 50%] [32mBuilding C object CMakeFiles/consumer.dir/src/readIMU.c.o[0m
-[ 66%] Built target serial
-[ 83%] Built target wit_c_sdk
-[100%] [32m[1mLinking C executable consumer[0m

@@ -1,5 +1,7 @@
 msg/PublishMessage.idl
 msg/PublishMessage.msg
+srv/CANsrv.idl
+srv/CANsrv.srv
 srv/GamepadSrv.idl
 srv/GamepadSrv.srv
 srv/IMU.idl

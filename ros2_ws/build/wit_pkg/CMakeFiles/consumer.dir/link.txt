@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/consumer.dir/src/readIMU.c.o -o consumer 

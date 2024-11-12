@@ -69,12 +69,14 @@ include CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/prog
 CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/srv/GamepadSrv.json
 CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/msg/PublishMessage.json
 CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/srv/IMU.json
+CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/srv/CANsrv.json
 
 rosidl_generator_type_description/custom_interfaces/srv/GamepadSrv.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
 rosidl_generator_type_description/custom_interfaces/srv/GamepadSrv.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
 rosidl_generator_type_description/custom_interfaces/srv/GamepadSrv.json: rosidl_adapter/custom_interfaces/srv/GamepadSrv.idl
 rosidl_generator_type_description/custom_interfaces/srv/GamepadSrv.json: rosidl_adapter/custom_interfaces/msg/PublishMessage.idl
 rosidl_generator_type_description/custom_interfaces/srv/GamepadSrv.json: rosidl_adapter/custom_interfaces/srv/IMU.idl
+rosidl_generator_type_description/custom_interfaces/srv/GamepadSrv.json: rosidl_adapter/custom_interfaces/srv/CANsrv.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/DATA/DogRobot/ros2_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/DATA/DogRobot/ros2_ws/build/custom_interfaces/rosidl_generator_type_description__arguments.json
 
@@ -84,8 +86,12 @@ rosidl_generator_type_description/custom_interfaces/msg/PublishMessage.json: ros
 rosidl_generator_type_description/custom_interfaces/srv/IMU.json: rosidl_generator_type_description/custom_interfaces/srv/GamepadSrv.json
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/custom_interfaces/srv/IMU.json
 
+rosidl_generator_type_description/custom_interfaces/srv/CANsrv.json: rosidl_generator_type_description/custom_interfaces/srv/GamepadSrv.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/custom_interfaces/srv/CANsrv.json
+
 custom_interfaces__rosidl_generator_type_description: CMakeFiles/custom_interfaces__rosidl_generator_type_description
 custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/msg/PublishMessage.json
+custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/srv/CANsrv.json
 custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/srv/GamepadSrv.json
 custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/srv/IMU.json
 custom_interfaces__rosidl_generator_type_description: CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/build.make
