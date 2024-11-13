@@ -1,0 +1,5 @@
+  File "/home/DATA/DogRobot/ros2_ws/install/control/lib/python3.12/site-packages/control/publish.py", line 40
+    joint_state.position = [posRR[0], posRR[1], posRR[2]
+                                                
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+

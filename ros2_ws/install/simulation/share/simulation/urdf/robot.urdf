@@ -30,8 +30,8 @@
     <xacro:property name="body_height" value="0.5" />
 
     <xacro:property name="limit_shoulder" value="${0.25*pi}"/>
-    <xacro:property name="limit_thigh" value="${0.5*pi}"/>
-    <xacro:property name="limit_shank" value="${0.75*pi}"/>
+    <xacro:property name="limit_thigh" value="${pi}"/>
+    <xacro:property name="limit_shank" value="${pi}"/>
 
     <link name="base_link">
         <visual>
@@ -285,7 +285,7 @@
             <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
         </inertial>
     </link>
-    <joint name="thigh_joint_fl_to_shoulder_rl" type="revolute">
+    <joint name="thigh_joint_rl_to_shoulder_rl" type="revolute">
         <parent link="shoulder_link_rl"/>
         <child link="thigh_link_rl"/>
         <axis xyz="0 1 0"/>

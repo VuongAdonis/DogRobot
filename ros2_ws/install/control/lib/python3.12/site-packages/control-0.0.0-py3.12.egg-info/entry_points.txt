@@ -1,2 +1,2 @@
 [console_scripts]
-control = control.publish:main
+sim = control.publish:main

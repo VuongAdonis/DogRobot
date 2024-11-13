@@ -1,0 +1,46 @@
+[0.011s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/home/DATA/DogRobot/ros2_ws/install/control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/simulation -- -j8 -l8
+[0.049s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/home/DATA/DogRobot/ros2_ws/install/control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/DATA/DogRobot/ros2_ws/build/simulation -- -j8 -l8
+[0.078s] Invoking command in '/home/DATA/DogRobot/ros2_ws/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/home/DATA/DogRobot/ros2_ws/install/control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/simulation
+[0.086s] -- Install configuration: ""
+[0.086s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/images
+[0.086s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/images/multipleshapes.png
+[0.086s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/images/flexible.png
+[0.086s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/images/materials.png
+[0.086s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/images/origins.png
+[0.086s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/images/myfirst.png
+[0.086s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/images/visual.png
+[0.086s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/launch
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/launch/display.launch.py
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/meshes
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/meshes/l_finger_tip_color.png
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/meshes/l_finger_color.png
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/meshes/l_finger_tip.dae
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/meshes/l_finger.dae
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/rviz
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/rviz/urdf.rviz
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/01-myfirst.urdf
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/06-flexible.urdf
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/02-multipleshapes.urdf
+[0.087s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/03-origins.urdf
+[0.088s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/robot.urdf
+[0.088s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/08-macroed.urdf.xacro
+[0.088s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/05-visual.urdf
+[0.088s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/04-materials.urdf
+[0.088s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/07-physics.urdf
+[0.088s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/ament_index/resource_index/package_run_dependencies/simulation
+[0.088s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/ament_index/resource_index/parent_prefix_path/simulation
+[0.088s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/environment/ament_prefix_path.sh
+[0.088s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/environment/ament_prefix_path.dsv
+[0.088s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/environment/path.sh
+[0.089s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/environment/path.dsv
+[0.089s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/local_setup.bash
+[0.089s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/local_setup.sh
+[0.089s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/local_setup.zsh
+[0.089s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/local_setup.dsv
+[0.089s] -- Installing: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/package.dsv
+[0.089s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/ament_index/resource_index/packages/simulation
+[0.089s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/cmake/simulationConfig.cmake
+[0.089s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/cmake/simulationConfig-version.cmake
+[0.090s] -- Up-to-date: /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/package.xml
+[0.090s] Invoked command in '/home/DATA/DogRobot/ros2_ws/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/DATA/DogRobot/ros2_ws/install/my_launch_package:/home/DATA/DogRobot/ros2_ws/install/gamepad_node:/home/DATA/DogRobot/ros2_ws/install/controller:/home/DATA/DogRobot/ros2_ws/install/can_node:/home/DATA/DogRobot/ros2_ws/install/add_integers:/home/DATA/DogRobot/ros2_ws/install/control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/DATA/DogRobot/ros2_ws/build/simulation
