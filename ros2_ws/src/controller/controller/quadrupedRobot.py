@@ -370,7 +370,7 @@ class quadrupedRobot:
     
     rclpy.init()
     self.serviceGamePadRos2 = AdditionClientAsync()
-    # self.serviceIMURos2 = IMUClientAsync()
+    self.serviceIMURos2 = IMUClientAsync()
     self.serviceCANRos2 = CANClientAsync()
 
     # the first mode when turning on the quadruped robot
@@ -403,6 +403,7 @@ class quadrupedRobot:
                 pass
       except KeyboardInterrupt:
         self.serviceGamePadRos2.destroy_node()
+        self.serviceIMURos2.destroy_node()
         self.serviceCANRos2.destroy_node()
         rclpy.shutdown()
 

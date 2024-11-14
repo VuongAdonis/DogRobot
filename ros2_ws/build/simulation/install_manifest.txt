@@ -10,15 +10,7 @@
 /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/meshes/l_finger_tip.dae
 /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/meshes/l_finger.dae
 /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/rviz/urdf.rviz
-/home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/01-myfirst.urdf
-/home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/06-flexible.urdf
-/home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/02-multipleshapes.urdf
-/home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/03-origins.urdf
 /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/robot.urdf
-/home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/08-macroed.urdf.xacro
-/home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/05-visual.urdf
-/home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/04-materials.urdf
-/home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/urdf/07-physics.urdf
 /home/DATA/DogRobot/ros2_ws/install/simulation/share/ament_index/resource_index/package_run_dependencies/simulation
 /home/DATA/DogRobot/ros2_ws/install/simulation/share/ament_index/resource_index/parent_prefix_path/simulation
 /home/DATA/DogRobot/ros2_ws/install/simulation/share/simulation/environment/ament_prefix_path.sh

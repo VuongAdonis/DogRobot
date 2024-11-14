@@ -33,17 +33,22 @@
     <xacro:property name="limit_thigh" value="${pi}"/>
     <xacro:property name="limit_shank" value="${pi}"/>
 
+    <xacro:property name="high_of_Robot" value="${thigh_len + shank_len}"/>
+    <xacro:property name="mass" value="1" /> <!-- arbitrary value for mass -->
+
     <link name="base_link">
         <visual>
             <geometry>
                 <box size="${body_len} ${body_width} ${body_height}"/>
             </geometry>
             <material name="green"/>
+            <origin rpy="0 0 0" xyz="0 0 ${high_of_Robot}"/>
         </visual>
         <collision>
             <geometry>
                 <box size="${body_len} ${body_width} ${body_height}"/>
             </geometry>
+            <origin rpy="0 0 0" xyz="0 0 ${high_of_Robot}"/>
         </collision>
         <inertial>
             <mass value="10"/>
@@ -69,17 +74,20 @@
         </collision>
 
         <inertial>
-            <mass value="1e-5" />
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
-        </inertial>
+            <mass value="${mass}"/>
+            <inertia
+                ixx="${mass / 12.0 * (body_width*body_width + body_height*body_height)}" ixy="0.0" ixz="0.0"
+                iyy="${mass / 12.0 * (body_height*body_height + body_width*body_width)}" iyz="0.0"
+                izz="${mass / 12.0 * (body_width*body_width + body_width*body_width)}"/>
+            </inertial>
     </link>
     <joint name="shoulder_joint_fr_to_base" type="revolute">
         <parent link="base_link"/>
         <child link="shoulder_link_fr"/>
         <axis xyz="1 0 0"/>
         <limit effort="1000.0" lower="${-limit_shoulder}" upper="${limit_shoulder}" velocity="0.5"/>
-        <origin xyz="${0.5*body_len + link_radius} 0.75 0"/>
+        <origin xyz="${0.5*body_len + link_radius} 0.75 ${high_of_Robot}"/>
     </joint>
 
     <!-- shoulder 2 -->
@@ -109,7 +117,7 @@
         <child link="shoulder_link_fl"/>
         <axis xyz="1 0 0"/>
         <limit effort="1000.0" lower="${-limit_shoulder}" upper="${limit_shoulder}" velocity="0.5"/>
-        <origin xyz="${0.5*body_len + link_radius} -0.75 0"/>
+        <origin xyz="${0.5*body_len + link_radius} -0.75 ${high_of_Robot}"/>
     </joint>
 
     <!-- shoulder 3 -->
@@ -139,7 +147,7 @@
         <child link="shoulder_link_rr"/>
         <axis xyz="1 0 0"/>
         <limit effort="1000.0" lower="${-limit_shoulder}" upper="${limit_shoulder}" velocity="0.5"/>
-        <origin xyz="${-0.5*body_len + link_radius} 0.75 0"/>
+        <origin xyz="${-0.5*body_len + link_radius} 0.75 ${high_of_Robot}"/>
     </joint>
 
     <!-- shoulder 4 -->
@@ -169,7 +177,7 @@
         <child link="shoulder_link_rl"/>
         <axis xyz="1 0 0"/>
         <limit effort="1000.0" lower="${-limit_shoulder}" upper="${limit_shoulder}" velocity="0.5"/>
-        <origin xyz="${-0.5*body_len + link_radius} -0.75 0"/>
+        <origin xyz="${-0.5*body_len + link_radius} -0.75 ${high_of_Robot}"/>
     </joint>
 
     <!-- Define for thigh  -->

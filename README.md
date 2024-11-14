@@ -35,6 +35,10 @@ $ ros2 run gamepad_node gamepad
 ## Controller:
 To control moving of the dog's robot
 
+## IMU:
+To read the IMU wit
+$ ros2 run wit_pkg IMU
+
 To run the quadrupedRobot:
 $ ros2 run controller control
 

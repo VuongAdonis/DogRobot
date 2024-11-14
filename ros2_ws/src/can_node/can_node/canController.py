@@ -155,8 +155,9 @@ class CanNode(Node):
         # self.CANDone = False
         # while not self.CANDone:
         #      for index in range(0,12):
-        #         if self.sendGetEncoderEstimate(index) == self.ODrivePos[index]:
-        #             self.CheckCANDone[index] = 1
+                # if(self.CheckCANDone[index] != 1):
+                #     if self.sendGetEncoderEstimate(index) == self.ODrivePos[index]:
+                #         self.CheckCANDone[index] = 1
 
         #      if all(x == 1 for x in self.CheckCANDone):
         #         self.CheckCANDone = [0] * 12 
