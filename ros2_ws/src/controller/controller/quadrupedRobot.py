@@ -34,7 +34,7 @@ class modeControl(Enum):
 #---------------------------------------------------------------------------------------------------------------------#
 
 # define the time sleep for control leg robot
-postpone = 0.25
+postpone = 0
 
 # Class AdditionClientAsync: the class to initialize the service in ros2 to read the input from gamePad_node
 class AdditionClientAsync(Node):
@@ -60,9 +60,9 @@ class AdditionClientAsync(Node):
                   f"Service call failed {e}"
               )
           else:
-              self.get_logger().info(  
-                  f"Result of gamepad is {response.position}"
-              )
+              # self.get_logger().info(  
+              #     f"Result of gamepad is {response.position}"
+              # )
               break
     return response
 #---------------------------------------------------------------------------------------------------------------------#
@@ -216,6 +216,8 @@ class quadrupedRobot:
     #     self.trajectoryFLTemp = posTrajectoryRR
       
   def selfBalancingIMU(self, pitch, yaw):
+    # pitch > 0 -> head up, pitch < 0 -> head down
+    # yaw > 0 -> right down, raw < 0 -> right up
     # check the angle of pitch or yaw is exceed or not (threshold = 5 degrees)
     if (abs(pitch) > pi/36) or (abs(yaw) > pi/36):
       balanceMatrix = self.createHomoMatrixBalance(pitch, yaw)
@@ -263,7 +265,7 @@ class quadrupedRobot:
     
       if ( self.posCurrentRR) and ( self.posCurrentRL) and ( self.posCurrentFR) and ( self.posCurrentFL):
         self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
-        time.sleep(postpone)
+        # time.sleep(postpone)
         self.currentMode = modeControl.standNormal.value
       return
     
@@ -277,7 +279,7 @@ class quadrupedRobot:
           self.posCurrentFL = self.legFL.getPosModeStandUpDown(self.heightStandUpDownDeviation)
           if ( self.posCurrentRR) and ( self.posCurrentRL) and ( self.posCurrentFR) and ( self.posCurrentFL):
             self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
-            time.sleep(postpone)
+            # time.sleep(postpone)
       
       if self.heightStandUpDownDeviation > 0:
         while self.heightStandUpDownDeviation > 0:
@@ -288,7 +290,7 @@ class quadrupedRobot:
           self.posCurrentFL = self.legFL.getPosModeStandUpDown(self.heightStandUpDownDeviation)
           if ( self.posCurrentRR) and ( self.posCurrentRL) and ( self.posCurrentFR) and ( self.posCurrentFL):
             self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
-            time.sleep(postpone)
+            # time.sleep(postpone)
       self.currentMode = modeControl.standNormal.value
       return
 
@@ -310,7 +312,7 @@ class quadrupedRobot:
       # print("height: ", self.heightStandUpDownDeviation)
       if ( self.posCurrentRR) and ( self.posCurrentRL) and ( self.posCurrentFR) and ( self.posCurrentFL):
         self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
-        time.sleep(postpone)
+        # time.sleep(postpone)
         self.currentMode = modeControl.standUpDown.value
       else:
         if Up == 1:
@@ -326,20 +328,33 @@ class quadrupedRobot:
       if abs(self.newAngleGamePad - self.oldAngleGamePad) >= 25/180*pi:
         self.modeControlStandNormalAllLegs()
         self.oldAngleGamePad = self.newAngleGamePad
-      else: 
-        self.idxRR =  8 if (self.idxRR -1) < 1 else self.idxRR -1
-        self.idxRL =  8 if (self.idxRL -1) < 1 else self.idxRL -1
-        self.idxFR =  8 if (self.idxFR -1) < 1 else self.idxFR -1
-        self.idxFL =  8 if (self.idxFL -1) < 1 else self.idxFL -1
-        self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
-        time.sleep(postpone)
-        
-        self.idxRR =  8 if (self.idxRR -1) < 1 else self.idxRR -1
-        self.idxRL =  8 if (self.idxRL -1) < 1 else self.idxRL -1
-        self.idxFR =  8 if (self.idxFR -1) < 1 else self.idxFR -1
-        self.idxFL =  8 if (self.idxFL -1) < 1 else self.idxFL -1
-        self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
-        time.sleep(postpone)
+      else:   # angle  < 25/180*pi
+        print("idxRR: ", self.idxRR)
+        print("idxRL: ", self.idxRL)
+        print("idxFR: ", self.idxFR)
+        print("idxFL: ", self.idxFL)
+
+        if (self.idxRR > 8) or (self.idxRL > 8) or (self.idxFR > 8) or (self.idxFL > 8):
+          self.idxRR =  self.idxRR if (self.idxRR -1) <= 7  else self.idxRR -1
+          self.idxRL =  self.idxRL if (self.idxRL -1) <= 7 else self.idxRL -1
+          self.idxFR =  self.idxFR if (self.idxFR -1) <= 7 else self.idxFR -1
+          self.idxFL =  self.idxFL if (self.idxFL -1) <= 7 else self.idxFL -1
+          self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
+
+        else:
+          self.idxRR =  10 if (self.idxRR -1) < 1 else self.idxRR -1
+          self.idxRL =  10 if (self.idxRL -1) < 1 else self.idxRL -1
+          self.idxFR =  10 if (self.idxFR -1) < 1 else self.idxFR -1
+          self.idxFL =  10 if (self.idxFL -1) < 1 else self.idxFL -1
+          self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
+          # time.sleep(postpone)
+          
+          # self.idxRR =  10 if (self.idxRR -1) < 1 else self.idxRR -1
+          # self.idxRL =  10 if (self.idxRL -1) < 1 else self.idxRL -1
+          # self.idxFR =  10 if (self.idxFR -1) < 1 else self.idxFR -1
+          # self.idxFL =  10 if (self.idxFL -1) < 1 else self.idxFL -1
+          # self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
+          # time.sleep(postpone)
     
     if self.currentMode == modeControl.standNormal.value:
       vectorAngle = atan2(-xGamePad, yGamePad)
@@ -351,7 +366,7 @@ class quadrupedRobot:
       self.idxFR = 7
       self.idxFL = 3
       self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
-      time.sleep(postpone)
+      # time.sleep(postpone)
       self.currentMode = modeControl.move.value
       return
 
@@ -359,8 +374,6 @@ class quadrupedRobot:
       self.modeControlStandNormalAllLegs()
       return
     
-  
-
   def operation(self):
     buttonStandUp = 1     # standUp
     buttonStandDown = 0   # standDown
@@ -370,42 +383,56 @@ class quadrupedRobot:
     
     rclpy.init()
     self.serviceGamePadRos2 = AdditionClientAsync()
-    self.serviceIMURos2 = IMUClientAsync()
+    # self.serviceIMURos2 = IMUClientAsync()
     self.serviceCANRos2 = CANClientAsync()
 
+    anglePitch = 20/180*pi
+    angleYaw = 10/180*pi
+
+    self.selfBalancingIMU(anglePitch, angleYaw)
+
+    self.posCurrentRR = self.legRR.getPosModeStandNormal()
+    self.posCurrentRL = self.legRL.getPosModeStandNormal()
+    self.posCurrentFR = self.legFR.getPosModeStandNormal()
+    self.posCurrentFL = self.legFL.getPosModeStandNormal()
+    print("checkRR: ", self.posCurrentRR)
+    print("checkRL: ", self.posCurrentRL)
+    print("checkFR: ", self.posCurrentFR)
+    print("checkFL: ", self.posCurrentFL)
+    self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
     # the first mode when turning on the quadruped robot
-    self.currentMode = modeControl.standNormal.value
-    self.modeControlStandNormalAllLegs()
-    time.sleep(4)
-    while True:
-      try:
-        responseGamePad = self.serviceGamePadRos2.getInformFromGamePad()
-        # condition to check responseGamePad is button A or B or x or y, which are received from gamePad
-        buttonStandUp = responseGamePad.button_stand_up     # standUp
-        buttonStandDown = responseGamePad.button_stand_down   # standDown
-        buttonStandNormal = responseGamePad.button_stand_normal # standNormal
-        joyX = responseGamePad.position[0]
-        joyY = responseGamePad.position[1]
-        if buttonStandUp == 1:
-          self.modeControlStandUpDownAllLegs(Up = 1, Down = 0)
-        else: # standUp = 0
-          if buttonStandDown == 1:
-            self.modeControlStandUpDownAllLegs(Up = 0, Down = 1)
-          else: # standDown = 0
-            if buttonStandNormal == 1:
-              self.modeControlStandNormalAllLegs()
-            else: # standNormal = 0
-              xGamePad = joyX
-              yGamePad = joyY
-              if (abs(xGamePad) >= 0.2) or (abs(yGamePad) >= 0.2):
-                self.modeControlMove(xGamePad, yGamePad)
-              else: # xGamePad = 0 and yGamePad = 0
-                pass
-      except KeyboardInterrupt:
-        self.serviceGamePadRos2.destroy_node()
-        self.serviceIMURos2.destroy_node()
-        self.serviceCANRos2.destroy_node()
-        rclpy.shutdown()
+    # self.currentMode = modeControl.standNormal.value
+    # self.modeControlStandNormalAllLegs()
+    # # time.sleep(4)
+    # while True:
+    #   try:
+    #     responseGamePad = self.serviceGamePadRos2.getInformFromGamePad()
+    #     # condition to check responseGamePad is button A or B or x or y, which are received from gamePad
+    #     buttonStandUp = responseGamePad.button_stand_up     # standUp
+    #     buttonStandDown = responseGamePad.button_stand_down   # standDown
+    #     buttonStandNormal = responseGamePad.button_stand_normal # standNormal
+    #     joyX = responseGamePad.position[0]
+    #     joyY = responseGamePad.position[1]
+    #     if buttonStandUp == 1:
+    #       self.modeControlStandUpDownAllLegs(Up = 1, Down = 0)
+    #     else: # standUp = 0
+    #       if buttonStandDown == 1:
+    #         self.modeControlStandUpDownAllLegs(Up = 0, Down = 1)
+    #       else: # standDown = 0
+    #         if buttonStandNormal == 1:
+    #           self.modeControlStandNormalAllLegs()
+    #         else: # standNormal = 0
+    #           xGamePad = joyX
+    #           yGamePad = joyY
+    #           if (abs(xGamePad) >= 0.2) or (abs(yGamePad) >= 0.2):
+    #             self.modeControlMove(xGamePad, yGamePad)
+    #           else: # xGamePad = 0 and yGamePad = 0
+    #             pass
+      # except KeyboardInterrupt:
+    self.serviceGamePadRos2.destroy_node()
+    # self.serviceIMURos2.destroy_node()
+    self.serviceCANRos2.destroy_node()
+    rclpy.shutdown()
 
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -414,6 +441,7 @@ class quadrupedRobot:
 def main():
   robotDogTeam = quadrupedRobot()
   robotDogTeam.operation()
+  
 if __name__ == "__main__":
   main()
   

@@ -248,7 +248,7 @@ class kinematicEachLeg:
       
   # value of some variables can be modified: angleVector, high, deviation, X coordinate
   def updatePosTrajectoryLeg(self, deviation, angleVector):
-    high = 150
+    high = 80
     sign123Y = 0
     sign123Z = 0
     sign567Y = 0
@@ -298,7 +298,9 @@ class kinematicEachLeg:
     corPnt5 = coordinatePoint(self.endEffector.X      , self.endEffector.Y +  stepY*sign567Y , self.endEffector.Z +   stepZ*sign567Z)
     corPnt6 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign567Y, self.endEffector.Z + 2*stepZ*sign567Z)
     corPnt7 = coordinatePoint(self.endEffector.X       , self.endEffector.Y + 3*stepY*sign567Y, self.endEffector.Z + 3*stepZ*sign567Z)
-    corPnt8 = coordinatePoint(self.endEffector.X+ high, self.endEffector.Y                   , self.endEffector.Z                   )
+    corPnt8 = coordinatePoint(self.endEffector.X + high, self.endEffector.Y + 3*stepY*sign567Y, self.endEffector.Z + 3*stepZ*sign567Z)
+    corPnt9 = coordinatePoint(self.endEffector.X + high, self.endEffector.Y                   , self.endEffector.Z                   )
+    corPnt10 = coordinatePoint(self.endEffector.X+ high, self.endEffector.Y + 3*stepY*sign123Y, self.endEffector.Z + 3*stepZ*sign123Z)
     
 
     posPnt1 = self.backwardKinematic(corPnt1.getCoordinate())
@@ -309,9 +311,12 @@ class kinematicEachLeg:
     posPnt6 = self.backwardKinematic(corPnt6.getCoordinate())
     posPnt7 = self.backwardKinematic(corPnt7.getCoordinate())
     posPnt8 = self.backwardKinematic(corPnt8.getCoordinate())
+    posPnt9 = self.backwardKinematic(corPnt9.getCoordinate())
+    posPnt10 = self.backwardKinematic(corPnt10.getCoordinate())
+
     
     # return [corPnt1, corPnt2, corPnt3, corPnt4, corPnt5, corPnt6, corPnt7, corPnt8]
-    return [posPnt1, posPnt2, posPnt3, posPnt4, posPnt5, posPnt6, posPnt7, posPnt8]
+    return [posPnt1, posPnt2, posPnt3, posPnt4, posPnt5, posPnt6, posPnt7, posPnt8, posPnt9, posPnt10]
   
   def getPosModeStandNormal(self):
     posPnt = self.backwardKinematic(self.endEffector.getCoordinate())
