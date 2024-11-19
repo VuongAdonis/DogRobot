@@ -21,7 +21,7 @@ from controller.convertGlobal2LocalCoordinate import leg
 class stepPerDegree(Enum):
   joint0     =          9/(2*pi)
   joint1     =          9/(2*pi)
-  joint2     =          2.5/(2*pi)
+  joint2     =          5/(2*pi)
 #---------------------------------------------------------------------------------------------------------------------#
   
 
@@ -29,22 +29,22 @@ class stepPerDegree(Enum):
 class originalPosRR(Enum):
   joint0Middle          =           0.4
   joint1Middle          =           0.52
-  joint2Middle         =            -0.04
+  joint2Middle         =            -0.23
   
 class originalPosRL(Enum):
   joint0Middle          =           -0.08
-  joint1Middle          =           -0.55
-  joint2Middle          =           0
+  joint1Middle          =           -0.45
+  joint2Middle          =           -0.2
   
 class originalPosFR(Enum):
   joint0Middle          =            0.43
   joint1Middle          =           -0.95
-  joint2Middle          =            -0.05
+  joint2Middle          =            -0.28
 
 class originalPosFL(Enum):
   joint0Middle          =           -0.55
   joint1Middle          =           0.08
-  joint2Middle          =           -0.09
+  joint2Middle          =           0.5
 
 #---------------------------------------------------------------------------------------------------------------------#
 # Class's name:

@@ -386,53 +386,53 @@ class quadrupedRobot:
     # self.serviceIMURos2 = IMUClientAsync()
     self.serviceCANRos2 = CANClientAsync()
 
-    anglePitch = 20/180*pi
-    angleYaw = 10/180*pi
+    # anglePitch = 20/180*pi
+    # angleYaw = 10/180*pi
 
-    self.selfBalancingIMU(anglePitch, angleYaw)
+    # self.selfBalancingIMU(anglePitch, angleYaw)
 
-    self.posCurrentRR = self.legRR.getPosModeStandNormal()
-    self.posCurrentRL = self.legRL.getPosModeStandNormal()
-    self.posCurrentFR = self.legFR.getPosModeStandNormal()
-    self.posCurrentFL = self.legFL.getPosModeStandNormal()
-    print("checkRR: ", self.posCurrentRR)
-    print("checkRL: ", self.posCurrentRL)
-    print("checkFR: ", self.posCurrentFR)
-    print("checkFL: ", self.posCurrentFL)
-    self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
+    # self.posCurrentRR = self.legRR.getPosModeStandNormal()
+    # self.posCurrentRL = self.legRL.getPosModeStandNormal()
+    # self.posCurrentFR = self.legFR.getPosModeStandNormal()
+    # self.posCurrentFL = self.legFL.getPosModeStandNormal()
+    # print("checkRR: ", self.posCurrentRR)
+    # print("checkRL: ", self.posCurrentRL)
+    # print("checkFR: ", self.posCurrentFR)
+    # print("checkFL: ", self.posCurrentFL)
+    # self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
     # the first mode when turning on the quadruped robot
-    # self.currentMode = modeControl.standNormal.value
-    # self.modeControlStandNormalAllLegs()
+    self.currentMode = modeControl.standNormal.value
+    self.modeControlStandNormalAllLegs()
     # # time.sleep(4)
-    # while True:
-    #   try:
-    #     responseGamePad = self.serviceGamePadRos2.getInformFromGamePad()
-    #     # condition to check responseGamePad is button A or B or x or y, which are received from gamePad
-    #     buttonStandUp = responseGamePad.button_stand_up     # standUp
-    #     buttonStandDown = responseGamePad.button_stand_down   # standDown
-    #     buttonStandNormal = responseGamePad.button_stand_normal # standNormal
-    #     joyX = responseGamePad.position[0]
-    #     joyY = responseGamePad.position[1]
-    #     if buttonStandUp == 1:
-    #       self.modeControlStandUpDownAllLegs(Up = 1, Down = 0)
-    #     else: # standUp = 0
-    #       if buttonStandDown == 1:
-    #         self.modeControlStandUpDownAllLegs(Up = 0, Down = 1)
-    #       else: # standDown = 0
-    #         if buttonStandNormal == 1:
-    #           self.modeControlStandNormalAllLegs()
-    #         else: # standNormal = 0
-    #           xGamePad = joyX
-    #           yGamePad = joyY
-    #           if (abs(xGamePad) >= 0.2) or (abs(yGamePad) >= 0.2):
-    #             self.modeControlMove(xGamePad, yGamePad)
-    #           else: # xGamePad = 0 and yGamePad = 0
-    #             pass
-      # except KeyboardInterrupt:
-    self.serviceGamePadRos2.destroy_node()
-    # self.serviceIMURos2.destroy_node()
-    self.serviceCANRos2.destroy_node()
-    rclpy.shutdown()
+    while True:
+      try:
+        responseGamePad = self.serviceGamePadRos2.getInformFromGamePad()
+        # condition to check responseGamePad is button A or B or x or y, which are received from gamePad
+        buttonStandUp = responseGamePad.button_stand_up     # standUp
+        buttonStandDown = responseGamePad.button_stand_down   # standDown
+        buttonStandNormal = responseGamePad.button_stand_normal # standNormal
+        joyX = responseGamePad.position[0]
+        joyY = responseGamePad.position[1]
+        if buttonStandUp == 1:
+          self.modeControlStandUpDownAllLegs(Up = 1, Down = 0)
+        else: # standUp = 0
+          if buttonStandDown == 1:
+            self.modeControlStandUpDownAllLegs(Up = 0, Down = 1)
+          else: # standDown = 0
+            if buttonStandNormal == 1:
+              self.modeControlStandNormalAllLegs()
+            else: # standNormal = 0
+              xGamePad = joyX
+              yGamePad = joyY
+              if (abs(xGamePad) >= 0.2) or (abs(yGamePad) >= 0.2):
+                self.modeControlMove(xGamePad, yGamePad)
+              else: # xGamePad = 0 and yGamePad = 0
+                pass
+      except KeyboardInterrupt:
+        self.serviceGamePadRos2.destroy_node()
+        # self.serviceIMURos2.destroy_node()
+        self.serviceCANRos2.destroy_node()
+        rclpy.shutdown()
 
 #---------------------------------------------------------------------------------------------------------------------#
 

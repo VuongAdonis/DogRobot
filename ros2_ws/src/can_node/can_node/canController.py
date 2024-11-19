@@ -31,7 +31,7 @@ class legFL(Enum):
 class CanNode(Node):
     def __init__(self):
         self.bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
-        self.timeDelayPos = 0.005
+        self.timeDelayPos = 0.1
         self.sendClosedLoop(legRR.shoulder.value)
         time.sleep(0.1)
         self.sendClosedLoop(legRR.thigh.value)
@@ -153,9 +153,13 @@ class CanNode(Node):
         # time.sleep(self.timeDelayPos)
 
         # # Check encoder of ODrive
-        # self.CheckCANDone = [0] * 3
         self.CANDone = False
+        timeStart = time.time()
         while not self.CANDone:
+             timeLimit = time.time()
+             if timeLimit - timeStart >= 0.2:
+                 self.CheckCANDone = [0] * 12
+                 break
              for index in range(0,12):
                 if(self.CheckCANDone[index] != 1):
                     if index in self.shankID:
@@ -304,6 +308,7 @@ def main(args=None):
     try:
         # run rclpy.spin to process the event
         rclpy.spin(robotDogHk241)
+
     except KeyboardInterrupt:
         robotDogHk241.StopSend()
         robotDogHk241.bus.shutdown() 
@@ -311,7 +316,6 @@ def main(args=None):
         robotDogHk241.destroy_node()
         rclpy.shutdown()
         print("Stop completed")
-
-
+    
 if __name__ == '__main__':
     main()
