@@ -247,8 +247,8 @@ class kinematicEachLeg:
     return pairPositionJoint012
       
   # value of some variables can be modified: angleVector, high, deviation, X coordinate
-  def updatePosTrajectoryLeg(self, deviation, angleVector):
-    high = 80
+  def updatePosCurrentPointLeg(self, deviation, angleVector, index):
+    high = 50
     sign123Y = 0
     sign123Z = 0
     sign567Y = 0
@@ -290,33 +290,26 @@ class kinematicEachLeg:
         sign567Z = 1
       stepY = deviation*cos(abs(angleVector)- pi/2)
       stepZ = deviation*sin(abs(angleVector) -pi/2)   
-      
-    corPnt1 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign123Y, self.endEffector.Z + 3*stepZ*sign123Z)
-    corPnt2 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign123Y, self.endEffector.Z + 2*stepZ*sign123Z)
-    corPnt3 = coordinatePoint(self.endEffector.X      , self.endEffector.Y +  stepY*sign123Y , self.endEffector.Z +   stepZ*sign123Z)
-    corPnt4 = coordinatePoint(self.endEffector.X      , self.endEffector.Y                   , self.endEffector.Z                   )
-    corPnt5 = coordinatePoint(self.endEffector.X      , self.endEffector.Y +  stepY*sign567Y , self.endEffector.Z +   stepZ*sign567Z)
-    corPnt6 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign567Y, self.endEffector.Z + 2*stepZ*sign567Z)
-    corPnt7 = coordinatePoint(self.endEffector.X       , self.endEffector.Y + 3*stepY*sign567Y, self.endEffector.Z + 3*stepZ*sign567Z)
-    corPnt8 = coordinatePoint(self.endEffector.X + high, self.endEffector.Y + 3*stepY*sign567Y, self.endEffector.Z + 3*stepZ*sign567Z)
-    corPnt9 = coordinatePoint(self.endEffector.X + high, self.endEffector.Y                   , self.endEffector.Z                   )
-    corPnt10 = coordinatePoint(self.endEffector.X+ high, self.endEffector.Y + 3*stepY*sign123Y, self.endEffector.Z + 3*stepZ*sign123Z)
     
-
-    posPnt1 = self.backwardKinematic(corPnt1.getCoordinate())
-    posPnt2 = self.backwardKinematic(corPnt2.getCoordinate())
-    posPnt3 = self.backwardKinematic(corPnt3.getCoordinate())
-    posPnt4 = self.backwardKinematic(corPnt4.getCoordinate())
-    posPnt5 = self.backwardKinematic(corPnt5.getCoordinate())
-    posPnt6 = self.backwardKinematic(corPnt6.getCoordinate())
-    posPnt7 = self.backwardKinematic(corPnt7.getCoordinate())
-    posPnt8 = self.backwardKinematic(corPnt8.getCoordinate())
-    posPnt9 = self.backwardKinematic(corPnt9.getCoordinate())
-    posPnt10 = self.backwardKinematic(corPnt10.getCoordinate())
-
+    if index == 1:
+      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign123Y, self.endEffector.Z + 3*stepZ*sign123Z)
+    if index == 2:
+      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign123Y, self.endEffector.Z + 2*stepZ*sign123Z)
+    if index == 3:
+      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y +  stepY*sign123Y , self.endEffector.Z +   stepZ*sign123Z)
+    if index == 4:
+      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y                   , self.endEffector.Z                   )
+    if index == 5:
+      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y +  stepY*sign567Y , self.endEffector.Z +   stepZ*sign567Z)
+    if index == 6:
+      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign567Y, self.endEffector.Z + 2*stepZ*sign567Z)
+    if index == 7:
+      corPnt = coordinatePoint(self.endEffector.X       , self.endEffector.Y + 3*stepY*sign567Y, self.endEffector.Z + 3*stepZ*sign567Z)
+    if index == 8:
+      corPnt = coordinatePoint(self.endEffector.X + high, self.endEffector.Y                   , self.endEffector.Z                   )
     
-    # return [corPnt1, corPnt2, corPnt3, corPnt4, corPnt5, corPnt6, corPnt7, corPnt8]
-    return [posPnt1, posPnt2, posPnt3, posPnt4, posPnt5, posPnt6, posPnt7, posPnt8, posPnt9, posPnt10]
+    posPnt = self.backwardKinematic(corPnt.getCoordinate())
+    return posPnt
   
   def getPosModeStandNormal(self):
     posPnt = self.backwardKinematic(self.endEffector.getCoordinate())
