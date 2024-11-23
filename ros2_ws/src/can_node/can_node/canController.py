@@ -31,7 +31,7 @@ class legFL(Enum):
 class CanNode(Node):
     def __init__(self):
         self.bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
-        self.timeDelayPos = 0.1
+        self.timeDelayPos = 0.5
         self.sendClosedLoop(legRR.shoulder.value)
         time.sleep(0.1)
         self.sendClosedLoop(legRR.thigh.value)
@@ -166,17 +166,21 @@ class CanNode(Node):
                         thresh_hold = 0.01
                     else:
                         thresh_hold = 0.1
-                    if self.sendGetEncoderEstimate(index) > self.ODrivePos[index] - thresh_hold and self.sendGetEncoderEstimate(index) < self.ODrivePos[index] + thresh_hold:
+                    encoder_pos = self.sendGetEncoderEstimate(index)
+                    if  encoder_pos > self.ODrivePos[index] - thresh_hold and encoder_pos < self.ODrivePos[index] + thresh_hold:
                         self.CheckCANDone[index] = 1
 
              if all(x == 1 for x in self.CheckCANDone):
                 self.CheckCANDone = [0] * 12
                 self.CANDone = True
+                print("pos: ", self.ODrivePos[2])
+                self.ODrivePos = [0] * 12
                 print("pos done")
 
         
 
         # Send the reponse to the Quadruped to notice that motor done.
+        # time.sleep(0)
         response.can_done = True
         # time.sleep(1)
         return response
@@ -308,8 +312,14 @@ def main(args=None):
     try:
         # run rclpy.spin to process the event
         rclpy.spin(robotDogHk241)
-
-    except KeyboardInterrupt:
+    except Exception as e:
+        print(f"Có lỗi xảy ra: {e}")
+        print("Reconect...")
+        # robotDogHk241.bus.shutdown() 
+        print("Shutdown the bus")
+        robotDogHk241.bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=500000)
+        print("Reconnect succeed...")
+    finally:
         robotDogHk241.StopSend()
         robotDogHk241.bus.shutdown() 
         print("SLCAN bus has been turned off properly.")

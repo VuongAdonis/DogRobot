@@ -1,0 +1,5 @@
+  File "/home/DATA/DogRobot/ros2_ws/install/controller/lib/python3.12/site-packages/controller/quadrupedRobot.py", line 381
+    if (self.idxFR == 7 and ) or (self.idx == ):
+                            ^
+SyntaxError: invalid syntax
+

@@ -33,8 +33,8 @@ class originalPosRR(Enum):
   
 class originalPosRL(Enum):
   joint0Middle          =           -0.08
-  joint1Middle          =           -0.45
-  joint2Middle          =           -0.2
+  joint1Middle          =           -0.46
+  joint2Middle          =           -0.12
   
 class originalPosFR(Enum):
   joint0Middle          =            0.43
@@ -44,7 +44,7 @@ class originalPosFR(Enum):
 class originalPosFL(Enum):
   joint0Middle          =           -0.55
   joint1Middle          =           0.08
-  joint2Middle          =           0.5
+  joint2Middle          =           -0.06
 
 #---------------------------------------------------------------------------------------------------------------------#
 # Class's name:
@@ -98,7 +98,7 @@ class position:
         joint1PositionCurrent = originalPosRL.joint1Middle.value + abs(angle)*stepPerDegree.joint1.value
       else:
         if angle < -0.0001:
-          joint1PositionCurrent = originalPosRL.joint1Middle.value + abs(angle)*stepPerDegree.joint1.value
+          joint1PositionCurrent = originalPosRL.joint1Middle.value - abs(angle)*stepPerDegree.joint1.value
     
     if legType == leg.FR.value:
       joint1PositionCurrent   = originalPosFR.joint1Middle.value

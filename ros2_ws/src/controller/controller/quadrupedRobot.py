@@ -154,10 +154,10 @@ class quadrupedRobot:
   
   def __init__(self):
     # may be modified x and z, not y
-    self.globalCoordinateStartingRR = coordinatePoint(-320, -161.12, 187)
-    self.globalCoordinateStartingRL = coordinatePoint(-320, 161.12, 187) 
-    self.globalCoordinateStartingFR = coordinatePoint(-320, -161.12, -187) 
-    self.globalCoordinateStartingFL = coordinatePoint(-320, 161.12, -187)    
+    self.globalCoordinateStartingRR = coordinatePoint(-300, -161.12, 187)
+    self.globalCoordinateStartingRL = coordinatePoint(-300, 161.12, 187) 
+    self.globalCoordinateStartingFR = coordinatePoint(-300, -161.12, -187) 
+    self.globalCoordinateStartingFL = coordinatePoint(-300, 161.12, -187)    
 
     self.legRR = kinematicEachLeg(self.globalCoordinateStartingRR, leg.RR.value)
     self.legRL = kinematicEachLeg(self.globalCoordinateStartingRL, leg.RL.value)
@@ -179,41 +179,12 @@ class quadrupedRobot:
 
     return np.linalg.inv(rotateMatrixYaw.dot(rotateMatrixPitch))
   
-  def updatePosTrajectoryAllLegs(self, vectorAngle):
-    # the result of posTrajectoryRR has foramt: [[], [], [], [], [], [], [], []]
-    posTrajectoryRR = self.legRR.updatePosTrajectoryLeg(deviation = 25, angleVector= vectorAngle)
-    posTrajectoryRL = self.legRL.updatePosTrajectoryLeg(deviation = 25, angleVector= vectorAngle)
-    posTrajectoryFR = self.legFR.updatePosTrajectoryLeg(deviation = 25, angleVector= vectorAngle)
-    posTrajectoryFL = self.legFL.updatePosTrajectoryLeg(deviation = 25, angleVector= vectorAngle)
-
-    self.trajectoryRRTemp = posTrajectoryRR      
-    self.trajectoryRLTemp = posTrajectoryRL
-    self.trajectoryFRTemp = posTrajectoryFR
-    self.trajectoryFLTemp = posTrajectoryFL
-    
-    # if abs(vectorAngle) <= atan2(161.12, 187):
-    #   self.trajectoryRRTemp = posTrajectoryRR      
-    #   self.trajectoryRLTemp = posTrajectoryRL
-    #   self.trajectoryFRTemp = posTrajectoryFR
-    #   self.trajectoryFLTemp = posTrajectoryFL
-    
-    # else:
-    #   if abs(vectorAngle) <= (pi - atan2(161.12, 187)):
-    #     if vectorAngle < 0:
-    #       self.trajectoryRRTemp = posTrajectoryFR
-    #       self.trajectoryRLTemp = posTrajectoryRR
-    #       self.trajectoryFRTemp = posTrajectoryFL
-    #       self.trajectoryFLTemp = posTrajectoryRL
-    #     else:
-    #       self.trajectoryRRTemp = posTrajectoryRL
-    #       self.trajectoryRLTemp = posTrajectoryFL
-    #       self.trajectoryFRTemp = posTrajectoryRR
-    #       self.trajectoryFLTemp = posTrajectoryFR
-    #   else:
-    #     self.trajectoryRRTemp = posTrajectoryFL
-    #     self.trajectoryRLTemp = posTrajectoryFR
-    #     self.trajectoryFRTemp = posTrajectoryRL
-    #     self.trajectoryFLTemp = posTrajectoryRR
+  def updatePosCurrentPointAllLegs(self, vectorAngle, idxRR, idxRL, idxFR, idxFL):
+ 
+    self.posCurrentPointRR = self.legRR.updatePosCurrentPointLeg(deviation = 15, angleVector= vectorAngle, index= idxRR)
+    self.posCurrentPointRL = self.legRL.updatePosCurrentPointLeg(deviation = 15, angleVector= vectorAngle, index= idxRL)
+    self.posCurrentPointFR = self.legFR.updatePosCurrentPointLeg(deviation = 15, angleVector= vectorAngle, index= idxFR)
+    self.posCurrentPointFL = self.legFL.updatePosCurrentPointLeg(deviation = 15, angleVector= vectorAngle, index= idxFL)
       
   def selfBalancingIMU(self, pitch, yaw):
     # pitch > 0 -> head up, pitch < 0 -> head down
@@ -252,20 +223,22 @@ class quadrupedRobot:
       return "not modified"
   
   def modeControlStandNormalAllLegs(self):
-    if self.currentMode == modeControl.move.value or self.currentMode == modeControl.standNormal.value:
-      self.posCurrentRR = self.legRR.getPosModeStandNormal()
-      self.posCurrentRL = self.legRL.getPosModeStandNormal()
-      self.posCurrentFR = self.legFR.getPosModeStandNormal()
-      self.posCurrentFL = self.legFL.getPosModeStandNormal()
+    # if self.currentMode == modeControl.move.value:
+    #   self.currentMode = modeControl.standNormal.value
+    #   return
+    if  self.currentMode == modeControl.standNormal.value or self.currentMode == modeControl.move.value:
+      self.posCurrentPointRR = self.legRR.getPosModeStandNormal()
+      self.posCurrentPointRL = self.legRL.getPosModeStandNormal()
+      self.posCurrentPointFR = self.legFR.getPosModeStandNormal()
+      self.posCurrentPointFL = self.legFL.getPosModeStandNormal()
       
       self.idxRR = 4
       self.idxRL = 4
       self.idxFR = 4
       self.idxFL = 4
     
-      if ( self.posCurrentRR) and ( self.posCurrentRL) and ( self.posCurrentFR) and ( self.posCurrentFL):
-        self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
-        # time.sleep(postpone)
+      if ( self.posCurrentPointRR) and ( self.posCurrentPointRL) and ( self.posCurrentPointFR) and ( self.posCurrentPointFL):
+        self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
         self.currentMode = modeControl.standNormal.value
       return
     
@@ -279,7 +252,6 @@ class quadrupedRobot:
           self.posCurrentFL = self.legFL.getPosModeStandUpDown(self.heightStandUpDownDeviation)
           if ( self.posCurrentRR) and ( self.posCurrentRL) and ( self.posCurrentFR) and ( self.posCurrentFL):
             self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
-            # time.sleep(postpone)
       
       if self.heightStandUpDownDeviation > 0:
         while self.heightStandUpDownDeviation > 0:
@@ -290,7 +262,6 @@ class quadrupedRobot:
           self.posCurrentFL = self.legFL.getPosModeStandUpDown(self.heightStandUpDownDeviation)
           if ( self.posCurrentRR) and ( self.posCurrentRL) and ( self.posCurrentFR) and ( self.posCurrentFL):
             self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
-            # time.sleep(postpone)
       self.currentMode = modeControl.standNormal.value
       return
 
@@ -312,7 +283,6 @@ class quadrupedRobot:
       # print("height: ", self.heightStandUpDownDeviation)
       if ( self.posCurrentRR) and ( self.posCurrentRL) and ( self.posCurrentFR) and ( self.posCurrentFL):
         self.serviceCANRos2.send_message(self.posCurrentRR, self.posCurrentRL, self.posCurrentFR, self.posCurrentFL)
-        # time.sleep(postpone)
         self.currentMode = modeControl.standUpDown.value
       else:
         if Up == 1:
@@ -323,50 +293,154 @@ class quadrupedRobot:
       return
   
   def modeControlMove(self, xGamePad, yGamePad):
+    deviationY = 1
+    deviationZ = 1
     if self.currentMode == modeControl.move.value:
-      self.newAngleGamePad = atan2(-xGamePad, yGamePad)
-      if abs(self.newAngleGamePad - self.oldAngleGamePad) >= 25/180*pi:
-        self.modeControlStandNormalAllLegs()
-        self.oldAngleGamePad = self.newAngleGamePad
-      else:   # angle  < 25/180*pi
-        print("idxRR: ", self.idxRR)
-        print("idxRL: ", self.idxRL)
-        print("idxFR: ", self.idxFR)
-        print("idxFL: ", self.idxFL)
-
-        if (self.idxRR > 8) or (self.idxRL > 8) or (self.idxFR > 8) or (self.idxFL > 8):
-          self.idxRR =  self.idxRR if (self.idxRR -1) <= 7  else self.idxRR -1
-          self.idxRL =  self.idxRL if (self.idxRL -1) <= 7 else self.idxRL -1
-          self.idxFR =  self.idxFR if (self.idxFR -1) <= 7 else self.idxFR -1
-          self.idxFL =  self.idxFL if (self.idxFL -1) <= 7 else self.idxFL -1
-          self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
-
-        else:
-          self.idxRR =  10 if (self.idxRR -1) < 1 else self.idxRR -1
-          self.idxRL =  10 if (self.idxRL -1) < 1 else self.idxRL -1
-          self.idxFR =  10 if (self.idxFR -1) < 1 else self.idxFR -1
-          self.idxFL =  10 if (self.idxFL -1) < 1 else self.idxFL -1
-          self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
-          # time.sleep(postpone)
-          
-          # self.idxRR =  10 if (self.idxRR -1) < 1 else self.idxRR -1
-          # self.idxRL =  10 if (self.idxRL -1) < 1 else self.idxRL -1
-          # self.idxFR =  10 if (self.idxFR -1) < 1 else self.idxFR -1
-          # self.idxFL =  10 if (self.idxFL -1) < 1 else self.idxFL -1
-          # self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
-          # time.sleep(postpone)
+      self.vectorAngle = atan2(-xGamePad, yGamePad)
     
+      if abs(self.vectorAngle - self.oldAngleGamePad) >= 25/180*pi:
+        self.modeControlStandNormalAllLegs()
+        self.oldAngleGamePad = self.vectorAngle
+      else:   # angle  < 25/180*pi
+        # send message to control body of robot to 
+        for i in range(0, 2):
+          if (self.idxRL == 1 and self.idxFL == 3) or (self.idxFL == 1 and self.idxFR == 3):
+            for i in range (0, 50):
+              # update Y
+              self.legRR.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
+              self.legRL.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
+              self.legFR.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
+              self.legFL.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
+              # update Z 
+              self.legRR.endEffector.Z -= deviationZ*abs(sin(self.vectorAngle))
+              self.legRL.endEffector.Z -= deviationZ*abs(sin(self.vectorAngle))
+              self.legFR.endEffector.Z -= deviationZ*abs(sin(self.vectorAngle))
+              self.legFL.endEffector.Z -= deviationZ*abs(sin(self.vectorAngle))
+              self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+              self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
+          else:
+            if (self.idxRR == 1 and self.idxFR == 3) or (self.idxRL == 1 and self.idxRR == 3):
+              for i in range(0, 50):
+                # update Y
+                self.legRR.endEffector.Y -= deviationY*abs(cos(self.vectorAngle))
+                self.legRL.endEffector.Y -= deviationY*abs(cos(self.vectorAngle))
+                self.legFR.endEffector.Y -= deviationY*abs(cos(self.vectorAngle))
+                self.legFL.endEffector.Y -= deviationY*abs(cos(self.vectorAngle))
+                
+                # update Z 
+                self.legRR.endEffector.Z += deviationZ*abs(sin(self.vectorAngle))
+                self.legRL.endEffector.Z += deviationZ*abs(sin(self.vectorAngle))
+                self.legFR.endEffector.Z += deviationZ*abs(sin(self.vectorAngle))
+                self.legFL.endEffector.Z += deviationZ*abs(sin(self.vectorAngle))
+                self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+                self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
+            else:
+              time.sleep(1)
+          
+          # send message to control all legs of robot (1 leg raise)
+          self.idxRR = 15 if (self.idxRR -1) < 1 else self.idxRR -1
+          self.idxRL = 15 if (self.idxRL -1) < 1 else self.idxRL -1
+          self.idxFR = 15 if (self.idxFR -1) < 1 else self.idxFR -1
+          self.idxFL = 15 if (self.idxFL -1) < 1 else self.idxFL -1
+          self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+          self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
+          # time.sleep(1)
+          
+          while self.idxRR > 8 or self.idxRL > 8 or self.idxFR > 8 or self.idxFL > 8:
+            self.idxRR = self.idxRR if (self.idxRR -1) < 8 else self.idxRR -1
+            self.idxRL = self.idxRL if (self.idxRL -1) < 8 else self.idxRL -1
+            self.idxFR = self.idxFR if (self.idxFR -1) < 8 else self.idxFR -1
+            self.idxFL = self.idxFL if (self.idxFL -1) < 8 else self.idxFL -1
+            self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+            self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
+            # time.sleep(1)
+          # send message to control all legs of robot (4 leg on ground)
+          self.idxRR = 15 if (self.idxRR -1) < 1 else self.idxRR -1
+          self.idxRL = 15 if (self.idxRL -1) < 1 else self.idxRL -1
+          self.idxFR = 15 if (self.idxFR -1) < 1 else self.idxFR -1
+          self.idxFL = 15 if (self.idxFL -1) < 1 else self.idxFL -1
+          self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+          self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
+          # time.sleep(1)
+
+          # send message to control body of robot to center
+        if (self.idxFL == 7 and self.idxRL == 5) or (self.idxFL == 5 and self.idxFR == 7):
+          for i in range(0, 50):
+            self.legRR.endEffector.Y -= deviationY*abs(cos(self.vectorAngle))
+            self.legRL.endEffector.Y -= deviationY*abs(cos(self.vectorAngle))
+            self.legFR.endEffector.Y -= deviationY*abs(cos(self.vectorAngle))
+            self.legFL.endEffector.Y -= deviationY*abs(cos(self.vectorAngle))
+
+            self.legRR.endEffector.Z += deviationZ*abs(sin(self.vectorAngle))
+            self.legRL.endEffector.Z += deviationZ*abs(sin(self.vectorAngle))
+            self.legFR.endEffector.Z += deviationZ*abs(sin(self.vectorAngle))
+            self.legFL.endEffector.Z += deviationZ*abs(sin(self.vectorAngle))
+            self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+            self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
+        else:
+          if (self.idxFR == 7 and self.idxRR== 5) or (self.idxRL == 5 and self.idxRR == 7 ):
+            for i in range(0, 60):
+              self.legRR.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
+              self.legRL.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
+              self.legFR.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
+              self.legFL.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
+
+              self.legRR.endEffector.Z -= deviationZ*abs(sin(self.vectorAngle))
+              self.legRL.endEffector.Z -= deviationZ*abs(sin(self.vectorAngle))
+              self.legFR.endEffector.Z -= deviationZ*abs(sin(self.vectorAngle))
+              self.legFL.endEffector.Z -= deviationZ*abs(sin(self.vectorAngle))
+              self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+              self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
+                  
+        self.currentMode = modeControl.move.value
+
     if self.currentMode == modeControl.standNormal.value:
-      vectorAngle = atan2(-xGamePad, yGamePad)
-      self.updatePosTrajectoryAllLegs(vectorAngle)
-      self.oldAngleGamePad = vectorAngle
+      self.vectorAngle = atan2(-xGamePad, yGamePad)
+      self.oldAngleGamePad = self.vectorAngle
+
+      if abs(self.vectorAngle) <= atan2(161.12, 187):
+        self.idxRR = 5
+        self.idxRL = 1
+        self.idxFR = 7
+        self.idxFL = 3
+        # self.posCurrentPointRR = posCurrentPointRRTemp      
+        # self.posCurrentPointRL = posCurrentPointRLTemp
+        # self.posCurrentPointFR = posCurrentPointFRTemp
+        # self.posCurrentPointFL = posCurrentPointFLTemp
       
-      self.idxRR = 5
-      self.idxRL = 1
-      self.idxFR = 7
-      self.idxFL = 3
-      self.serviceCANRos2.send_message(self.trajectoryRRTemp[self.idxRR -1], self.trajectoryRLTemp[self.idxRL-1], self.trajectoryFRTemp[self.idxFR-1], self.trajectoryFLTemp[self.idxFL-1])
-      # time.sleep(postpone)
+      else:
+        if abs(self.vectorAngle) <= (pi - atan2(161.12, 187)):
+          if self.vectorAngle < 0:
+            self.idxRR = 7
+            self.idxRL = 5
+            self.idxFR = 3
+            self.idxFL = 1
+            # self.posCurrentPointRR = posCurrentPointFRTemp
+            # self.posCurrentPointRL = posCurrentPointRRTemp
+            # self.posCurrentPointFR = posCurrentPointFLTemp
+            # self.posCurrentPointFL = posCurrentPointRLTemp
+          else:
+            self.idxRR = 7
+            self.idxRL = 5
+            self.idxFR = 3
+            self.idxFL = 1
+            # self.posCurrentPointRR = posCurrentPointRLTemp
+            # self.posCurrentPointRL = posCurrentPointFLTemp
+            # self.posCurrentPointFR = posCurrentPointRRTemp
+            # self.posCurrentPointFL = posCurrentPointFRTemp
+        else:
+          self.idxRR = 5
+          self.idxRL = 1
+          self.idxFR = 7
+          self.idxFL = 3
+          # self.posCurrentPointRR = posCurrentPointFLTemp
+          # self.posCurrentPointRL = posCurrentPointFRTemp
+          # self.posCurrentPointFR = posCurrentPointRLTemp
+          # self.posCurrentPointFL = posCurrentPointRRTemp
+      
+      
+      self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+      self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
       self.currentMode = modeControl.move.value
       return
 
@@ -403,7 +477,6 @@ class quadrupedRobot:
     # the first mode when turning on the quadruped robot
     self.currentMode = modeControl.standNormal.value
     self.modeControlStandNormalAllLegs()
-    # # time.sleep(4)
     while True:
       try:
         responseGamePad = self.serviceGamePadRos2.getInformFromGamePad()
