@@ -33,8 +33,8 @@ class originalPosRR(Enum):
   
 class originalPosRL(Enum):
   joint0Middle          =           -0.08
-  joint1Middle          =           -0.46
-  joint2Middle          =           -0.12
+  joint1Middle          =           -0.26
+  joint2Middle          =            0.63
   
 class originalPosFR(Enum):
   joint0Middle          =            0.43

@@ -154,10 +154,10 @@ class quadrupedRobot:
   
   def __init__(self):
     # may be modified x and z, not y
-    self.globalCoordinateStartingRR = coordinatePoint(-300, -161.12, 187)
-    self.globalCoordinateStartingRL = coordinatePoint(-300, 161.12, 187) 
-    self.globalCoordinateStartingFR = coordinatePoint(-300, -161.12, -187) 
-    self.globalCoordinateStartingFL = coordinatePoint(-300, 161.12, -187)    
+    self.globalCoordinateStartingRR = coordinatePoint(-320, -161.12, 187)
+    self.globalCoordinateStartingRL = coordinatePoint(-320, 161.12, 187) 
+    self.globalCoordinateStartingFR = coordinatePoint(-320, -161.12, -187) 
+    self.globalCoordinateStartingFL = coordinatePoint(-320, 161.12, -187)    
 
     self.legRR = kinematicEachLeg(self.globalCoordinateStartingRR, leg.RR.value)
     self.legRL = kinematicEachLeg(self.globalCoordinateStartingRL, leg.RL.value)
@@ -181,10 +181,10 @@ class quadrupedRobot:
   
   def updatePosCurrentPointAllLegs(self, vectorAngle, idxRR, idxRL, idxFR, idxFL):
  
-    self.posCurrentPointRR = self.legRR.updatePosCurrentPointLeg(deviation = 15, angleVector= vectorAngle, index= idxRR)
-    self.posCurrentPointRL = self.legRL.updatePosCurrentPointLeg(deviation = 15, angleVector= vectorAngle, index= idxRL)
-    self.posCurrentPointFR = self.legFR.updatePosCurrentPointLeg(deviation = 15, angleVector= vectorAngle, index= idxFR)
-    self.posCurrentPointFL = self.legFL.updatePosCurrentPointLeg(deviation = 15, angleVector= vectorAngle, index= idxFL)
+    self.posCurrentPointRR = self.legRR.updatePosCurrentPointLeg(deviation = 30, angleVector= vectorAngle, index= idxRR)
+    self.posCurrentPointRL = self.legRL.updatePosCurrentPointLeg(deviation = 30, angleVector= vectorAngle, index= idxRL)
+    self.posCurrentPointFR = self.legFR.updatePosCurrentPointLeg(deviation = 30, angleVector= vectorAngle, index= idxFR)
+    self.posCurrentPointFL = self.legFL.updatePosCurrentPointLeg(deviation = 30, angleVector= vectorAngle, index= idxFL)
       
   def selfBalancingIMU(self, pitch, yaw):
     # pitch > 0 -> head up, pitch < 0 -> head down
@@ -343,8 +343,11 @@ class quadrupedRobot:
           self.idxFR = 15 if (self.idxFR -1) < 1 else self.idxFR -1
           self.idxFL = 15 if (self.idxFL -1) < 1 else self.idxFL -1
           self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
-          self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
-          # time.sleep(1)
+          for i in range(2, -1):
+            self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
+            time.sleep(1)
+          
+          
           
           while self.idxRR > 8 or self.idxRL > 8 or self.idxFR > 8 or self.idxFL > 8:
             self.idxRR = self.idxRR if (self.idxRR -1) < 8 else self.idxRR -1
@@ -352,7 +355,7 @@ class quadrupedRobot:
             self.idxFR = self.idxFR if (self.idxFR -1) < 8 else self.idxFR -1
             self.idxFL = self.idxFL if (self.idxFL -1) < 8 else self.idxFL -1
             self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
-            self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
+            self.serviceCANRos2.send_message(self.posCurrentPointRR[0], self.posCurrentPointRL[0], self.posCurrentPointFR[0], self.posCurrentPointFL[0])
             # time.sleep(1)
           # send message to control all legs of robot (4 leg on ground)
           self.idxRR = 15 if (self.idxRR -1) < 1 else self.idxRR -1
@@ -360,8 +363,9 @@ class quadrupedRobot:
           self.idxFR = 15 if (self.idxFR -1) < 1 else self.idxFR -1
           self.idxFL = 15 if (self.idxFL -1) < 1 else self.idxFL -1
           self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
-          self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
-          # time.sleep(1)
+          for i in range(2, -1):
+            self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
+            time.sleep(1)
 
           # send message to control body of robot to center
         if (self.idxFL == 7 and self.idxRL == 5) or (self.idxFL == 5 and self.idxFR == 7):
@@ -379,7 +383,7 @@ class quadrupedRobot:
             self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
         else:
           if (self.idxFR == 7 and self.idxRR== 5) or (self.idxRL == 5 and self.idxRR == 7 ):
-            for i in range(0, 60):
+            for i in range(0, 50):
               self.legRR.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
               self.legRL.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
               self.legFR.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
