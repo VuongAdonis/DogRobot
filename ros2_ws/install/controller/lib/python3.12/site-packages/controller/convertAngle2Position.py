@@ -29,12 +29,12 @@ class stepPerDegree(Enum):
 class originalPosRR(Enum):
   joint0Middle          =           0.4
   joint1Middle          =           0.52
-  joint2Middle         =            -0.23
+  joint2Middle         =            -0.39
   
 class originalPosRL(Enum):
   joint0Middle          =           -0.08
   joint1Middle          =           -0.26
-  joint2Middle          =            0.63
+  joint2Middle          =            -0.09
   
 class originalPosFR(Enum):
   joint0Middle          =            0.43
