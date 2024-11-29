@@ -310,7 +310,7 @@ class quadrupedRobot:
         self.idxFR = 19 if (self.idxFR -1) < 1 else self.idxFR -1
         self.idxFL = 19 if (self.idxFL -1) < 1 else self.idxFL -1
         self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
-        for i in range(0, 4):
+        for i in range(3, -1):
           self.serviceCANRos2.send_message(self.posCurrentPointRR[i], self.posCurrentPointRL[i], self.posCurrentPointFR[i], self.posCurrentPointFL[i])
           time.sleep(0.01)
         time.sleep(1)
@@ -467,7 +467,7 @@ class quadrupedRobot:
         self.idxFR = 19 if (self.idxFR -1) < 1 else self.idxFR -1
         self.idxFL = 19 if (self.idxFL -1) < 1 else self.idxFL -1
         self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
-        for i in range(0, 4):
+        for i in range(3, -1):
           self.serviceCANRos2.send_message(self.posCurrentPointRR[i], self.posCurrentPointRL[i], self.posCurrentPointFR[i], self.posCurrentPointFL[i])
           time.sleep(0.01)
         time.sleep(1)
