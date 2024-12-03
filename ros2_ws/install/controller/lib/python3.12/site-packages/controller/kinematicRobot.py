@@ -247,7 +247,7 @@ class kinematicEachLeg:
     return pairPositionJoint012
       
   # value of some variables can be modified: angleVector, high, deviation, X coordinate
-  def updatePosCurrentPointLeg(self, deviation, angleVector, index):
+  def updatePosCurrentPointLeg(self, deviation, angleVector, index, step):
     high = 80
     sign123Y = 0
     sign123Z = 0
@@ -255,6 +255,7 @@ class kinematicEachLeg:
     sign567Z = 0
     stepY = 0
     stepZ = 0
+    stepByStep = step
     if abs(angleVector) <= pi/2:
       if angleVector >= 0:  # y < 0 and z < 0
         # point 1, 2, 3 has y increase, z increase
@@ -291,22 +292,71 @@ class kinematicEachLeg:
       stepY = deviation*cos(abs(angleVector)- pi/2)
       stepZ = deviation*sin(abs(angleVector) -pi/2)   
     
-    if index == 19:
-      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 4*stepY*sign123Y, self.endEffector.Z + 4*stepZ*sign123Z)
-    if index == 1:
-      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign123Y, self.endEffector.Z + 3*stepZ*sign123Z)
-    if index == 2:
-      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign123Y, self.endEffector.Z + 2*stepZ*sign123Z)
-    if index == 3:
-      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y +  stepY*sign123Y , self.endEffector.Z +   stepZ*sign123Z)
-    if index == 4:
-      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y                   , self.endEffector.Z                   )
-    if index == 5:
-      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y +  stepY*sign567Y , self.endEffector.Z +   stepZ*sign567Z)
-    if index == 6:
-      corPnt = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign567Y, self.endEffector.Z + 2*stepZ*sign567Z)
-    if index == 7:
-      corPnt = coordinatePoint(self.endEffector.X   , self.endEffector.Y + 3*stepY*sign567Y, self.endEffector.Z + 3*stepZ*sign567Z)
+    if index == 19: # self.enfEffector.Y + 4*stepY*sign123Y
+      lstCorPnt = list()
+      for i in range(0, stepByStep):
+        lstCorPnt.append(coordinatePoint(self.endEffector.X, self.endEffector.Y + 3*stepY*sign123Y + stepY*sign123Y*(i+1)/stepByStep, self.endEffector.Z + 3*stepZ*sign123Z + stepZ*sign123Z*(i+1)/stepByStep))
+      # corPnt1 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign123Y + stepY*sign123Y*4/4, self.endEffector.Z + 3*stepZ*sign123Z + stepZ*sign123Z*4/4)
+      # corPnt2 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign123Y + stepY*sign123Y*3/4, self.endEffector.Z + 3*stepZ*sign123Z + stepZ*sign123Z*3/4)
+      # corPnt3 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign123Y + stepY*sign123Y*2/4, self.endEffector.Z + 3*stepZ*sign123Z + stepZ*sign123Z*2/4)
+      # corPnt4 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign123Y + stepY*sign123Y*1/4, self.endEffector.Z + 3*stepZ*sign123Z + stepZ*sign123Z*1/4)
+    if index == 1: # self.endEffector.Y + 3*stepY*sign123Y
+      lstCorPnt = list()
+      for i in range(0, stepByStep):
+        lstCorPnt.append(coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign123Y + stepY*sign123Y*(i+1)/stepByStep, self.endEffector.Z + 2*stepZ*sign123Z + stepZ*sign123Z*(i+1)/stepByStep))
+      # corPnt1 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign123Y + stepY*sign123Y*4/4, self.endEffector.Z + 2*stepZ*sign123Z + stepZ*sign123Z*4/4)
+      # corPnt2 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign123Y + stepY*sign123Y*3/4, self.endEffector.Z + 2*stepZ*sign123Z + stepZ*sign123Z*3/4)
+      # corPnt3 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign123Y + stepY*sign123Y*2/4, self.endEffector.Z + 2*stepZ*sign123Z + stepZ*sign123Z*2/4)
+      # corPnt4 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign123Y + stepY*sign123Y*1/4, self.endEffector.Z + 2*stepZ*sign123Z + stepZ*sign123Z*1/4)
+    if index == 2: # self.endEffector.Y + 2*stepY*sign123Y
+      lstCorPnt = list()
+      for i in range(0, stepByStep):
+        lstCorPnt.append(coordinatePoint(self.endEffector.X      , self.endEffector.Y + 1*stepY*sign123Y + stepY*sign123Y*(i+1)/stepByStep, self.endEffector.Z + 1*stepZ*sign123Z + stepZ*sign123Z*(i+1)/stepByStep))
+      # corPnt1 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 1*stepY*sign123Y + stepY*sign123Y*4/4, self.endEffector.Z + 1*stepZ*sign123Z + stepZ*sign123Z*4/4)
+      # corPnt2 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 1*stepY*sign123Y + stepY*sign123Y*3/4, self.endEffector.Z + 1*stepZ*sign123Z + stepZ*sign123Z*3/4)
+      # corPnt3 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 1*stepY*sign123Y + stepY*sign123Y*2/4, self.endEffector.Z + 1*stepZ*sign123Z + stepZ*sign123Z*2/4)
+      # corPnt4 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 1*stepY*sign123Y + stepY*sign123Y*1/4, self.endEffector.Z + 1*stepZ*sign123Z + stepZ*sign123Z*1/4)
+    if index == 3: # self.endEffector.Y + stepY*sign123Y
+      lstCorPnt = list()
+      for i in range(0, stepByStep):
+        lstCorPnt.append(coordinatePoint(self.endEffector.X      , self.endEffector.Y + 0*stepY*sign123Y + stepY*sign123Y*(i+1)/stepByStep, self.endEffector.Z + 0*stepZ*sign123Z + stepZ*sign123Z*(i+1)/stepByStep))
+      # corPnt1 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 0*stepY*sign123Y + stepY*sign123Y*4/4, self.endEffector.Z + 0*stepZ*sign123Z + stepZ*sign123Z*4/4)
+      # corPnt2 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 0*stepY*sign123Y + stepY*sign123Y*3/4, self.endEffector.Z + 0*stepZ*sign123Z + stepZ*sign123Z*3/4)
+      # corPnt3 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 0*stepY*sign123Y + stepY*sign123Y*2/4, self.endEffector.Z + 0*stepZ*sign123Z + stepZ*sign123Z*2/4)
+      # corPnt4 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 0*stepY*sign123Y + stepY*sign123Y*1/4, self.endEffector.Z + 0*stepZ*sign123Z + stepZ*sign123Z*1/4)
+    if index == 4: # self.endEffector.Y + 0
+      lstCorPnt = list()
+      for i in range(0, stepByStep):
+        lstCorPnt.append(coordinatePoint(self.endEffector.X      , self.endEffector.Y + 1*stepY*sign567Y - stepY*sign567Y*(i+1)/stepByStep, self.endEffector.Z + 1*stepZ*sign567Z - stepZ*sign567Z*(i+1)/stepByStep))
+      # corPnt1 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 1*stepY*sign567Y - stepY*sign567Y*4/4, self.endEffector.Z + 1*stepZ*sign567Z - stepZ*sign567Z*4/4)
+      # corPnt2 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 1*stepY*sign567Y - stepY*sign567Y*3/4, self.endEffector.Z + 1*stepZ*sign567Z - stepZ*sign567Z*3/4)
+      # corPnt3 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 1*stepY*sign567Y - stepY*sign567Y*2/4, self.endEffector.Z + 1*stepZ*sign567Z - stepZ*sign567Z*2/4)
+      # corPnt4 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 1*stepY*sign567Y - stepY*sign567Y*1/4, self.endEffector.Z + 1*stepZ*sign567Z - stepZ*sign567Z*1/4)
+    if index == 5: # self.endEffector.Y + stepY*sign567Y
+      lstCorPnt = list()
+      for i in range(0, stepByStep):
+        lstCorPnt.append(coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign567Y - stepY*sign567Y*(i+1)/stepByStep, self.endEffector.Z + 2*stepZ*sign567Z - stepZ*sign567Z*(i+1)/stepByStep))
+      # corPnt1 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign567Y - stepY*sign567Y*4/4, self.endEffector.Z + 2*stepZ*sign567Z - stepZ*sign567Z*4/4)
+      # corPnt2 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign567Y - stepY*sign567Y*3/4, self.endEffector.Z + 2*stepZ*sign567Z - stepZ*sign567Z*3/4)
+      # corPnt3 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign567Y - stepY*sign567Y*2/4, self.endEffector.Z + 2*stepZ*sign567Z - stepZ*sign567Z*2/4)
+      # corPnt4 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 2*stepY*sign567Y - stepY*sign567Y*1/4, self.endEffector.Z + 2*stepZ*sign567Z - stepZ*sign567Z*1/4)
+    if index == 6: # self.endEffector.Y + 2*stepY*sign567Y
+      lstCorPnt = list()
+      for i in range(0, stepByStep):
+        lstCorPnt.append(coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign567Y - stepY*sign567Y*(i+1)/stepByStep, self.endEffector.Z + 3*stepZ*sign567Z - stepZ*sign567Z*(i+1)/stepByStep))
+      # corPnt1 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign567Y - stepY*sign567Y*4/4, self.endEffector.Z + 3*stepZ*sign567Z - stepZ*sign567Z*4/4)
+      # corPnt2 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign567Y - stepY*sign567Y*3/4, self.endEffector.Z + 3*stepZ*sign567Z - stepZ*sign567Z*3/4)
+      # corPnt3 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign567Y - stepY*sign567Y*2/4, self.endEffector.Z + 3*stepZ*sign567Z - stepZ*sign567Z*2/4)
+      # corPnt4 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 3*stepY*sign567Y - stepY*sign567Y*1/4, self.endEffector.Z + 3*stepZ*sign567Z - stepZ*sign567Z*1/4)
+    if index == 7: # self.endEffector.Y + 3*stepY*sign567Y
+      lstCorPnt = list()
+      for i in range(0, stepByStep):
+        lstCorPnt.append(coordinatePoint(self.endEffector.X      , self.endEffector.Y + 4*stepY*sign567Y - stepY*sign567Y*(i+1)/stepByStep, self.endEffector.Z + 4*stepZ*sign567Z - stepZ*sign567Z*(i+1)/stepByStep))
+      # corPnt1 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 4*stepY*sign567Y - stepY*sign567Y*4/4, self.endEffector.Z + 4*stepZ*sign567Z - stepZ*sign567Z*4/4)
+      # corPnt2 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 4*stepY*sign567Y - stepY*sign567Y*3/4, self.endEffector.Z + 4*stepZ*sign567Z - stepZ*sign567Z*3/4)
+      # corPnt3 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 4*stepY*sign567Y - stepY*sign567Y*2/4, self.endEffector.Z + 4*stepZ*sign567Z - stepZ*sign567Z*2/4)
+      # corPnt4 = coordinatePoint(self.endEffector.X      , self.endEffector.Y + 4*stepY*sign567Y - stepY*sign567Y*1/4, self.endEffector.Z + 4*stepZ*sign567Z - stepZ*sign567Z*1/4)
+
     if index == 8:
       corPnt = coordinatePoint(self.endEffector.X   , self.endEffector.Y + 4*stepY*sign567Y, self.endEffector.Z + 4*stepZ*sign567Z)
     if index == 9:
@@ -330,8 +380,20 @@ class kinematicEachLeg:
     if index == 18: 
       corPnt = coordinatePoint(self.endEffector.X + high, self.endEffector.Y + 4*stepY*sign123Y, self.endEffector.Z + 4*stepZ*sign123Z)
       
-    posPnt = self.backwardKinematic(corPnt.getCoordinate())
-    return posPnt
+    if (index >= 1 and index <= 7) or index == 19:
+      posPnt = list()
+      for i in range(stepByStep-1, -1, -1):
+        posPnt.append(self.backwardKinematic(lstCorPnt[i].getCoordinate()))
+      return posPnt
+      # posPnt1 = self.backwardKinematic(corPnt1.getCoordinate())
+      # posPnt2 = self.backwardKinematic(corPnt2.getCoordinate())
+      # posPnt3 = self.backwardKinematic(corPnt3.getCoordinate())
+      # posPnt4 = self.backwardKinematic(corPnt4.getCoordinate())
+      # return [posPnt1, posPnt2, posPnt3, posPnt4]
+
+    else:
+      posPnt = self.backwardKinematic(corPnt.getCoordinate())
+      return [posPnt]
 
   def getPosModeStandNormal(self):
     posPnt = self.backwardKinematic(self.endEffector.getCoordinate())

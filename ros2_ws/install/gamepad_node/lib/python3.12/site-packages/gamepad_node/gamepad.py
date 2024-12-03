@@ -43,6 +43,7 @@ class GamepadRecorder(Node):
         response.button_stand_normal = self.buttonStandNormal
 
         # self.get_logger().info(f"Incoming request\na: {request.a} b:{request.b}")
+        print([self.x, self.y], self.buttonStandUp, self.buttonStandDown, self.buttonStandNormal)
         self.get_logger().info(f"Incoming request\n")
         return response
 
