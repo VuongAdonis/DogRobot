@@ -184,20 +184,23 @@ class quadrupedRobot:
 
     return np.linalg.inv(rotateMatrixYaw.dot(rotateMatrixPitch))
   
-  def updatePosCurrentPointAllLegs(self, vectorAngle, idxRR, idxRL, idxFR, idxFL):
+  def updatePosCurrentPointAllLegs(self, vectorAngle, idxRR, idxRL, idxFR, idxFL, balanceState = 0):
  
-    self.posCurrentPointRR = self.legRR.updatePosCurrentPointLeg(deviation = 20, angleVector= vectorAngle, index= idxRR, step= 20)
-    self.posCurrentPointRL = self.legRL.updatePosCurrentPointLeg(deviation = 20, angleVector= vectorAngle, index= idxRL, step= 20)
-    self.posCurrentPointFR = self.legFR.updatePosCurrentPointLeg(deviation = 20, angleVector= vectorAngle, index= idxFR, step= 20)
-    self.posCurrentPointFL = self.legFL.updatePosCurrentPointLeg(deviation = 20, angleVector= vectorAngle, index= idxFL, step= 20)
+    self.posCurrentPointRR = self.legRR.updatePosCurrentPointLeg(deviation = 20, angleVector= vectorAngle, index= idxRR, balanceGarvity=balanceState)
+    self.posCurrentPointRL = self.legRL.updatePosCurrentPointLeg(deviation = 20, angleVector= vectorAngle, index= idxRL, balanceGarvity=balanceState)
+    self.posCurrentPointFR = self.legFR.updatePosCurrentPointLeg(deviation = 20, angleVector= vectorAngle, index= idxFR, balanceGarvity=balanceState)
+    self.posCurrentPointFL = self.legFL.updatePosCurrentPointLeg(deviation = 20, angleVector= vectorAngle, index= idxFL, balanceGarvity=balanceState)
       
-  def selfBalancingIMU(self, pitch, yaw):
+  def selfBalancingIMU(self, pitchNew, yawNew):
     # pitch > 0 -> head up, pitch < 0 -> head down
     # yaw > 0 -> right down, raw < 0 -> right up
     # check the angle of pitch or yaw is exceed or not (threshold = 5 degrees)
-
-    if (abs(pitch) > pi/36 and abs(pitch) < pi/6) or (abs(yaw) > pi/36 and abs(yaw) < pi/6):
-      balanceMatrix = self.createHomoMatrixBalance(pitch, yaw)
+    differencePitch = abs(self.anglePitchCurrent - pitchNew)
+    differenceYaw = abs(self.angleYawCurrent - yawNew)
+    
+    if (differencePitch > pi/36 and differencePitch < pi/6):
+      # consider the signal of difference between anglePitchCurrent and pitchNew, as well as angleYawCurrent and yawNew
+      balanceMatrix = self.createHomoMatrixBalance(self.anglePitchCurrent - pitchNew, self.angleYawCurrent - yawNew)
       # convert all coordinates of leg to new coordinate system
       imuGlobalCoordinateRR = balanceMatrix.dot(self.legRR.endEffector.getCoordinate()).reshape(1, -1)
       imuGlobalCoordinateRL = balanceMatrix.dot(self.legRL.endEffector.getCoordinate()).reshape(1, -1)
@@ -296,8 +299,7 @@ class quadrupedRobot:
       return
   
   def modeControlMove(self, xGamePad, yGamePad):
-    deviationY = 1
-    deviationZ = 1
+    deviationStep = 5
     if self.currentMode == modeControl.move.value:
       self.vectorAngle = atan2(-xGamePad, yGamePad)
     
@@ -306,7 +308,7 @@ class quadrupedRobot:
         self.oldAngleGamePad = self.vectorAngle
       else:   # angle  < 25/180*pi
         # send message to control body of robot to 
-        angleGarvity = atan2(53.7, 62.3) # 53.7 and 62.3 is the coordinate of Garvity point of triangle
+        # angleGarvity = atan2(53.7, 62.3) # 53.7 and 62.3 is the coordinate of Garvity point of triangle
 
         self.idxRR = 19 if (self.idxRR -1) < 1 else self.idxRR -1
         self.idxRL = 19 if (self.idxRL -1) < 1 else self.idxRL -1
@@ -315,74 +317,89 @@ class quadrupedRobot:
         self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
         for i in range(19, -1, -1):
           self.serviceCANRos2.send_message(self.posCurrentPointRR[i], self.posCurrentPointRL[i], self.posCurrentPointFR[i], self.posCurrentPointFL[i])
-          time.sleep(0.01)
+          time.sleep(0.05)
         # time.sleep(1)
         if (self.idxRL == 19 and self.idxFL == 2):# or (self.idxFL == 1 and self.idxFR == 3):
-          for i in range (0, 50):
+          garvityCoordinateY = abs(self.legRR.endEffector.Y + self.legFR.endEffector.Y + self.legFL.endEffector.Y)/3
+          garvityCoordinateZ = abs(self.legRR.endEffector.Z + self.legFR.endEffector.Z + self.legFL.endEffector.Z)/3
+          angleGarvity = atan2(garvityCoordinateY, garvityCoordinateZ)
+          for i in range (0, 10):
             # update Y
-            self.legRR.endEffector.Y += deviationY*abs(sin(angleGarvity))
-            self.legRL.endEffector.Y += deviationY*abs(sin(angleGarvity))
-            self.legFR.endEffector.Y += deviationY*abs(sin(angleGarvity))
-            self.legFL.endEffector.Y += deviationY*abs(sin(angleGarvity))
+            self.legRR.endEffector.Y += deviationStep*abs(sin(angleGarvity))
+            self.legRL.endEffector.Y += deviationStep*abs(sin(angleGarvity))
+            self.legFR.endEffector.Y += deviationStep*abs(sin(angleGarvity))
+            self.legFL.endEffector.Y += deviationStep*abs(sin(angleGarvity))
             # update Z 
-            self.legRR.endEffector.Z += deviationZ*abs(cos(angleGarvity))
-            self.legRL.endEffector.Z += deviationZ*abs(cos(angleGarvity))
-            self.legFR.endEffector.Z += deviationZ*abs(cos(angleGarvity))
-            self.legFL.endEffector.Z += deviationZ*abs(cos(angleGarvity))
+            self.legRR.endEffector.Z += deviationStep*abs(cos(angleGarvity))
+            self.legRL.endEffector.Z += deviationStep*abs(cos(angleGarvity))
+            self.legFR.endEffector.Z += deviationStep*abs(cos(angleGarvity))
+            self.legFL.endEffector.Z += deviationStep*abs(cos(angleGarvity))
             
-            self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+            self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL, 1)
             self.serviceCANRos2.send_message(self.posCurrentPointRR[0], self.posCurrentPointRL[0], self.posCurrentPointFR[0], self.posCurrentPointFL[0])
+            time.sleep(0.1)
         else:
           if (self.idxRR == 19 and self.idxFR == 2): #or (self.idxRL == 1 and self.idxRR == 3):
-            for i in range(0, 50):
+            garvityCoordinateY = abs(self.legRL.endEffector.Y + self.legFR.endEffector.Y + self.legFL.endEffector.Y)/3
+            garvityCoordinateZ = abs(self.legRL.endEffector.Z + self.legFR.endEffector.Z + self.legFL.endEffector.Z)/3
+            angleGarvity = atan2(garvityCoordinateY, garvityCoordinateZ)
+            for i in range(0, 10):
               # update Y
-              self.legRR.endEffector.Y -= deviationY*abs(cos(angleGarvity))
-              self.legRL.endEffector.Y -= deviationY*abs(cos(angleGarvity))
-              self.legFR.endEffector.Y -= deviationY*abs(cos(angleGarvity))
-              self.legFL.endEffector.Y -= deviationY*abs(cos(angleGarvity))
+              self.legRR.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
+              self.legRL.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
+              self.legFR.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
+              self.legFL.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
               
               # update Z 
-              self.legRR.endEffector.Z += deviationZ*abs(sin(angleGarvity))
-              self.legRL.endEffector.Z += deviationZ*abs(sin(angleGarvity))
-              self.legFR.endEffector.Z += deviationZ*abs(sin(angleGarvity))
-              self.legFL.endEffector.Z += deviationZ*abs(sin(angleGarvity))
+              self.legRR.endEffector.Z += deviationStep*abs(cos(angleGarvity))
+              self.legRL.endEffector.Z += deviationStep*abs(cos(angleGarvity))
+              self.legFR.endEffector.Z += deviationStep*abs(cos(angleGarvity))
+              self.legFL.endEffector.Z += deviationStep*abs(cos(angleGarvity))
               
-              self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+              self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL, 1)
               self.serviceCANRos2.send_message(self.posCurrentPointRR[0], self.posCurrentPointRL[0], self.posCurrentPointFR[0], self.posCurrentPointFL[0])
+              time.sleep(0.1)
           else:
             if (self.idxFL == 19 and self.idxRR == 2) :
-              for i in range(0, 50):
+              garvityCoordinateY = abs(self.legRR.endEffector.Y + self.legRL.endEffector.Y + self.legFR.endEffector.Y)/3
+              garvityCoordinateZ = abs(self.legRR.endEffector.Z + self.legRL.endEffector.Z + self.legFR.endEffector.Z)/3
+              angleGarvity = atan2(garvityCoordinateY, garvityCoordinateZ)
+              for i in range(0, 10):
                 # update Y
-                self.legRR.endEffector.Y += deviationY*abs(sin(angleGarvity))
-                self.legRL.endEffector.Y += deviationY*abs(sin(angleGarvity))
-                self.legFR.endEffector.Y += deviationY*abs(sin(angleGarvity))
-                self.legFL.endEffector.Y += deviationY*abs(sin(angleGarvity))
+                self.legRR.endEffector.Y += deviationStep*abs(sin(angleGarvity))
+                self.legRL.endEffector.Y += deviationStep*abs(sin(angleGarvity))
+                self.legFR.endEffector.Y += deviationStep*abs(sin(angleGarvity))
+                self.legFL.endEffector.Y += deviationStep*abs(sin(angleGarvity))
                 # update Z 
-                self.legRR.endEffector.Z -= deviationZ*abs(cos(angleGarvity))
-                self.legRL.endEffector.Z -= deviationZ*abs(cos(angleGarvity))
-                self.legFR.endEffector.Z -= deviationZ*abs(cos(angleGarvity))
-                self.legFL.endEffector.Z -= deviationZ*abs(cos(angleGarvity))
+                self.legRR.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
+                self.legRL.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
+                self.legFR.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
+                self.legFL.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
                 
-                self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+                self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL, 1)
                 self.serviceCANRos2.send_message(self.posCurrentPointRR[0], self.posCurrentPointRL[0], self.posCurrentPointFR[0], self.posCurrentPointFL[0])
+                time.sleep(0.1)
             else:
               if self.idxFR == 19 and self.idxRL == 2:
-                for i in range (0, 50):
+                garvityCoordinateY = abs(self.legRR.endEffector.Y + self.legRL.endEffector.Y + self.legFL.endEffector.Y)/3
+                garvityCoordinateZ = abs(self.legRR.endEffector.Z + self.legRL.endEffector.Z + self.legFL.endEffector.Z)/3
+                angleGarvity = atan2(garvityCoordinateY, garvityCoordinateZ)
+                for i in range (0, 10):
                   # update Y
-                  self.legRR.endEffector.Y -= deviationY*abs(cos(angleGarvity))
-                  self.legRL.endEffector.Y -= deviationY*abs(cos(angleGarvity))
-                  self.legFR.endEffector.Y -= deviationY*abs(cos(angleGarvity))
-                  self.legFL.endEffector.Y -= deviationY*abs(cos(angleGarvity))
+                  self.legRR.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
+                  self.legRL.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
+                  self.legFR.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
+                  self.legFL.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
                   
                   # update Z 
-                  self.legRR.endEffector.Z -= deviationZ*abs(sin(angleGarvity))
-                  self.legRL.endEffector.Z -= deviationZ*abs(sin(angleGarvity))
-                  self.legFR.endEffector.Z -= deviationZ*abs(sin(angleGarvity))
-                  self.legFL.endEffector.Z -= deviationZ*abs(sin(angleGarvity))
+                  self.legRR.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
+                  self.legRL.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
+                  self.legFR.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
+                  self.legFL.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
                   
-                  self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+                  self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL, 1)
                   self.serviceCANRos2.send_message(self.posCurrentPointRR[0], self.posCurrentPointRL[0], self.posCurrentPointFR[0], self.posCurrentPointFL[0])
-        # time.sleep(1)  
+                  time.sleep(0.1)  
 
         # send message to control all legs of robot (1 leg raise)
         while self.idxRR > 8 or self.idxRL > 8 or self.idxFR > 8 or self.idxFL > 8:
@@ -397,71 +414,74 @@ class quadrupedRobot:
 
         # send message to control body of robot to center
         if self.idxRL == 8 and self.idxFL == 2:
-          for i in range (0, 50):
+          for i in range (0, 10):
             # update Y
-            self.legRR.endEffector.Y -= deviationY*abs(sin(angleGarvity))
-            self.legRL.endEffector.Y -= deviationY*abs(sin(angleGarvity))
-            self.legFR.endEffector.Y -= deviationY*abs(sin(angleGarvity))
-            self.legFL.endEffector.Y -= deviationY*abs(sin(angleGarvity))
+            self.legRR.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
+            self.legRL.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
+            self.legFR.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
+            self.legFL.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
             # update Z 
-            self.legRR.endEffector.Z -= deviationZ*abs(cos(angleGarvity))
-            self.legRL.endEffector.Z -= deviationZ*abs(cos(angleGarvity))
-            self.legFR.endEffector.Z -= deviationZ*abs(cos(angleGarvity))
-            self.legFL.endEffector.Z -= deviationZ*abs(cos(angleGarvity))
+            self.legRR.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
+            self.legRL.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
+            self.legFR.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
+            self.legFL.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
             
-            self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+            self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL, 1)
             self.serviceCANRos2.send_message(self.posCurrentPointRR[0], self.posCurrentPointRL[0], self.posCurrentPointFR[0], self.posCurrentPointFL[0])   
+            time.sleep(0.1)        
         else:
           if self.idxFL == 8 and self.idxRR == 2:
-            for i in range(0, 50):
+            for i in range(0, 10):
               # update Y
-              self.legRR.endEffector.Y -= deviationY*abs(sin(angleGarvity))
-              self.legRL.endEffector.Y -= deviationY*abs(sin(angleGarvity))
-              self.legFR.endEffector.Y -= deviationY*abs(sin(angleGarvity))
-              self.legFL.endEffector.Y -= deviationY*abs(sin(angleGarvity))
+              self.legRR.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
+              self.legRL.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
+              self.legFR.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
+              self.legFL.endEffector.Y -= deviationStep*abs(sin(angleGarvity))
               # update Z 
-              self.legRR.endEffector.Z += deviationZ*abs(cos(angleGarvity))
-              self.legRL.endEffector.Z += deviationZ*abs(cos(angleGarvity))
-              self.legFR.endEffector.Z += deviationZ*abs(cos(angleGarvity))
-              self.legFL.endEffector.Z += deviationZ*abs(cos(angleGarvity))
+              self.legRR.endEffector.Z += deviationStep*abs(cos(angleGarvity))
+              self.legRL.endEffector.Z += deviationStep*abs(cos(angleGarvity))
+              self.legFR.endEffector.Z += deviationStep*abs(cos(angleGarvity))
+              self.legFL.endEffector.Z += deviationStep*abs(cos(angleGarvity))
               
-              self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+              self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL, 1)
               self.serviceCANRos2.send_message(self.posCurrentPointRR[0], self.posCurrentPointRL[0], self.posCurrentPointFR[0], self.posCurrentPointFL[0])
+              time.sleep(0.1)
           else:
             if self.idxRR == 8 and self.idxFR == 2:
-              for i in range(0, 50):
+              for i in range(0, 10):
                 # update Y
-                self.legRR.endEffector.Y += deviationY*abs(cos(angleGarvity))
-                self.legRL.endEffector.Y += deviationY*abs(cos(angleGarvity))
-                self.legFR.endEffector.Y += deviationY*abs(cos(angleGarvity))
-                self.legFL.endEffector.Y += deviationY*abs(cos(angleGarvity))
+                self.legRR.endEffector.Y += deviationStep*abs(sin(angleGarvity))
+                self.legRL.endEffector.Y += deviationStep*abs(sin(angleGarvity))
+                self.legFR.endEffector.Y += deviationStep*abs(sin(angleGarvity))
+                self.legFL.endEffector.Y += deviationStep*abs(sin(angleGarvity))
                 
                 # update Z 
-                self.legRR.endEffector.Z -= deviationZ*abs(sin(angleGarvity))
-                self.legRL.endEffector.Z -= deviationZ*abs(sin(angleGarvity))
-                self.legFR.endEffector.Z -= deviationZ*abs(sin(angleGarvity))
-                self.legFL.endEffector.Z -= deviationZ*abs(sin(angleGarvity))
+                self.legRR.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
+                self.legRL.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
+                self.legFR.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
+                self.legFL.endEffector.Z -= deviationStep*abs(cos(angleGarvity))
                 
-                self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+                self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL, 1)
                 self.serviceCANRos2.send_message(self.posCurrentPointRR[0], self.posCurrentPointRL[0], self.posCurrentPointFR[1], self.posCurrentPointFL[1])
+                time.sleep(0.1)
             else:
               if self.idxFR == 8 and self.idxRL == 2:
-                for i in range(0, 50):
+                for i in range(0, 10):
                   #update Y
-                  self.legRR.endEffector.Y += deviationY*abs(cos(angleGarvity))
-                  self.legRL.endEffector.Y += deviationY*abs(cos(angleGarvity))
-                  self.legFR.endEffector.Y += deviationY*abs(cos(angleGarvity))
-                  self.legFL.endEffector.Y += deviationY*abs(cos(angleGarvity))
+                  self.legRR.endEffector.Y += deviationStep*abs(sin(angleGarvity))
+                  self.legRL.endEffector.Y += deviationStep*abs(sin(angleGarvity))
+                  self.legFR.endEffector.Y += deviationStep*abs(sin(angleGarvity))
+                  self.legFL.endEffector.Y += deviationStep*abs(sin(angleGarvity))
                   
                   # update Z 
-                  self.legRR.endEffector.Z += deviationZ*abs(sin(angleGarvity))
-                  self.legRL.endEffector.Z += deviationZ*abs(sin(angleGarvity))
-                  self.legFR.endEffector.Z += deviationZ*abs(sin(angleGarvity))
-                  self.legFL.endEffector.Z += deviationZ*abs(sin(angleGarvity))
+                  self.legRR.endEffector.Z += deviationStep*abs(cos(angleGarvity))
+                  self.legRL.endEffector.Z += deviationStep*abs(cos(angleGarvity))
+                  self.legFR.endEffector.Z += deviationStep*abs(cos(angleGarvity))
+                  self.legFL.endEffector.Z += deviationStep*abs(cos(angleGarvity))
                   
-                  self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
+                  self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL, 1)
                   self.serviceCANRos2.send_message(self.posCurrentPointRR[0], self.posCurrentPointRL[0], self.posCurrentPointFR[0], self.posCurrentPointFL[0])
-        # time.sleep(1)
+                  time.sleep(1)
 
         # send message to control all legs of robot (4 leg on ground)
         self.idxRR = 19 if (self.idxRR -1) < 1 else self.idxRR -1
@@ -471,34 +491,34 @@ class quadrupedRobot:
         self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
         for i in range(19, -1, -1):
           self.serviceCANRos2.send_message(self.posCurrentPointRR[i], self.posCurrentPointRL[i], self.posCurrentPointFR[i], self.posCurrentPointFL[i])
-          time.sleep(0.01)
+          time.sleep(0.05)
         # time.sleep(1)
         # if (self.idxFL == 7 and self.idxRL == 5): #or (self.idxFL == 5 and self.idxFR == 7):
         #   for i in range(0, 60):
-        #     self.legRR.endEffector.Y -= deviationY*abs(cos(self.vectorAngle))
-        #     self.legRL.endEffector.Y -= deviationY*abs(cos(self.vectorAngle))
-        #     self.legFR.endEffector.Y -= deviationY*abs(cos(self.vectorAngle))
-        #     self.legFL.endEffector.Y -= deviationY*abs(cos(self.vectorAngle))
+        #     self.legRR.endEffector.Y -= deviationStep*abs(cos(self.vectorAngle))
+        #     self.legRL.endEffector.Y -= deviationStep*abs(cos(self.vectorAngle))
+        #     self.legFR.endEffector.Y -= deviationStep*abs(cos(self.vectorAngle))
+        #     self.legFL.endEffector.Y -= deviationStep*abs(cos(self.vectorAngle))
 
-        #     self.legRR.endEffector.Z += deviationZ*abs(sin(self.vectorAngle))
-        #     self.legRL.endEffector.Z += deviationZ*abs(sin(self.vectorAngle))
-        #     self.legFR.endEffector.Z += deviationZ*abs(sin(self.vectorAngle))
-        #     self.legFL.endEffector.Z += deviationZ*abs(sin(self.vectorAngle))
+        #     self.legRR.endEffector.Z += deviationStep*abs(sin(self.vectorAngle))
+        #     self.legRL.endEffector.Z += deviationStep*abs(sin(self.vectorAngle))
+        #     self.legFR.endEffector.Z += deviationStep*abs(sin(self.vectorAngle))
+        #     self.legFL.endEffector.Z += deviationStep*abs(sin(self.vectorAngle))
             
         #     self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
         #     self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
         # else:
         #   if (self.idxFR == 7 and self.idxRR== 5) or (self.idxRL == 5 and self.idxRR == 7 ):
         #     for i in range(0, 60):
-        #       self.legRR.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
-        #       self.legRL.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
-        #       self.legFR.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
-        #       self.legFL.endEffector.Y += deviationY*abs(cos(self.vectorAngle))
+        #       self.legRR.endEffector.Y += deviationStep*abs(cos(self.vectorAngle))
+        #       self.legRL.endEffector.Y += deviationStep*abs(cos(self.vectorAngle))
+        #       self.legFR.endEffector.Y += deviationStep*abs(cos(self.vectorAngle))
+        #       self.legFL.endEffector.Y += deviationStep*abs(cos(self.vectorAngle))
 
-        #       self.legRR.endEffector.Z -= deviationZ*abs(sin(self.vectorAngle))
-        #       self.legRL.endEffector.Z -= deviationZ*abs(sin(self.vectorAngle))
-        #       self.legFR.endEffector.Z -= deviationZ*abs(sin(self.vectorAngle))
-        #       self.legFL.endEffector.Z -= deviationZ*abs(sin(self.vectorAngle))
+        #       self.legRR.endEffector.Z -= deviationStep*abs(sin(self.vectorAngle))
+        #       self.legRL.endEffector.Z -= deviationStep*abs(sin(self.vectorAngle))
+        #       self.legFR.endEffector.Z -= deviationStep*abs(sin(self.vectorAngle))
+        #       self.legFL.endEffector.Z -= deviationStep*abs(sin(self.vectorAngle))
               
         #       self.updatePosCurrentPointAllLegs(self.vectorAngle, self.idxRR, self.idxRL, self.idxFR, self.idxFL)
         #       self.serviceCANRos2.send_message(self.posCurrentPointRR, self.posCurrentPointRL, self.posCurrentPointFR, self.posCurrentPointFL)
@@ -561,8 +581,8 @@ class quadrupedRobot:
 
     # read angle from IMU to control the robot
     responseIMU = self.serviceIMURos2.getInFormFromIMU()
-    time.sleep(1)
-    self.selfBalancingIMU(responseIMU[1], responseIMU[2])
+    self.anglePitchCurrent = responseIMU[1]
+    self.angleYawCurrent = responseIMU[2]
 
     while True:
       try:
@@ -589,7 +609,7 @@ class quadrupedRobot:
               else: # xGamePad = 0 and yGamePad = 0
                 pass
         responseIMU = self.serviceIMURos2.getInFormFromIMU()
-        print(responseIMU[1], responseIMU[2])
+        # print(responseIMU[1], responseIMU[2])
         self.selfBalancingIMU(responseIMU[1], responseIMU[2])
 
       except KeyboardInterrupt:
