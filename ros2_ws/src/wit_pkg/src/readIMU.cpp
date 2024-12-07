@@ -103,7 +103,7 @@ int main(int argc,char* argv[]){
 			WitSerialDataIn(cBuff[0]);
 		}
 		printf("\n");
-		Delayms(500);
+		Delayms(2000);
 		
 		if(s_cDataUpdate)
 		{
